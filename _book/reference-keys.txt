@@ -13,3 +13,8 @@ gettingStarted
 specify-ode-parameters-and-initial-conditions
 specify-dosing-and-sampling-in-rxode
 solving-odes
+syntax
+example
+syntax-1
+identifiers
+logical-operators
