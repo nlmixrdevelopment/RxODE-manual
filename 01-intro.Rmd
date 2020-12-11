@@ -25,3 +25,8 @@ While this is the user guide, there are other places that you can visit for help
 
 This book was assembled on `r date()` with RxODE version 
 `r packageVersion("RxODE")` automatically by github actions.
+
+
+# Related R packages
+```{r child='RxODE/man-roxygen/rmdhunks/related-R-chunk.Rmd'}
+```

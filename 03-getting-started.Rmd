@@ -1,0 +1,4 @@
+# Getting Started {#gettingStarted}
+
+```{r child='RxODE/man/rmdhunks/RxODE-intro-chunk.Rmd'}
+```
