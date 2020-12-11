@@ -1,0 +1,3 @@
+[submodule "RxODE"]
+	path = RxODE
+	url = git@github.com:nlmixrdevelopment/RxODE.git
