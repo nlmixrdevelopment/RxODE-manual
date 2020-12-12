@@ -1,4 +1,4 @@
-# Introduction {#intro}
+# Introduction {#index}
 
 Welcome to the RxODE user guide; **RxODE** is an R package for solving
 and simulating from ode-based models. These models are convert the
