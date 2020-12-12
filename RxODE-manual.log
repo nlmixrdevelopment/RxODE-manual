@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.11.22)  11 DEC 2020 22:40
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.11.22)  11 DEC 2020 23:03
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -486,45 +486,48 @@ Chapter 4.
 
 ]
 LaTeX Font Info:    Trying to load font information for TS1+lmtt on input line 
-419.
+440.
 (/home/matt/.TinyTeX/texmf-dist/tex/latex/lm/ts1lmtt.fd
 File: ts1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 ) [12] [13]
-Overfull \hbox (0.1109pt too wide) in paragraph at lines 520--537
+Overfull \hbox (0.1109pt too wide) in paragraph at lines 541--558
 [][] 
  []
 
 
-Overfull \hbox (1.499pt too wide) in paragraph at lines 567--567
+Overfull \hbox (1.499pt too wide) in paragraph at lines 588--588
 []\T1/lmtt/m/n/10 #>      V2      V3      KA      CL       Q     Kin    Kout   
  EC50[] 
  []
 
 
-Overfull \hbox (1.499pt too wide) in paragraph at lines 567--567
+Overfull \hbox (1.499pt too wide) in paragraph at lines 588--588
 []\T1/lmtt/m/n/10 #>  40.200 297.000   0.294  18.600  10.500   1.000   1.000 20
 0.000[] 
  []
 
-<RxODE-manual_files/figure-latex/intro-central-1.pdf, id=186, 469.755pt x 325.2
+[14]
+<RxODE-manual_files/figure-latex/intro-central-1.pdf, id=190, 469.755pt x 325.2
 15pt>
 File: RxODE-manual_files/figure-latex/intro-central-1.pdf Graphic file (type pd
 f)
 <use RxODE-manual_files/figure-latex/intro-central-1.pdf>
 Package pdftex.def Info: RxODE-manual_files/figure-latex/intro-central-1.pdf  u
-sed on input line 579.
+sed on input line 600.
 (pdftex.def)             Requested size: 344.997pt x 238.84406pt.
-[14]
 <RxODE-manual_files/figure-latex/intro-effect-1.pdf, id=191, 469.755pt x 325.21
 5pt>
 File: RxODE-manual_files/figure-latex/intro-effect-1.pdf Graphic file (type pdf
 )
 <use RxODE-manual_files/figure-latex/intro-effect-1.pdf>
 Package pdftex.def Info: RxODE-manual_files/figure-latex/intro-effect-1.pdf  us
-ed on input line 589.
+ed on input line 610.
 (pdftex.def)             Requested size: 344.997pt x 238.84406pt.
-[15 <./RxODE-manual_files/figure-latex/intro-central-1.pdf> <./RxODE-manual_fil
-es/figure-latex/intro-effect-1.pdf>] [16]
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[15 <./RxODE-manual_files/figure-latex/intro-central-1.pdf>] [16 <./RxODE-manua
+l_files/figure-latex/intro-effect-1.pdf>]
 Chapter 5.
 
 Underfull \vbox (badness 3579) has occurred while \output is active []
@@ -532,179 +535,179 @@ Underfull \vbox (badness 3579) has occurred while \output is active []
 [17
 
 ] [18] [19] [20]
-Overfull \vbox (0.79272pt too high) detected at line 911
+Overfull \vbox (0.79272pt too high) detected at line 932
  []
 
 [21]
-Underfull \vbox (badness 10000) detected at line 911
+Underfull \vbox (badness 10000) detected at line 932
  []
 
 
-Underfull \vbox (badness 10000) detected at line 911
+Underfull \vbox (badness 10000) detected at line 932
  []
 
 [22]
-Overfull \hbox (69.7488pt too wide) in paragraph at lines 1011--1011
+Overfull \hbox (69.7488pt too wide) in paragraph at lines 1032--1032
 []\T1/lmtt/m/n/10 #> RxODE 1.0.0-0 model named rx_2e57f6731796bc01c8971d9f44386
 1b6 model (ready).[] 
  []
 
 
-Overfull \hbox (258.74825pt too wide) in paragraph at lines 1011--1011
+Overfull \hbox (258.74825pt too wide) in paragraph at lines 1032--1032
 []\T1/lmtt/m/n/10 #> DLL: /home/matt/.cache/R/RxODE/rx_2e57f6731796bc01c8971d9f
 443861b6__.rxd/rx_2e57f6731796bc01c8971d9f443861b6_.so[] 
  []
 
 
-Overfull \hbox (59.24883pt too wide) in paragraph at lines 1011--1011
+Overfull \hbox (59.24883pt too wide) in paragraph at lines 1032--1032
 []\T1/lmtt/m/n/10 #>  [1] "KbBR"  "KbMU"  "KbAD"  "CLint" "KbBO"  "KbRB"  "CO" 
    "QHT"   "QBR"[] 
  []
 
 
-Overfull \hbox (59.24883pt too wide) in paragraph at lines 1011--1011
+Overfull \hbox (59.24883pt too wide) in paragraph at lines 1032--1032
 []\T1/lmtt/m/n/10 #> [10] "QMU"   "QAD"   "QSK"   "QSP"   "QPA"   "QLI"   "QST"
    "QGU"   "QHA"[] 
  []
 
 
-Overfull \hbox (59.24883pt too wide) in paragraph at lines 1011--1011
+Overfull \hbox (59.24883pt too wide) in paragraph at lines 1032--1032
 []\T1/lmtt/m/n/10 #> [19] "QBO"   "QKI"   "QRB"   "QLU"   "VLU"   "VHT"   "VBR"
    "VMU"   "VAD"[] 
  []
 
 
-Overfull \hbox (59.24883pt too wide) in paragraph at lines 1011--1011
+Overfull \hbox (59.24883pt too wide) in paragraph at lines 1032--1032
 []\T1/lmtt/m/n/10 #> [28] "VSK"   "VSP"   "VPA"   "VLI"   "VST"   "VGU"   "VBO"
    "VKI"   "VAB"[] 
  []
 
 
-Overfull \hbox (64.49881pt too wide) in paragraph at lines 1011--1011
+Overfull \hbox (64.49881pt too wide) in paragraph at lines 1032--1032
 []\T1/lmtt/m/n/10 #> [37] "VVB"   "VRB"   "fub"   "KbLU"  "KbHT"  "KbSK"  "KbSP
 "  "KbPA"  "KbLI"[] 
  []
 
 [23]
-Overfull \hbox (11.99896pt too wide) in paragraph at lines 1011--1011
+Overfull \hbox (11.99896pt too wide) in paragraph at lines 1032--1032
 []\T1/lmtt/m/n/10 #>     d/dt(Muscles) = QMU * (Arterial_Blood/VAB - Muscles/Kb
 MU/VMU)[] 
  []
 
 
-Overfull \hbox (11.99896pt too wide) in paragraph at lines 1011--1011
+Overfull \hbox (11.99896pt too wide) in paragraph at lines 1032--1032
 []\T1/lmtt/m/n/10 #>     d/dt(Adipose) = QAD * (Arterial_Blood/VAB - Adipose/Kb
 AD/VAD)[] 
  []
 
 
-Overfull \hbox (1.499pt too wide) in paragraph at lines 1011--1011
+Overfull \hbox (1.499pt too wide) in paragraph at lines 1032--1032
 []\T1/lmtt/m/n/10 #>     d/dt(Spleen) = QSP * (Arterial_Blood/VAB - Spleen/KbSP
 /VSP)[] 
  []
 
 
-Overfull \hbox (22.49893pt too wide) in paragraph at lines 1011--1011
+Overfull \hbox (22.49893pt too wide) in paragraph at lines 1032--1032
 []\T1/lmtt/m/n/10 #>     d/dt(Pancreas) = QPA * (Arterial_Blood/VAB - Pancreas/
 KbPA/VPA)[] 
  []
 
 
-Overfull \hbox (27.74892pt too wide) in paragraph at lines 1011--1011
+Overfull \hbox (27.74892pt too wide) in paragraph at lines 1032--1032
 []\T1/lmtt/m/n/10 #>     d/dt(Liver) = QHA * Arterial_Blood/VAB + QSP * Spleen/
 KbSP/VSP +[] 
  []
 
 
-Overfull \hbox (6.74898pt too wide) in paragraph at lines 1011--1011
+Overfull \hbox (6.74898pt too wide) in paragraph at lines 1032--1032
 []\T1/lmtt/m/n/10 #>         QPA * Pancreas/KbPA/VPA + QST * Stomach/KbST/VST +
  QGU *[] 
  []
 
 
-Overfull \hbox (59.24883pt too wide) in paragraph at lines 1011--1011
+Overfull \hbox (59.24883pt too wide) in paragraph at lines 1032--1032
 []\T1/lmtt/m/n/10 #>         Gut/KbGU/VGU - CLint * fub * Liver/KbLI/VLI - QLI 
 * Liver/KbLI/VLI[] 
  []
 
 
-Overfull \hbox (11.99896pt too wide) in paragraph at lines 1011--1011
+Overfull \hbox (11.99896pt too wide) in paragraph at lines 1032--1032
 []\T1/lmtt/m/n/10 #>     d/dt(Stomach) = QST * (Arterial_Blood/VAB - Stomach/Kb
 ST/VST)[] 
  []
 
 
-Overfull \hbox (11.99896pt too wide) in paragraph at lines 1011--1011
+Overfull \hbox (11.99896pt too wide) in paragraph at lines 1032--1032
 []\T1/lmtt/m/n/10 #>     d/dt(Kidneys) = QKI * (Arterial_Blood/VAB - Kidneys/Kb
 KI/VKI)[] 
  []
 
 
-Overfull \hbox (38.24889pt too wide) in paragraph at lines 1011--1011
+Overfull \hbox (38.24889pt too wide) in paragraph at lines 1032--1032
 []\T1/lmtt/m/n/10 #>     d/dt(Arterial_Blood) = QLU * (Lungs/KbLU/VLU - Arteria
 l_Blood/VAB)[] 
  []
 
 
-Overfull \hbox (38.24889pt too wide) in paragraph at lines 1011--1011
+Overfull \hbox (38.24889pt too wide) in paragraph at lines 1032--1032
 []\T1/lmtt/m/n/10 #>     d/dt(Venous_Blood) = QHT * Heart/KbHT/VHT + QBR * Brai
 n/KbBR/VBR +[] 
  []
 
 
-Overfull \hbox (1.499pt too wide) in paragraph at lines 1011--1011
+Overfull \hbox (1.499pt too wide) in paragraph at lines 1032--1032
 []\T1/lmtt/m/n/10 #>         QMU * Muscles/KbMU/VMU + QAD * Adipose/KbAD/VAD + 
 QSK *[] 
  []
 
 [24]
-Overfull \hbox (32.9989pt too wide) in paragraph at lines 1011--1011
+Overfull \hbox (32.9989pt too wide) in paragraph at lines 1032--1032
 []\T1/lmtt/m/n/10 #>         Skin/KbSK/VSK + QLI * Liver/KbLI/VLI + QBO * Bones
 /KbBO/VBO +[] 
  []
 
 
-Overfull \hbox (64.49881pt too wide) in paragraph at lines 1011--1011
+Overfull \hbox (64.49881pt too wide) in paragraph at lines 1032--1032
 []\T1/lmtt/m/n/10 #>     d/dt(Rest_of_Body) = QRB * (Arterial_Blood/VAB - Rest_
 of_Body/KbRB/VRB)[] 
  []
 
 LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <12> not available
-(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 1022.
+(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 1043.
 
-Underfull \hbox (badness 3029) in paragraph at lines 1022--1022
+Underfull \hbox (badness 3029) in paragraph at lines 1043--1043
 []\T1/lmr/bx/n/12 Changing com-part-ments by pre-declaring with
  []
 
 [25]
-Underfull \vbox (badness 10000) detected at line 1125
+Underfull \vbox (badness 10000) detected at line 1146
  []
 
 
-Underfull \vbox (badness 10000) detected at line 1125
+Underfull \vbox (badness 10000) detected at line 1146
  []
 
 [26]
-Overfull \hbox (69.7488pt too wide) in paragraph at lines 1140--1140
+Overfull \hbox (69.7488pt too wide) in paragraph at lines 1161--1161
 []\T1/lmtt/m/n/10 #> RxODE 1.0.0-0 model named rx_dfc43b162c4ff916310e6ca1def02
 8ac model (ready).[] 
  []
 
 
-Overfull \hbox (463.49765pt too wide) in paragraph at lines 1140--1140
+Overfull \hbox (463.49765pt too wide) in paragraph at lines 1161--1161
 []\T1/lmtt/m/n/10 #> x$state: Venous_Blood, Skin, Lungs, Heart, Brain, Muscles,
  Adipose, Spleen, Pancreas, Liver, Stomach, Gut, Bones, Kidneys, Arterial_Blood
 , Rest_of_Body[] 
  []
 
 
-Overfull \hbox (69.7488pt too wide) in paragraph at lines 1140--1140
+Overfull \hbox (69.7488pt too wide) in paragraph at lines 1161--1161
 []\T1/lmtt/m/n/10 #> x$params: lKbBR, lKbMU, lKbAD, lCLint, eta.LClint, lKbBO, 
 lKbRB, WT, BP, fup[] 
  []
 
 
-Overfull \hbox (1088.24583pt too wide) in paragraph at lines 1140--1140
+Overfull \hbox (1088.24583pt too wide) in paragraph at lines 1161--1161
 []\T1/lmtt/m/n/10 #> x$lhs: KbBR, KbMU, KbAD, CLint, KbBO, KbRB, CO, QHT, QBR, 
 QMU, QAD, QSK, QSP, QPA, QLI, QST, QGU, QHA, QBO, QKI, QRB, QLU, VLU, VHT, VBR,
  VMU, VAD, VSK, VSP, VPA, VLI, VST, VGU, VBO, VKI, VAB, VVB, VRB, fub, KbLU, Kb
@@ -712,13 +715,13 @@ HT, KbSK, KbSP, KbPA, KbLI, KbST, KbGU, KbKI, S15, C15[]
  []
 
 [27]
-Overfull \hbox (69.7488pt too wide) in paragraph at lines 1171--1171
+Overfull \hbox (69.7488pt too wide) in paragraph at lines 1192--1192
 []\T1/lmtt/m/n/10 #> RxODE 1.0.0-0 model named rx_de6db2c40ddb8e5bf666a1a942c0c
 10a model (ready).[] 
  []
 
 
-Overfull \hbox (48.74886pt too wide) in paragraph at lines 1189--1189
+Overfull \hbox (48.74886pt too wide) in paragraph at lines 1210--1210
 []  \T1/lmtt/m/n/10 Evaluation error: Compartment 'eff' needs differential equa
 tions defined.[] 
  []
@@ -748,7 +751,7 @@ dist/fonts/type1/public/lm/lmri10.pfb></home/matt/.TinyTeX/texmf-dist/fonts/typ
 e1/public/lm/lmro10.pfb></home/matt/.TinyTeX/texmf-dist/fonts/type1/public/lm/l
 mtk10.pfb></home/matt/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmtt10.pfb></ho
 me/matt/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmtti10.pfb>
-Output written on RxODE-manual.pdf (28 pages, 313098 bytes).
+Output written on RxODE-manual.pdf (28 pages, 313332 bytes).
 PDF statistics:
  340 PDF objects out of 1000 (max. 8388607)
  293 compressed objects within 3 object streams
