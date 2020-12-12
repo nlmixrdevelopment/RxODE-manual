@@ -444,7 +444,7 @@ used:</p>
 #&gt; [28] &quot;VSK&quot;   &quot;VSP&quot;   &quot;VPA&quot;   &quot;VLI&quot;   &quot;VST&quot;   &quot;VGU&quot;   &quot;VBO&quot;   &quot;VKI&quot;   &quot;VAB&quot;  
 #&gt; [37] &quot;VVB&quot;   &quot;VRB&quot;   &quot;fub&quot;   &quot;KbLU&quot;  &quot;KbHT&quot;  &quot;KbSK&quot;  &quot;KbSP&quot;  &quot;KbPA&quot;  &quot;KbLI&quot; 
 #&gt; [46] &quot;KbST&quot;  &quot;KbGU&quot;  &quot;KbKI&quot;  &quot;S15&quot;   &quot;C15&quot;  
-#&gt; ▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂ RxODE Model Syntax ▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂
+#&gt; ▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂ RxODE Model Syntax ▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂
 #&gt; RxODE({
 #&gt;     KbBR = exp(lKbBR)
 #&gt;     KbMU = exp(lKbMU)
@@ -521,7 +521,7 @@ used:</p>
 #&gt;         QLU * Venous_Blood/VVB
 #&gt;     d/dt(Rest_of_Body) = QRB * (Arterial_Blood/VAB - Rest_of_Body/KbRB/VRB)
 #&gt; }) 
-#&gt; ▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂</code></pre>
+#&gt; ▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂</code></pre>
 <p>In this case, <code>Venous_Blood</code> is assigned to compartment <code>15</code>.
 Figuring this out can be inconvenient and also lead to re-numbering
 compartment in simulation or estimation datasets. While it is easy and
@@ -707,7 +707,7 @@ gitbook.start({
 "link": null,
 "text": null
 },
-"download": ["bookdown-demo.pdf", "bookdown-demo.epub"],
+"download": ["RxODE-manual.pdf"],
 "toc": {
 "collapse": "subsection"
 }

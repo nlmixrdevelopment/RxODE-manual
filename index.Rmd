@@ -13,7 +13,6 @@ description: "This book is the user manual for RxODE"
 ---
 
 ```{r, echo=FALSE}
-knitr::opts_chunk$set( comment = "#>")
-options(width=80)
-Sys.setenv(RSTUDIO_CONSOLE_WIDTH=80)
+knitr::opts_chunk$set(comment = "#>")
+options(cli.width=80)
 ```
