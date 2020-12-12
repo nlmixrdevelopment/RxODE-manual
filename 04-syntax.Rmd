@@ -33,3 +33,31 @@ describes the communication of variables between `R` and the
 
 ```{r child='RxODE/man/rmdhunks/RxODE-syntax-hunk.Rmd'}
 ```
+
+## cmt() changing compartment numbers for states
+
+The compartment order can be changed with the `cmt()` syntax in the
+model.  To understand what the `cmt()` can do you need to understand
+how `RxODE` numbers the compartments.
+
+Below is an example of how RxODE numbers compartments
+
+### How RxODE numbers compartments
+
+```{r child='RxODE/man/rmdhunks/rxode-cmt-assign.Rmd'}
+```
+
+
+### Changing compartments by pre-declaring with `cmt()`
+
+
+```{r child='RxODE/man/rmdhunks/rxode-cmt-preassign-1.Rmd'}
+```
+
+### Appending compartments to the model with `cmt()`
+
+
+
+```{r child='RxODE/man/rmdhunks/rxode-cmt-preassign-2.Rmd'}
+```
+

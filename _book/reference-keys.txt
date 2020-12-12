@@ -18,3 +18,7 @@ example
 syntax-1
 identifiers
 logical-operators
+cmt-changing-compartment-numbers-for-states
+how-rxode-numbers-compartments
+changing-compartments-by-pre-declaring-with-cmt
+appending-compartments-to-the-model-with-cmt

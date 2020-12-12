@@ -163,6 +163,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="5.2.1" data-path="syntax.html"><a href="syntax.html#identifiers"><i class="fa fa-check"></i><b>5.2.1</b> Identifiers</a></li>
 </ul></li>
 <li class="chapter" data-level="5.3" data-path="syntax.html"><a href="syntax.html#logical-operators"><i class="fa fa-check"></i><b>5.3</b> Logical Operators</a></li>
+<li class="chapter" data-level="5.4" data-path="syntax.html"><a href="syntax.html#cmt-changing-compartment-numbers-for-states"><i class="fa fa-check"></i><b>5.4</b> cmt() changing compartment numbers for states</a>
+<ul>
+<li class="chapter" data-level="5.4.1" data-path="syntax.html"><a href="syntax.html#how-rxode-numbers-compartments"><i class="fa fa-check"></i><b>5.4.1</b> How RxODE numbers compartments</a></li>
+<li class="chapter" data-level="5.4.2" data-path="syntax.html"><a href="syntax.html#changing-compartments-by-pre-declaring-with-cmt"><i class="fa fa-check"></i><b>5.4.2</b> Changing compartments by pre-declaring with <code>cmt()</code></a></li>
+<li class="chapter" data-level="5.4.3" data-path="syntax.html"><a href="syntax.html#appending-compartments-to-the-model-with-cmt"><i class="fa fa-check"></i><b>5.4.3</b> Appending compartments to the model with <code>cmt()</code></a></li>
+</ul></li>
 </ul></li>
 </ul>
 
@@ -239,17 +245,17 @@ to specify 10mg BID dosing for 5 days, followed by 20mg QD dosing for
 <p>The functions <code>get.dosing()</code> and <code>get.sampling()</code> can be used to
 retrieve information from the event table.</p>
 <div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="gettingStarted.html#cb12-1" aria-hidden="true"></a><span class="kw">head</span>(ev<span class="op">$</span><span class="kw">get.dosing</span>())</span></code></pre></div>
-<pre><code>##   id low time high       cmt   amt rate ii addl evid ss dur
-## 1  1  NA    0   NA (default) 10000    0 12    9    1  0   0
-## 2  1  NA  120   NA (default) 20000    0 24    4    1  0   0</code></pre>
+<pre><code>#&gt;   id low time high       cmt   amt rate ii addl evid ss dur
+#&gt; 1  1  NA    0   NA (default) 10000    0 12    9    1  0   0
+#&gt; 2  1  NA  120   NA (default) 20000    0 24    4    1  0   0</code></pre>
 <div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="gettingStarted.html#cb14-1" aria-hidden="true"></a><span class="kw">head</span>(ev<span class="op">$</span><span class="kw">get.sampling</span>())</span></code></pre></div>
-<pre><code>##   id low time high   cmt amt rate ii addl evid ss dur
-## 1  1  NA    0   NA (obs)  NA   NA NA   NA    0 NA  NA
-## 2  1  NA    1   NA (obs)  NA   NA NA   NA    0 NA  NA
-## 3  1  NA    2   NA (obs)  NA   NA NA   NA    0 NA  NA
-## 4  1  NA    3   NA (obs)  NA   NA NA   NA    0 NA  NA
-## 5  1  NA    4   NA (obs)  NA   NA NA   NA    0 NA  NA
-## 6  1  NA    5   NA (obs)  NA   NA NA   NA    0 NA  NA</code></pre>
+<pre><code>#&gt;   id low time high   cmt amt rate ii addl evid ss dur
+#&gt; 1  1  NA    0   NA (obs)  NA   NA NA   NA    0 NA  NA
+#&gt; 2  1  NA    1   NA (obs)  NA   NA NA   NA    0 NA  NA
+#&gt; 3  1  NA    2   NA (obs)  NA   NA NA   NA    0 NA  NA
+#&gt; 4  1  NA    3   NA (obs)  NA   NA NA   NA    0 NA  NA
+#&gt; 5  1  NA    4   NA (obs)  NA   NA NA   NA    0 NA  NA
+#&gt; 6  1  NA    5   NA (obs)  NA   NA NA   NA    0 NA  NA</code></pre>
 <p>You may notice that these are similar to NONMEM event tables; If you
 are more familiar with NONMEM data and events you could use them
 directly with the event table function <code>et</code></p>
@@ -345,25 +351,25 @@ in the output matrix x.</p>
 <p>You can also solve this and create a RxODE data frame:</p>
 <div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb18-1"><a href="gettingStarted.html#cb18-1" aria-hidden="true"></a>x &lt;-<span class="st"> </span>mod1 <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">rxSolve</span>(theta, ev, inits);</span>
 <span id="cb18-2"><a href="gettingStarted.html#cb18-2" aria-hidden="true"></a>x</span></code></pre></div>
-<pre><code>## ▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂ Solved RxODE object ▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂
-## ── Parameters (x$params): ─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
-##      V2      V3      KA      CL       Q     Kin    Kout    EC50 
-##  40.200 297.000   0.294  18.600  10.500   1.000   1.000 200.000 
-## ── Initial Conditions (x$inits): ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
-## depot centr  peri   eff 
-##     0     0     0     1 
-## ── First part of data (object): ───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
-## # A tibble: 241 x 7
-##    time    C2    C3  depot centr  peri   eff
-##     [h] &lt;dbl&gt; &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
-## 1     0   0   0     10000     0     0   1   
-## 2     1  44.4 0.920  7453. 1784.  273.  1.08
-## 3     2  54.9 2.67   5554. 2206.  794.  1.18
-## 4     3  51.9 4.46   4140. 2087. 1324.  1.23
-## 5     4  44.5 5.98   3085. 1789. 1776.  1.23
-## 6     5  36.5 7.18   2299. 1467. 2132.  1.21
-## # … with 235 more rows
-## ▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂</code></pre>
+<pre><code>#&gt; ▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂ Solved RxODE object ▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂
+#&gt; ── Parameters (x$params): ─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+#&gt;      V2      V3      KA      CL       Q     Kin    Kout    EC50 
+#&gt;  40.200 297.000   0.294  18.600  10.500   1.000   1.000 200.000 
+#&gt; ── Initial Conditions (x$inits): ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+#&gt; depot centr  peri   eff 
+#&gt;     0     0     0     1 
+#&gt; ── First part of data (object): ───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+#&gt; # A tibble: 241 x 7
+#&gt;    time    C2    C3  depot centr  peri   eff
+#&gt;     [h] &lt;dbl&gt; &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
+#&gt; 1     0   0   0     10000     0     0   1   
+#&gt; 2     1  44.4 0.920  7453. 1784.  273.  1.08
+#&gt; 3     2  54.9 2.67   5554. 2206.  794.  1.18
+#&gt; 4     3  51.9 4.46   4140. 2087. 1324.  1.23
+#&gt; 5     4  44.5 5.98   3085. 1789. 1776.  1.23
+#&gt; 6     5  36.5 7.18   2299. 1467. 2132.  1.21
+#&gt; # … with 235 more rows
+#&gt; ▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂</code></pre>
 <p>This returns a modified data frame. You can see the compartment
 values in the plot below:</p>
 <div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb20-1"><a href="gettingStarted.html#cb20-1" aria-hidden="true"></a><span class="kw">library</span>(ggplot2)</span>
