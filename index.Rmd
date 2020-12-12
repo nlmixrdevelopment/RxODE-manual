@@ -14,5 +14,5 @@ description: "This book is the user manual for RxODE"
 
 ```{r, echo=FALSE}
 knitr::opts_chunk$set(comment = "#>")
-options(cli.width=80)
+options(cli.width=60)
 ```

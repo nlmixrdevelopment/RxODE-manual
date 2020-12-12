@@ -235,13 +235,15 @@ complex dosing or sampling regiments. Here, these functions are used
 to specify 10mg BID dosing for 5 days, followed by 20mg QD dosing for
 5 days:</p>
 <div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="gettingStarted.html#cb10-1" aria-hidden="true"></a>ev<span class="op">$</span><span class="kw">add.dosing</span>(<span class="dt">dose=</span><span class="dv">10000</span>, <span class="dt">nbr.doses=</span><span class="dv">10</span>, <span class="dt">dosing.interval=</span><span class="dv">12</span>)</span>
-<span id="cb10-2"><a href="gettingStarted.html#cb10-2" aria-hidden="true"></a>ev<span class="op">$</span><span class="kw">add.dosing</span>(<span class="dt">dose=</span><span class="dv">20000</span>, <span class="dt">nbr.doses=</span><span class="dv">5</span>, <span class="dt">start.time=</span><span class="dv">120</span>, <span class="dt">dosing.interval=</span><span class="dv">24</span>)</span>
-<span id="cb10-3"><a href="gettingStarted.html#cb10-3" aria-hidden="true"></a>ev<span class="op">$</span><span class="kw">add.sampling</span>(<span class="dv">0</span><span class="op">:</span><span class="dv">240</span>)</span></code></pre></div>
+<span id="cb10-2"><a href="gettingStarted.html#cb10-2" aria-hidden="true"></a>ev<span class="op">$</span><span class="kw">add.dosing</span>(<span class="dt">dose=</span><span class="dv">20000</span>, <span class="dt">nbr.doses=</span><span class="dv">5</span>, <span class="dt">start.time=</span><span class="dv">120</span>,</span>
+<span id="cb10-3"><a href="gettingStarted.html#cb10-3" aria-hidden="true"></a>              <span class="dt">dosing.interval=</span><span class="dv">24</span>)</span>
+<span id="cb10-4"><a href="gettingStarted.html#cb10-4" aria-hidden="true"></a>ev<span class="op">$</span><span class="kw">add.sampling</span>(<span class="dv">0</span><span class="op">:</span><span class="dv">240</span>)</span></code></pre></div>
 <p>If you wish you can also do this with the <code>mattigr</code> pipe operator <code>%&gt;%</code></p>
 <div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="gettingStarted.html#cb11-1" aria-hidden="true"></a>ev &lt;-<span class="st"> </span><span class="kw">eventTable</span>(<span class="dt">amount.units=</span><span class="st">&quot;mg&quot;</span>, <span class="dt">time.units=</span><span class="st">&quot;hours&quot;</span>) <span class="op">%&gt;%</span></span>
-<span id="cb11-2"><a href="gettingStarted.html#cb11-2" aria-hidden="true"></a><span class="st">    </span><span class="kw">add.dosing</span>(<span class="dt">dose=</span><span class="dv">10000</span>, <span class="dt">nbr.doses=</span><span class="dv">10</span>, <span class="dt">dosing.interval=</span><span class="dv">12</span>) <span class="op">%&gt;%</span></span>
-<span id="cb11-3"><a href="gettingStarted.html#cb11-3" aria-hidden="true"></a><span class="st">    </span><span class="kw">add.dosing</span>(<span class="dt">dose=</span><span class="dv">20000</span>, <span class="dt">nbr.doses=</span><span class="dv">5</span>, <span class="dt">start.time=</span><span class="dv">120</span>,<span class="dt">dosing.interval=</span><span class="dv">24</span>) <span class="op">%&gt;%</span></span>
-<span id="cb11-4"><a href="gettingStarted.html#cb11-4" aria-hidden="true"></a><span class="st">    </span><span class="kw">add.sampling</span>(<span class="dv">0</span><span class="op">:</span><span class="dv">240</span>);</span></code></pre></div>
+<span id="cb11-2"><a href="gettingStarted.html#cb11-2" aria-hidden="true"></a><span class="st">  </span><span class="kw">add.dosing</span>(<span class="dt">dose=</span><span class="dv">10000</span>, <span class="dt">nbr.doses=</span><span class="dv">10</span>, <span class="dt">dosing.interval=</span><span class="dv">12</span>) <span class="op">%&gt;%</span></span>
+<span id="cb11-3"><a href="gettingStarted.html#cb11-3" aria-hidden="true"></a><span class="st">  </span><span class="kw">add.dosing</span>(<span class="dt">dose=</span><span class="dv">20000</span>, <span class="dt">nbr.doses=</span><span class="dv">5</span>, <span class="dt">start.time=</span><span class="dv">120</span>,</span>
+<span id="cb11-4"><a href="gettingStarted.html#cb11-4" aria-hidden="true"></a>             <span class="dt">dosing.interval=</span><span class="dv">24</span>) <span class="op">%&gt;%</span></span>
+<span id="cb11-5"><a href="gettingStarted.html#cb11-5" aria-hidden="true"></a><span class="st">  </span><span class="kw">add.sampling</span>(<span class="dv">0</span><span class="op">:</span><span class="dv">240</span>)</span></code></pre></div>
 <p>The functions <code>get.dosing()</code> and <code>get.sampling()</code> can be used to
 retrieve information from the event table.</p>
 <div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="gettingStarted.html#cb12-1" aria-hidden="true"></a><span class="kw">head</span>(ev<span class="op">$</span><span class="kw">get.dosing</span>())</span></code></pre></div>
@@ -260,9 +262,9 @@ retrieve information from the event table.</p>
 are more familiar with NONMEM data and events you could use them
 directly with the event table function <code>et</code></p>
 <div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb16-1"><a href="gettingStarted.html#cb16-1" aria-hidden="true"></a>ev  &lt;-<span class="st"> </span><span class="kw">et</span>(<span class="dt">amountUnits=</span><span class="st">&quot;mg&quot;</span>, <span class="dt">timeUnits=</span><span class="st">&quot;hours&quot;</span>) <span class="op">%&gt;%</span></span>
-<span id="cb16-2"><a href="gettingStarted.html#cb16-2" aria-hidden="true"></a><span class="st">    </span><span class="kw">et</span>(<span class="dt">amt=</span><span class="dv">10000</span>, <span class="dt">addl=</span><span class="dv">9</span>,<span class="dt">ii=</span><span class="dv">12</span>,<span class="dt">cmt=</span><span class="st">&quot;depot&quot;</span>) <span class="op">%&gt;%</span></span>
-<span id="cb16-3"><a href="gettingStarted.html#cb16-3" aria-hidden="true"></a><span class="st">    </span><span class="kw">et</span>(<span class="dt">time=</span><span class="dv">120</span>, <span class="dt">amt=</span><span class="dv">2000</span>, <span class="dt">addl=</span><span class="dv">4</span>, <span class="dt">ii=</span><span class="dv">14</span>, <span class="dt">cmt=</span><span class="st">&quot;depot&quot;</span>) <span class="op">%&gt;%</span></span>
-<span id="cb16-4"><a href="gettingStarted.html#cb16-4" aria-hidden="true"></a><span class="st">    </span><span class="kw">et</span>(<span class="dv">0</span><span class="op">:</span><span class="dv">240</span>) <span class="co"># Assumes sampling when there is no dosing information</span></span></code></pre></div>
+<span id="cb16-2"><a href="gettingStarted.html#cb16-2" aria-hidden="true"></a><span class="st">  </span><span class="kw">et</span>(<span class="dt">amt=</span><span class="dv">10000</span>, <span class="dt">addl=</span><span class="dv">9</span>,<span class="dt">ii=</span><span class="dv">12</span>,<span class="dt">cmt=</span><span class="st">&quot;depot&quot;</span>) <span class="op">%&gt;%</span></span>
+<span id="cb16-3"><a href="gettingStarted.html#cb16-3" aria-hidden="true"></a><span class="st">  </span><span class="kw">et</span>(<span class="dt">time=</span><span class="dv">120</span>, <span class="dt">amt=</span><span class="dv">2000</span>, <span class="dt">addl=</span><span class="dv">4</span>, <span class="dt">ii=</span><span class="dv">14</span>, <span class="dt">cmt=</span><span class="st">&quot;depot&quot;</span>) <span class="op">%&gt;%</span></span>
+<span id="cb16-4"><a href="gettingStarted.html#cb16-4" aria-hidden="true"></a><span class="st">  </span><span class="kw">et</span>(<span class="dv">0</span><span class="op">:</span><span class="dv">240</span>) <span class="co"># Add sampling </span></span></code></pre></div>
 <p>You can see from the above code, you can dose to the compartment named
 in the RxODE model. This slight deviation from NONMEM can reduce the
 need for compartment renumbering.</p>
@@ -351,14 +353,14 @@ in the output matrix x.</p>
 <p>You can also solve this and create a RxODE data frame:</p>
 <div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb18-1"><a href="gettingStarted.html#cb18-1" aria-hidden="true"></a>x &lt;-<span class="st"> </span>mod1 <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">rxSolve</span>(theta, ev, inits);</span>
 <span id="cb18-2"><a href="gettingStarted.html#cb18-2" aria-hidden="true"></a>x</span></code></pre></div>
-<pre><code>#&gt; ▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂ Solved RxODE object ▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂
-#&gt; ── Parameters (x$params): ──────────────────────────────────────────────────────
+<pre><code>#&gt; ▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂ Solved RxODE object ▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂
+#&gt; ── Parameters (x$params): ──────────────────────────────────
 #&gt;      V2      V3      KA      CL       Q     Kin    Kout    EC50 
 #&gt;  40.200 297.000   0.294  18.600  10.500   1.000   1.000 200.000 
-#&gt; ── Initial Conditions (x$inits): ───────────────────────────────────────────────
+#&gt; ── Initial Conditions (x$inits): ───────────────────────────
 #&gt; depot centr  peri   eff 
 #&gt;     0     0     0     1 
-#&gt; ── First part of data (object): ────────────────────────────────────────────────
+#&gt; ── First part of data (object): ────────────────────────────
 #&gt; # A tibble: 241 x 7
 #&gt;    time    C2    C3  depot centr  peri   eff
 #&gt;     [h] &lt;dbl&gt; &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
@@ -369,7 +371,7 @@ in the output matrix x.</p>
 #&gt; 5     4  44.5 5.98   3085. 1789. 1776.  1.23
 #&gt; 6     5  36.5 7.18   2299. 1467. 2132.  1.21
 #&gt; # … with 235 more rows
-#&gt; ▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂</code></pre>
+#&gt; ▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂</code></pre>
 <p>This returns a modified data frame. You can see the compartment
 values in the plot below:</p>
 <div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb20-1"><a href="gettingStarted.html#cb20-1" aria-hidden="true"></a><span class="kw">library</span>(ggplot2)</span>
