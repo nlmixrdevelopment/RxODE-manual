@@ -1,0 +1,5 @@
+# Easily creating RxODE events {#et}
+
+```{r child='RxODE/vignettes/events-et.Rmdh'}
+```
+
