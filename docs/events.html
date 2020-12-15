@@ -1,0 +1,1262 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 6 RxODE events | RxODE user manual</title>
+  <meta name="description" content="This book is the user manual for RxODE" />
+  <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 6 RxODE events | RxODE user manual" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="This book is the user manual for RxODE" />
+  <meta name="github-repo" content="nlmixrdevelopment/RxODE-manual" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 6 RxODE events | RxODE user manual" />
+  
+  <meta name="twitter:description" content="This book is the user manual for RxODE" />
+  
+
+<meta name="author" content="Matthew Fidler" />
+
+
+<meta name="date" content="2020-12-15" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="syntax.html"/>
+
+<script src="libs/header-attrs-2.5/header-attrs.js"></script>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
+<link href="libs/anchor-sections-1.0/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0/anchor-sections.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Introduction</a></li>
+<li class="chapter" data-level="2" data-path="related-r-packages.html"><a href="related-r-packages.html"><i class="fa fa-check"></i><b>2</b> Related R packages</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="related-r-packages.html"><a href="related-r-packages.html#ode-solving"><i class="fa fa-check"></i><b>2.1</b> ODE solving</a></li>
+<li class="chapter" data-level="2.2" data-path="related-r-packages.html"><a href="related-r-packages.html#pk-solved-systems"><i class="fa fa-check"></i><b>2.2</b> PK Solved systems</a>
+<ul>
+<li class="chapter" data-level="2.2.1" data-path="related-r-packages.html"><a href="related-r-packages.html#the-following-packages-for-solved-pk-systems-are-on-cran"><i class="fa fa-check"></i><b>2.2.1</b> The following packages for solved PK systems are on CRAN</a></li>
+<li class="chapter" data-level="2.2.2" data-path="related-r-packages.html"><a href="related-r-packages.html#non-cran-libraries"><i class="fa fa-check"></i><b>2.2.2</b> Non-CRAN libraries:</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="install.html"><a href="install.html"><i class="fa fa-check"></i><b>3</b> Installation</a>
+<ul>
+<li class="chapter" data-level="3.0.1" data-path="install.html"><a href="install.html#windows"><i class="fa fa-check"></i><b>3.0.1</b> Windows</a></li>
+<li class="chapter" data-level="3.0.2" data-path="install.html"><a href="install.html#mac-osx"><i class="fa fa-check"></i><b>3.0.2</b> Mac OSX</a></li>
+<li class="chapter" data-level="3.0.3" data-path="install.html"><a href="install.html#linux"><i class="fa fa-check"></i><b>3.0.3</b> Linux</a></li>
+<li class="chapter" data-level="3.1" data-path="install.html"><a href="install.html#development-version"><i class="fa fa-check"></i><b>3.1</b> Development Version</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="gettingStarted.html"><a href="gettingStarted.html"><i class="fa fa-check"></i><b>4</b> Getting Started</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="gettingStarted.html"><a href="gettingStarted.html#specify-ode-parameters-and-initial-conditions"><i class="fa fa-check"></i><b>4.1</b> Specify ODE parameters and initial conditions</a></li>
+<li class="chapter" data-level="4.2" data-path="gettingStarted.html"><a href="gettingStarted.html#specify-dosing-and-sampling-in-rxode"><i class="fa fa-check"></i><b>4.2</b> Specify Dosing and sampling in RxODE</a></li>
+<li class="chapter" data-level="4.3" data-path="gettingStarted.html"><a href="gettingStarted.html#solving-odes"><i class="fa fa-check"></i><b>4.3</b> Solving ODEs</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="syntax.html"><a href="syntax.html"><i class="fa fa-check"></i><b>5</b> RxODE syntax</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="syntax.html"><a href="syntax.html#example"><i class="fa fa-check"></i><b>5.1</b> Example</a></li>
+<li class="chapter" data-level="5.2" data-path="syntax.html"><a href="syntax.html#syntax-1"><i class="fa fa-check"></i><b>5.2</b> Syntax</a>
+<ul>
+<li class="chapter" data-level="5.2.1" data-path="syntax.html"><a href="syntax.html#identifiers"><i class="fa fa-check"></i><b>5.2.1</b> Identifiers</a></li>
+</ul></li>
+<li class="chapter" data-level="5.3" data-path="syntax.html"><a href="syntax.html#logical-operators"><i class="fa fa-check"></i><b>5.3</b> Logical Operators</a></li>
+<li class="chapter" data-level="5.4" data-path="syntax.html"><a href="syntax.html#cmt-changing-compartment-numbers-for-states"><i class="fa fa-check"></i><b>5.4</b> cmt() changing compartment numbers for states</a>
+<ul>
+<li class="chapter" data-level="5.4.1" data-path="syntax.html"><a href="syntax.html#how-rxode-numbers-compartments"><i class="fa fa-check"></i><b>5.4.1</b> How RxODE numbers compartments</a></li>
+<li class="chapter" data-level="5.4.2" data-path="syntax.html"><a href="syntax.html#changing-compartments-by-pre-declaring-with-cmt"><i class="fa fa-check"></i><b>5.4.2</b> Changing compartments by pre-declaring with <code>cmt()</code></a></li>
+<li class="chapter" data-level="5.4.3" data-path="syntax.html"><a href="syntax.html#appending-compartments-to-the-model-with-cmt"><i class="fa fa-check"></i><b>5.4.3</b> Appending compartments to the model with <code>cmt()</code></a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="events.html"><a href="events.html"><i class="fa fa-check"></i><b>6</b> RxODE events</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="events.html"><a href="events.html#bolusadditive-doses"><i class="fa fa-check"></i><b>6.1</b> Bolus/Additive Doses</a></li>
+<li class="chapter" data-level="6.2" data-path="events.html"><a href="events.html#infusion-doses"><i class="fa fa-check"></i><b>6.2</b> Infusion Doses</a>
+<ul>
+<li class="chapter" data-level="6.2.1" data-path="events.html"><a href="events.html#constant-infusions-in-terms-of-duration-and-rate"><i class="fa fa-check"></i><b>6.2.1</b> Constant Infusions (in terms of duration and rate)</a></li>
+<li class="chapter" data-level="6.2.2" data-path="events.html"><a href="events.html#modeled-rate-and-duration-of-infusion"><i class="fa fa-check"></i><b>6.2.2</b> Modeled Rate and Duration of Infusion</a></li>
+</ul></li>
+<li class="chapter" data-level="6.3" data-path="events.html"><a href="events.html#steady-state"><i class="fa fa-check"></i><b>6.3</b> Steady State</a>
+<ul>
+<li class="chapter" data-level="6.3.1" data-path="events.html"><a href="events.html#steady-state-for-complex-dosing"><i class="fa fa-check"></i><b>6.3.1</b> Steady state for complex dosing</a></li>
+<li class="chapter" data-level="6.3.2" data-path="events.html"><a href="events.html#steady-state-for-constant-infusion-or-zero-order-processes"><i class="fa fa-check"></i><b>6.3.2</b> Steady state for constant infusion or zero order processes</a></li>
+</ul></li>
+<li class="chapter" data-level="6.4" data-path="events.html"><a href="events.html#reset-events"><i class="fa fa-check"></i><b>6.4</b> Reset Events</a></li>
+<li class="chapter" data-level="6.5" data-path="events.html"><a href="events.html#turning-off-compartments"><i class="fa fa-check"></i><b>6.5</b> Turning off compartments</a></li>
+<li class="chapter" data-level="6.6" data-path="events.html"><a href="events.html#classic-rxode-events"><i class="fa fa-check"></i><b>6.6</b> Classic RxODE events</a>
+<ul>
+<li class="chapter" data-level="6.6.1" data-path="events.html"><a href="events.html#bolus-dose-examples"><i class="fa fa-check"></i><b>6.6.1</b> Bolus Dose Examples</a></li>
+<li class="chapter" data-level="6.6.2" data-path="events.html"><a href="events.html#infusion-event-examples"><i class="fa fa-check"></i><b>6.6.2</b> Infusion Event Examples</a></li>
+<li class="chapter" data-level="6.6.3" data-path="events.html"><a href="events.html#steady-state-for-classic-rxode-evid-example"><i class="fa fa-check"></i><b>6.6.3</b> Steady State for classic RxODE EVID example</a></li>
+<li class="chapter" data-level="6.6.4" data-path="events.html"><a href="events.html#turning-off-a-compartment-with-classic-rxode-evid"><i class="fa fa-check"></i><b>6.6.4</b> Turning off a compartment with classic RxODE EVID</a></li>
+</ul></li>
+</ul></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">RxODE user manual</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="events" class="section level1" number="6">
+<h1><span class="header-section-number">Chapter 6</span> RxODE events</h1>
+<p>In general, RxODE event tables follow NONMEM dataset convention with
+the exceptions:</p>
+<ul>
+<li>The compartment data item (<code>cmt</code>) can be a string/factor with
+compartment names
+<ul>
+<li>You may turn off a compartment with a negative compartment number
+or “-cmt” where cmt is the compartment name.</li>
+<li>The compartment data item (<code>cmt</code>) can still be a number, the
+number of the compartment is defined by the appearance of the
+compartment name in the model. This can be tedious to count, so
+you can specify compartment numbers easier by using the
+<code>cmt(cmtName)</code> at the beginning of the model.</li>
+</ul></li>
+<li>An additional column, <code>dur</code> can specify the duration of infusions;
+<ul>
+<li>Bioavailability changes will change the rate of infusion since
+<code>dur</code>/<code>amt</code> are fixed in the input data.</li>
+<li>Similarly, when specifying <code>rate</code>/<code>amt</code> for an infusion, the
+bioavailability will change the infusion duration since
+<code>rate</code>/<code>amt</code> are fixed in the input data.</li>
+</ul></li>
+<li>Some infrequent NONMEM columns are not supported: <code>pcmt</code>, <code>call</code>.</li>
+<li>Additional events are supported:
+<ul>
+<li><code>evid=5</code> or replace event; This replaces the value of a
+compartment with the value specified in the <code>amt</code> column. This
+is equivalent to <code>deSolve</code>=<code>replace</code>.</li>
+<li><code>evid=6</code> or multiply event; This multiplies the value in the
+compartment with the value specified by the <code>amt</code> column. This
+is equivalent to <code>deSolve</code>=<code>multiply</code>.</li>
+</ul></li>
+</ul>
+<p>Here are the legal entries to a data table:</p>
+<table>
+<colgroup>
+<col width="9%" />
+<col width="20%" />
+<col width="69%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Data Item</th>
+<th>Meaning</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>id</td>
+<td>Individual identifier</td>
+<td>Can be a integer, factor, character, or numeric</td>
+</tr>
+<tr class="even">
+<td>time</td>
+<td>Individual time</td>
+<td>Numeric for each time.</td>
+</tr>
+<tr class="odd">
+<td>amt</td>
+<td>dose amount</td>
+<td>Positive for doses zero/NA for observations</td>
+</tr>
+<tr class="even">
+<td>rate</td>
+<td>infusion rate</td>
+<td>When specified the infusion duration will be dur=amt/rate</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td>rate = -1, rate modeled; rate = -2, duration modeled</td>
+</tr>
+<tr class="even">
+<td>dur</td>
+<td>infusion duration</td>
+<td>When specified the infusion rate will be rate = amt/dur</td>
+</tr>
+<tr class="odd">
+<td>evid</td>
+<td>event ID</td>
+<td>0=Observation; 1=Dose; 2=Other; 3=Reset; 4=Reset+Dose; 5=Replace; 6=Multiply</td>
+</tr>
+<tr class="even">
+<td>cmt</td>
+<td>Compartment</td>
+<td>Represents compartment #/name for dose/observation</td>
+</tr>
+<tr class="odd">
+<td>ss</td>
+<td>Steady State Flag</td>
+<td>0 = non-steady-state; 1=steady state; 2=steady state +prior states</td>
+</tr>
+<tr class="even">
+<td>ii</td>
+<td>Inter-dose Interval</td>
+<td>Time between doses.</td>
+</tr>
+<tr class="odd">
+<td>addl</td>
+<td># of additional doses</td>
+<td>Number of doses like the current dose.</td>
+</tr>
+</tbody>
+</table>
+<p>Other notes:</p>
+<ul>
+<li>The <code>evid</code> can be the classic RxODE (described
+<a href="https://nlmixrdevelopment.github.io/RxODE/articles/RxODE-events-classic.html">here</a>)
+or the <code>NONMEM</code>-style <code>evid</code> described above.</li>
+<li><code>NONMEM</code>’s <code>DV</code> is not required; <code>RxODE</code> is a ODE solving framework.</li>
+<li><code>NONMEM</code>’s <code>MDV</code> is not required, since it is captured in <code>EVID</code>.</li>
+<li>Instead of <code>NONMEM</code>-compatible data, it can accept <code>deSolve</code>
+compatible data-frames.</li>
+</ul>
+<p>When returning the RxODE solved data-set there are a few additional
+event ids (<code>EVID</code>) that you may see depending on the solving options:</p>
+<ul>
+<li><code>EVID = -1</code> is when a modeled rate ends (corresponds to <code>rate = -1</code>)</li>
+<li><code>EVID = -2</code> is when a modeled duration ends (corresponds to <code>rate=-2</code>)</li>
+<li><code>EVID = -10</code> when a rate specified zero-order infusion ends
+(corresponds to <code>rate &gt; 0</code>)</li>
+<li><code>EVID = -20</code> when a duration specified zero-order infusion ends
+(corresponds to <code>dur &gt; 0</code>)</li>
+<li><code>EVID = 101, 102, 103,...</code> These correspond to the <code>1</code>, <code>2</code>, <code>3</code>,
+… modeled time (<code>mtime</code>).</li>
+</ul>
+<p>These can only be accessed when solving with the option combination
+<code>addDosing=TRUE</code> and <code>subsetNonmem=FALSE</code>. If you want to see the
+classic <code>EVID</code> equivalents you can use <code>addDosing=NA</code>.</p>
+<p>To illustrate the event types we will use the model from the original RxODE
+tutorial.</p>
+<div class="sourceCode" id="cb40"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb40-1"><a href="events.html#cb40-1" aria-hidden="true"></a><span class="kw">library</span>(RxODE)</span>
+<span id="cb40-2"><a href="events.html#cb40-2" aria-hidden="true"></a><span class="co">## Model from RxODE tutorial</span></span>
+<span id="cb40-3"><a href="events.html#cb40-3" aria-hidden="true"></a>m1 &lt;-<span class="kw">RxODE</span>({</span>
+<span id="cb40-4"><a href="events.html#cb40-4" aria-hidden="true"></a>    KA=<span class="fl">2.94E-01</span>;</span>
+<span id="cb40-5"><a href="events.html#cb40-5" aria-hidden="true"></a>    CL=<span class="fl">1.86E+01</span>;</span>
+<span id="cb40-6"><a href="events.html#cb40-6" aria-hidden="true"></a>    V2=<span class="fl">4.02E+01</span>;</span>
+<span id="cb40-7"><a href="events.html#cb40-7" aria-hidden="true"></a>    Q=<span class="fl">1.05E+01</span>;</span>
+<span id="cb40-8"><a href="events.html#cb40-8" aria-hidden="true"></a>    V3=<span class="fl">2.97E+02</span>;</span>
+<span id="cb40-9"><a href="events.html#cb40-9" aria-hidden="true"></a>    Kin=<span class="dv">1</span>;</span>
+<span id="cb40-10"><a href="events.html#cb40-10" aria-hidden="true"></a>    Kout=<span class="dv">1</span>;</span>
+<span id="cb40-11"><a href="events.html#cb40-11" aria-hidden="true"></a>    EC50=<span class="dv">200</span>;</span>
+<span id="cb40-12"><a href="events.html#cb40-12" aria-hidden="true"></a>    <span class="co">## Added modeled bioavaiblity, duration and rate</span></span>
+<span id="cb40-13"><a href="events.html#cb40-13" aria-hidden="true"></a>    fdepot =<span class="st"> </span><span class="dv">1</span>;</span>
+<span id="cb40-14"><a href="events.html#cb40-14" aria-hidden="true"></a>    durDepot =<span class="st"> </span><span class="dv">8</span>;</span>
+<span id="cb40-15"><a href="events.html#cb40-15" aria-hidden="true"></a>    rateDepot =<span class="st"> </span><span class="dv">1250</span>;</span>
+<span id="cb40-16"><a href="events.html#cb40-16" aria-hidden="true"></a>    C2 =<span class="st"> </span>centr<span class="op">/</span>V2;</span>
+<span id="cb40-17"><a href="events.html#cb40-17" aria-hidden="true"></a>    C3 =<span class="st"> </span>peri<span class="op">/</span>V3;</span>
+<span id="cb40-18"><a href="events.html#cb40-18" aria-hidden="true"></a>    d<span class="op">/</span><span class="kw">dt</span>(depot) =<span class="op">-</span>KA<span class="op">*</span>depot;</span>
+<span id="cb40-19"><a href="events.html#cb40-19" aria-hidden="true"></a>    <span class="kw">f</span>(depot) =<span class="st"> </span>fdepot</span>
+<span id="cb40-20"><a href="events.html#cb40-20" aria-hidden="true"></a>    <span class="kw">dur</span>(depot) =<span class="st"> </span>durDepot</span>
+<span id="cb40-21"><a href="events.html#cb40-21" aria-hidden="true"></a>    <span class="kw">rate</span>(depot) =<span class="st"> </span>rateDepot</span>
+<span id="cb40-22"><a href="events.html#cb40-22" aria-hidden="true"></a>    d<span class="op">/</span><span class="kw">dt</span>(centr) =<span class="st"> </span>KA<span class="op">*</span>depot <span class="op">-</span><span class="st"> </span>CL<span class="op">*</span>C2 <span class="op">-</span><span class="st"> </span>Q<span class="op">*</span>C2 <span class="op">+</span><span class="st"> </span>Q<span class="op">*</span>C3;</span>
+<span id="cb40-23"><a href="events.html#cb40-23" aria-hidden="true"></a>    d<span class="op">/</span><span class="kw">dt</span>(peri)  =<span class="st">                    </span>Q<span class="op">*</span>C2 <span class="op">-</span><span class="st"> </span>Q<span class="op">*</span>C3;</span>
+<span id="cb40-24"><a href="events.html#cb40-24" aria-hidden="true"></a>    d<span class="op">/</span><span class="kw">dt</span>(eff)  =<span class="st"> </span>Kin <span class="op">-</span><span class="st"> </span>Kout<span class="op">*</span>(<span class="dv">1</span><span class="op">-</span>C2<span class="op">/</span>(EC50<span class="op">+</span>C2))<span class="op">*</span>eff;</span>
+<span id="cb40-25"><a href="events.html#cb40-25" aria-hidden="true"></a>    <span class="kw">eff</span>(<span class="dv">0</span>) =<span class="st"> </span><span class="dv">1</span></span>
+<span id="cb40-26"><a href="events.html#cb40-26" aria-hidden="true"></a>});</span></code></pre></div>
+<div id="bolusadditive-doses" class="section level2" number="6.1">
+<h2><span class="header-section-number">6.1</span> Bolus/Additive Doses</h2>
+<p>A bolus dose is the default type of dose in RxODE and only requires
+the <code>amt</code>/<code>dose</code>. Note that this uses the convenience function <code>et()</code>
+described in the <a href="RxODE-event-table.html">RxODE event tables</a></p>
+<div class="sourceCode" id="cb41"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb41-1"><a href="events.html#cb41-1" aria-hidden="true"></a>ev &lt;-<span class="st"> </span><span class="kw">et</span>(<span class="dt">timeUnits=</span><span class="st">&quot;hr&quot;</span>) <span class="op">%&gt;%</span></span>
+<span id="cb41-2"><a href="events.html#cb41-2" aria-hidden="true"></a><span class="st">    </span><span class="kw">et</span>(<span class="dt">amt=</span><span class="dv">10000</span>, <span class="dt">ii=</span><span class="dv">12</span>,<span class="dt">until=</span><span class="dv">24</span>) <span class="op">%&gt;%</span></span>
+<span id="cb41-3"><a href="events.html#cb41-3" aria-hidden="true"></a><span class="st">    </span><span class="kw">et</span>(<span class="kw">seq</span>(<span class="dv">0</span>, <span class="dv">24</span>, <span class="dt">length.out=</span><span class="dv">100</span>))</span>
+<span id="cb41-4"><a href="events.html#cb41-4" aria-hidden="true"></a></span>
+<span id="cb41-5"><a href="events.html#cb41-5" aria-hidden="true"></a>ev</span></code></pre></div>
+<pre><code>#&gt; ──────────────── EventTable with 101 records ───────────────
+#&gt; 
+#&gt;    1 dosing records (see x$get.dosing(); add with add.dosing or et)
+#&gt;    100 observation times (see x$get.sampling(); add with add.sampling or et)
+#&gt;    multiple doses in `addl` columns, expand with x$expand(); or etExpand(x)
+#&gt; ── First part of x: ────────────────────────────────────────
+#&gt; # A tibble: 101 x 5
+#&gt;         time   amt    ii  addl evid         
+#&gt;          [h] &lt;dbl&gt;   [h] &lt;int&gt; &lt;evid&gt;       
+#&gt;  1 0.0000000    NA    NA    NA 0:Observation
+#&gt;  2 0.0000000 10000    12     2 1:Dose (Add) 
+#&gt;  3 0.2424242    NA    NA    NA 0:Observation
+#&gt;  4 0.4848485    NA    NA    NA 0:Observation
+#&gt;  5 0.7272727    NA    NA    NA 0:Observation
+#&gt;  6 0.9696970    NA    NA    NA 0:Observation
+#&gt;  7 1.2121212    NA    NA    NA 0:Observation
+#&gt;  8 1.4545455    NA    NA    NA 0:Observation
+#&gt;  9 1.6969697    NA    NA    NA 0:Observation
+#&gt; 10 1.9393939    NA    NA    NA 0:Observation
+#&gt; # … with 91 more rows</code></pre>
+<div class="sourceCode" id="cb43"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb43-1"><a href="events.html#cb43-1" aria-hidden="true"></a><span class="kw">rxSolve</span>(m1, ev) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">plot</span>(C2) <span class="op">+</span></span>
+<span id="cb43-2"><a href="events.html#cb43-2" aria-hidden="true"></a><span class="st">    </span><span class="kw">xlab</span>(<span class="st">&quot;Time&quot;</span>)</span></code></pre></div>
+<p><img src="RxODE-manual_files/figure-html/unnamed-chunk-38-1.png" width="672" /></p>
+</div>
+<div id="infusion-doses" class="section level2" number="6.2">
+<h2><span class="header-section-number">6.2</span> Infusion Doses</h2>
+<p>There are a few different type of infusions that RxODE supports:</p>
+<ul>
+<li>Constant Rate Infusion (<code>rate</code>)</li>
+<li>Constant Duration Infusion (<code>dur</code>)</li>
+<li>Estimated Rate of Infusion</li>
+<li>Estimated Duration of Infusion</li>
+</ul>
+<div id="constant-infusions-in-terms-of-duration-and-rate" class="section level3" number="6.2.1">
+<h3><span class="header-section-number">6.2.1</span> Constant Infusions (in terms of duration and rate)</h3>
+<p>The next type of event is an infusion; There are two ways to specify
+an infusion; The first is the <code>dur</code> keyword.</p>
+<p>An example of this is:</p>
+<div class="sourceCode" id="cb44"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb44-1"><a href="events.html#cb44-1" aria-hidden="true"></a>ev &lt;-<span class="st"> </span><span class="kw">et</span>(<span class="dt">timeUnits=</span><span class="st">&quot;hr&quot;</span>) <span class="op">%&gt;%</span></span>
+<span id="cb44-2"><a href="events.html#cb44-2" aria-hidden="true"></a><span class="st">    </span><span class="kw">et</span>(<span class="dt">amt=</span><span class="dv">10000</span>, <span class="dt">ii=</span><span class="dv">12</span>,<span class="dt">until=</span><span class="dv">24</span>, <span class="dt">dur=</span><span class="dv">8</span>) <span class="op">%&gt;%</span></span>
+<span id="cb44-3"><a href="events.html#cb44-3" aria-hidden="true"></a><span class="st">    </span><span class="kw">et</span>(<span class="kw">seq</span>(<span class="dv">0</span>, <span class="dv">24</span>, <span class="dt">length.out=</span><span class="dv">100</span>))</span>
+<span id="cb44-4"><a href="events.html#cb44-4" aria-hidden="true"></a></span>
+<span id="cb44-5"><a href="events.html#cb44-5" aria-hidden="true"></a>ev</span></code></pre></div>
+<pre><code>#&gt; ──────────────── EventTable with 101 records ───────────────
+#&gt; 
+#&gt;    1 dosing records (see x$get.dosing(); add with add.dosing or et)
+#&gt;    100 observation times (see x$get.sampling(); add with add.sampling or et)
+#&gt;    multiple doses in `addl` columns, expand with x$expand(); or etExpand(x)
+#&gt; ── First part of x: ────────────────────────────────────────
+#&gt; # A tibble: 101 x 6
+#&gt;         time   amt    ii  addl evid            dur
+#&gt;          [h] &lt;dbl&gt;   [h] &lt;int&gt; &lt;evid&gt;          [h]
+#&gt;  1 0.0000000    NA    NA    NA 0:Observation    NA
+#&gt;  2 0.0000000 10000    12     2 1:Dose (Add)      8
+#&gt;  3 0.2424242    NA    NA    NA 0:Observation    NA
+#&gt;  4 0.4848485    NA    NA    NA 0:Observation    NA
+#&gt;  5 0.7272727    NA    NA    NA 0:Observation    NA
+#&gt;  6 0.9696970    NA    NA    NA 0:Observation    NA
+#&gt;  7 1.2121212    NA    NA    NA 0:Observation    NA
+#&gt;  8 1.4545455    NA    NA    NA 0:Observation    NA
+#&gt;  9 1.6969697    NA    NA    NA 0:Observation    NA
+#&gt; 10 1.9393939    NA    NA    NA 0:Observation    NA
+#&gt; # … with 91 more rows</code></pre>
+<div class="sourceCode" id="cb46"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb46-1"><a href="events.html#cb46-1" aria-hidden="true"></a><span class="kw">rxSolve</span>(m1, ev) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">plot</span>(depot, C2) <span class="op">+</span></span>
+<span id="cb46-2"><a href="events.html#cb46-2" aria-hidden="true"></a><span class="st">    </span><span class="kw">xlab</span>(<span class="st">&quot;Time&quot;</span>)</span></code></pre></div>
+<p><img src="RxODE-manual_files/figure-html/unnamed-chunk-40-1.png" width="672" /></p>
+<p>It can be also specified by the <code>rate</code> component:</p>
+<div class="sourceCode" id="cb47"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb47-1"><a href="events.html#cb47-1" aria-hidden="true"></a>ev &lt;-<span class="st"> </span><span class="kw">et</span>(<span class="dt">timeUnits=</span><span class="st">&quot;hr&quot;</span>) <span class="op">%&gt;%</span></span>
+<span id="cb47-2"><a href="events.html#cb47-2" aria-hidden="true"></a><span class="st">    </span><span class="kw">et</span>(<span class="dt">amt=</span><span class="dv">10000</span>, <span class="dt">ii=</span><span class="dv">12</span>,<span class="dt">until=</span><span class="dv">24</span>, <span class="dt">rate=</span><span class="dv">10000</span><span class="op">/</span><span class="dv">8</span>) <span class="op">%&gt;%</span></span>
+<span id="cb47-3"><a href="events.html#cb47-3" aria-hidden="true"></a><span class="st">    </span><span class="kw">et</span>(<span class="kw">seq</span>(<span class="dv">0</span>, <span class="dv">24</span>, <span class="dt">length.out=</span><span class="dv">100</span>))</span>
+<span id="cb47-4"><a href="events.html#cb47-4" aria-hidden="true"></a></span>
+<span id="cb47-5"><a href="events.html#cb47-5" aria-hidden="true"></a>ev</span></code></pre></div>
+<pre><code>#&gt; ──────────────── EventTable with 101 records ───────────────
+#&gt; 
+#&gt;    1 dosing records (see x$get.dosing(); add with add.dosing or et)
+#&gt;    100 observation times (see x$get.sampling(); add with add.sampling or et)
+#&gt;    multiple doses in `addl` columns, expand with x$expand(); or etExpand(x)
+#&gt; ── First part of x: ────────────────────────────────────────
+#&gt; # A tibble: 101 x 6
+#&gt;         time   amt rate          ii  addl evid         
+#&gt;          [h] &lt;dbl&gt; &lt;rate/dur&gt;   [h] &lt;int&gt; &lt;evid&gt;       
+#&gt;  1 0.0000000    NA NA            NA    NA 0:Observation
+#&gt;  2 0.0000000 10000  1250         12     2 1:Dose (Add) 
+#&gt;  3 0.2424242    NA NA            NA    NA 0:Observation
+#&gt;  4 0.4848485    NA NA            NA    NA 0:Observation
+#&gt;  5 0.7272727    NA NA            NA    NA 0:Observation
+#&gt;  6 0.9696970    NA NA            NA    NA 0:Observation
+#&gt;  7 1.2121212    NA NA            NA    NA 0:Observation
+#&gt;  8 1.4545455    NA NA            NA    NA 0:Observation
+#&gt;  9 1.6969697    NA NA            NA    NA 0:Observation
+#&gt; 10 1.9393939    NA NA            NA    NA 0:Observation
+#&gt; # … with 91 more rows</code></pre>
+<div class="sourceCode" id="cb49"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb49-1"><a href="events.html#cb49-1" aria-hidden="true"></a><span class="kw">rxSolve</span>(m1, ev) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">plot</span>(depot, C2) <span class="op">+</span></span>
+<span id="cb49-2"><a href="events.html#cb49-2" aria-hidden="true"></a><span class="st">    </span><span class="kw">xlab</span>(<span class="st">&quot;Time&quot;</span>)</span></code></pre></div>
+<p><img src="RxODE-manual_files/figure-html/unnamed-chunk-42-1.png" width="672" /></p>
+<p>These are the same with the exception of how bioavailability changes
+the infusion.</p>
+<p>In the case of modeling <code>rate</code>, a bioavailability decrease,
+decreases the infusion duration, as in NONMEM. For example:</p>
+<div class="sourceCode" id="cb50"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb50-1"><a href="events.html#cb50-1" aria-hidden="true"></a><span class="kw">rxSolve</span>(m1, ev, <span class="kw">c</span>(<span class="dt">fdepot=</span><span class="fl">0.25</span>)) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">plot</span>(depot, C2) <span class="op">+</span></span>
+<span id="cb50-2"><a href="events.html#cb50-2" aria-hidden="true"></a><span class="st">    </span><span class="kw">xlab</span>(<span class="st">&quot;Time&quot;</span>)</span></code></pre></div>
+<p><img src="RxODE-manual_files/figure-html/unnamed-chunk-43-1.png" width="672" /></p>
+<p>Similarly increasing the bioavailability increases the infusion duration.</p>
+<div class="sourceCode" id="cb51"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb51-1"><a href="events.html#cb51-1" aria-hidden="true"></a><span class="kw">rxSolve</span>(m1, ev, <span class="kw">c</span>(<span class="dt">fdepot=</span><span class="fl">1.25</span>)) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">plot</span>(depot, C2) <span class="op">+</span></span>
+<span id="cb51-2"><a href="events.html#cb51-2" aria-hidden="true"></a><span class="st">    </span><span class="kw">xlab</span>(<span class="st">&quot;Time&quot;</span>)</span></code></pre></div>
+<p><img src="RxODE-manual_files/figure-html/unnamed-chunk-44-1.png" width="672" /></p>
+<p>The rationale for this behavior is that the <code>rate</code> and <code>amt</code> are
+specified by the event table, so the only thing that can change with a
+bioavailability increase is the duration of the infusion.</p>
+<p>If you specify the <code>amt</code> and <code>dur</code> components in the event table,
+bioavailability changes affect the <code>rate</code> of infusion.</p>
+<div class="sourceCode" id="cb52"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb52-1"><a href="events.html#cb52-1" aria-hidden="true"></a>ev &lt;-<span class="st"> </span><span class="kw">et</span>(<span class="dt">timeUnits=</span><span class="st">&quot;hr&quot;</span>) <span class="op">%&gt;%</span></span>
+<span id="cb52-2"><a href="events.html#cb52-2" aria-hidden="true"></a><span class="st">    </span><span class="kw">et</span>(<span class="dt">amt=</span><span class="dv">10000</span>, <span class="dt">ii=</span><span class="dv">12</span>,<span class="dt">until=</span><span class="dv">24</span>, <span class="dt">dur=</span><span class="dv">8</span>) <span class="op">%&gt;%</span></span>
+<span id="cb52-3"><a href="events.html#cb52-3" aria-hidden="true"></a><span class="st">    </span><span class="kw">et</span>(<span class="kw">seq</span>(<span class="dv">0</span>, <span class="dv">24</span>, <span class="dt">length.out=</span><span class="dv">100</span>))</span></code></pre></div>
+<p>You can see the side-by-side comparison of bioavailability changes
+affecting <code>rate</code> instead of duration with these records in the
+following plots:</p>
+<div class="sourceCode" id="cb53"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb53-1"><a href="events.html#cb53-1" aria-hidden="true"></a><span class="kw">library</span>(ggplot2)</span>
+<span id="cb53-2"><a href="events.html#cb53-2" aria-hidden="true"></a><span class="kw">library</span>(patchwork)</span>
+<span id="cb53-3"><a href="events.html#cb53-3" aria-hidden="true"></a></span>
+<span id="cb53-4"><a href="events.html#cb53-4" aria-hidden="true"></a>p1 &lt;-<span class="st"> </span><span class="kw">rxSolve</span>(m1, ev, <span class="kw">c</span>(<span class="dt">fdepot=</span><span class="fl">1.25</span>)) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">plot</span>(depot) <span class="op">+</span></span>
+<span id="cb53-5"><a href="events.html#cb53-5" aria-hidden="true"></a><span class="st">    </span><span class="kw">xlab</span>(<span class="st">&quot;Time&quot;</span>) <span class="op">+</span><span class="st"> </span><span class="kw">ylim</span>(<span class="dv">0</span>,<span class="dv">5000</span>)</span>
+<span id="cb53-6"><a href="events.html#cb53-6" aria-hidden="true"></a></span>
+<span id="cb53-7"><a href="events.html#cb53-7" aria-hidden="true"></a>p2 &lt;-<span class="st"> </span><span class="kw">rxSolve</span>(m1, ev, <span class="kw">c</span>(<span class="dt">fdepot=</span><span class="fl">0.25</span>)) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">plot</span>(depot) <span class="op">+</span></span>
+<span id="cb53-8"><a href="events.html#cb53-8" aria-hidden="true"></a><span class="st">    </span><span class="kw">xlab</span>(<span class="st">&quot;Time&quot;</span>)<span class="op">+</span><span class="st"> </span><span class="kw">ylim</span>(<span class="dv">0</span>,<span class="dv">5000</span>)</span>
+<span id="cb53-9"><a href="events.html#cb53-9" aria-hidden="true"></a></span>
+<span id="cb53-10"><a href="events.html#cb53-10" aria-hidden="true"></a><span class="co">## Use patchwork syntax to combine plots</span></span>
+<span id="cb53-11"><a href="events.html#cb53-11" aria-hidden="true"></a>p1 <span class="op">*</span><span class="st"> </span>p2</span></code></pre></div>
+<p><img src="RxODE-manual_files/figure-html/unnamed-chunk-46-1.png" width="672" /></p>
+</div>
+<div id="modeled-rate-and-duration-of-infusion" class="section level3" number="6.2.2">
+<h3><span class="header-section-number">6.2.2</span> Modeled Rate and Duration of Infusion</h3>
+<p>You can model the duration, which is equivalent to NONMEM’s
+<code>rate=-2</code>. As a mnemonic you can use the <code>dur=model</code> instead of
+<code>rate=-2</code></p>
+<div class="sourceCode" id="cb54"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb54-1"><a href="events.html#cb54-1" aria-hidden="true"></a>ev &lt;-<span class="st"> </span><span class="kw">et</span>(<span class="dt">timeUnits=</span><span class="st">&quot;hr&quot;</span>) <span class="op">%&gt;%</span></span>
+<span id="cb54-2"><a href="events.html#cb54-2" aria-hidden="true"></a><span class="st">    </span><span class="kw">et</span>(<span class="dt">amt=</span><span class="dv">10000</span>, <span class="dt">ii=</span><span class="dv">12</span>,<span class="dt">until=</span><span class="dv">24</span>, <span class="dt">dur=</span>model) <span class="op">%&gt;%</span></span>
+<span id="cb54-3"><a href="events.html#cb54-3" aria-hidden="true"></a><span class="st">    </span><span class="kw">et</span>(<span class="kw">seq</span>(<span class="dv">0</span>, <span class="dv">24</span>, <span class="dt">length.out=</span><span class="dv">100</span>))</span>
+<span id="cb54-4"><a href="events.html#cb54-4" aria-hidden="true"></a></span>
+<span id="cb54-5"><a href="events.html#cb54-5" aria-hidden="true"></a>ev</span></code></pre></div>
+<pre><code>#&gt; ──────────────── EventTable with 101 records ───────────────
+#&gt; 
+#&gt;    1 dosing records (see x$get.dosing(); add with add.dosing or et)
+#&gt;    100 observation times (see x$get.sampling(); add with add.sampling or et)
+#&gt;    multiple doses in `addl` columns, expand with x$expand(); or etExpand(x)
+#&gt; ── First part of x: ────────────────────────────────────────
+#&gt; # A tibble: 101 x 6
+#&gt;         time   amt rate          ii  addl evid         
+#&gt;          [h] &lt;dbl&gt; &lt;rate/dur&gt;   [h] &lt;int&gt; &lt;evid&gt;       
+#&gt;  1 0.0000000    NA NA            NA    NA 0:Observation
+#&gt;  2 0.0000000 10000 -2:dur        12     2 1:Dose (Add) 
+#&gt;  3 0.2424242    NA NA            NA    NA 0:Observation
+#&gt;  4 0.4848485    NA NA            NA    NA 0:Observation
+#&gt;  5 0.7272727    NA NA            NA    NA 0:Observation
+#&gt;  6 0.9696970    NA NA            NA    NA 0:Observation
+#&gt;  7 1.2121212    NA NA            NA    NA 0:Observation
+#&gt;  8 1.4545455    NA NA            NA    NA 0:Observation
+#&gt;  9 1.6969697    NA NA            NA    NA 0:Observation
+#&gt; 10 1.9393939    NA NA            NA    NA 0:Observation
+#&gt; # … with 91 more rows</code></pre>
+<div class="sourceCode" id="cb56"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb56-1"><a href="events.html#cb56-1" aria-hidden="true"></a><span class="kw">rxSolve</span>(m1, ev, <span class="kw">c</span>(<span class="dt">durDepot=</span><span class="dv">7</span>)) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">plot</span>(depot, C2) <span class="op">+</span></span>
+<span id="cb56-2"><a href="events.html#cb56-2" aria-hidden="true"></a><span class="st">    </span><span class="kw">xlab</span>(<span class="st">&quot;Time&quot;</span>)</span></code></pre></div>
+<p><img src="RxODE-manual_files/figure-html/unnamed-chunk-48-1.png" width="672" /></p>
+<p>Similarly, you may also model rate. This is equivalent to NONMEM’s
+<code>rate=-1</code> and is how RxODE’s event table specifies the data item as
+well. You can also use <code>rate=model</code> as a mnemonic:</p>
+<div class="sourceCode" id="cb57"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb57-1"><a href="events.html#cb57-1" aria-hidden="true"></a>ev &lt;-<span class="st"> </span><span class="kw">et</span>(<span class="dt">timeUnits=</span><span class="st">&quot;hr&quot;</span>) <span class="op">%&gt;%</span></span>
+<span id="cb57-2"><a href="events.html#cb57-2" aria-hidden="true"></a><span class="st">    </span><span class="kw">et</span>(<span class="dt">amt=</span><span class="dv">10000</span>, <span class="dt">ii=</span><span class="dv">12</span>,<span class="dt">until=</span><span class="dv">24</span>, <span class="dt">rate=</span>model) <span class="op">%&gt;%</span></span>
+<span id="cb57-3"><a href="events.html#cb57-3" aria-hidden="true"></a><span class="st">    </span><span class="kw">et</span>(<span class="kw">seq</span>(<span class="dv">0</span>, <span class="dv">24</span>, <span class="dt">length.out=</span><span class="dv">100</span>))</span>
+<span id="cb57-4"><a href="events.html#cb57-4" aria-hidden="true"></a></span>
+<span id="cb57-5"><a href="events.html#cb57-5" aria-hidden="true"></a>ev</span></code></pre></div>
+<pre><code>#&gt; ──────────────── EventTable with 101 records ───────────────
+#&gt; 
+#&gt;    1 dosing records (see x$get.dosing(); add with add.dosing or et)
+#&gt;    100 observation times (see x$get.sampling(); add with add.sampling or et)
+#&gt;    multiple doses in `addl` columns, expand with x$expand(); or etExpand(x)
+#&gt; ── First part of x: ────────────────────────────────────────
+#&gt; # A tibble: 101 x 6
+#&gt;         time   amt rate          ii  addl evid         
+#&gt;          [h] &lt;dbl&gt; &lt;rate/dur&gt;   [h] &lt;int&gt; &lt;evid&gt;       
+#&gt;  1 0.0000000    NA NA            NA    NA 0:Observation
+#&gt;  2 0.0000000 10000 -1:rate       12     2 1:Dose (Add) 
+#&gt;  3 0.2424242    NA NA            NA    NA 0:Observation
+#&gt;  4 0.4848485    NA NA            NA    NA 0:Observation
+#&gt;  5 0.7272727    NA NA            NA    NA 0:Observation
+#&gt;  6 0.9696970    NA NA            NA    NA 0:Observation
+#&gt;  7 1.2121212    NA NA            NA    NA 0:Observation
+#&gt;  8 1.4545455    NA NA            NA    NA 0:Observation
+#&gt;  9 1.6969697    NA NA            NA    NA 0:Observation
+#&gt; 10 1.9393939    NA NA            NA    NA 0:Observation
+#&gt; # … with 91 more rows</code></pre>
+<div class="sourceCode" id="cb59"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb59-1"><a href="events.html#cb59-1" aria-hidden="true"></a><span class="kw">rxSolve</span>(m1, ev, <span class="kw">c</span>(<span class="dt">rateDepot=</span><span class="dv">10000</span><span class="op">/</span><span class="dv">3</span>)) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">plot</span>(depot, C2) <span class="op">+</span></span>
+<span id="cb59-2"><a href="events.html#cb59-2" aria-hidden="true"></a><span class="st">    </span><span class="kw">xlab</span>(<span class="st">&quot;Time&quot;</span>)</span></code></pre></div>
+<p><img src="RxODE-manual_files/figure-html/unnamed-chunk-50-1.png" width="672" /></p>
+</div>
+</div>
+<div id="steady-state" class="section level2" number="6.3">
+<h2><span class="header-section-number">6.3</span> Steady State</h2>
+<p>These doses are solved until a steady state is
+reached with a constant inter-dose interval.</p>
+<div class="sourceCode" id="cb60"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb60-1"><a href="events.html#cb60-1" aria-hidden="true"></a>ev &lt;-<span class="st"> </span><span class="kw">et</span>(<span class="dt">timeUnits=</span><span class="st">&quot;hr&quot;</span>) <span class="op">%&gt;%</span></span>
+<span id="cb60-2"><a href="events.html#cb60-2" aria-hidden="true"></a><span class="st">    </span><span class="kw">et</span>(<span class="dt">amt=</span><span class="dv">10000</span>, <span class="dt">ii=</span><span class="dv">12</span>, <span class="dt">ss=</span><span class="dv">1</span>) <span class="op">%&gt;%</span></span>
+<span id="cb60-3"><a href="events.html#cb60-3" aria-hidden="true"></a><span class="st">    </span><span class="kw">et</span>(<span class="kw">seq</span>(<span class="dv">0</span>, <span class="dv">24</span>, <span class="dt">length.out=</span><span class="dv">100</span>))</span>
+<span id="cb60-4"><a href="events.html#cb60-4" aria-hidden="true"></a></span>
+<span id="cb60-5"><a href="events.html#cb60-5" aria-hidden="true"></a>ev</span></code></pre></div>
+<pre><code>#&gt; ──────────────── EventTable with 101 records ───────────────
+#&gt; 
+#&gt;    1 dosing records (see x$get.dosing(); add with add.dosing or et)
+#&gt;    100 observation times (see x$get.sampling(); add with add.sampling or et)
+#&gt; ── First part of x: ────────────────────────────────────────
+#&gt; # A tibble: 101 x 5
+#&gt;         time   amt    ii evid             ss
+#&gt;          [h] &lt;dbl&gt;   [h] &lt;evid&gt;        &lt;int&gt;
+#&gt;  1 0.0000000    NA    NA 0:Observation    NA
+#&gt;  2 0.0000000 10000    12 1:Dose (Add)      1
+#&gt;  3 0.2424242    NA    NA 0:Observation    NA
+#&gt;  4 0.4848485    NA    NA 0:Observation    NA
+#&gt;  5 0.7272727    NA    NA 0:Observation    NA
+#&gt;  6 0.9696970    NA    NA 0:Observation    NA
+#&gt;  7 1.2121212    NA    NA 0:Observation    NA
+#&gt;  8 1.4545455    NA    NA 0:Observation    NA
+#&gt;  9 1.6969697    NA    NA 0:Observation    NA
+#&gt; 10 1.9393939    NA    NA 0:Observation    NA
+#&gt; # … with 91 more rows</code></pre>
+<div class="sourceCode" id="cb62"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb62-1"><a href="events.html#cb62-1" aria-hidden="true"></a><span class="kw">rxSolve</span>(m1, ev) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">plot</span>(C2)</span></code></pre></div>
+<p><img src="RxODE-manual_files/figure-html/unnamed-chunk-52-1.png" width="672" /></p>
+<div id="steady-state-for-complex-dosing" class="section level3" number="6.3.1">
+<h3><span class="header-section-number">6.3.1</span> Steady state for complex dosing</h3>
+<p>By using the <code>ss=2</code> flag, you can use the super-positioning principle
+in linear kinetics to get steady state nonstandard dosing
+(i.e. morning 100 mg vs evening 150 mg). This is done by:</p>
+<ul>
+<li>Saving all the state values</li>
+<li>Resetting all the states and solving the system to steady state</li>
+<li>Adding back all the prior state values</li>
+</ul>
+<div class="sourceCode" id="cb63"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb63-1"><a href="events.html#cb63-1" aria-hidden="true"></a>ev &lt;-<span class="st"> </span><span class="kw">et</span>(<span class="dt">timeUnits=</span><span class="st">&quot;hr&quot;</span>) <span class="op">%&gt;%</span></span>
+<span id="cb63-2"><a href="events.html#cb63-2" aria-hidden="true"></a><span class="st">    </span><span class="kw">et</span>(<span class="dt">amt=</span><span class="dv">10000</span>, <span class="dt">ii=</span><span class="dv">24</span>, <span class="dt">ss=</span><span class="dv">1</span>) <span class="op">%&gt;%</span></span>
+<span id="cb63-3"><a href="events.html#cb63-3" aria-hidden="true"></a><span class="st">    </span><span class="kw">et</span>(<span class="dt">time=</span><span class="dv">12</span>, <span class="dt">amt=</span><span class="dv">15000</span>, <span class="dt">ii=</span><span class="dv">24</span>, <span class="dt">ss=</span><span class="dv">2</span>) <span class="op">%&gt;%</span></span>
+<span id="cb63-4"><a href="events.html#cb63-4" aria-hidden="true"></a><span class="st">    </span><span class="kw">et</span>(<span class="dt">time=</span><span class="dv">24</span>, <span class="dt">amt=</span><span class="dv">10000</span>, <span class="dt">ii=</span><span class="dv">24</span>, <span class="dt">addl=</span><span class="dv">3</span>) <span class="op">%&gt;%</span></span>
+<span id="cb63-5"><a href="events.html#cb63-5" aria-hidden="true"></a><span class="st">    </span><span class="kw">et</span>(<span class="dt">time=</span><span class="dv">36</span>, <span class="dt">amt=</span><span class="dv">15000</span>, <span class="dt">ii=</span><span class="dv">24</span>, <span class="dt">addl=</span><span class="dv">3</span>) <span class="op">%&gt;%</span></span>
+<span id="cb63-6"><a href="events.html#cb63-6" aria-hidden="true"></a><span class="st">    </span><span class="kw">et</span>(<span class="kw">seq</span>(<span class="dv">0</span>, <span class="dv">64</span>, <span class="dt">length.out=</span><span class="dv">500</span>))</span>
+<span id="cb63-7"><a href="events.html#cb63-7" aria-hidden="true"></a></span>
+<span id="cb63-8"><a href="events.html#cb63-8" aria-hidden="true"></a><span class="kw">library</span>(ggplot2)</span>
+<span id="cb63-9"><a href="events.html#cb63-9" aria-hidden="true"></a></span>
+<span id="cb63-10"><a href="events.html#cb63-10" aria-hidden="true"></a><span class="kw">rxSolve</span>(m1, ev,<span class="dt">maxsteps=</span><span class="dv">10000</span>) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">plot</span>(C2) <span class="op">+</span></span>
+<span id="cb63-11"><a href="events.html#cb63-11" aria-hidden="true"></a><span class="st">    </span><span class="kw">annotate</span>(<span class="st">&quot;rect&quot;</span>, <span class="dt">xmin=</span><span class="dv">0</span>, <span class="dt">xmax=</span><span class="dv">24</span>, <span class="dt">ymin=</span><span class="op">-</span><span class="ot">Inf</span>, <span class="dt">ymax=</span><span class="ot">Inf</span>, <span class="dt">alpha=</span><span class="fl">0.2</span>) <span class="op">+</span></span>
+<span id="cb63-12"><a href="events.html#cb63-12" aria-hidden="true"></a><span class="st">    </span><span class="kw">annotate</span>(<span class="st">&quot;text&quot;</span>, <span class="dt">x=</span><span class="fl">12.5</span>, <span class="dt">y=</span><span class="dv">7</span>, <span class="dt">label=</span><span class="st">&quot;Initial Steady State Period&quot;</span>) <span class="op">+</span></span>
+<span id="cb63-13"><a href="events.html#cb63-13" aria-hidden="true"></a><span class="st">    </span><span class="kw">annotate</span>(<span class="st">&quot;text&quot;</span>, <span class="dt">x=</span><span class="dv">44</span>,   <span class="dt">y=</span><span class="dv">7</span>, <span class="dt">label=</span><span class="st">&quot;Steady State AM/PM dosing&quot;</span>)</span></code></pre></div>
+<p><img src="RxODE-manual_files/figure-html/unnamed-chunk-53-1.png" width="672" /></p>
+<p>You can see that it takes a full dose cycle to reach the true complex
+steady state dosing.</p>
+</div>
+<div id="steady-state-for-constant-infusion-or-zero-order-processes" class="section level3" number="6.3.2">
+<h3><span class="header-section-number">6.3.2</span> Steady state for constant infusion or zero order processes</h3>
+<p>The last type of steady state that RxODE supports is steady-state
+constant infusion rate. This can be specified the same way as NONMEM,
+that is:</p>
+<ul>
+<li>No inter-dose interval <code>ii</code>=<code>0</code></li>
+<li>A steady state dose, ie <code>ss</code>=<code>1</code></li>
+<li>Either a positive rate (<code>rate</code>&gt;0) or a estimated rate <code>rate</code>=<code>-1</code>.</li>
+<li>A zero dose, ie <code>amt</code>=<code>0</code></li>
+<li>Once the steady-state constant infusion is achieved, the infusion is
+turned off when using this record, just like NONMEM.</li>
+</ul>
+<p>Note that <code>rate</code>=<code>-2</code> where we model the duration of infusion doesn’t
+make much sense since we are solving the infusion until steady state.
+The duration is specified by the steady state solution.</p>
+<p>Also note that bioavailability changes on this steady state infusion
+also do not make sense because they neither change the <code>rate</code> or the
+duration of the steady state infusion. Hence modeled bioavailability
+on this type of dosing event is ignored.</p>
+<p>Here is an example:</p>
+<div class="sourceCode" id="cb64"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb64-1"><a href="events.html#cb64-1" aria-hidden="true"></a>ev &lt;-<span class="st"> </span><span class="kw">et</span>(<span class="dt">timeUnits=</span><span class="st">&quot;hr&quot;</span>) <span class="op">%&gt;%</span></span>
+<span id="cb64-2"><a href="events.html#cb64-2" aria-hidden="true"></a><span class="st">    </span><span class="kw">et</span>(<span class="dt">amt=</span><span class="dv">0</span>, <span class="dt">ss=</span><span class="dv">1</span>,<span class="dt">rate=</span><span class="dv">10000</span><span class="op">/</span><span class="dv">8</span>)</span>
+<span id="cb64-3"><a href="events.html#cb64-3" aria-hidden="true"></a></span>
+<span id="cb64-4"><a href="events.html#cb64-4" aria-hidden="true"></a>p1 &lt;-<span class="st"> </span><span class="kw">rxSolve</span>(m1, ev) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">plot</span>(C2, eff)</span>
+<span id="cb64-5"><a href="events.html#cb64-5" aria-hidden="true"></a></span>
+<span id="cb64-6"><a href="events.html#cb64-6" aria-hidden="true"></a></span>
+<span id="cb64-7"><a href="events.html#cb64-7" aria-hidden="true"></a>ev &lt;-<span class="st"> </span><span class="kw">et</span>(<span class="dt">timeUnits=</span><span class="st">&quot;hr&quot;</span>) <span class="op">%&gt;%</span></span>
+<span id="cb64-8"><a href="events.html#cb64-8" aria-hidden="true"></a><span class="st">    </span><span class="kw">et</span>(<span class="dt">amt=</span><span class="dv">200000</span>, <span class="dt">rate=</span><span class="dv">10000</span><span class="op">/</span><span class="dv">8</span>) <span class="op">%&gt;%</span></span>
+<span id="cb64-9"><a href="events.html#cb64-9" aria-hidden="true"></a><span class="st">    </span><span class="kw">et</span>(<span class="dv">0</span>, <span class="dv">250</span>, <span class="dt">length.out=</span><span class="dv">1000</span>)</span>
+<span id="cb64-10"><a href="events.html#cb64-10" aria-hidden="true"></a></span>
+<span id="cb64-11"><a href="events.html#cb64-11" aria-hidden="true"></a>p2 &lt;-<span class="st"> </span><span class="kw">rxSolve</span>(m1, ev) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">plot</span>(C2, eff)</span>
+<span id="cb64-12"><a href="events.html#cb64-12" aria-hidden="true"></a></span>
+<span id="cb64-13"><a href="events.html#cb64-13" aria-hidden="true"></a><span class="kw">library</span>(patchwork)</span>
+<span id="cb64-14"><a href="events.html#cb64-14" aria-hidden="true"></a></span>
+<span id="cb64-15"><a href="events.html#cb64-15" aria-hidden="true"></a>p1 <span class="op">/</span><span class="st"> </span>p2</span></code></pre></div>
+<p><img src="RxODE-manual_files/figure-html/unnamed-chunk-54-1.png" width="672" /></p>
+<p>Not only can this be used for PK, it can be used for steady-state
+disease processes.</p>
+</div>
+</div>
+<div id="reset-events" class="section level2" number="6.4">
+<h2><span class="header-section-number">6.4</span> Reset Events</h2>
+<p>Reset events are implemented by <code>evid=3</code> or <code>evid=reset</code>, for reset
+and <code>evid=4</code> for reset and dose.</p>
+<div class="sourceCode" id="cb65"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb65-1"><a href="events.html#cb65-1" aria-hidden="true"></a>ev &lt;-<span class="st"> </span><span class="kw">et</span>(<span class="dt">timeUnits=</span><span class="st">&quot;hr&quot;</span>) <span class="op">%&gt;%</span></span>
+<span id="cb65-2"><a href="events.html#cb65-2" aria-hidden="true"></a><span class="st">    </span><span class="kw">et</span>(<span class="dt">amt=</span><span class="dv">10000</span>, <span class="dt">ii=</span><span class="dv">12</span>, <span class="dt">addl=</span><span class="dv">3</span>) <span class="op">%&gt;%</span></span>
+<span id="cb65-3"><a href="events.html#cb65-3" aria-hidden="true"></a><span class="st">    </span><span class="kw">et</span>(<span class="dt">time=</span><span class="dv">6</span>, <span class="dt">evid=</span>reset) <span class="op">%&gt;%</span></span>
+<span id="cb65-4"><a href="events.html#cb65-4" aria-hidden="true"></a><span class="st">    </span><span class="kw">et</span>(<span class="kw">seq</span>(<span class="dv">0</span>, <span class="dv">24</span>, <span class="dt">length.out=</span><span class="dv">100</span>))</span>
+<span id="cb65-5"><a href="events.html#cb65-5" aria-hidden="true"></a></span>
+<span id="cb65-6"><a href="events.html#cb65-6" aria-hidden="true"></a>ev</span></code></pre></div>
+<pre><code>#&gt; ──────────────── EventTable with 102 records ───────────────
+#&gt; 
+#&gt;    2 dosing records (see x$get.dosing(); add with add.dosing or et)
+#&gt;    100 observation times (see x$get.sampling(); add with add.sampling or et)
+#&gt;    multiple doses in `addl` columns, expand with x$expand(); or etExpand(x)
+#&gt; ── First part of x: ────────────────────────────────────────
+#&gt; # A tibble: 102 x 5
+#&gt;         time   amt    ii  addl evid         
+#&gt;          [h] &lt;dbl&gt;   [h] &lt;int&gt; &lt;evid&gt;       
+#&gt;  1 0.0000000    NA    NA    NA 0:Observation
+#&gt;  2 0.0000000 10000    12     3 1:Dose (Add) 
+#&gt;  3 0.2424242    NA    NA    NA 0:Observation
+#&gt;  4 0.4848485    NA    NA    NA 0:Observation
+#&gt;  5 0.7272727    NA    NA    NA 0:Observation
+#&gt;  6 0.9696970    NA    NA    NA 0:Observation
+#&gt;  7 1.2121212    NA    NA    NA 0:Observation
+#&gt;  8 1.4545455    NA    NA    NA 0:Observation
+#&gt;  9 1.6969697    NA    NA    NA 0:Observation
+#&gt; 10 1.9393939    NA    NA    NA 0:Observation
+#&gt; # … with 92 more rows</code></pre>
+<p>The solving show what happens in this system when the system is reset at 6 hours post-dose.</p>
+<div class="sourceCode" id="cb67"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb67-1"><a href="events.html#cb67-1" aria-hidden="true"></a><span class="kw">rxSolve</span>(m1, ev) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">plot</span>(depot,C2, eff)</span></code></pre></div>
+<p><img src="RxODE-manual_files/figure-html/unnamed-chunk-56-1.png" width="672" /></p>
+<p>You can see all the compartments are reset to their initial values.
+The next dose start the dosing cycle over.</p>
+<div class="sourceCode" id="cb68"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb68-1"><a href="events.html#cb68-1" aria-hidden="true"></a>ev &lt;-<span class="st"> </span><span class="kw">et</span>(<span class="dt">timeUnits=</span><span class="st">&quot;hr&quot;</span>) <span class="op">%&gt;%</span></span>
+<span id="cb68-2"><a href="events.html#cb68-2" aria-hidden="true"></a><span class="st">    </span><span class="kw">et</span>(<span class="dt">amt=</span><span class="dv">10000</span>, <span class="dt">ii=</span><span class="dv">12</span>, <span class="dt">addl=</span><span class="dv">3</span>) <span class="op">%&gt;%</span></span>
+<span id="cb68-3"><a href="events.html#cb68-3" aria-hidden="true"></a><span class="st">    </span><span class="kw">et</span>(<span class="dt">time=</span><span class="dv">6</span>, <span class="dt">amt=</span><span class="dv">10000</span>, <span class="dt">evid=</span><span class="dv">4</span>) <span class="op">%&gt;%</span></span>
+<span id="cb68-4"><a href="events.html#cb68-4" aria-hidden="true"></a><span class="st">    </span><span class="kw">et</span>(<span class="kw">seq</span>(<span class="dv">0</span>, <span class="dv">24</span>, <span class="dt">length.out=</span><span class="dv">100</span>))</span>
+<span id="cb68-5"><a href="events.html#cb68-5" aria-hidden="true"></a></span>
+<span id="cb68-6"><a href="events.html#cb68-6" aria-hidden="true"></a>ev</span></code></pre></div>
+<pre><code>#&gt; ──────────────── EventTable with 102 records ───────────────
+#&gt; 
+#&gt;    2 dosing records (see x$get.dosing(); add with add.dosing or et)
+#&gt;    100 observation times (see x$get.sampling(); add with add.sampling or et)
+#&gt;    multiple doses in `addl` columns, expand with x$expand(); or etExpand(x)
+#&gt; ── First part of x: ────────────────────────────────────────
+#&gt; # A tibble: 102 x 5
+#&gt;         time   amt    ii  addl evid         
+#&gt;          [h] &lt;dbl&gt;   [h] &lt;int&gt; &lt;evid&gt;       
+#&gt;  1 0.0000000    NA    NA    NA 0:Observation
+#&gt;  2 0.0000000 10000    12     3 1:Dose (Add) 
+#&gt;  3 0.2424242    NA    NA    NA 0:Observation
+#&gt;  4 0.4848485    NA    NA    NA 0:Observation
+#&gt;  5 0.7272727    NA    NA    NA 0:Observation
+#&gt;  6 0.9696970    NA    NA    NA 0:Observation
+#&gt;  7 1.2121212    NA    NA    NA 0:Observation
+#&gt;  8 1.4545455    NA    NA    NA 0:Observation
+#&gt;  9 1.6969697    NA    NA    NA 0:Observation
+#&gt; 10 1.9393939    NA    NA    NA 0:Observation
+#&gt; # … with 92 more rows</code></pre>
+<p>In this case, the whole system is reset and the dose is given</p>
+<div class="sourceCode" id="cb70"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb70-1"><a href="events.html#cb70-1" aria-hidden="true"></a><span class="kw">rxSolve</span>(m1, ev) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">plot</span>(depot,C2, eff)</span></code></pre></div>
+<p><img src="RxODE-manual_files/figure-html/unnamed-chunk-58-1.png" width="672" /></p>
+</div>
+<div id="turning-off-compartments" class="section level2" number="6.5">
+<h2><span class="header-section-number">6.5</span> Turning off compartments</h2>
+<p>You may also turn off a compartment, which is similar to a reset event.</p>
+<div class="sourceCode" id="cb71"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb71-1"><a href="events.html#cb71-1" aria-hidden="true"></a>ev &lt;-<span class="st"> </span><span class="kw">et</span>(<span class="dt">timeUnits=</span><span class="st">&quot;hr&quot;</span>) <span class="op">%&gt;%</span></span>
+<span id="cb71-2"><a href="events.html#cb71-2" aria-hidden="true"></a><span class="st">    </span><span class="kw">et</span>(<span class="dt">amt=</span><span class="dv">10000</span>, <span class="dt">ii=</span><span class="dv">12</span>, <span class="dt">addl=</span><span class="dv">3</span>) <span class="op">%&gt;%</span></span>
+<span id="cb71-3"><a href="events.html#cb71-3" aria-hidden="true"></a><span class="st">    </span><span class="kw">et</span>(<span class="dt">time=</span><span class="dv">6</span>, <span class="dt">cmt=</span><span class="st">&quot;-depot&quot;</span>, <span class="dt">evid=</span><span class="dv">2</span>) <span class="op">%&gt;%</span></span>
+<span id="cb71-4"><a href="events.html#cb71-4" aria-hidden="true"></a><span class="st">    </span><span class="kw">et</span>(<span class="kw">seq</span>(<span class="dv">0</span>, <span class="dv">24</span>, <span class="dt">length.out=</span><span class="dv">100</span>))</span>
+<span id="cb71-5"><a href="events.html#cb71-5" aria-hidden="true"></a></span>
+<span id="cb71-6"><a href="events.html#cb71-6" aria-hidden="true"></a>ev</span></code></pre></div>
+<pre><code>#&gt; ──────────────── EventTable with 102 records ───────────────
+#&gt; 
+#&gt;    2 dosing records (see x$get.dosing(); add with add.dosing or et)
+#&gt;    100 observation times (see x$get.sampling(); add with add.sampling or et)
+#&gt;    multiple doses in `addl` columns, expand with x$expand(); or etExpand(x)
+#&gt; ── First part of x: ────────────────────────────────────────
+#&gt; # A tibble: 102 x 6
+#&gt;         time cmt         amt    ii  addl evid         
+#&gt;          [h] &lt;chr&gt;     &lt;dbl&gt;   [h] &lt;int&gt; &lt;evid&gt;       
+#&gt;  1 0.0000000 (obs)        NA    NA    NA 0:Observation
+#&gt;  2 0.0000000 (default) 10000    12     3 1:Dose (Add) 
+#&gt;  3 0.2424242 (obs)        NA    NA    NA 0:Observation
+#&gt;  4 0.4848485 (obs)        NA    NA    NA 0:Observation
+#&gt;  5 0.7272727 (obs)        NA    NA    NA 0:Observation
+#&gt;  6 0.9696970 (obs)        NA    NA    NA 0:Observation
+#&gt;  7 1.2121212 (obs)        NA    NA    NA 0:Observation
+#&gt;  8 1.4545455 (obs)        NA    NA    NA 0:Observation
+#&gt;  9 1.6969697 (obs)        NA    NA    NA 0:Observation
+#&gt; 10 1.9393939 (obs)        NA    NA    NA 0:Observation
+#&gt; # … with 92 more rows</code></pre>
+<p>Solving shows what this does in the system:</p>
+<div class="sourceCode" id="cb73"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb73-1"><a href="events.html#cb73-1" aria-hidden="true"></a><span class="kw">rxSolve</span>(m1, ev) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">plot</span>(depot,C2, eff)</span></code></pre></div>
+<p><img src="RxODE-manual_files/figure-html/unnamed-chunk-60-1.png" width="672" /></p>
+<p>In this case, the depot is turned off, and the depot compartment
+concentrations are set to the initial values but the other compartment
+concentrations/levels are not reset. When another dose to the depot is
+administered the depot compartment is turned back on.</p>
+<p>Note that a dose to a compartment only turns back on the compartment
+that was dosed. Hence if you turn off the effect compartment, it
+continues to be off after another dose to the depot.</p>
+<div class="sourceCode" id="cb74"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb74-1"><a href="events.html#cb74-1" aria-hidden="true"></a>ev &lt;-<span class="st"> </span><span class="kw">et</span>(<span class="dt">timeUnits=</span><span class="st">&quot;hr&quot;</span>) <span class="op">%&gt;%</span></span>
+<span id="cb74-2"><a href="events.html#cb74-2" aria-hidden="true"></a><span class="st">    </span><span class="kw">et</span>(<span class="dt">amt=</span><span class="dv">10000</span>, <span class="dt">ii=</span><span class="dv">12</span>, <span class="dt">addl=</span><span class="dv">3</span>) <span class="op">%&gt;%</span></span>
+<span id="cb74-3"><a href="events.html#cb74-3" aria-hidden="true"></a><span class="st">    </span><span class="kw">et</span>(<span class="dt">time=</span><span class="dv">6</span>, <span class="dt">cmt=</span><span class="st">&quot;-eff&quot;</span>, <span class="dt">evid=</span><span class="dv">2</span>) <span class="op">%&gt;%</span></span>
+<span id="cb74-4"><a href="events.html#cb74-4" aria-hidden="true"></a><span class="st">    </span><span class="kw">et</span>(<span class="kw">seq</span>(<span class="dv">0</span>, <span class="dv">24</span>, <span class="dt">length.out=</span><span class="dv">100</span>))</span>
+<span id="cb74-5"><a href="events.html#cb74-5" aria-hidden="true"></a></span>
+<span id="cb74-6"><a href="events.html#cb74-6" aria-hidden="true"></a><span class="kw">rxSolve</span>(m1, ev) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">plot</span>(depot,C2, eff)</span></code></pre></div>
+<p><img src="RxODE-manual_files/figure-html/unnamed-chunk-61-1.png" width="672" /></p>
+<p>To turn back on the compartment, a zero-dose to the compartment or a
+evid=2 with the compartment would be needed.</p>
+<div class="sourceCode" id="cb75"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb75-1"><a href="events.html#cb75-1" aria-hidden="true"></a>ev &lt;-<span class="st"> </span><span class="kw">et</span>(<span class="dt">timeUnits=</span><span class="st">&quot;hr&quot;</span>) <span class="op">%&gt;%</span></span>
+<span id="cb75-2"><a href="events.html#cb75-2" aria-hidden="true"></a><span class="st">    </span><span class="kw">et</span>(<span class="dt">amt=</span><span class="dv">10000</span>, <span class="dt">ii=</span><span class="dv">12</span>, <span class="dt">addl=</span><span class="dv">3</span>) <span class="op">%&gt;%</span></span>
+<span id="cb75-3"><a href="events.html#cb75-3" aria-hidden="true"></a><span class="st">    </span><span class="kw">et</span>(<span class="dt">time=</span><span class="dv">6</span>, <span class="dt">cmt=</span><span class="st">&quot;-eff&quot;</span>, <span class="dt">evid=</span><span class="dv">2</span>) <span class="op">%&gt;%</span></span>
+<span id="cb75-4"><a href="events.html#cb75-4" aria-hidden="true"></a><span class="st">    </span><span class="kw">et</span>(<span class="dt">time=</span><span class="dv">12</span>,<span class="dt">cmt=</span><span class="st">&quot;eff&quot;</span>,<span class="dt">evid=</span><span class="dv">2</span>) <span class="op">%&gt;%</span></span>
+<span id="cb75-5"><a href="events.html#cb75-5" aria-hidden="true"></a><span class="st">    </span><span class="kw">et</span>(<span class="kw">seq</span>(<span class="dv">0</span>, <span class="dv">24</span>, <span class="dt">length.out=</span><span class="dv">100</span>))</span>
+<span id="cb75-6"><a href="events.html#cb75-6" aria-hidden="true"></a></span>
+<span id="cb75-7"><a href="events.html#cb75-7" aria-hidden="true"></a><span class="kw">rxSolve</span>(m1, ev) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">plot</span>(depot,C2, eff)</span></code></pre></div>
+<p><img src="RxODE-manual_files/figure-html/unnamed-chunk-62-1.png" width="672" /></p>
+</div>
+<div id="classic-rxode-events" class="section level2" number="6.6">
+<h2><span class="header-section-number">6.6</span> Classic RxODE events</h2>
+<p>Originally RxODE supported compound event IDs; RxODE still supports
+these parameters, but it is often more useful to use the the normal
+NONMEM dataset standard that is used by many modeling tools like
+NONMEM, Monolix and nlmixr, described in the <a href="RxODE-event-types.html">RxODE event types</a> article.</p>
+<p>Classically, RxODE supported event coding in a single event id <code>evid</code> described in the following table.</p>
+<table>
+<colgroup>
+<col width="9%" />
+<col width="28%" />
+<col width="9%" />
+<col width="53%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>100+ cmt</th>
+<th>Infusion/Event Flag</th>
+<th>&lt;99 Cmt</th>
+<th>SS flag &amp; Turning of Compartment</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>100+ cmt</td>
+<td>0 = bolus dose</td>
+<td>&lt; 99 cmt</td>
+<td>1 = dose</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>1 = infusion (rate)</td>
+<td></td>
+<td>10 = Steady state 1 (equivalent to SS=1)</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>2 = infusion (dur)</td>
+<td></td>
+<td>20 = Steady state 2 (equivalent to SS=2)</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>6 = turn off modeled duration</td>
+<td></td>
+<td>30 = Turn off a compartment (equivalent to -CMT w/EVID=2)</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>7 = turn off modeled rate</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td>8 = turn on modeled duration</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>9 = turn on modeled rate</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td>4 = replace event</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>5 = multiply event</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>The classic EVID concatenate the numbers in the above table, so an
+infusion would to compartment 1 would be <code>10101</code> and an infusion to compartment 199 would be <code>119901</code>.</p>
+<p>EVID = 0 (observations), EVID=2 (other type event) and EVID=3 are all
+supported. Internally an EVID=9 is a non-observation event and makes
+sure the system is initialized to zero; EVID=9 should not be manually
+set. EVID 10-99 represents modeled time interventions, similar to
+NONMEM’s MTIME. This along with amount (amt) and time columns specify
+the events in the ODE system.</p>
+<p>For infusions specified with EVIDs &gt; 100 the amt column represents the rate value.</p>
+<p>For Infusion flags 1 and 2 <code>+amt</code> turn on the infusion to a specific
+compartment <code>-amt</code> turn off the infusion to a specific
+compartment. To specify a dose/duration you place the dosing records
+at the time the duration starts or stops.</p>
+<p>For modeled rate/duration infusion flags the on infusion flag must be followed by an off infusion record.</p>
+<p>These number are concatenated together to form a full RxODE event ID, as shown in the following examples:</p>
+<div id="bolus-dose-examples" class="section level3" number="6.6.1">
+<h3><span class="header-section-number">6.6.1</span> Bolus Dose Examples</h3>
+<p><em>A 100 bolus dose to compartment #1 at time 0</em></p>
+<table>
+<thead>
+<tr class="header">
+<th>time</th>
+<th>evid</th>
+<th>amt</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>0</td>
+<td>101</td>
+<td>100</td>
+</tr>
+<tr class="even">
+<td>0.5</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td>1</td>
+<td>0</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+<p><em>A 100 bolus dose to compartment #99 at time 0</em></p>
+<table>
+<thead>
+<tr class="header">
+<th>time</th>
+<th>evid</th>
+<th>amt</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>0</td>
+<td>9901</td>
+<td>100</td>
+</tr>
+<tr class="even">
+<td>0.5</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td>1</td>
+<td>0</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+<p><em>A 100 bolus dose to compartment #199 at time 0</em></p>
+<table>
+<thead>
+<tr class="header">
+<th>time</th>
+<th>evid</th>
+<th>amt</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>0</td>
+<td>109901</td>
+<td>100</td>
+</tr>
+<tr class="even">
+<td>0.5</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td>1</td>
+<td>0</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="infusion-event-examples" class="section level3" number="6.6.2">
+<h3><span class="header-section-number">6.6.2</span> Infusion Event Examples</h3>
+<p>Bolus infusion with rate 50 to compartment 1 for 1.5 hr, (modeled
+bioavailability changes duration of infusion)</p>
+<table>
+<thead>
+<tr class="header">
+<th>time</th>
+<th>evid</th>
+<th>amt</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>0</td>
+<td>10101</td>
+<td>50</td>
+</tr>
+<tr class="even">
+<td>0.5</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td>1</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr class="even">
+<td>1.5</td>
+<td>10101</td>
+<td>-50</td>
+</tr>
+</tbody>
+</table>
+<p>Bolus infusion with rate 50 to compartment 1 for 1.5 hr (modeled
+bioavailability changes rate of infusion)</p>
+<table>
+<thead>
+<tr class="header">
+<th>time</th>
+<th>evid</th>
+<th>amt</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>0</td>
+<td>20101</td>
+<td>50</td>
+</tr>
+<tr class="even">
+<td>0.5</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td>1</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr class="even">
+<td>1.5</td>
+<td>20101</td>
+<td>-50</td>
+</tr>
+</tbody>
+</table>
+<p>Modeled rate with amount of 50</p>
+<table>
+<thead>
+<tr class="header">
+<th>time</th>
+<th>evid</th>
+<th>amt</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>0</td>
+<td>90101</td>
+<td>50</td>
+</tr>
+<tr class="even">
+<td>0</td>
+<td>70101</td>
+<td>50</td>
+</tr>
+<tr class="odd">
+<td>0.5</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td>0</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+<p>Modeled duration with amount of 50</p>
+<table>
+<thead>
+<tr class="header">
+<th>time</th>
+<th>evid</th>
+<th>amt</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>0</td>
+<td>80101</td>
+<td>50</td>
+</tr>
+<tr class="even">
+<td>0</td>
+<td>60101</td>
+<td>50</td>
+</tr>
+<tr class="odd">
+<td>0.5</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td>0</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="steady-state-for-classic-rxode-evid-example" class="section level3" number="6.6.3">
+<h3><span class="header-section-number">6.6.3</span> Steady State for classic RxODE EVID example</h3>
+<p>Steady state dose to cmt 1</p>
+<table>
+<thead>
+<tr class="header">
+<th>time</th>
+<th>evid</th>
+<th>amt</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>0</td>
+<td>110</td>
+<td>50</td>
+</tr>
+</tbody>
+</table>
+<p>Steady State with super-positioning principle for am 50 and pm 100 dose</p>
+<table>
+<thead>
+<tr class="header">
+<th>time</th>
+<th>evid</th>
+<th>amt</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>0</td>
+<td>110</td>
+<td>50</td>
+</tr>
+<tr class="even">
+<td>12</td>
+<td>120</td>
+<td>100</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="turning-off-a-compartment-with-classic-rxode-evid" class="section level3" number="6.6.4">
+<h3><span class="header-section-number">6.6.4</span> Turning off a compartment with classic RxODE EVID</h3>
+<p>Turn off the first compartment at time 12</p>
+<table>
+<thead>
+<tr class="header">
+<th>time</th>
+<th>evid</th>
+<th>amt</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>0</td>
+<td>110</td>
+<td>50</td>
+</tr>
+<tr class="even">
+<td>12</td>
+<td>130</td>
+<td>NA</td>
+</tr>
+</tbody>
+</table>
+<p>Event coding in RxODE is encoded in a single event number <code>evid</code>. For
+compartments under 100, this is coded as:</p>
+<ul>
+<li>This event is <code>0</code> for observation events.</li>
+<li>For a specified compartment a bolus dose is defined as:
+<ul>
+<li>100*(Compartment Number) + 1</li>
+<li>The dose is then captured in the <code>amt</code></li>
+</ul></li>
+<li>For IV bolus doses the event is defined as:
+<ul>
+<li>10000 + 100*(Compartment Number) + 1</li>
+<li>The infusion rate is captured in the <code>amt</code> column</li>
+<li>The infusion is turned off by subtracting <code>amt</code> with the same
+<code>evid</code> at the stop of the infusion.</li>
+</ul></li>
+</ul>
+<p>For compartments greater or equal to 100, the 100s place and above
+digits are transferred to the 100,000th place digit. For doses to the
+99th compartment the <code>evid</code> for a bolus dose would be <code>9901</code> and the
+<code>evid</code> for an infusion would be <code>19901</code>. For a bolus dose to the
+<code>199</code>th compartment the <code>evid</code> for the bolus dose would be
+<code>109901</code>. An infusion dosing record for the <code>199</code>th compartment would
+be <code>119901</code>.</p>
+
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="syntax.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["RxODE-manual.pdf"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>
