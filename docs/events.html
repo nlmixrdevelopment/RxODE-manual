@@ -33,7 +33,7 @@
   
 <link rel="prev" href="syntax.html"/>
 <link rel="next" href="et.html"/>
-<script src="libs/header-attrs-2.5/header-attrs.js"></script>
+<script src="libs/header-attrs-2.6/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -52,8 +52,6 @@
 
 
 <script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
-<link href="libs/anchor-sections-1.0/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0/anchor-sections.js"></script>
 
 
 <style type="text/css">
@@ -564,9 +562,12 @@ in linear kinetics to get steady state nonstandard dosing
 <span id="cb63-8"><a href="events.html#cb63-8" aria-hidden="true"></a><span class="kw">library</span>(ggplot2)</span>
 <span id="cb63-9"><a href="events.html#cb63-9" aria-hidden="true"></a></span>
 <span id="cb63-10"><a href="events.html#cb63-10" aria-hidden="true"></a><span class="kw">rxSolve</span>(m1, ev,<span class="dt">maxsteps=</span><span class="dv">10000</span>) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">plot</span>(C2) <span class="op">+</span></span>
-<span id="cb63-11"><a href="events.html#cb63-11" aria-hidden="true"></a><span class="st">    </span><span class="kw">annotate</span>(<span class="st">&quot;rect&quot;</span>, <span class="dt">xmin=</span><span class="dv">0</span>, <span class="dt">xmax=</span><span class="dv">24</span>, <span class="dt">ymin=</span><span class="op">-</span><span class="ot">Inf</span>, <span class="dt">ymax=</span><span class="ot">Inf</span>, <span class="dt">alpha=</span><span class="fl">0.2</span>) <span class="op">+</span></span>
-<span id="cb63-12"><a href="events.html#cb63-12" aria-hidden="true"></a><span class="st">    </span><span class="kw">annotate</span>(<span class="st">&quot;text&quot;</span>, <span class="dt">x=</span><span class="fl">12.5</span>, <span class="dt">y=</span><span class="dv">7</span>, <span class="dt">label=</span><span class="st">&quot;Initial Steady State Period&quot;</span>) <span class="op">+</span></span>
-<span id="cb63-13"><a href="events.html#cb63-13" aria-hidden="true"></a><span class="st">    </span><span class="kw">annotate</span>(<span class="st">&quot;text&quot;</span>, <span class="dt">x=</span><span class="dv">44</span>,   <span class="dt">y=</span><span class="dv">7</span>, <span class="dt">label=</span><span class="st">&quot;Steady State AM/PM dosing&quot;</span>)</span></code></pre></div>
+<span id="cb63-11"><a href="events.html#cb63-11" aria-hidden="true"></a><span class="st">  </span><span class="kw">annotate</span>(<span class="st">&quot;rect&quot;</span>, <span class="dt">xmin=</span><span class="dv">0</span>, <span class="dt">xmax=</span><span class="dv">24</span>, <span class="dt">ymin=</span><span class="op">-</span><span class="ot">Inf</span>, <span class="dt">ymax=</span><span class="ot">Inf</span>,</span>
+<span id="cb63-12"><a href="events.html#cb63-12" aria-hidden="true"></a>           <span class="dt">alpha=</span><span class="fl">0.2</span>) <span class="op">+</span></span>
+<span id="cb63-13"><a href="events.html#cb63-13" aria-hidden="true"></a><span class="st">  </span><span class="kw">annotate</span>(<span class="st">&quot;text&quot;</span>, <span class="dt">x=</span><span class="fl">12.5</span>, <span class="dt">y=</span><span class="dv">7</span>,</span>
+<span id="cb63-14"><a href="events.html#cb63-14" aria-hidden="true"></a>           <span class="dt">label=</span><span class="st">&quot;Initial Steady State Period&quot;</span>) <span class="op">+</span></span>
+<span id="cb63-15"><a href="events.html#cb63-15" aria-hidden="true"></a><span class="st">  </span><span class="kw">annotate</span>(<span class="st">&quot;text&quot;</span>, <span class="dt">x=</span><span class="dv">44</span>,   <span class="dt">y=</span><span class="dv">7</span>,</span>
+<span id="cb63-16"><a href="events.html#cb63-16" aria-hidden="true"></a>           <span class="dt">label=</span><span class="st">&quot;Steady State AM/PM dosing&quot;</span>)</span></code></pre></div>
 <p><img src="RxODE-manual_files/figure-html/unnamed-chunk-55-1.png" width="672" /></p>
 <p>You can see that it takes a full dose cycle to reach the true complex
 steady state dosing.</p>

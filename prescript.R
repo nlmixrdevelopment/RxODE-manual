@@ -85,3 +85,7 @@ w <- which(regexpr("below", l2) != -1)
 l2 <- l2[1:w]
 
 writeLines(c(l2, "", "", l), "07-solving.Rmd")
+
+for (f in list.files("RxODE/vignettes/",pattern="\\.png$")) {
+  file.copy(file.path("RxODE/vignettes/", f), f)
+}

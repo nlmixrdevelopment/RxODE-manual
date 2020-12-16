@@ -33,7 +33,7 @@
   
 <link rel="prev" href="et.html"/>
 <link rel="next" href="output.html"/>
-<script src="libs/header-attrs-2.5/header-attrs.js"></script>
+<script src="libs/header-attrs-2.6/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -52,8 +52,6 @@
 
 
 <script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
-<link href="libs/anchor-sections-1.0/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0/anchor-sections.js"></script>
 
 
 <style type="text/css">
@@ -150,11 +148,15 @@ yes
             <section class="normal" id="section-">
 <div id="solve" class="section level1" number="8">
 <h1><span class="header-section-number">Chapter 8</span> Solving and solving options</h1>
-<p>In general, ODEs are solved using a combination of:
-- A compiled model specification from <code>RxODE()</code>, specified with <code>object=</code>
-- Input parameters, specified with <code>params=</code> (and could be blank)
-- Input data or event table, specified with <code>events=</code>
-- Initial conditions, specified by <code>inits=</code> (and possibly in the model itself by <code>state(0)=</code>)</p>
+<p>In general, ODEs are solved using a combination of:</p>
+<ul>
+<li><p>A compiled model specification from <code>RxODE()</code>, specified with
+<code>object=</code></p></li>
+<li><p>Input parameters, specified with <code>params=</code> (and could be blank)</p></li>
+<li><p>Input data or event table, specified with <code>events=</code></p></li>
+<li><p>Initial conditions, specified by <code>inits=</code> (and possibly in the model
+itself by <code>state(0)=</code>)</p></li>
+</ul>
 <p>The solving options are given in the sections below:</p>
 <div id="general-solving-options" class="section level2" number="8.1">
 <h2><span class="header-section-number">8.1</span> General Solving Options</h2>

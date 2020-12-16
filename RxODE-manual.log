@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.12.16)  16 DEC 2020 07:05
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.12.16)  16 DEC 2020 11:38
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -752,7 +752,7 @@ LaTeX Font Info:    Font shape `MDB/mdput/m/n' will be
 LaTeX Font Info:    Font shape `MDB/mdput/m/n' will be
 (Font)              scaled to size 4.70001pt on input line 3.
 [3]
-Overfull \hbox (0.37598pt too wide) detected at line 158
+Overfull \hbox (0.37598pt too wide) detected at line 160
  []\T1/mdput/m/n/10 100
  []
 
@@ -840,7 +840,7 @@ Overfull \hbox (1.499pt too wide) in paragraph at lines 592--592
  []
 
 [14]
-<RxODE-manual_files/figure-latex/intro-central-1.pdf, id=344, 469.755pt x 325.2
+<RxODE-manual_files/figure-latex/intro-central-1.pdf, id=349, 469.755pt x 325.2
 15pt>
 File: RxODE-manual_files/figure-latex/intro-central-1.pdf Graphic file (type pd
 f)
@@ -848,7 +848,7 @@ f)
 Package pdftex.def Info: RxODE-manual_files/figure-latex/intro-central-1.pdf  u
 sed on input line 604.
 (pdftex.def)             Requested size: 344.997pt x 238.84406pt.
-<RxODE-manual_files/figure-latex/intro-effect-1.pdf, id=345, 469.755pt x 325.21
+<RxODE-manual_files/figure-latex/intro-effect-1.pdf, id=350, 469.755pt x 325.21
 5pt>
 File: RxODE-manual_files/figure-latex/intro-effect-1.pdf Graphic file (type pdf
 )
@@ -1100,7 +1100,7 @@ l\TS1/lmtt/m/n/10 ` \T1/lmtt/m/n/10 columns, expand with x$expand(); or etExpan
 d(x)[] 
  []
 
-<RxODE-manual_files/figure-latex/unnamed-chunk-40-1.pdf, id=461, 469.755pt x 32
+<RxODE-manual_files/figure-latex/unnamed-chunk-40-1.pdf, id=466, 469.755pt x 32
 5.215pt>
 File: RxODE-manual_files/figure-latex/unnamed-chunk-40-1.pdf Graphic file (type
  pdf)
@@ -1131,7 +1131,7 @@ d(x)[]
  []
 
 [34]
-<RxODE-manual_files/figure-latex/unnamed-chunk-42-1.pdf, id=480, 469.755pt x 32
+<RxODE-manual_files/figure-latex/unnamed-chunk-42-1.pdf, id=485, 469.755pt x 32
 5.215pt>
 File: RxODE-manual_files/figure-latex/unnamed-chunk-42-1.pdf Graphic file (type
  pdf)
@@ -1159,7 +1159,7 @@ d(x)[]
  []
 
 [35 <./RxODE-manual_files/figure-latex/unnamed-chunk-42-1.pdf>]
-<RxODE-manual_files/figure-latex/unnamed-chunk-44-1.pdf, id=491, 469.755pt x 32
+<RxODE-manual_files/figure-latex/unnamed-chunk-44-1.pdf, id=496, 469.755pt x 32
 5.215pt>
 File: RxODE-manual_files/figure-latex/unnamed-chunk-44-1.pdf Graphic file (type
  pdf)
@@ -1167,7 +1167,7 @@ File: RxODE-manual_files/figure-latex/unnamed-chunk-44-1.pdf Graphic file (type
 Package pdftex.def Info: RxODE-manual_files/figure-latex/unnamed-chunk-44-1.pdf
   used on input line 1597.
 (pdftex.def)             Requested size: 344.997pt x 238.84406pt.
-<RxODE-manual_files/figure-latex/unnamed-chunk-45-1.pdf, id=492, 469.755pt x 32
+<RxODE-manual_files/figure-latex/unnamed-chunk-45-1.pdf, id=497, 469.755pt x 32
 5.215pt>
 File: RxODE-manual_files/figure-latex/unnamed-chunk-45-1.pdf Graphic file (type
  pdf)
@@ -1179,7 +1179,7 @@ Package pdftex.def Info: RxODE-manual_files/figure-latex/unnamed-chunk-45-1.pdf
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 [36 <./RxODE-manual_files/figure-latex/unnamed-chunk-44-1.pdf>]
-<RxODE-manual_files/figure-latex/unnamed-chunk-46-1.pdf, id=503, 469.755pt x 32
+<RxODE-manual_files/figure-latex/unnamed-chunk-46-1.pdf, id=508, 469.755pt x 32
 5.215pt>
 File: RxODE-manual_files/figure-latex/unnamed-chunk-46-1.pdf Graphic file (type
  pdf)
@@ -1189,7 +1189,7 @@ Package pdftex.def Info: RxODE-manual_files/figure-latex/unnamed-chunk-46-1.pdf
 (pdftex.def)             Requested size: 344.997pt x 238.84406pt.
 [37 <./RxODE-manual_files/figure-latex/unnamed-chunk-45-1.pdf> <./RxODE-manual_
 files/figure-latex/unnamed-chunk-46-1.pdf>]
-<RxODE-manual_files/figure-latex/unnamed-chunk-48-1.pdf, id=521, 469.755pt x 32
+<RxODE-manual_files/figure-latex/unnamed-chunk-48-1.pdf, id=526, 469.755pt x 32
 5.215pt>
 File: RxODE-manual_files/figure-latex/unnamed-chunk-48-1.pdf Graphic file (type
  pdf)
@@ -1216,7 +1216,7 @@ l\TS1/lmtt/m/n/10 ` \T1/lmtt/m/n/10 columns, expand with x$expand(); or etExpan
 d(x)[] 
  []
 
-<RxODE-manual_files/figure-latex/unnamed-chunk-50-1.pdf, id=533, 469.755pt x 32
+<RxODE-manual_files/figure-latex/unnamed-chunk-50-1.pdf, id=538, 469.755pt x 32
 5.215pt>
 File: RxODE-manual_files/figure-latex/unnamed-chunk-50-1.pdf Graphic file (type
  pdf)
@@ -1247,7 +1247,7 @@ d(x)[]
  []
 
 [40 <./RxODE-manual_files/figure-latex/unnamed-chunk-50-1.pdf>]
-<RxODE-manual_files/figure-latex/unnamed-chunk-52-1.pdf, id=549, 469.755pt x 32
+<RxODE-manual_files/figure-latex/unnamed-chunk-52-1.pdf, id=554, 469.755pt x 32
 5.215pt>
 File: RxODE-manual_files/figure-latex/unnamed-chunk-52-1.pdf Graphic file (type
  pdf)
@@ -1268,7 +1268,7 @@ dd.sampling or et)[]
  []
 
 [41 <./RxODE-manual_files/figure-latex/unnamed-chunk-52-1.pdf>]
-<RxODE-manual_files/figure-latex/unnamed-chunk-54-1.pdf, id=562, 469.755pt x 32
+<RxODE-manual_files/figure-latex/unnamed-chunk-54-1.pdf, id=567, 469.755pt x 32
 5.215pt>
 File: RxODE-manual_files/figure-latex/unnamed-chunk-54-1.pdf Graphic file (type
  pdf)
@@ -1277,128 +1277,128 @@ Package pdftex.def Info: RxODE-manual_files/figure-latex/unnamed-chunk-54-1.pdf
   used on input line 1801.
 (pdftex.def)             Requested size: 344.997pt x 238.84406pt.
 [42 <./RxODE-manual_files/figure-latex/unnamed-chunk-54-1.pdf>]
-<RxODE-manual_files/figure-latex/unnamed-chunk-55-1.pdf, id=575, 469.755pt x 32
+<RxODE-manual_files/figure-latex/unnamed-chunk-55-1.pdf, id=580, 469.755pt x 32
 5.215pt>
 File: RxODE-manual_files/figure-latex/unnamed-chunk-55-1.pdf Graphic file (type
  pdf)
 <use RxODE-manual_files/figure-latex/unnamed-chunk-55-1.pdf>
 Package pdftex.def Info: RxODE-manual_files/figure-latex/unnamed-chunk-55-1.pdf
-  used on input line 1838.
+  used on input line 1841.
 (pdftex.def)             Requested size: 344.997pt x 238.84406pt.
 [43 <./RxODE-manual_files/figure-latex/unnamed-chunk-55-1.pdf>]
-<RxODE-manual_files/figure-latex/unnamed-chunk-56-1.pdf, id=591, 469.755pt x 32
+<RxODE-manual_files/figure-latex/unnamed-chunk-56-1.pdf, id=596, 469.755pt x 32
 5.215pt>
 File: RxODE-manual_files/figure-latex/unnamed-chunk-56-1.pdf Graphic file (type
  pdf)
 <use RxODE-manual_files/figure-latex/unnamed-chunk-56-1.pdf>
 Package pdftex.def Info: RxODE-manual_files/figure-latex/unnamed-chunk-56-1.pdf
-  used on input line 1896.
+  used on input line 1899.
 (pdftex.def)             Requested size: 344.997pt x 238.84406pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 [44]
-Overfull \hbox (22.49893pt too wide) in paragraph at lines 1939--1939
+Overfull \hbox (22.49893pt too wide) in paragraph at lines 1942--1942
 []\T1/lmtt/m/n/10 #>    2 dosing records (see x$get.dosing(); add with add.dosi
 ng or et)[] 
  []
 
 
-Overfull \hbox (69.7488pt too wide) in paragraph at lines 1939--1939
+Overfull \hbox (69.7488pt too wide) in paragraph at lines 1942--1942
 []\T1/lmtt/m/n/10 #>    100 observation times (see x$get.sampling(); add with a
 dd.sampling or et)[] 
  []
 
 
-Overfull \hbox (64.49881pt too wide) in paragraph at lines 1939--1939
+Overfull \hbox (64.49881pt too wide) in paragraph at lines 1942--1942
 []\T1/lmtt/m/n/10 #>    multiple doses in \TS1/lmtt/m/n/10 `\T1/lmtt/m/n/10 add
 l\TS1/lmtt/m/n/10 ` \T1/lmtt/m/n/10 columns, expand with x$expand(); or etExpan
 d(x)[] 
  []
 
 [45 <./RxODE-manual_files/figure-latex/unnamed-chunk-56-1.pdf>]
-<RxODE-manual_files/figure-latex/unnamed-chunk-58-1.pdf, id=608, 469.755pt x 32
+<RxODE-manual_files/figure-latex/unnamed-chunk-58-1.pdf, id=613, 469.755pt x 32
 5.215pt>
 File: RxODE-manual_files/figure-latex/unnamed-chunk-58-1.pdf Graphic file (type
  pdf)
 <use RxODE-manual_files/figure-latex/unnamed-chunk-58-1.pdf>
 Package pdftex.def Info: RxODE-manual_files/figure-latex/unnamed-chunk-58-1.pdf
-  used on input line 1949.
+  used on input line 1952.
 (pdftex.def)             Requested size: 344.997pt x 238.84406pt.
 [46 <./RxODE-manual_files/figure-latex/unnamed-chunk-58-1.pdf>]
-Overfull \hbox (22.49893pt too wide) in paragraph at lines 1986--1986
+Overfull \hbox (22.49893pt too wide) in paragraph at lines 1989--1989
 []\T1/lmtt/m/n/10 #>    2 dosing records (see x$get.dosing(); add with add.dosi
 ng or et)[] 
  []
 
 
-Overfull \hbox (69.7488pt too wide) in paragraph at lines 1986--1986
+Overfull \hbox (69.7488pt too wide) in paragraph at lines 1989--1989
 []\T1/lmtt/m/n/10 #>    100 observation times (see x$get.sampling(); add with a
 dd.sampling or et)[] 
  []
 
 
-Overfull \hbox (64.49881pt too wide) in paragraph at lines 1986--1986
+Overfull \hbox (64.49881pt too wide) in paragraph at lines 1989--1989
 []\T1/lmtt/m/n/10 #>    multiple doses in \TS1/lmtt/m/n/10 `\T1/lmtt/m/n/10 add
 l\TS1/lmtt/m/n/10 ` \T1/lmtt/m/n/10 columns, expand with x$expand(); or etExpan
 d(x)[] 
  []
 
-<RxODE-manual_files/figure-latex/unnamed-chunk-60-1.pdf, id=619, 469.755pt x 32
+<RxODE-manual_files/figure-latex/unnamed-chunk-60-1.pdf, id=624, 469.755pt x 32
 5.215pt>
 File: RxODE-manual_files/figure-latex/unnamed-chunk-60-1.pdf Graphic file (type
  pdf)
 <use RxODE-manual_files/figure-latex/unnamed-chunk-60-1.pdf>
 Package pdftex.def Info: RxODE-manual_files/figure-latex/unnamed-chunk-60-1.pdf
-  used on input line 1996.
+  used on input line 1999.
 (pdftex.def)             Requested size: 344.997pt x 238.84406pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 [47]
-Overfull \hbox (22.49893pt too wide) in paragraph at lines 2035--2035
+Overfull \hbox (22.49893pt too wide) in paragraph at lines 2038--2038
 []\T1/lmtt/m/n/10 #>    2 dosing records (see x$get.dosing(); add with add.dosi
 ng or et)[] 
  []
 
 
-Overfull \hbox (69.7488pt too wide) in paragraph at lines 2035--2035
+Overfull \hbox (69.7488pt too wide) in paragraph at lines 2038--2038
 []\T1/lmtt/m/n/10 #>    100 observation times (see x$get.sampling(); add with a
 dd.sampling or et)[] 
  []
 
 
-Overfull \hbox (64.49881pt too wide) in paragraph at lines 2035--2035
+Overfull \hbox (64.49881pt too wide) in paragraph at lines 2038--2038
 []\T1/lmtt/m/n/10 #>    multiple doses in \TS1/lmtt/m/n/10 `\T1/lmtt/m/n/10 add
 l\TS1/lmtt/m/n/10 ` \T1/lmtt/m/n/10 columns, expand with x$expand(); or etExpan
 d(x)[] 
  []
 
 [48 <./RxODE-manual_files/figure-latex/unnamed-chunk-60-1.pdf>]
-<RxODE-manual_files/figure-latex/unnamed-chunk-62-1.pdf, id=635, 469.755pt x 32
+<RxODE-manual_files/figure-latex/unnamed-chunk-62-1.pdf, id=640, 469.755pt x 32
 5.215pt>
 File: RxODE-manual_files/figure-latex/unnamed-chunk-62-1.pdf Graphic file (type
  pdf)
 <use RxODE-manual_files/figure-latex/unnamed-chunk-62-1.pdf>
 Package pdftex.def Info: RxODE-manual_files/figure-latex/unnamed-chunk-62-1.pdf
-  used on input line 2045.
+  used on input line 2048.
 (pdftex.def)             Requested size: 344.997pt x 238.84406pt.
 [49 <./RxODE-manual_files/figure-latex/unnamed-chunk-62-1.pdf>]
-<RxODE-manual_files/figure-latex/unnamed-chunk-63-1.pdf, id=647, 469.755pt x 32
+<RxODE-manual_files/figure-latex/unnamed-chunk-63-1.pdf, id=652, 469.755pt x 32
 5.215pt>
 File: RxODE-manual_files/figure-latex/unnamed-chunk-63-1.pdf Graphic file (type
  pdf)
 <use RxODE-manual_files/figure-latex/unnamed-chunk-63-1.pdf>
 Package pdftex.def Info: RxODE-manual_files/figure-latex/unnamed-chunk-63-1.pdf
-  used on input line 2067.
+  used on input line 2070.
 (pdftex.def)             Requested size: 344.997pt x 238.84406pt.
-<RxODE-manual_files/figure-latex/unnamed-chunk-64-1.pdf, id=648, 469.755pt x 32
+<RxODE-manual_files/figure-latex/unnamed-chunk-64-1.pdf, id=653, 469.755pt x 32
 5.215pt>
 File: RxODE-manual_files/figure-latex/unnamed-chunk-64-1.pdf Graphic file (type
  pdf)
 <use RxODE-manual_files/figure-latex/unnamed-chunk-64-1.pdf>
 Package pdftex.def Info: RxODE-manual_files/figure-latex/unnamed-chunk-64-1.pdf
-  used on input line 2084.
+  used on input line 2087.
 (pdftex.def)             Requested size: 344.997pt x 238.84406pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -1412,25 +1412,25 @@ Overfull \vbox (7.86336pt too high) has occurred while \output is active []
 ]
 Chapter 7.
 
-Overfull \hbox (22.49893pt too wide) in paragraph at lines 2421--2421
+Overfull \hbox (22.49893pt too wide) in paragraph at lines 2424--2424
 []\T1/lmtt/m/n/10 #>    0 dosing records (see x$get.dosing(); add with add.dosi
 ng or et)[] 
  []
 
 
-Overfull \hbox (59.24883pt too wide) in paragraph at lines 2421--2421
+Overfull \hbox (59.24883pt too wide) in paragraph at lines 2424--2424
 []\T1/lmtt/m/n/10 #>    0 observation times (see x$get.sampling(); add with add
 .sampling or et)[] 
  []
 
 
-Overfull \hbox (22.49893pt too wide) in paragraph at lines 2436--2436
+Overfull \hbox (22.49893pt too wide) in paragraph at lines 2439--2439
 []\T1/lmtt/m/n/10 #>    0 dosing records (see x$get.dosing(); add with add.dosi
 ng or et)[] 
  []
 
 
-Overfull \hbox (59.24883pt too wide) in paragraph at lines 2436--2436
+Overfull \hbox (59.24883pt too wide) in paragraph at lines 2439--2439
 []\T1/lmtt/m/n/10 #>    0 observation times (see x$get.sampling(); add with add
 .sampling or et)[] 
  []
@@ -1439,319 +1439,326 @@ Overfull \hbox (59.24883pt too wide) in paragraph at lines 2436--2436
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 [58]
-Overfull \hbox (22.49893pt too wide) in paragraph at lines 2547--2547
+Overfull \hbox (22.49893pt too wide) in paragraph at lines 2551--2551
 []\T1/lmtt/m/n/10 #>    2 dosing records (see x$get.dosing(); add with add.dosi
 ng or et)[] 
  []
 
 
-Overfull \hbox (59.24883pt too wide) in paragraph at lines 2547--2547
+Overfull \hbox (59.24883pt too wide) in paragraph at lines 2551--2551
 []\T1/lmtt/m/n/10 #>    0 observation times (see x$get.sampling(); add with add
 .sampling or et)[] 
  []
 
 
-Overfull \hbox (64.49881pt too wide) in paragraph at lines 2547--2547
+Overfull \hbox (64.49881pt too wide) in paragraph at lines 2551--2551
 []\T1/lmtt/m/n/10 #>    multiple doses in \TS1/lmtt/m/n/10 `\T1/lmtt/m/n/10 add
 l\TS1/lmtt/m/n/10 ` \T1/lmtt/m/n/10 columns, expand with x$expand(); or etExpan
 d(x)[] 
  []
 
 [59]
-<RxODE-manual_files/figure-latex/unnamed-chunk-69-1.pdf, id=731, 469.755pt x 32
+<RxODE-manual_files/figure-latex/unnamed-chunk-69-1.pdf, id=736, 469.755pt x 32
 5.215pt>
 File: RxODE-manual_files/figure-latex/unnamed-chunk-69-1.pdf Graphic file (type
  pdf)
 <use RxODE-manual_files/figure-latex/unnamed-chunk-69-1.pdf>
 Package pdftex.def Info: RxODE-manual_files/figure-latex/unnamed-chunk-69-1.pdf
-  used on input line 2563.
+  used on input line 2567.
 (pdftex.def)             Requested size: 344.997pt x 238.84406pt.
 
-Overfull \hbox (22.49893pt too wide) in paragraph at lines 2588--2588
+Overfull \hbox (22.49893pt too wide) in paragraph at lines 2593--2593
 []\T1/lmtt/m/n/10 #>    1 dosing records (see x$get.dosing(); add with add.dosi
 ng or et)[] 
  []
 
 
-Overfull \hbox (59.24883pt too wide) in paragraph at lines 2588--2588
+Overfull \hbox (59.24883pt too wide) in paragraph at lines 2593--2593
 []\T1/lmtt/m/n/10 #>    0 observation times (see x$get.sampling(); add with add
 .sampling or et)[] 
  []
 
 
-Overfull \hbox (64.49881pt too wide) in paragraph at lines 2588--2588
+Overfull \hbox (64.49881pt too wide) in paragraph at lines 2593--2593
 []\T1/lmtt/m/n/10 #>    multiple doses in \TS1/lmtt/m/n/10 `\T1/lmtt/m/n/10 add
 l\TS1/lmtt/m/n/10 ` \T1/lmtt/m/n/10 columns, expand with x$expand(); or etExpan
 d(x)[] 
  []
 
 [60 <./RxODE-manual_files/figure-latex/unnamed-chunk-69-1.pdf>]
-<RxODE-manual_files/figure-latex/unnamed-chunk-71-1.pdf, id=742, 469.755pt x 32
+<RxODE-manual_files/figure-latex/unnamed-chunk-71-1.pdf, id=747, 469.755pt x 32
 5.215pt>
 File: RxODE-manual_files/figure-latex/unnamed-chunk-71-1.pdf Graphic file (type
  pdf)
 <use RxODE-manual_files/figure-latex/unnamed-chunk-71-1.pdf>
 Package pdftex.def Info: RxODE-manual_files/figure-latex/unnamed-chunk-71-1.pdf
-  used on input line 2598.
+  used on input line 2603.
 (pdftex.def)             Requested size: 344.997pt x 238.84406pt.
-
-Overfull \hbox (22.49893pt too wide) in paragraph at lines 2642--2642
+[61 <./RxODE-manual_files/figure-latex/unnamed-chunk-71-1.pdf>]
+Overfull \hbox (22.49893pt too wide) in paragraph at lines 2647--2647
 []\T1/lmtt/m/n/10 #>    1 dosing records (see x$get.dosing(); add with add.dosi
 ng or et)[] 
  []
 
-[61 <./RxODE-manual_files/figure-latex/unnamed-chunk-71-1.pdf>]
-Overfull \hbox (59.24883pt too wide) in paragraph at lines 2642--2642
+
+Overfull \hbox (59.24883pt too wide) in paragraph at lines 2647--2647
 []\T1/lmtt/m/n/10 #>    7 observation times (see x$get.sampling(); add with add
 .sampling or et)[] 
  []
 
 
-Overfull \hbox (64.49881pt too wide) in paragraph at lines 2642--2642
+Overfull \hbox (64.49881pt too wide) in paragraph at lines 2647--2647
 []\T1/lmtt/m/n/10 #>    multiple doses in \TS1/lmtt/m/n/10 `\T1/lmtt/m/n/10 add
 l\TS1/lmtt/m/n/10 ` \T1/lmtt/m/n/10 columns, expand with x$expand(); or etExpan
 d(x)[] 
  []
 
-<RxODE-manual_files/figure-latex/unnamed-chunk-73-1.pdf, id=755, 469.755pt x 32
+<RxODE-manual_files/figure-latex/unnamed-chunk-73-1.pdf, id=760, 469.755pt x 32
 5.215pt>
 File: RxODE-manual_files/figure-latex/unnamed-chunk-73-1.pdf Graphic file (type
  pdf)
 <use RxODE-manual_files/figure-latex/unnamed-chunk-73-1.pdf>
 Package pdftex.def Info: RxODE-manual_files/figure-latex/unnamed-chunk-73-1.pdf
-  used on input line 2652.
+  used on input line 2657.
 (pdftex.def)             Requested size: 344.997pt x 238.84406pt.
 [62 <./RxODE-manual_files/figure-latex/unnamed-chunk-73-1.pdf>]
-Overfull \hbox (22.49893pt too wide) in paragraph at lines 2684--2684
+Overfull \hbox (22.49893pt too wide) in paragraph at lines 2690--2690
 []\T1/lmtt/m/n/10 #>    1 dosing records (see x$get.dosing(); add with add.dosi
 ng or et)[] 
  []
 
 
-Overfull \hbox (59.24883pt too wide) in paragraph at lines 2684--2684
+Overfull \hbox (59.24883pt too wide) in paragraph at lines 2690--2690
 []\T1/lmtt/m/n/10 #>    7 observation times (see x$get.sampling(); add with add
 .sampling or et)[] 
  []
 
 
-Overfull \hbox (64.49881pt too wide) in paragraph at lines 2684--2684
+Overfull \hbox (64.49881pt too wide) in paragraph at lines 2690--2690
 []\T1/lmtt/m/n/10 #>    multiple doses in \TS1/lmtt/m/n/10 `\T1/lmtt/m/n/10 add
 l\TS1/lmtt/m/n/10 ` \T1/lmtt/m/n/10 columns, expand with x$expand(); or etExpan
 d(x)[] 
  []
 
-<RxODE-manual_files/figure-latex/unnamed-chunk-75-1.pdf, id=766, 469.755pt x 32
+<RxODE-manual_files/figure-latex/unnamed-chunk-75-1.pdf, id=771, 469.755pt x 32
 5.215pt>
 File: RxODE-manual_files/figure-latex/unnamed-chunk-75-1.pdf Graphic file (type
  pdf)
 <use RxODE-manual_files/figure-latex/unnamed-chunk-75-1.pdf>
 Package pdftex.def Info: RxODE-manual_files/figure-latex/unnamed-chunk-75-1.pdf
-  used on input line 2694.
+  used on input line 2700.
 (pdftex.def)             Requested size: 344.997pt x 238.84406pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 [63]
-Overfull \hbox (22.49893pt too wide) in paragraph at lines 2737--2737
+Overfull \hbox (22.49893pt too wide) in paragraph at lines 2744--2744
 []\T1/lmtt/m/n/10 #>    4 dosing records (see x$get.dosing(); add with add.dosi
 ng or et)[] 
  []
 
 
-Overfull \hbox (69.7488pt too wide) in paragraph at lines 2737--2737
+Overfull \hbox (69.7488pt too wide) in paragraph at lines 2744--2744
 []\T1/lmtt/m/n/10 #>    800 observation times (see x$get.sampling(); add with a
 dd.sampling or et)[] 
  []
 
 
-Overfull \hbox (64.49881pt too wide) in paragraph at lines 2737--2737
+Overfull \hbox (64.49881pt too wide) in paragraph at lines 2744--2744
 []\T1/lmtt/m/n/10 #>    multiple doses in \TS1/lmtt/m/n/10 `\T1/lmtt/m/n/10 add
 l\TS1/lmtt/m/n/10 ` \T1/lmtt/m/n/10 columns, expand with x$expand(); or etExpan
 d(x)[] 
  []
 
 [64 <./RxODE-manual_files/figure-latex/unnamed-chunk-75-1.pdf>]
-Overfull \hbox (74.99878pt too wide) in paragraph at lines 2753--2753
+Overfull \hbox (74.99878pt too wide) in paragraph at lines 2761--2761
 []\T1/lmtt/m/n/10 #> individual parameters are assumed to have the same order a
 s the event dataset[] 
  []
 
-<RxODE-manual_files/figure-latex/unnamed-chunk-77-1.pdf, id=782, 469.755pt x 32
+<RxODE-manual_files/figure-latex/unnamed-chunk-77-1.pdf, id=787, 469.755pt x 32
 5.215pt>
 File: RxODE-manual_files/figure-latex/unnamed-chunk-77-1.pdf Graphic file (type
  pdf)
 <use RxODE-manual_files/figure-latex/unnamed-chunk-77-1.pdf>
 Package pdftex.def Info: RxODE-manual_files/figure-latex/unnamed-chunk-77-1.pdf
-  used on input line 2755.
+  used on input line 2763.
 (pdftex.def)             Requested size: 344.997pt x 238.84406pt.
 [65 <./RxODE-manual_files/figure-latex/unnamed-chunk-77-1.pdf>]
-Overfull \hbox (27.74892pt too wide) in paragraph at lines 2803--2803
+Overfull \hbox (27.74892pt too wide) in paragraph at lines 2812--2812
 []\T1/lmtt/m/n/10 #>    16 dosing records (see x$get.dosing(); add with add.dos
 ing or et)[] 
  []
 
 
-Overfull \hbox (59.24883pt too wide) in paragraph at lines 2803--2803
+Overfull \hbox (59.24883pt too wide) in paragraph at lines 2812--2812
 []\T1/lmtt/m/n/10 #>    0 observation times (see x$get.sampling(); add with add
 .sampling or et)[] 
  []
 
 [66]
-Overfull \hbox (74.99878pt too wide) in paragraph at lines 2818--2818
+Overfull \hbox (74.99878pt too wide) in paragraph at lines 2830--2830
 []\T1/lmtt/m/n/10 #> individual parameters are assumed to have the same order a
 s the event dataset[] 
  []
 
-<RxODE-manual_files/figure-latex/unnamed-chunk-79-1.pdf, id=797, 469.755pt x 32
+<RxODE-manual_files/figure-latex/unnamed-chunk-79-1.pdf, id=802, 469.755pt x 32
 5.215pt>
 File: RxODE-manual_files/figure-latex/unnamed-chunk-79-1.pdf Graphic file (type
  pdf)
 <use RxODE-manual_files/figure-latex/unnamed-chunk-79-1.pdf>
 Package pdftex.def Info: RxODE-manual_files/figure-latex/unnamed-chunk-79-1.pdf
-  used on input line 2820.
+  used on input line 2832.
 (pdftex.def)             Requested size: 344.997pt x 238.84406pt.
-
-Overfull \hbox (74.99878pt too wide) in paragraph at lines 2839--2839
+[67 <./RxODE-manual_files/figure-latex/unnamed-chunk-79-1.pdf>]
+Overfull \hbox (74.99878pt too wide) in paragraph at lines 2855--2855
 []\T1/lmtt/m/n/10 #> individual parameters are assumed to have the same order a
 s the event dataset[] 
  []
 
-<RxODE-manual_files/figure-latex/unnamed-chunk-80-1.pdf, id=798, 469.755pt x 32
+<RxODE-manual_files/figure-latex/unnamed-chunk-80-1.pdf, id=815, 469.755pt x 32
 5.215pt>
 File: RxODE-manual_files/figure-latex/unnamed-chunk-80-1.pdf Graphic file (type
  pdf)
 <use RxODE-manual_files/figure-latex/unnamed-chunk-80-1.pdf>
 Package pdftex.def Info: RxODE-manual_files/figure-latex/unnamed-chunk-80-1.pdf
-  used on input line 2841.
+  used on input line 2857.
 (pdftex.def)             Requested size: 344.997pt x 238.84406pt.
-
-Underfull \vbox (badness 1565) has occurred while \output is active []
-
-[67 <./RxODE-manual_files/figure-latex/unnamed-chunk-79-1.pdf>]
-Overfull \hbox (74.99878pt too wide) in paragraph at lines 2870--2870
+[68 <./RxODE-manual_files/figure-latex/unnamed-chunk-80-1.pdf>]
+Overfull \hbox (74.99878pt too wide) in paragraph at lines 2890--2890
 []\T1/lmtt/m/n/10 #> individual parameters are assumed to have the same order a
 s the event dataset[] 
  []
 
-<RxODE-manual_files/figure-latex/unnamed-chunk-81-1.pdf, id=810, 469.755pt x 32
+<RxODE-manual_files/figure-latex/unnamed-chunk-81-1.pdf, id=826, 469.755pt x 32
 5.215pt>
 File: RxODE-manual_files/figure-latex/unnamed-chunk-81-1.pdf Graphic file (type
  pdf)
 <use RxODE-manual_files/figure-latex/unnamed-chunk-81-1.pdf>
 Package pdftex.def Info: RxODE-manual_files/figure-latex/unnamed-chunk-81-1.pdf
-  used on input line 2872.
+  used on input line 2892.
 (pdftex.def)             Requested size: 344.997pt x 238.84406pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-[68 <./RxODE-manual_files/figure-latex/unnamed-chunk-80-1.pdf>] [69 <./RxODE-ma
-nual_files/figure-latex/unnamed-chunk-81-1.pdf>]
-<RxODE-manual_files/figure-latex/unnamed-chunk-82-1.pdf, id=834, 469.755pt x 32
+[69 <./RxODE-manual_files/figure-latex/unnamed-chunk-81-1.pdf>]
+<RxODE-manual_files/figure-latex/unnamed-chunk-82-1.pdf, id=839, 469.755pt x 32
 5.215pt>
 File: RxODE-manual_files/figure-latex/unnamed-chunk-82-1.pdf Graphic file (type
  pdf)
 <use RxODE-manual_files/figure-latex/unnamed-chunk-82-1.pdf>
 Package pdftex.def Info: RxODE-manual_files/figure-latex/unnamed-chunk-82-1.pdf
-  used on input line 2907.
+  used on input line 2927.
 (pdftex.def)             Requested size: 344.997pt x 238.84406pt.
-<RxODE-manual_files/figure-latex/unnamed-chunk-83-1.pdf, id=835, 469.755pt x 32
+<RxODE-manual_files/figure-latex/unnamed-chunk-83-1.pdf, id=840, 469.755pt x 32
 5.215pt>
 File: RxODE-manual_files/figure-latex/unnamed-chunk-83-1.pdf Graphic file (type
  pdf)
 <use RxODE-manual_files/figure-latex/unnamed-chunk-83-1.pdf>
 Package pdftex.def Info: RxODE-manual_files/figure-latex/unnamed-chunk-83-1.pdf
-  used on input line 2923.
+  used on input line 2943.
 (pdftex.def)             Requested size: 344.997pt x 238.84406pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 [70 <./RxODE-manual_files/figure-latex/unnamed-chunk-82-1.pdf>]
-<RxODE-manual_files/figure-latex/unnamed-chunk-84-1.pdf, id=846, 469.755pt x 32
+<RxODE-manual_files/figure-latex/unnamed-chunk-84-1.pdf, id=851, 469.755pt x 32
 5.215pt>
 File: RxODE-manual_files/figure-latex/unnamed-chunk-84-1.pdf Graphic file (type
  pdf)
 <use RxODE-manual_files/figure-latex/unnamed-chunk-84-1.pdf>
 Package pdftex.def Info: RxODE-manual_files/figure-latex/unnamed-chunk-84-1.pdf
-  used on input line 2940.
+  used on input line 2960.
 (pdftex.def)             Requested size: 344.997pt x 238.84406pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 [71 <./RxODE-manual_files/figure-latex/unnamed-chunk-83-1.pdf>]
-<RxODE-manual_files/figure-latex/unnamed-chunk-85-1.pdf, id=857, 469.755pt x 32
+<RxODE-manual_files/figure-latex/unnamed-chunk-85-1.pdf, id=862, 469.755pt x 32
 5.215pt>
 File: RxODE-manual_files/figure-latex/unnamed-chunk-85-1.pdf Graphic file (type
  pdf)
 <use RxODE-manual_files/figure-latex/unnamed-chunk-85-1.pdf>
 Package pdftex.def Info: RxODE-manual_files/figure-latex/unnamed-chunk-85-1.pdf
-  used on input line 2965.
+  used on input line 2986.
 (pdftex.def)             Requested size: 344.997pt x 238.84406pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 [72 <./RxODE-manual_files/figure-latex/unnamed-chunk-84-1.pdf>]
-Underfull \hbox (badness 1275) in paragraph at lines 2967--2972
+Underfull \hbox (badness 1275) in paragraph at lines 2988--2993
 \T1/mdput/m/n/10 of the same op-tions still ap-ply; That is \T1/lmtt/m/n/10 sam
 ples \T1/mdput/m/n/10 are cleared un-less you use
  []
 
 [73 <./RxODE-manual_files/figure-latex/unnamed-chunk-85-1.pdf>]
-<RxODE-manual_files/figure-latex/unnamed-chunk-86-1.pdf, id=881, 469.755pt x 32
+<RxODE-manual_files/figure-latex/unnamed-chunk-86-1.pdf, id=886, 469.755pt x 32
 5.215pt>
 File: RxODE-manual_files/figure-latex/unnamed-chunk-86-1.pdf Graphic file (type
  pdf)
 <use RxODE-manual_files/figure-latex/unnamed-chunk-86-1.pdf>
 Package pdftex.def Info: RxODE-manual_files/figure-latex/unnamed-chunk-86-1.pdf
-  used on input line 3000.
+  used on input line 3021.
 (pdftex.def)             Requested size: 344.997pt x 238.84406pt.
-<RxODE-manual_files/figure-latex/unnamed-chunk-87-1.pdf, id=882, 469.755pt x 32
+<RxODE-manual_files/figure-latex/unnamed-chunk-87-1.pdf, id=887, 469.755pt x 32
 5.215pt>
 File: RxODE-manual_files/figure-latex/unnamed-chunk-87-1.pdf Graphic file (type
  pdf)
 <use RxODE-manual_files/figure-latex/unnamed-chunk-87-1.pdf>
 Package pdftex.def Info: RxODE-manual_files/figure-latex/unnamed-chunk-87-1.pdf
-  used on input line 3014.
+  used on input line 3035.
 (pdftex.def)             Requested size: 344.997pt x 238.84406pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 [74 <./RxODE-manual_files/figure-latex/unnamed-chunk-86-1.pdf>]
-<RxODE-manual_files/figure-latex/unnamed-chunk-88-1.pdf, id=893, 469.755pt x 32
+<RxODE-manual_files/figure-latex/unnamed-chunk-88-1.pdf, id=898, 469.755pt x 32
 5.215pt>
 File: RxODE-manual_files/figure-latex/unnamed-chunk-88-1.pdf Graphic file (type
  pdf)
 <use RxODE-manual_files/figure-latex/unnamed-chunk-88-1.pdf>
 Package pdftex.def Info: RxODE-manual_files/figure-latex/unnamed-chunk-88-1.pdf
-  used on input line 3027.
+  used on input line 3048.
 (pdftex.def)             Requested size: 344.997pt x 238.84406pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 [75 <./RxODE-manual_files/figure-latex/unnamed-chunk-87-1.pdf>]
-<RxODE-manual_files/figure-latex/unnamed-chunk-89-1.pdf, id=904, 469.755pt x 32
+<RxODE-manual_files/figure-latex/unnamed-chunk-89-1.pdf, id=909, 469.755pt x 32
 5.215pt>
 File: RxODE-manual_files/figure-latex/unnamed-chunk-89-1.pdf Graphic file (type
  pdf)
 <use RxODE-manual_files/figure-latex/unnamed-chunk-89-1.pdf>
 Package pdftex.def Info: RxODE-manual_files/figure-latex/unnamed-chunk-89-1.pdf
-  used on input line 3045.
+  used on input line 3066.
 (pdftex.def)             Requested size: 344.997pt x 238.84406pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[76 <./RxODE-manual_files/figure-latex/unnamed-chunk-88-1.pdf>] [77 <./RxODE-ma
-nual_files/figure-latex/unnamed-chunk-89-1.pdf>] [78
-
-]
+[76 <./RxODE-manual_files/figure-latex/unnamed-chunk-88-1.pdf>]
+<eventTable-output-notebook-02.png, id=920, 986.68625pt x 488.82625pt>
+File: eventTable-output-notebook-02.png Graphic file (type png)
+<use eventTable-output-notebook-02.png>
+Package pdftex.def Info: eventTable-output-notebook-02.png  used on input line 
+3078.
+(pdftex.def)             Requested size: 344.99908pt x 170.92018pt.
+[77 <./RxODE-manual_files/figure-latex/unnamed-chunk-89-1.pdf> <./eventTable-ou
+tput-notebook-02.png>]
+<eventTable-output-notebook-01.png, id=934, 962.59625pt x 530.98375pt>
+File: eventTable-output-notebook-01.png Graphic file (type png)
+<use eventTable-output-notebook-01.png>
+Package pdftex.def Info: eventTable-output-notebook-01.png  used on input line 
+3084.
+(pdftex.def)             Requested size: 344.99214pt x 190.30327pt.
+[78 <./eventTable-output-notebook-01.png>]
 Chapter 8.
-[79] [80] [81]
-Underfull \hbox (badness 10000) in paragraph at lines 3208--3210
+[79
+
+] [80] [81]
+Underfull \hbox (badness 10000) in paragraph at lines 3256--3258
 \T1/lmtt/m/n/10 at any time, but will not take effect until the next change of\
 T1/mdput/m/n/10 H\T1/lmtt/m/n/10 is
  []
 
 [82] [83] [84] [85] [86] [87] [88] [89] [90] [91]
-Underfull \hbox (badness 2582) in paragraph at lines 3788--3791
+Underfull \hbox (badness 2582) in paragraph at lines 3836--3839
 []\T1/lmtt/m/n/10 EVID=-10 \T1/mdput/m/n/10 When the spec-i-fied \T1/lmtt/m/n/1
 0 rate \T1/mdput/m/n/10 in-fu-sions are turned off (matches
  []
@@ -1761,109 +1768,109 @@ Chapter 9.
 [97
 
 ]
-Overfull \hbox (1.499pt too wide) in paragraph at lines 4035--4035
+Overfull \hbox (1.499pt too wide) in paragraph at lines 4084--4084
 []\T1/lmtt/m/n/10 #>      V2      V3      KA      CL       Q     Kin    Kout   
  EC50[] 
  []
 
 
-Overfull \hbox (1.499pt too wide) in paragraph at lines 4035--4035
+Overfull \hbox (1.499pt too wide) in paragraph at lines 4084--4084
 []\T1/lmtt/m/n/10 #>  40.200 297.000   0.294  18.600  10.500   1.000   1.000 20
 0.000[] 
  []
 
 
-Overfull \hbox (1.499pt too wide) in paragraph at lines 4066--4066
+Overfull \hbox (1.499pt too wide) in paragraph at lines 4115--4115
 []\T1/lmtt/m/n/10 #>      V2      V3      KA      CL       Q     Kin    Kout   
  EC50[] 
  []
 
 
-Overfull \hbox (1.499pt too wide) in paragraph at lines 4066--4066
+Overfull \hbox (1.499pt too wide) in paragraph at lines 4115--4115
 []\T1/lmtt/m/n/10 #>  40.200 297.000   0.294  18.600  10.500   1.000   1.000 20
 0.000[] 
  []
 
 [98]
-Overfull \hbox (1.499pt too wide) in paragraph at lines 4097--4097
+Overfull \hbox (1.499pt too wide) in paragraph at lines 4146--4146
 []\T1/lmtt/m/n/10 #>      V2      V3      KA      CL       Q     Kin    Kout   
  EC50[] 
  []
 
 
-Overfull \hbox (1.499pt too wide) in paragraph at lines 4097--4097
+Overfull \hbox (1.499pt too wide) in paragraph at lines 4146--4146
 []\T1/lmtt/m/n/10 #>  40.200 297.000   0.294  18.600  10.500   1.000   1.000 20
 0.000[] 
  []
 
 [99]
-Overfull \hbox (59.24883pt too wide) in paragraph at lines 4141--4141
+Overfull \hbox (59.24883pt too wide) in paragraph at lines 4193--4193
 []\T1/lmtt/m/n/10 #> Call \TS1/lmtt/m/n/10 `\T1/lmtt/m/n/10 lifecycle::last_war
 nings()\TS1/lmtt/m/n/10 ` \T1/lmtt/m/n/10 to see where this warning was generat
 ed.[] 
  []
 
 [100]
-Overfull \hbox (1.499pt too wide) in paragraph at lines 4198--4198
+Overfull \hbox (1.499pt too wide) in paragraph at lines 4250--4250
 []\T1/lmtt/m/n/10 #>      V2      V3      KA      CL       Q     Kin    Kout   
  EC50[] 
  []
 
 
-Overfull \hbox (1.499pt too wide) in paragraph at lines 4198--4198
+Overfull \hbox (1.499pt too wide) in paragraph at lines 4250--4250
 []\T1/lmtt/m/n/10 #>  40.200 297.000   0.294  18.600  10.500   1.000   1.000 20
 0.000[] 
  []
 
 
-Overfull \hbox (1.499pt too wide) in paragraph at lines 4248--4248
+Overfull \hbox (1.499pt too wide) in paragraph at lines 4300--4300
 []\T1/lmtt/m/n/10 #>      V2      V3      KA      CL       Q     Kin    Kout   
  EC50[] 
  []
 
 
-Overfull \hbox (1.499pt too wide) in paragraph at lines 4248--4248
+Overfull \hbox (1.499pt too wide) in paragraph at lines 4300--4300
 []\T1/lmtt/m/n/10 #>  40.200 297.000   0.294  18.600  10.500   1.000   1.000 20
 0.000[] 
  []
 
 [101]
-<RxODE-manual_files/figure-latex/unnamed-chunk-96-1.pdf, id=1235, 469.755pt x 3
+<RxODE-manual_files/figure-latex/unnamed-chunk-96-1.pdf, id=1248, 469.755pt x 3
 25.215pt>
 File: RxODE-manual_files/figure-latex/unnamed-chunk-96-1.pdf Graphic file (type
  pdf)
 <use RxODE-manual_files/figure-latex/unnamed-chunk-96-1.pdf>
 Package pdftex.def Info: RxODE-manual_files/figure-latex/unnamed-chunk-96-1.pdf
-  used on input line 4256.
+  used on input line 4308.
 (pdftex.def)             Requested size: 344.997pt x 238.84406pt.
 [102 <./RxODE-manual_files/figure-latex/unnamed-chunk-96-1.pdf>]
-Overfull \hbox (1.499pt too wide) in paragraph at lines 4293--4293
+Overfull \hbox (1.499pt too wide) in paragraph at lines 4345--4345
 []\T1/lmtt/m/n/10 #>      V2      V3      KA      CL       Q     Kin    Kout   
  EC50[] 
  []
 
 
-Overfull \hbox (1.499pt too wide) in paragraph at lines 4293--4293
+Overfull \hbox (1.499pt too wide) in paragraph at lines 4345--4345
 []\T1/lmtt/m/n/10 #>  40.200 297.000   0.294  18.600  10.500   1.000   1.000 20
 0.000[] 
  []
 
-<RxODE-manual_files/figure-latex/unnamed-chunk-97-1.pdf, id=1248, 469.755pt x 3
+<RxODE-manual_files/figure-latex/unnamed-chunk-97-1.pdf, id=1261, 469.755pt x 3
 25.215pt>
 File: RxODE-manual_files/figure-latex/unnamed-chunk-97-1.pdf Graphic file (type
  pdf)
 <use RxODE-manual_files/figure-latex/unnamed-chunk-97-1.pdf>
 Package pdftex.def Info: RxODE-manual_files/figure-latex/unnamed-chunk-97-1.pdf
-  used on input line 4301.
+  used on input line 4353.
 (pdftex.def)             Requested size: 344.997pt x 238.84406pt.
 [103 <./RxODE-manual_files/figure-latex/unnamed-chunk-97-1.pdf>]
-<RxODE-manual_files/figure-latex/unnamed-chunk-99-1.pdf, id=1261, 469.755pt x 3
+<RxODE-manual_files/figure-latex/unnamed-chunk-99-1.pdf, id=1275, 469.755pt x 3
 25.215pt>
 File: RxODE-manual_files/figure-latex/unnamed-chunk-99-1.pdf Graphic file (type
  pdf)
 <use RxODE-manual_files/figure-latex/unnamed-chunk-99-1.pdf>
 Package pdftex.def Info: RxODE-manual_files/figure-latex/unnamed-chunk-99-1.pdf
-  used on input line 4356.
+  used on input line 4408.
 (pdftex.def)             Requested size: 344.997pt x 238.84406pt.
 
 Underfull \vbox (badness 6493) has occurred while \output is active []
@@ -1873,19 +1880,19 @@ No file RxODE-manual.bbl.
 [105 <./RxODE-manual_files/figure-latex/unnamed-chunk-99-1.pdf>] (./RxODE-manua
 l.aux)
 Package rerunfilecheck Info: File `RxODE-manual.out' has not changed.
-(rerunfilecheck)             Checksum: C481D747B995AD5558132045A7F05D74;8128.
+(rerunfilecheck)             Checksum: EBD0303A3FF69314A8CD1679E0E9FFE3;8360.
 
 LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 13473 strings out of 481331
- 199290 string characters out of 5917870
- 491226 words of memory out of 5000000
- 29584 multiletter control sequences out of 15000+600000
+ 13493 strings out of 481331
+ 199898 string characters out of 5917870
+ 491352 words of memory out of 5000000
+ 29597 multiletter control sequences out of 15000+600000
  544823 words of font info for 123 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 66i,6n,72p,545b,473s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 66i,6n,72p,482b,473s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/home/matt/.TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}{/home/matt/.Ti
 nyTeX/texmf-dist/fonts/enc/dvips/ly1/texnansi.enc}{/home/matt/.TinyTeX/texmf-di
 st/fonts/enc/dvips/lm/lm-ec.enc}</home/matt/.TinyTeX/texmf-dist/fonts/type1/pub
@@ -1898,10 +1905,10 @@ ome/matt/.TinyTeX/texmf-dist/fonts/type1/adobe/utopia/putb8a.pfb></home/matt/.T
 inyTeX/texmf-dist/fonts/type1/adobe/utopia/putr8a.pfb></home/matt/.TinyTeX/texm
 f-dist/fonts/type1/adobe/utopia/putr8a.pfb></home/matt/.TinyTeX/texmf-dist/font
 s/type1/adobe/utopia/putri8a.pfb>
-Output written on RxODE-manual.pdf (105 pages, 593201 bytes).
+Output written on RxODE-manual.pdf (105 pages, 677178 bytes).
 PDF statistics:
- 1414 PDF objects out of 1440 (max. 8388607)
- 1210 compressed objects within 13 object streams
- 443 named destinations out of 1000 (max. 500000)
- 554 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1428 PDF objects out of 1440 (max. 8388607)
+ 1220 compressed objects within 13 object streams
+ 447 named destinations out of 1000 (max. 500000)
+ 572 words of extra memory for PDF output out of 10000 (max. 10000000)
 
