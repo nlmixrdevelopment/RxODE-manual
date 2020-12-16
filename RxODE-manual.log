@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.12.15)  15 DEC 2020 23:30
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.12.16)  16 DEC 2020 07:05
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -340,31 +340,240 @@ Package graphics Info: Driver file: pdftex.def on input line 105.
 )
 \Gin@req@height=\dimen171
 \Gin@req@width=\dimen172
+) (/home/matt/.TinyTeX/texmf-dist/tex/latex/mathdesign/mathdesign.sty
+Package: mathdesign 2013/08/29 v2.31 Math Design Project
+(/home/matt/.TinyTeX/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
+) (/home/matt/.TinyTeX/texmf-dist/tex/latex/mathdesign/mdput/mdput.cfg) (/home/
+matt/.TinyTeX/texmf-dist/tex/latex/mathdesign/mdput/mdput.sty
+Package: mdput 2013/08/29 v2.31 adobe utopia + mdput (Math Design Project)
+(/home/matt/.TinyTeX/texmf-dist/tex/latex/mathdesign/mdfont.def
+File: mdfont.def 2013/08/29 v2.31 (Math Design Project)
+) (/home/matt/.TinyTeX/texmf-dist/tex/latex/mathdesign/mdsffont.def
+File: mdsffont.def 2013/08/29 v2.31 (Math Design Project)
+
+LaTeX Warning: Font shape declaration has incorrect series value `mc'.
+               It should not contain an `m'! Please correct it.
+               Found on input line 53.
+
+
+LaTeX Warning: Font shape declaration has incorrect series value `mc'.
+               It should not contain an `m'! Please correct it.
+               Found on input line 56.
+
+
+LaTeX Warning: Font shape declaration has incorrect series value `mc'.
+               It should not contain an `m'! Please correct it.
+               Found on input line 59.
+
+
+LaTeX Warning: Font shape declaration has incorrect series value `mc'.
+               It should not contain an `m'! Please correct it.
+               Found on input line 79.
+
+
+LaTeX Warning: Font shape declaration has incorrect series value `mc'.
+               It should not contain an `m'! Please correct it.
+               Found on input line 102.
+
+
+LaTeX Warning: Font shape declaration has incorrect series value `mc'.
+               It should not contain an `m'! Please correct it.
+               Found on input line 105.
+
+
+LaTeX Warning: Font shape declaration has incorrect series value `mc'.
+               It should not contain an `m'! Please correct it.
+               Found on input line 108.
+
+
+LaTeX Warning: Font shape declaration has incorrect series value `mc'.
+               It should not contain an `m'! Please correct it.
+               Found on input line 128.
+
+
+LaTeX Warning: Font shape declaration has incorrect series value `mc'.
+               It should not contain an `m'! Please correct it.
+               Found on input line 259.
+
+
+LaTeX Warning: Font shape declaration has incorrect series value `mc'.
+               It should not contain an `m'! Please correct it.
+               Found on input line 262.
+
+
+LaTeX Warning: Font shape declaration has incorrect series value `mc'.
+               It should not contain an `m'! Please correct it.
+               Found on input line 265.
+
+
+LaTeX Warning: Font shape declaration has incorrect series value `mc'.
+               It should not contain an `m'! Please correct it.
+               Found on input line 268.
+
+
+LaTeX Warning: Font shape declaration has incorrect series value `mc'.
+               It should not contain an `m'! Please correct it.
+               Found on input line 313.
+
+
+LaTeX Warning: Font shape declaration has incorrect series value `mc'.
+               It should not contain an `m'! Please correct it.
+               Found on input line 316.
+
+
+LaTeX Warning: Font shape declaration has incorrect series value `mc'.
+               It should not contain an `m'! Please correct it.
+               Found on input line 319.
+
+
+LaTeX Warning: Font shape declaration has incorrect series value `mc'.
+               It should not contain an `m'! Please correct it.
+               Found on input line 322.
+
+) (/home/matt/.TinyTeX/texmf-dist/tex/latex/mathdesign/mdttfont.def
+File: mdttfont.def 2013/08/29 v2.31 (Math Design Project)
+)
+\symmdcal=\mathgroup6
+LaTeX Font Info:    Overwriting symbol font `mdcal' in version `bold'
+(Font)                  OMS/mdput/m/n --> OMS/mdput/b/n on input line 97.
+\symmdscr=\mathgroup7
+LaTeX Font Info:    Overwriting symbol font `mdscr' in version `bold'
+(Font)                  OMS/mdput/m/n --> OMS/mdput/b/n on input line 103.
+LaTeX Font Info:    Redeclaring math alphabet \mathfrak on input line 109.
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `normal'
+(Font)                  U/euf/m/n --> U/xmdeuf/m/n on input line 109.
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/b/n --> U/xmdeuf/m/n on input line 109.
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/xmdeuf/m/n --> U/xmdeuf/b/n on input line 110.
+LaTeX Info: Redefining \frak on input line 111.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
+(Font)                  OT1/lmr/m/n --> OT1/mdput/m/n on input line 121.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `normal'
+(Font)                  OML/lmm/m/it --> OML/mdput/m/it on input line 122.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `normal'
+(Font)                  OMS/lmsy/m/n --> OMS/mdput/m/n on input line 123.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
+(Font)                  OMX/lmex/m/n --> OMX/mdput/m/n on input line 124.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  OT1/lmr/bx/n --> OT1/mdput/b/n on input line 126.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `bold'
+(Font)                  OML/lmm/b/it --> OML/mdput/b/it on input line 127.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
+(Font)                  OMS/lmsy/b/n --> OMS/mdput/b/n on input line 128.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
+(Font)                  OMX/lmex/m/n --> OMX/mdput/b/n on input line 129.
+LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `normal'
+(Font)                  OT1/mdput/m/n --> T1/mdput/m/n on input line 131.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
+(Font)                  OT1/lmr/bx/n --> T1/mdput/b/n on input line 132.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
+(Font)                  OT1/lmr/m/it --> T1/mdput/m/it on input line 133.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
+(Font)                  OT1/lmss/m/n --> T1/lmss/m/n on input line 134.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
+(Font)                  OT1/lmtt/m/n --> T1/lmtt/m/n on input line 135.
+LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `bold'
+(Font)                  OT1/mdput/b/n --> T1/mdput/b/n on input line 137.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
+(Font)                  OT1/lmr/bx/n --> T1/mdput/b/n on input line 138.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
+(Font)                  OT1/lmr/bx/it --> T1/mdput/b/it on input line 139.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
+(Font)                  OT1/lmss/bx/n --> T1/lmss/b/n on input line 140.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
+(Font)                  OT1/lmtt/m/n --> T1/lmtt/b/n on input line 141.
+\symlettersupright=\mathgroup8
+LaTeX Font Info:    Overwriting symbol font `lettersupright' in version `bold'
+(Font)                  OML/mdput/m/n --> OML/mdput/b/n on input line 144.
+LaTeX Font Info:    Redeclaring math alphabet \mathrm on input line 145.
+LaTeX Font Info:    Overwriting math alphabet `\mathcal' in version `normal'
+(Font)                  OMS/mdput/m/n --> OMS/mdput/m/n on input line 167.
+(/home/matt/.TinyTeX/texmf-dist/tex/latex/xkeyval/xkeyval.sty
+Package: xkeyval 2020/11/20 v2.8 package option processing (HA)
+(/home/matt/.TinyTeX/texmf-dist/tex/generic/xkeyval/xkeyval.tex (/home/matt/.Ti
+nyTeX/texmf-dist/tex/generic/xkeyval/xkvutils.tex
+\XKV@toks=\toks25
+\XKV@tempa@toks=\toks26
+)
+\XKV@depth=\count287
+File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
+))
+LaTeX Font Info:    Trying to load font information for T1+mdput on input line 
+186.
+(/home/matt/.TinyTeX/texmf-dist/tex/latex/mathdesign/mdput/t1mdput.fd
+File: t1mdput.fd 2013/08/29 Fontinst v1.933 font definitions for T1/mdput.
+)
+LaTeX Font Info:    Font shape `T1/mdput/m/n' will be
+(Font)              scaled to size 9.40002pt on input line 186.
+LaTeX Font Info:    Redeclaring math accent \widetilde on input line 449.
+LaTeX Font Info:    Redeclaring math accent \widehat on input line 450.
+Now handling font encoding MDA ...
+... no UTF-8 mapping file for font encoding MDA
+\symmathdesignA=\mathgroup9
+LaTeX Font Info:    Overwriting symbol font `mathdesignA' in version `bold'
+(Font)                  MDA/mdput/m/n --> MDA/mdput/b/n on input line 491.
+LaTeX Font Info:    Overwriting encoding scheme math defaults on input line 493
+.
+Now handling font encoding MDB ...
+... no UTF-8 mapping file for font encoding MDB
+\symmathdesignB=\mathgroup10
+LaTeX Font Info:    Overwriting symbol font `mathdesignB' in version `bold'
+(Font)                  MDB/mdput/m/n --> MDB/mdput/b/n on input line 498.
+LaTeX Info: Redefining \bold on input line 510.
+LaTeX Font Info:    Redeclaring math accent \widetilde on input line 532.
+LaTeX Font Info:    Redeclaring math accent \widehat on input line 533.
+\rulethickness=\skip58
+) (/home/matt/.TinyTeX/texmf-dist/tex/latex/base/fontenc.sty
+Package: fontenc 2020/08/10 v2.0s Standard LaTeX package
+)) (/home/matt/.TinyTeX/texmf-dist/tex/latex/base/fontenc.sty
+Package: fontenc 2020/08/10 v2.0s Standard LaTeX package
+) (/home/matt/.TinyTeX/texmf-dist/tex/latex/natbib/natbib.sty
+Package: natbib 2010/09/13 8.31b (PWD, AO)
+\bibhang=\skip59
+\bibsep=\skip60
+LaTeX Info: Redefining \cite on input line 694.
+\c@NAT@ctr=\count288
 ) (/home/matt/.TinyTeX/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2020-09-24 L3 backend support: PDF output (pdfTeX)
-\l__kernel_color_stack_int=\count287
+\l__kernel_color_stack_int=\count289
 \l__pdf_internal_box=\box55
 ) (./RxODE-manual.aux)
 \openout1 = `RxODE-manual.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 115.
-LaTeX Font Info:    ... okay on input line 115.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 115.
-LaTeX Font Info:    ... okay on input line 115.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 115.
-LaTeX Font Info:    ... okay on input line 115.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 115.
-LaTeX Font Info:    ... okay on input line 115.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 115.
-LaTeX Font Info:    ... okay on input line 115.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 115.
-LaTeX Font Info:    ... okay on input line 115.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 115.
-LaTeX Font Info:    ... okay on input line 115.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 115.
-LaTeX Font Info:    ... okay on input line 115.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 115.
-LaTeX Font Info:    ... okay on input line 115.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 119.
+LaTeX Font Info:    ... okay on input line 119.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 119.
+LaTeX Font Info:    ... okay on input line 119.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 119.
+LaTeX Font Info:    ... okay on input line 119.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 119.
+LaTeX Font Info:    ... okay on input line 119.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 119.
+LaTeX Font Info:    ... okay on input line 119.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 119.
+LaTeX Font Info:    ... okay on input line 119.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 119.
+LaTeX Font Info:    ... okay on input line 119.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 119.
+LaTeX Font Info:    ... okay on input line 119.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 119.
+LaTeX Font Info:    ... okay on input line 119.
+LaTeX Font Info:    Checking defaults for MDA/cmr/m/n on input line 119.
+LaTeX Font Info:    Trying to load font information for MDA+cmr on input line 1
+19.
+(/home/matt/.TinyTeX/texmf-dist/tex/latex/mathdesign/mdacmr.fd
+File: mdacmr.fd 
+)
+LaTeX Font Info:    ... okay on input line 119.
+LaTeX Font Info:    Checking defaults for MDB/cmr/m/n on input line 119.
+LaTeX Font Info:    Trying to load font information for MDB+cmr on input line 1
+19.
+(/home/matt/.TinyTeX/texmf-dist/tex/latex/mathdesign/mdbcmr.fd
+File: mdbcmr.fd 
+)
+LaTeX Font Info:    ... okay on input line 119.
 (/home/matt/.TinyTeX/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
@@ -373,7 +582,7 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-Package hyperref Info: Link coloring OFF on input line 115.
+Package hyperref Info: Link coloring OFF on input line 119.
 (/home/matt/.TinyTeX/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
 (/home/matt/.TinyTeX/texmf-dist/tex/latex/refcount/refcount.sty
@@ -381,85 +590,204 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 ) (/home/matt/.TinyTeX/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count288
+\c@section@level=\count290
 )
-LaTeX Info: Redefining \ref on input line 115.
-LaTeX Info: Redefining \pageref on input line 115.
-LaTeX Info: Redefining \nameref on input line 115.
+LaTeX Info: Redefining \ref on input line 119.
+LaTeX Info: Redefining \pageref on input line 119.
+LaTeX Info: Redefining \nameref on input line 119.
 (./RxODE-manual.out) (./RxODE-manual.out)
 \@outlinefile=\write4
 \openout4 = `RxODE-manual.out'.
 
-LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 1
-17.
-(/home/matt/.TinyTeX/texmf-dist/tex/latex/lm/ot1lmr.fd
-File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
+
+Package mathdesign/mdput Warning: Package 'amssymb' shouldn't be used in conjon
+ction with package mdput, on input line 119.
+
+
+Package mathdesign/mdput Warning: Package 'amsfonts' shouldn't be used in conjo
+nction with package mdput, on input line 119.
+
+LaTeX Font Info:    Font shape `T1/mdput/m/n' will be
+(Font)              scaled to size 16.24324pt on input line 121.
+LaTeX Font Info:    Font shape `T1/mdput/m/n' will be
+(Font)              scaled to size 11.28003pt on input line 121.
+LaTeX Font Info:    Trying to load font information for OT1+mdput on input line
+ 121.
+(/home/matt/.TinyTeX/texmf-dist/tex/latex/mathdesign/mdput/ot1mdput.fd
+File: ot1mdput.fd 2013/08/29 Fontinst v1.933 font definitions for OT1/mdput.
 )
-LaTeX Font Info:    Trying to load font information for OML+lmm on input line 1
-17.
-(/home/matt/.TinyTeX/texmf-dist/tex/latex/lm/omllmm.fd
-File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
+LaTeX Font Info:    Font shape `OT1/mdput/m/n' will be
+(Font)              scaled to size 11.28003pt on input line 121.
+LaTeX Font Info:    Font shape `OT1/mdput/m/n' will be
+(Font)              scaled to size 7.52002pt on input line 121.
+LaTeX Font Info:    Font shape `OT1/mdput/m/n' will be
+(Font)              scaled to size 5.64001pt on input line 121.
+LaTeX Font Info:    Trying to load font information for OML+mdput on input line
+ 121.
+(/home/matt/.TinyTeX/texmf-dist/tex/latex/mathdesign/mdput/omlmdput.fd
+File: omlmdput.fd 2013/08/29 Fontinst v1.933 font definitions for OML/mdput.
 )
-LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
-117.
-(/home/matt/.TinyTeX/texmf-dist/tex/latex/lm/omslmsy.fd
-File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
+LaTeX Font Info:    Font shape `OML/mdput/m/it' will be
+(Font)              scaled to size 11.28003pt on input line 121.
+LaTeX Font Info:    Font shape `OML/mdput/m/it' will be
+(Font)              scaled to size 7.52002pt on input line 121.
+LaTeX Font Info:    Font shape `OML/mdput/m/it' will be
+(Font)              scaled to size 5.64001pt on input line 121.
+LaTeX Font Info:    Trying to load font information for OMS+mdput on input line
+ 121.
+(/home/matt/.TinyTeX/texmf-dist/tex/latex/mathdesign/mdput/omsmdput.fd
+File: omsmdput.fd 2013/08/29 Fontinst v1.933 font definitions for OMS/mdput.
 )
-LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
-117.
-(/home/matt/.TinyTeX/texmf-dist/tex/latex/lm/omxlmex.fd
-File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
+LaTeX Font Info:    Font shape `OMS/mdput/m/n' will be
+(Font)              scaled to size 11.28003pt on input line 121.
+LaTeX Font Info:    Font shape `OMS/mdput/m/n' will be
+(Font)              scaled to size 7.52002pt on input line 121.
+LaTeX Font Info:    Font shape `OMS/mdput/m/n' will be
+(Font)              scaled to size 5.64001pt on input line 121.
+LaTeX Font Info:    Trying to load font information for OMX+mdput on input line
+ 121.
+(/home/matt/.TinyTeX/texmf-dist/tex/latex/mathdesign/mdput/omxmdput.fd
+File: omxmdput.fd 2013/08/29 Fontinst v1.933 font definitions for OMX/mdput.
 )
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 117.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 117.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 117.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 117
+LaTeX Font Info:    Font shape `OMX/mdput/m/n' will be
+(Font)              scaled to size 11.28003pt on input line 121.
+LaTeX Font Info:    Font shape `OMX/mdput/m/n' will be
+(Font)              scaled to size 7.52002pt on input line 121.
+LaTeX Font Info:    Font shape `OMX/mdput/m/n' will be
+(Font)              scaled to size 5.64001pt on input line 121.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 121
 .
 (/home/matt/.TinyTeX/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 117
+LaTeX Font Info:    Trying to load font information for U+msb on input line 121
 .
 (/home/matt/.TinyTeX/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) [1
+)
+LaTeX Font Info:    Font shape `OML/mdput/m/n' will be
+(Font)              scaled to size 11.28003pt on input line 121.
+LaTeX Font Info:    Font shape `OML/mdput/m/n' will be
+(Font)              scaled to size 7.52002pt on input line 121.
+LaTeX Font Info:    Font shape `OML/mdput/m/n' will be
+(Font)              scaled to size 5.64001pt on input line 121.
+LaTeX Font Info:    Trying to load font information for MDA+mdput on input line
+ 121.
+(/home/matt/.TinyTeX/texmf-dist/tex/latex/mathdesign/mdput/mdamdput.fd
+File: mdamdput.fd 2013/08/29 Fontinst v1.933 font definitions for MDA/mdput.
+)
+LaTeX Font Info:    Font shape `MDA/mdput/m/n' will be
+(Font)              scaled to size 11.28003pt on input line 121.
+LaTeX Font Info:    Font shape `MDA/mdput/m/n' will be
+(Font)              scaled to size 7.52002pt on input line 121.
+LaTeX Font Info:    Font shape `MDA/mdput/m/n' will be
+(Font)              scaled to size 5.64001pt on input line 121.
+LaTeX Font Info:    Trying to load font information for MDB+mdput on input line
+ 121.
+(/home/matt/.TinyTeX/texmf-dist/tex/latex/mathdesign/mdput/mdbmdput.fd
+File: mdbmdput.fd 2013/08/29 Fontinst v1.933 font definitions for MDB/mdput.
+)
+LaTeX Font Info:    Font shape `MDB/mdput/m/n' will be
+(Font)              scaled to size 11.28003pt on input line 121.
+LaTeX Font Info:    Font shape `MDB/mdput/m/n' will be
+(Font)              scaled to size 7.52002pt on input line 121.
+LaTeX Font Info:    Font shape `MDB/mdput/m/n' will be
+(Font)              scaled to size 5.64001pt on input line 121.
+[1
 
 
-{/home/matt/.TinyTeX/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2
+{/home/matt/.TinyTeX/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+LaTeX Font Info:    Font shape `T1/mdput/m/sl' will be
+(Font)              scaled to size 9.40002pt on input line 124.
+[2
 
-] (./RxODE-manual.toc
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 3.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 3.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 3.
-[3])
+]
+LaTeX Font Info:    Font shape `T1/mdput/m/n' will be
+(Font)              scaled to size 23.38725pt on input line 124.
+LaTeX Font Info:    Font shape `T1/mdput/b/n' will be
+(Font)              scaled to size 23.38725pt on input line 124.
+(./RxODE-manual.toc
+LaTeX Font Info:    Font shape `T1/mdput/b/n' will be
+(Font)              scaled to size 9.40002pt on input line 1.
+LaTeX Font Info:    Font shape `OT1/mdput/m/n' will be
+(Font)              scaled to size 9.40002pt on input line 3.
+LaTeX Font Info:    Font shape `OT1/mdput/m/n' will be
+(Font)              scaled to size 6.58002pt on input line 3.
+LaTeX Font Info:    Font shape `OT1/mdput/m/n' will be
+(Font)              scaled to size 4.70001pt on input line 3.
+LaTeX Font Info:    Font shape `OML/mdput/m/it' will be
+(Font)              scaled to size 9.40002pt on input line 3.
+LaTeX Font Info:    Font shape `OML/mdput/m/it' will be
+(Font)              scaled to size 6.58002pt on input line 3.
+LaTeX Font Info:    Font shape `OML/mdput/m/it' will be
+(Font)              scaled to size 4.70001pt on input line 3.
+LaTeX Font Info:    Font shape `OMS/mdput/m/n' will be
+(Font)              scaled to size 9.40002pt on input line 3.
+LaTeX Font Info:    Font shape `OMS/mdput/m/n' will be
+(Font)              scaled to size 6.58002pt on input line 3.
+LaTeX Font Info:    Font shape `OMS/mdput/m/n' will be
+(Font)              scaled to size 4.70001pt on input line 3.
+LaTeX Font Info:    Font shape `OMX/mdput/m/n' will be
+(Font)              scaled to size 9.40002pt on input line 3.
+LaTeX Font Info:    Font shape `OMX/mdput/m/n' will be
+(Font)              scaled to size 6.58002pt on input line 3.
+LaTeX Font Info:    Font shape `OMX/mdput/m/n' will be
+(Font)              scaled to size 4.70001pt on input line 3.
+LaTeX Font Info:    Font shape `OML/mdput/m/n' will be
+(Font)              scaled to size 9.40002pt on input line 3.
+LaTeX Font Info:    Font shape `OML/mdput/m/n' will be
+(Font)              scaled to size 6.58002pt on input line 3.
+LaTeX Font Info:    Font shape `OML/mdput/m/n' will be
+(Font)              scaled to size 4.70001pt on input line 3.
+LaTeX Font Info:    Font shape `MDA/mdput/m/n' will be
+(Font)              scaled to size 9.40002pt on input line 3.
+LaTeX Font Info:    Font shape `MDA/mdput/m/n' will be
+(Font)              scaled to size 6.58002pt on input line 3.
+LaTeX Font Info:    Font shape `MDA/mdput/m/n' will be
+(Font)              scaled to size 4.70001pt on input line 3.
+LaTeX Font Info:    Font shape `MDB/mdput/m/n' will be
+(Font)              scaled to size 9.40002pt on input line 3.
+LaTeX Font Info:    Font shape `MDB/mdput/m/n' will be
+(Font)              scaled to size 6.58002pt on input line 3.
+LaTeX Font Info:    Font shape `MDB/mdput/m/n' will be
+(Font)              scaled to size 4.70001pt on input line 3.
+[3]
+Overfull \hbox (0.37598pt too wide) detected at line 158
+ []\T1/mdput/m/n/10 100
+ []
+
+)
 \tf@toc=\write5
 \openout5 = `RxODE-manual.toc'.
 
-[4]
+[4
+design size mismatch in local font md-utro8t in virtual font mdputro8t.vf ignor
+ed.]
 Chapter 1.
-LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 1
-33.
-(/home/matt/.TinyTeX/texmf-dist/tex/latex/lm/ts1lmr.fd
-File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
+LaTeX Font Info:    Font shape `T1/mdput/m/n' will be
+(Font)              scaled to size 19.49565pt on input line 127.
+LaTeX Font Info:    Font shape `T1/mdput/b/n' will be
+(Font)              scaled to size 19.49565pt on input line 127.
+LaTeX Font Info:    Trying to load font information for TS1+mdput on input line
+ 137.
+(/home/matt/.TinyTeX/texmf-dist/tex/latex/mathdesign/mdput/ts1mdput.fd
+File: ts1mdput.fd 2013/08/29 Fontinst v1.933 font definitions for TS1/mdput.
 )
+LaTeX Font Info:    Font shape `TS1/mdput/m/n' will be
+(Font)              scaled to size 9.40002pt on input line 137.
 LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 1
-33.
+37.
 (/home/matt/.TinyTeX/texmf-dist/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 
-LaTeX Warning: Reference `simulation' on page 5 undefined on input line 143.
+LaTeX Warning: Reference `simulation' on page 5 undefined on input line 147.
 
 
-Underfull \hbox (badness 3386) in paragraph at lines 143--145
-[]\T1/lmr/m/n/10 created with \T1/lmtt/m/n/10 et() \T1/lmr/m/n/10 or \T1/lmtt/m
-/n/10 EventTable() \T1/lmr/m/n/10 for easy sim-u-la-tion of
+Overfull \hbox (8.65771pt too wide) in paragraph at lines 147--149
+[]\T1/mdput/m/n/10 created with \T1/lmtt/m/n/10 et() \T1/mdput/m/n/10 or \T1/lm
+tt/m/n/10 EventTable() \T1/mdput/m/n/10 for easy sim-u-la-tion of events(Chapte
+r
  []
 
 [5
@@ -468,16 +796,26 @@ Underfull \hbox (badness 3386) in paragraph at lines 143--145
 
 ]
 Chapter 2.
+LaTeX Font Info:    Font shape `T1/mdput/m/n' will be
+(Font)              scaled to size 13.53603pt on input line 178.
+LaTeX Font Info:    Font shape `T1/mdput/b/n' will be
+(Font)              scaled to size 13.53603pt on input line 178.
 [7]
-Overfull \hbox (0.22043pt too wide) in paragraph at lines 271--274
-[][]\T1/lmr/m/n/10 PKADVAN[] Pro-vides 1-3 com-part-ment mod-els us-ing non-sup
-erpositioning.
+Underfull \hbox (badness 1365) in paragraph at lines 245--248
+\T1/mdput/m/n/10 RxODE sup-ports 1-3 com-part-ment mod-els with gra-di-ents (us
+-ing stan math's
+ []
+
+LaTeX Font Info:    Font shape `T1/mdput/b/n' will be
+(Font)              scaled to size 11.28003pt on input line 252.
+
+Underfull \hbox (badness 3271) in paragraph at lines 261--265
+[][]\T1/mdput/m/n/10 pmxTools[] cur-rently have 1-3 com-part-ment (super-positi
+oning) mod-els
  []
 
 [8]
 Chapter 3.
-LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <10> not available
-(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 284.
 [9
 
 ] [10]
@@ -486,42 +824,37 @@ Chapter 4.
 
 ]
 LaTeX Font Info:    Trying to load font information for TS1+lmtt on input line 
-440.
+444.
 (/home/matt/.TinyTeX/texmf-dist/tex/latex/lm/ts1lmtt.fd
 File: ts1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 ) [12] [13]
-Overfull \hbox (0.1109pt too wide) in paragraph at lines 541--558
-[][] 
- []
-
-
-Overfull \hbox (1.499pt too wide) in paragraph at lines 588--588
+Overfull \hbox (1.499pt too wide) in paragraph at lines 592--592
 []\T1/lmtt/m/n/10 #>      V2      V3      KA      CL       Q     Kin    Kout   
  EC50[] 
  []
 
 
-Overfull \hbox (1.499pt too wide) in paragraph at lines 588--588
+Overfull \hbox (1.499pt too wide) in paragraph at lines 592--592
 []\T1/lmtt/m/n/10 #>  40.200 297.000   0.294  18.600  10.500   1.000   1.000 20
 0.000[] 
  []
 
 [14]
-<RxODE-manual_files/figure-latex/intro-central-1.pdf, id=347, 469.755pt x 325.2
+<RxODE-manual_files/figure-latex/intro-central-1.pdf, id=344, 469.755pt x 325.2
 15pt>
 File: RxODE-manual_files/figure-latex/intro-central-1.pdf Graphic file (type pd
 f)
 <use RxODE-manual_files/figure-latex/intro-central-1.pdf>
 Package pdftex.def Info: RxODE-manual_files/figure-latex/intro-central-1.pdf  u
-sed on input line 600.
+sed on input line 604.
 (pdftex.def)             Requested size: 344.997pt x 238.84406pt.
-<RxODE-manual_files/figure-latex/intro-effect-1.pdf, id=348, 469.755pt x 325.21
+<RxODE-manual_files/figure-latex/intro-effect-1.pdf, id=345, 469.755pt x 325.21
 5pt>
 File: RxODE-manual_files/figure-latex/intro-effect-1.pdf Graphic file (type pdf
 )
 <use RxODE-manual_files/figure-latex/intro-effect-1.pdf>
 Package pdftex.def Info: RxODE-manual_files/figure-latex/intro-effect-1.pdf  us
-ed on input line 610.
+ed on input line 614.
 (pdftex.def)             Requested size: 344.997pt x 238.84406pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -530,184 +863,189 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 l_files/figure-latex/intro-effect-1.pdf>]
 Chapter 5.
 
-Underfull \vbox (badness 3579) has occurred while \output is active []
+Underfull \vbox (badness 2698) has occurred while \output is active []
 
 [17
 
-] [18] [19] [20]
-Overfull \vbox (0.79272pt too high) detected at line 932
+]
+Underfull \hbox (badness 2088) in paragraph at lines 674--678
+[]\T1/mdput/m/n/10 special \T1/mdput/b/n/10 time-derivative \T1/mdput/m/n/10 as
+-sign-ments, where the left hand spec-i-fies the
  []
 
-[21]
-Underfull \vbox (badness 10000) detected at line 932
+
+Underfull \hbox (badness 4967) in paragraph at lines 682--689
+\T1/mdput/b/n/10 time \T1/mdput/m/n/10 (\T1/lmtt/m/n/10 alag(depot)=0\T1/mdput/
+m/n/10 ), \T1/mdput/b/n/10 mod-eled rate \T1/mdput/m/n/10 (\T1/lmtt/m/n/10 rate
+(depot)=2\T1/mdput/m/n/10 ) and \T1/mdput/b/n/10 mod-eled
+ []
+
+[18]
+LaTeX Font Info:    Font shape `T1/mdput/m/it' will be
+(Font)              scaled to size 9.40002pt on input line 770.
+[19] [20] [21]
+Underfull \vbox (badness 10000) detected at line 936
  []
 
 
-Underfull \vbox (badness 10000) detected at line 932
+Underfull \vbox (badness 10000) detected at line 936
  []
 
 [22]
-Overfull \hbox (59.24883pt too wide) in paragraph at lines 1032--1032
+Overfull \hbox (59.24883pt too wide) in paragraph at lines 1036--1036
 []\T1/lmtt/m/n/10 #> RxODE 1.0.1 model named rx_21243c097e8010e00b53c08d0f26fb8
 1 model (ready).[] 
  []
 
 
-Overfull \hbox (258.74825pt too wide) in paragraph at lines 1032--1032
+Overfull \hbox (258.74825pt too wide) in paragraph at lines 1036--1036
 []\T1/lmtt/m/n/10 #> DLL: /home/matt/.cache/R/RxODE/rx_21243c097e8010e00b53c08d
 0f26fb81__.rxd/rx_21243c097e8010e00b53c08d0f26fb81_.so[] 
  []
 
 
-Overfull \hbox (59.24883pt too wide) in paragraph at lines 1032--1032
+Overfull \hbox (59.24883pt too wide) in paragraph at lines 1036--1036
 []\T1/lmtt/m/n/10 #>  [1] "KbBR"  "KbMU"  "KbAD"  "CLint" "KbBO"  "KbRB"  "CO" 
    "QHT"   "QBR"[] 
  []
 
 
-Overfull \hbox (59.24883pt too wide) in paragraph at lines 1032--1032
+Overfull \hbox (59.24883pt too wide) in paragraph at lines 1036--1036
 []\T1/lmtt/m/n/10 #> [10] "QMU"   "QAD"   "QSK"   "QSP"   "QPA"   "QLI"   "QST"
    "QGU"   "QHA"[] 
  []
 
 
-Overfull \hbox (59.24883pt too wide) in paragraph at lines 1032--1032
+Overfull \hbox (59.24883pt too wide) in paragraph at lines 1036--1036
 []\T1/lmtt/m/n/10 #> [19] "QBO"   "QKI"   "QRB"   "QLU"   "VLU"   "VHT"   "VBR"
    "VMU"   "VAD"[] 
  []
 
 
-Overfull \hbox (59.24883pt too wide) in paragraph at lines 1032--1032
+Overfull \hbox (59.24883pt too wide) in paragraph at lines 1036--1036
 []\T1/lmtt/m/n/10 #> [28] "VSK"   "VSP"   "VPA"   "VLI"   "VST"   "VGU"   "VBO"
    "VKI"   "VAB"[] 
  []
 
 
-Overfull \hbox (64.49881pt too wide) in paragraph at lines 1032--1032
+Overfull \hbox (64.49881pt too wide) in paragraph at lines 1036--1036
 []\T1/lmtt/m/n/10 #> [37] "VVB"   "VRB"   "fub"   "KbLU"  "KbHT"  "KbSK"  "KbSP
 "  "KbPA"  "KbLI"[] 
  []
 
 [23]
-Overfull \hbox (11.99896pt too wide) in paragraph at lines 1032--1032
+Overfull \hbox (11.99896pt too wide) in paragraph at lines 1036--1036
 []\T1/lmtt/m/n/10 #>     d/dt(Muscles) = QMU * (Arterial_Blood/VAB - Muscles/Kb
 MU/VMU)[] 
  []
 
 
-Overfull \hbox (11.99896pt too wide) in paragraph at lines 1032--1032
+Overfull \hbox (11.99896pt too wide) in paragraph at lines 1036--1036
 []\T1/lmtt/m/n/10 #>     d/dt(Adipose) = QAD * (Arterial_Blood/VAB - Adipose/Kb
 AD/VAD)[] 
  []
 
 
-Overfull \hbox (1.499pt too wide) in paragraph at lines 1032--1032
+Overfull \hbox (1.499pt too wide) in paragraph at lines 1036--1036
 []\T1/lmtt/m/n/10 #>     d/dt(Spleen) = QSP * (Arterial_Blood/VAB - Spleen/KbSP
 /VSP)[] 
  []
 
 
-Overfull \hbox (22.49893pt too wide) in paragraph at lines 1032--1032
+Overfull \hbox (22.49893pt too wide) in paragraph at lines 1036--1036
 []\T1/lmtt/m/n/10 #>     d/dt(Pancreas) = QPA * (Arterial_Blood/VAB - Pancreas/
 KbPA/VPA)[] 
  []
 
 
-Overfull \hbox (27.74892pt too wide) in paragraph at lines 1032--1032
+Overfull \hbox (27.74892pt too wide) in paragraph at lines 1036--1036
 []\T1/lmtt/m/n/10 #>     d/dt(Liver) = QHA * Arterial_Blood/VAB + QSP * Spleen/
 KbSP/VSP +[] 
  []
 
 
-Overfull \hbox (6.74898pt too wide) in paragraph at lines 1032--1032
+Overfull \hbox (6.74898pt too wide) in paragraph at lines 1036--1036
 []\T1/lmtt/m/n/10 #>         QPA * Pancreas/KbPA/VPA + QST * Stomach/KbST/VST +
  QGU *[] 
  []
 
 
-Overfull \hbox (59.24883pt too wide) in paragraph at lines 1032--1032
+Overfull \hbox (59.24883pt too wide) in paragraph at lines 1036--1036
 []\T1/lmtt/m/n/10 #>         Gut/KbGU/VGU - CLint * fub * Liver/KbLI/VLI - QLI 
 * Liver/KbLI/VLI[] 
  []
 
 
-Overfull \hbox (11.99896pt too wide) in paragraph at lines 1032--1032
+Overfull \hbox (11.99896pt too wide) in paragraph at lines 1036--1036
 []\T1/lmtt/m/n/10 #>     d/dt(Stomach) = QST * (Arterial_Blood/VAB - Stomach/Kb
 ST/VST)[] 
  []
 
 
-Overfull \hbox (11.99896pt too wide) in paragraph at lines 1032--1032
+Overfull \hbox (11.99896pt too wide) in paragraph at lines 1036--1036
 []\T1/lmtt/m/n/10 #>     d/dt(Kidneys) = QKI * (Arterial_Blood/VAB - Kidneys/Kb
 KI/VKI)[] 
  []
 
 
-Overfull \hbox (38.24889pt too wide) in paragraph at lines 1032--1032
+Overfull \hbox (38.24889pt too wide) in paragraph at lines 1036--1036
 []\T1/lmtt/m/n/10 #>     d/dt(Arterial_Blood) = QLU * (Lungs/KbLU/VLU - Arteria
 l_Blood/VAB)[] 
  []
 
-
-Overfull \hbox (38.24889pt too wide) in paragraph at lines 1032--1032
+[24]
+Overfull \hbox (38.24889pt too wide) in paragraph at lines 1036--1036
 []\T1/lmtt/m/n/10 #>     d/dt(Venous_Blood) = QHT * Heart/KbHT/VHT + QBR * Brai
 n/KbBR/VBR +[] 
  []
 
 
-Overfull \hbox (1.499pt too wide) in paragraph at lines 1032--1032
+Overfull \hbox (1.499pt too wide) in paragraph at lines 1036--1036
 []\T1/lmtt/m/n/10 #>         QMU * Muscles/KbMU/VMU + QAD * Adipose/KbAD/VAD + 
 QSK *[] 
  []
 
-[24]
-Overfull \hbox (32.9989pt too wide) in paragraph at lines 1032--1032
+
+Overfull \hbox (32.9989pt too wide) in paragraph at lines 1036--1036
 []\T1/lmtt/m/n/10 #>         Skin/KbSK/VSK + QLI * Liver/KbLI/VLI + QBO * Bones
 /KbBO/VBO +[] 
  []
 
 
-Overfull \hbox (64.49881pt too wide) in paragraph at lines 1032--1032
+Overfull \hbox (64.49881pt too wide) in paragraph at lines 1036--1036
 []\T1/lmtt/m/n/10 #>     d/dt(Rest_of_Body) = QRB * (Arterial_Blood/VAB - Rest_
 of_Body/KbRB/VRB)[] 
  []
 
-LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <12> not available
-(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 1043.
-
-Underfull \hbox (badness 3029) in paragraph at lines 1043--1043
-[]\T1/lmr/bx/n/12 Changing com-part-ments by pre-declaring with
- []
-
 [25]
-Underfull \vbox (badness 10000) detected at line 1146
+Underfull \vbox (badness 10000) detected at line 1150
  []
 
 
-Underfull \vbox (badness 10000) detected at line 1146
+Underfull \vbox (badness 10000) detected at line 1150
  []
 
 [26]
-Overfull \hbox (59.24883pt too wide) in paragraph at lines 1161--1161
+Overfull \hbox (59.24883pt too wide) in paragraph at lines 1165--1165
 []\T1/lmtt/m/n/10 #> RxODE 1.0.1 model named rx_34c2ce824e1c2c66f5e5ede3f02296e
 e model (ready).[] 
  []
 
 
-Overfull \hbox (463.49765pt too wide) in paragraph at lines 1161--1161
+Overfull \hbox (463.49765pt too wide) in paragraph at lines 1165--1165
 []\T1/lmtt/m/n/10 #> x$state: Venous_Blood, Skin, Lungs, Heart, Brain, Muscles,
  Adipose, Spleen, Pancreas, Liver, Stomach, Gut, Bones, Kidneys, Arterial_Blood
 , Rest_of_Body[] 
  []
 
 
-Overfull \hbox (69.7488pt too wide) in paragraph at lines 1161--1161
+Overfull \hbox (69.7488pt too wide) in paragraph at lines 1165--1165
 []\T1/lmtt/m/n/10 #> x$params: lKbBR, lKbMU, lKbAD, lCLint, eta.LClint, lKbBO, 
 lKbRB, WT, BP, fup[] 
  []
 
 
-Overfull \hbox (1088.24583pt too wide) in paragraph at lines 1161--1161
+Overfull \hbox (1088.24583pt too wide) in paragraph at lines 1165--1165
 []\T1/lmtt/m/n/10 #> x$lhs: KbBR, KbMU, KbAD, CLint, KbBO, KbRB, CO, QHT, QBR, 
 QMU, QAD, QSK, QSP, QPA, QLI, QST, QGU, QHA, QBO, QKI, QRB, QLU, VLU, VHT, VBR,
  VMU, VAD, VSK, VSP, VPA, VLI, VST, VGU, VBO, VKI, VAB, VVB, VRB, fub, KbLU, Kb
@@ -715,13 +1053,13 @@ HT, KbSK, KbSP, KbPA, KbLI, KbST, KbGU, KbKI, S15, C15[]
  []
 
 [27]
-Overfull \hbox (59.24883pt too wide) in paragraph at lines 1192--1192
+Overfull \hbox (59.24883pt too wide) in paragraph at lines 1196--1196
 []\T1/lmtt/m/n/10 #> RxODE 1.0.1 model named rx_b991a2eef1080aa8e4ff6765e643293
 c model (ready).[] 
  []
 
 
-Overfull \hbox (48.74886pt too wide) in paragraph at lines 1210--1210
+Overfull \hbox (48.74886pt too wide) in paragraph at lines 1214--1214
 []  \T1/lmtt/m/n/10 Evaluation error: Compartment \TS1/lmtt/m/n/10 '\T1/lmtt/m/
 n/10 eff\TS1/lmtt/m/n/10 ' \T1/lmtt/m/n/10 needs differential equations defined
 .[] 
@@ -732,381 +1070,388 @@ Chapter 6.
 [29
 
 ] [30]
-Underfull \hbox (badness 1194) in paragraph at lines 1397--1400
-[]\T1/lmr/m/n/10 These can only be ac-cessed when solv-ing with the op-tion com
--bi-na-tion
+Underfull \hbox (badness 10000) in paragraph at lines 1401--1404
+[]\T1/mdput/m/n/10 These can only be ac-cessed when solv-ing with the op-tion c
+om-bi-na-tion
+ []
+
+
+Underfull \hbox (badness 3679) in paragraph at lines 1401--1404
+\T1/lmtt/m/n/10 addDosing=TRUE \T1/mdput/m/n/10 and \T1/lmtt/m/n/10 subsetNonme
+m=FALSE\T1/mdput/m/n/10 . If you want to see the clas-sic
  []
 
 [31] [32]
-Overfull \hbox (22.49893pt too wide) in paragraph at lines 1473--1473
+Overfull \hbox (22.49893pt too wide) in paragraph at lines 1477--1477
 []\T1/lmtt/m/n/10 #>    1 dosing records (see x$get.dosing(); add with add.dosi
 ng or et)[] 
  []
 
 
-Overfull \hbox (69.7488pt too wide) in paragraph at lines 1473--1473
+Overfull \hbox (69.7488pt too wide) in paragraph at lines 1477--1477
 []\T1/lmtt/m/n/10 #>    100 observation times (see x$get.sampling(); add with a
 dd.sampling or et)[] 
  []
 
 
-Overfull \hbox (64.49881pt too wide) in paragraph at lines 1473--1473
+Overfull \hbox (64.49881pt too wide) in paragraph at lines 1477--1477
 []\T1/lmtt/m/n/10 #>    multiple doses in \TS1/lmtt/m/n/10 `\T1/lmtt/m/n/10 add
 l\TS1/lmtt/m/n/10 ` \T1/lmtt/m/n/10 columns, expand with x$expand(); or etExpan
 d(x)[] 
  []
 
-<RxODE-manual_files/figure-latex/unnamed-chunk-40-1.pdf, id=462, 469.755pt x 32
+<RxODE-manual_files/figure-latex/unnamed-chunk-40-1.pdf, id=461, 469.755pt x 32
 5.215pt>
 File: RxODE-manual_files/figure-latex/unnamed-chunk-40-1.pdf Graphic file (type
  pdf)
 <use RxODE-manual_files/figure-latex/unnamed-chunk-40-1.pdf>
 Package pdftex.def Info: RxODE-manual_files/figure-latex/unnamed-chunk-40-1.pdf
-  used on input line 1482.
+  used on input line 1486.
 (pdftex.def)             Requested size: 344.997pt x 238.84406pt.
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \vbox (badness 1052) has occurred while \output is active []
 
-[33] [34 <./RxODE-manual_files/figure-latex/unnamed-chunk-40-1.pdf>]
-Overfull \hbox (22.49893pt too wide) in paragraph at lines 1540--1540
+[33 <./RxODE-manual_files/figure-latex/unnamed-chunk-40-1.pdf>]
+Overfull \hbox (22.49893pt too wide) in paragraph at lines 1544--1544
 []\T1/lmtt/m/n/10 #>    1 dosing records (see x$get.dosing(); add with add.dosi
 ng or et)[] 
  []
 
 
-Overfull \hbox (69.7488pt too wide) in paragraph at lines 1540--1540
+Overfull \hbox (69.7488pt too wide) in paragraph at lines 1544--1544
 []\T1/lmtt/m/n/10 #>    100 observation times (see x$get.sampling(); add with a
 dd.sampling or et)[] 
  []
 
 
-Overfull \hbox (64.49881pt too wide) in paragraph at lines 1540--1540
+Overfull \hbox (64.49881pt too wide) in paragraph at lines 1544--1544
 []\T1/lmtt/m/n/10 #>    multiple doses in \TS1/lmtt/m/n/10 `\T1/lmtt/m/n/10 add
 l\TS1/lmtt/m/n/10 ` \T1/lmtt/m/n/10 columns, expand with x$expand(); or etExpan
 d(x)[] 
  []
 
+[34]
 <RxODE-manual_files/figure-latex/unnamed-chunk-42-1.pdf, id=480, 469.755pt x 32
 5.215pt>
 File: RxODE-manual_files/figure-latex/unnamed-chunk-42-1.pdf Graphic file (type
  pdf)
 <use RxODE-manual_files/figure-latex/unnamed-chunk-42-1.pdf>
 Package pdftex.def Info: RxODE-manual_files/figure-latex/unnamed-chunk-42-1.pdf
-  used on input line 1549.
+  used on input line 1553.
 (pdftex.def)             Requested size: 344.997pt x 238.84406pt.
-[35 <./RxODE-manual_files/figure-latex/unnamed-chunk-42-1.pdf>]
-Overfull \hbox (22.49893pt too wide) in paragraph at lines 1584--1584
+
+Overfull \hbox (22.49893pt too wide) in paragraph at lines 1588--1588
 []\T1/lmtt/m/n/10 #>    1 dosing records (see x$get.dosing(); add with add.dosi
 ng or et)[] 
  []
 
 
-Overfull \hbox (69.7488pt too wide) in paragraph at lines 1584--1584
+Overfull \hbox (69.7488pt too wide) in paragraph at lines 1588--1588
 []\T1/lmtt/m/n/10 #>    100 observation times (see x$get.sampling(); add with a
 dd.sampling or et)[] 
  []
 
 
-Overfull \hbox (64.49881pt too wide) in paragraph at lines 1584--1584
+Overfull \hbox (64.49881pt too wide) in paragraph at lines 1588--1588
 []\T1/lmtt/m/n/10 #>    multiple doses in \TS1/lmtt/m/n/10 `\T1/lmtt/m/n/10 add
 l\TS1/lmtt/m/n/10 ` \T1/lmtt/m/n/10 columns, expand with x$expand(); or etExpan
 d(x)[] 
  []
 
+[35 <./RxODE-manual_files/figure-latex/unnamed-chunk-42-1.pdf>]
 <RxODE-manual_files/figure-latex/unnamed-chunk-44-1.pdf, id=491, 469.755pt x 32
 5.215pt>
 File: RxODE-manual_files/figure-latex/unnamed-chunk-44-1.pdf Graphic file (type
  pdf)
 <use RxODE-manual_files/figure-latex/unnamed-chunk-44-1.pdf>
 Package pdftex.def Info: RxODE-manual_files/figure-latex/unnamed-chunk-44-1.pdf
-  used on input line 1593.
+  used on input line 1597.
 (pdftex.def)             Requested size: 344.997pt x 238.84406pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-[36]
-<RxODE-manual_files/figure-latex/unnamed-chunk-45-1.pdf, id=496, 469.755pt x 32
+<RxODE-manual_files/figure-latex/unnamed-chunk-45-1.pdf, id=492, 469.755pt x 32
 5.215pt>
 File: RxODE-manual_files/figure-latex/unnamed-chunk-45-1.pdf Graphic file (type
  pdf)
 <use RxODE-manual_files/figure-latex/unnamed-chunk-45-1.pdf>
 Package pdftex.def Info: RxODE-manual_files/figure-latex/unnamed-chunk-45-1.pdf
-  used on input line 1608.
+  used on input line 1612.
 (pdftex.def)             Requested size: 344.997pt x 238.84406pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[37 <./RxODE-manual_files/figure-latex/unnamed-chunk-44-1.pdf>]
-<RxODE-manual_files/figure-latex/unnamed-chunk-46-1.pdf, id=508, 469.755pt x 32
+[36 <./RxODE-manual_files/figure-latex/unnamed-chunk-44-1.pdf>]
+<RxODE-manual_files/figure-latex/unnamed-chunk-46-1.pdf, id=503, 469.755pt x 32
 5.215pt>
 File: RxODE-manual_files/figure-latex/unnamed-chunk-46-1.pdf Graphic file (type
  pdf)
 <use RxODE-manual_files/figure-latex/unnamed-chunk-46-1.pdf>
 Package pdftex.def Info: RxODE-manual_files/figure-latex/unnamed-chunk-46-1.pdf
-  used on input line 1619.
+  used on input line 1623.
 (pdftex.def)             Requested size: 344.997pt x 238.84406pt.
-[38 <./RxODE-manual_files/figure-latex/unnamed-chunk-45-1.pdf> <./RxODE-manual_
+[37 <./RxODE-manual_files/figure-latex/unnamed-chunk-45-1.pdf> <./RxODE-manual_
 files/figure-latex/unnamed-chunk-46-1.pdf>]
-<RxODE-manual_files/figure-latex/unnamed-chunk-48-1.pdf, id=525, 469.755pt x 32
+<RxODE-manual_files/figure-latex/unnamed-chunk-48-1.pdf, id=521, 469.755pt x 32
 5.215pt>
 File: RxODE-manual_files/figure-latex/unnamed-chunk-48-1.pdf Graphic file (type
  pdf)
 <use RxODE-manual_files/figure-latex/unnamed-chunk-48-1.pdf>
 Package pdftex.def Info: RxODE-manual_files/figure-latex/unnamed-chunk-48-1.pdf
-  used on input line 1656.
+  used on input line 1660.
 (pdftex.def)             Requested size: 344.997pt x 238.84406pt.
-[39 <./RxODE-manual_files/figure-latex/unnamed-chunk-48-1.pdf>]
-Overfull \hbox (22.49893pt too wide) in paragraph at lines 1696--1696
+[38 <./RxODE-manual_files/figure-latex/unnamed-chunk-48-1.pdf>]
+Overfull \hbox (22.49893pt too wide) in paragraph at lines 1700--1700
 []\T1/lmtt/m/n/10 #>    1 dosing records (see x$get.dosing(); add with add.dosi
 ng or et)[] 
  []
 
 
-Overfull \hbox (69.7488pt too wide) in paragraph at lines 1696--1696
+Overfull \hbox (69.7488pt too wide) in paragraph at lines 1700--1700
 []\T1/lmtt/m/n/10 #>    100 observation times (see x$get.sampling(); add with a
 dd.sampling or et)[] 
  []
 
 
-Overfull \hbox (64.49881pt too wide) in paragraph at lines 1696--1696
+Overfull \hbox (64.49881pt too wide) in paragraph at lines 1700--1700
 []\T1/lmtt/m/n/10 #>    multiple doses in \TS1/lmtt/m/n/10 `\T1/lmtt/m/n/10 add
 l\TS1/lmtt/m/n/10 ` \T1/lmtt/m/n/10 columns, expand with x$expand(); or etExpan
 d(x)[] 
  []
 
-<RxODE-manual_files/figure-latex/unnamed-chunk-50-1.pdf, id=537, 469.755pt x 32
+<RxODE-manual_files/figure-latex/unnamed-chunk-50-1.pdf, id=533, 469.755pt x 32
 5.215pt>
 File: RxODE-manual_files/figure-latex/unnamed-chunk-50-1.pdf Graphic file (type
  pdf)
 <use RxODE-manual_files/figure-latex/unnamed-chunk-50-1.pdf>
 Package pdftex.def Info: RxODE-manual_files/figure-latex/unnamed-chunk-50-1.pdf
-  used on input line 1705.
+  used on input line 1709.
 (pdftex.def)             Requested size: 344.997pt x 238.84406pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[40]
-Overfull \hbox (22.49893pt too wide) in paragraph at lines 1742--1742
+[39]
+Overfull \hbox (22.49893pt too wide) in paragraph at lines 1746--1746
 []\T1/lmtt/m/n/10 #>    1 dosing records (see x$get.dosing(); add with add.dosi
 ng or et)[] 
  []
 
 
-Overfull \hbox (69.7488pt too wide) in paragraph at lines 1742--1742
+Overfull \hbox (69.7488pt too wide) in paragraph at lines 1746--1746
 []\T1/lmtt/m/n/10 #>    100 observation times (see x$get.sampling(); add with a
 dd.sampling or et)[] 
  []
 
 
-Overfull \hbox (64.49881pt too wide) in paragraph at lines 1742--1742
+Overfull \hbox (64.49881pt too wide) in paragraph at lines 1746--1746
 []\T1/lmtt/m/n/10 #>    multiple doses in \TS1/lmtt/m/n/10 `\T1/lmtt/m/n/10 add
 l\TS1/lmtt/m/n/10 ` \T1/lmtt/m/n/10 columns, expand with x$expand(); or etExpan
 d(x)[] 
  []
 
-[41 <./RxODE-manual_files/figure-latex/unnamed-chunk-50-1.pdf>]
-<RxODE-manual_files/figure-latex/unnamed-chunk-52-1.pdf, id=553, 469.755pt x 32
+[40 <./RxODE-manual_files/figure-latex/unnamed-chunk-50-1.pdf>]
+<RxODE-manual_files/figure-latex/unnamed-chunk-52-1.pdf, id=549, 469.755pt x 32
 5.215pt>
 File: RxODE-manual_files/figure-latex/unnamed-chunk-52-1.pdf Graphic file (type
  pdf)
 <use RxODE-manual_files/figure-latex/unnamed-chunk-52-1.pdf>
 Package pdftex.def Info: RxODE-manual_files/figure-latex/unnamed-chunk-52-1.pdf
-  used on input line 1751.
+  used on input line 1755.
 (pdftex.def)             Requested size: 344.997pt x 238.84406pt.
 
-Overfull \hbox (22.49893pt too wide) in paragraph at lines 1789--1789
+Overfull \hbox (22.49893pt too wide) in paragraph at lines 1793--1793
 []\T1/lmtt/m/n/10 #>    1 dosing records (see x$get.dosing(); add with add.dosi
 ng or et)[] 
  []
 
 
-Overfull \hbox (69.7488pt too wide) in paragraph at lines 1789--1789
+Overfull \hbox (69.7488pt too wide) in paragraph at lines 1793--1793
 []\T1/lmtt/m/n/10 #>    100 observation times (see x$get.sampling(); add with a
 dd.sampling or et)[] 
  []
 
-[42 <./RxODE-manual_files/figure-latex/unnamed-chunk-52-1.pdf>]
-<RxODE-manual_files/figure-latex/unnamed-chunk-54-1.pdf, id=566, 469.755pt x 32
+[41 <./RxODE-manual_files/figure-latex/unnamed-chunk-52-1.pdf>]
+<RxODE-manual_files/figure-latex/unnamed-chunk-54-1.pdf, id=562, 469.755pt x 32
 5.215pt>
 File: RxODE-manual_files/figure-latex/unnamed-chunk-54-1.pdf Graphic file (type
  pdf)
 <use RxODE-manual_files/figure-latex/unnamed-chunk-54-1.pdf>
 Package pdftex.def Info: RxODE-manual_files/figure-latex/unnamed-chunk-54-1.pdf
-  used on input line 1797.
+  used on input line 1801.
 (pdftex.def)             Requested size: 344.997pt x 238.84406pt.
-[43 <./RxODE-manual_files/figure-latex/unnamed-chunk-54-1.pdf>]
-<RxODE-manual_files/figure-latex/unnamed-chunk-55-1.pdf, id=580, 469.755pt x 32
+[42 <./RxODE-manual_files/figure-latex/unnamed-chunk-54-1.pdf>]
+<RxODE-manual_files/figure-latex/unnamed-chunk-55-1.pdf, id=575, 469.755pt x 32
 5.215pt>
 File: RxODE-manual_files/figure-latex/unnamed-chunk-55-1.pdf Graphic file (type
  pdf)
 <use RxODE-manual_files/figure-latex/unnamed-chunk-55-1.pdf>
 Package pdftex.def Info: RxODE-manual_files/figure-latex/unnamed-chunk-55-1.pdf
-  used on input line 1834.
+  used on input line 1838.
 (pdftex.def)             Requested size: 344.997pt x 238.84406pt.
-[44 <./RxODE-manual_files/figure-latex/unnamed-chunk-55-1.pdf>]
-<RxODE-manual_files/figure-latex/unnamed-chunk-56-1.pdf, id=595, 469.755pt x 32
+[43 <./RxODE-manual_files/figure-latex/unnamed-chunk-55-1.pdf>]
+<RxODE-manual_files/figure-latex/unnamed-chunk-56-1.pdf, id=591, 469.755pt x 32
 5.215pt>
 File: RxODE-manual_files/figure-latex/unnamed-chunk-56-1.pdf Graphic file (type
  pdf)
 <use RxODE-manual_files/figure-latex/unnamed-chunk-56-1.pdf>
 Package pdftex.def Info: RxODE-manual_files/figure-latex/unnamed-chunk-56-1.pdf
-  used on input line 1892.
+  used on input line 1896.
 (pdftex.def)             Requested size: 344.997pt x 238.84406pt.
 
-Underfull \vbox (badness 7722) has occurred while \output is active []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[45]
-Overfull \hbox (22.49893pt too wide) in paragraph at lines 1935--1935
+[44]
+Overfull \hbox (22.49893pt too wide) in paragraph at lines 1939--1939
 []\T1/lmtt/m/n/10 #>    2 dosing records (see x$get.dosing(); add with add.dosi
 ng or et)[] 
  []
 
 
-Overfull \hbox (69.7488pt too wide) in paragraph at lines 1935--1935
+Overfull \hbox (69.7488pt too wide) in paragraph at lines 1939--1939
 []\T1/lmtt/m/n/10 #>    100 observation times (see x$get.sampling(); add with a
 dd.sampling or et)[] 
  []
 
 
-Overfull \hbox (64.49881pt too wide) in paragraph at lines 1935--1935
+Overfull \hbox (64.49881pt too wide) in paragraph at lines 1939--1939
 []\T1/lmtt/m/n/10 #>    multiple doses in \TS1/lmtt/m/n/10 `\T1/lmtt/m/n/10 add
 l\TS1/lmtt/m/n/10 ` \T1/lmtt/m/n/10 columns, expand with x$expand(); or etExpan
 d(x)[] 
  []
 
-[46 <./RxODE-manual_files/figure-latex/unnamed-chunk-56-1.pdf>]
-<RxODE-manual_files/figure-latex/unnamed-chunk-58-1.pdf, id=612, 469.755pt x 32
+[45 <./RxODE-manual_files/figure-latex/unnamed-chunk-56-1.pdf>]
+<RxODE-manual_files/figure-latex/unnamed-chunk-58-1.pdf, id=608, 469.755pt x 32
 5.215pt>
 File: RxODE-manual_files/figure-latex/unnamed-chunk-58-1.pdf Graphic file (type
  pdf)
 <use RxODE-manual_files/figure-latex/unnamed-chunk-58-1.pdf>
 Package pdftex.def Info: RxODE-manual_files/figure-latex/unnamed-chunk-58-1.pdf
-  used on input line 1945.
+  used on input line 1949.
 (pdftex.def)             Requested size: 344.997pt x 238.84406pt.
-[47 <./RxODE-manual_files/figure-latex/unnamed-chunk-58-1.pdf>]
-Overfull \hbox (22.49893pt too wide) in paragraph at lines 1982--1982
+[46 <./RxODE-manual_files/figure-latex/unnamed-chunk-58-1.pdf>]
+Overfull \hbox (22.49893pt too wide) in paragraph at lines 1986--1986
 []\T1/lmtt/m/n/10 #>    2 dosing records (see x$get.dosing(); add with add.dosi
 ng or et)[] 
  []
 
 
-Overfull \hbox (69.7488pt too wide) in paragraph at lines 1982--1982
+Overfull \hbox (69.7488pt too wide) in paragraph at lines 1986--1986
 []\T1/lmtt/m/n/10 #>    100 observation times (see x$get.sampling(); add with a
 dd.sampling or et)[] 
  []
 
 
-Overfull \hbox (64.49881pt too wide) in paragraph at lines 1982--1982
+Overfull \hbox (64.49881pt too wide) in paragraph at lines 1986--1986
 []\T1/lmtt/m/n/10 #>    multiple doses in \TS1/lmtt/m/n/10 `\T1/lmtt/m/n/10 add
 l\TS1/lmtt/m/n/10 ` \T1/lmtt/m/n/10 columns, expand with x$expand(); or etExpan
 d(x)[] 
  []
 
-<RxODE-manual_files/figure-latex/unnamed-chunk-60-1.pdf, id=623, 469.755pt x 32
+<RxODE-manual_files/figure-latex/unnamed-chunk-60-1.pdf, id=619, 469.755pt x 32
 5.215pt>
 File: RxODE-manual_files/figure-latex/unnamed-chunk-60-1.pdf Graphic file (type
  pdf)
 <use RxODE-manual_files/figure-latex/unnamed-chunk-60-1.pdf>
 Package pdftex.def Info: RxODE-manual_files/figure-latex/unnamed-chunk-60-1.pdf
-  used on input line 1992.
+  used on input line 1996.
 (pdftex.def)             Requested size: 344.997pt x 238.84406pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[48]
-Overfull \hbox (22.49893pt too wide) in paragraph at lines 2031--2031
+[47]
+Overfull \hbox (22.49893pt too wide) in paragraph at lines 2035--2035
 []\T1/lmtt/m/n/10 #>    2 dosing records (see x$get.dosing(); add with add.dosi
 ng or et)[] 
  []
 
 
-Overfull \hbox (69.7488pt too wide) in paragraph at lines 2031--2031
+Overfull \hbox (69.7488pt too wide) in paragraph at lines 2035--2035
 []\T1/lmtt/m/n/10 #>    100 observation times (see x$get.sampling(); add with a
 dd.sampling or et)[] 
  []
 
 
-Overfull \hbox (64.49881pt too wide) in paragraph at lines 2031--2031
+Overfull \hbox (64.49881pt too wide) in paragraph at lines 2035--2035
 []\T1/lmtt/m/n/10 #>    multiple doses in \TS1/lmtt/m/n/10 `\T1/lmtt/m/n/10 add
 l\TS1/lmtt/m/n/10 ` \T1/lmtt/m/n/10 columns, expand with x$expand(); or etExpan
 d(x)[] 
  []
 
-[49 <./RxODE-manual_files/figure-latex/unnamed-chunk-60-1.pdf>]
-<RxODE-manual_files/figure-latex/unnamed-chunk-62-1.pdf, id=640, 469.755pt x 32
+[48 <./RxODE-manual_files/figure-latex/unnamed-chunk-60-1.pdf>]
+<RxODE-manual_files/figure-latex/unnamed-chunk-62-1.pdf, id=635, 469.755pt x 32
 5.215pt>
 File: RxODE-manual_files/figure-latex/unnamed-chunk-62-1.pdf Graphic file (type
  pdf)
 <use RxODE-manual_files/figure-latex/unnamed-chunk-62-1.pdf>
 Package pdftex.def Info: RxODE-manual_files/figure-latex/unnamed-chunk-62-1.pdf
-  used on input line 2041.
+  used on input line 2045.
 (pdftex.def)             Requested size: 344.997pt x 238.84406pt.
-[50 <./RxODE-manual_files/figure-latex/unnamed-chunk-62-1.pdf>]
-<RxODE-manual_files/figure-latex/unnamed-chunk-63-1.pdf, id=651, 469.755pt x 32
+[49 <./RxODE-manual_files/figure-latex/unnamed-chunk-62-1.pdf>]
+<RxODE-manual_files/figure-latex/unnamed-chunk-63-1.pdf, id=647, 469.755pt x 32
 5.215pt>
 File: RxODE-manual_files/figure-latex/unnamed-chunk-63-1.pdf Graphic file (type
  pdf)
 <use RxODE-manual_files/figure-latex/unnamed-chunk-63-1.pdf>
 Package pdftex.def Info: RxODE-manual_files/figure-latex/unnamed-chunk-63-1.pdf
-  used on input line 2063.
+  used on input line 2067.
 (pdftex.def)             Requested size: 344.997pt x 238.84406pt.
-<RxODE-manual_files/figure-latex/unnamed-chunk-64-1.pdf, id=652, 469.755pt x 32
+<RxODE-manual_files/figure-latex/unnamed-chunk-64-1.pdf, id=648, 469.755pt x 32
 5.215pt>
 File: RxODE-manual_files/figure-latex/unnamed-chunk-64-1.pdf Graphic file (type
  pdf)
 <use RxODE-manual_files/figure-latex/unnamed-chunk-64-1.pdf>
 Package pdftex.def Info: RxODE-manual_files/figure-latex/unnamed-chunk-64-1.pdf
-  used on input line 2080.
+  used on input line 2084.
 (pdftex.def)             Requested size: 344.997pt x 238.84406pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[51 <./RxODE-manual_files/figure-latex/unnamed-chunk-63-1.pdf>] [52 <./RxODE-ma
-nual_files/figure-latex/unnamed-chunk-64-1.pdf>] [53] [54] [55] [56]
-Chapter 7.
+[50 <./RxODE-manual_files/figure-latex/unnamed-chunk-63-1.pdf>] [51 <./RxODE-ma
+nual_files/figure-latex/unnamed-chunk-64-1.pdf>]
+Overfull \vbox (7.86336pt too high) has occurred while \output is active []
 
-Overfull \hbox (22.49893pt too wide) in paragraph at lines 2417--2417
-[]\T1/lmtt/m/n/10 #>    0 dosing records (see x$get.dosing(); add with add.dosi
-ng or et)[] 
- []
-
-
-Overfull \hbox (59.24883pt too wide) in paragraph at lines 2417--2417
-[]\T1/lmtt/m/n/10 #>    0 observation times (see x$get.sampling(); add with add
-.sampling or et)[] 
- []
-
-
-Overfull \hbox (22.49893pt too wide) in paragraph at lines 2432--2432
-[]\T1/lmtt/m/n/10 #>    0 dosing records (see x$get.dosing(); add with add.dosi
-ng or et)[] 
- []
-
-
-Overfull \hbox (59.24883pt too wide) in paragraph at lines 2432--2432
-[]\T1/lmtt/m/n/10 #>    0 observation times (see x$get.sampling(); add with add
-.sampling or et)[] 
- []
-
-[57
+[52] [53] [54] [55] [56
 
 ]
+Chapter 7.
+
+Overfull \hbox (22.49893pt too wide) in paragraph at lines 2421--2421
+[]\T1/lmtt/m/n/10 #>    0 dosing records (see x$get.dosing(); add with add.dosi
+ng or et)[] 
+ []
+
+
+Overfull \hbox (59.24883pt too wide) in paragraph at lines 2421--2421
+[]\T1/lmtt/m/n/10 #>    0 observation times (see x$get.sampling(); add with add
+.sampling or et)[] 
+ []
+
+
+Overfull \hbox (22.49893pt too wide) in paragraph at lines 2436--2436
+[]\T1/lmtt/m/n/10 #>    0 dosing records (see x$get.dosing(); add with add.dosi
+ng or et)[] 
+ []
+
+
+Overfull \hbox (59.24883pt too wide) in paragraph at lines 2436--2436
+[]\T1/lmtt/m/n/10 #>    0 observation times (see x$get.sampling(); add with add
+.sampling or et)[] 
+ []
+
+[57]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 [58]
-Overfull \hbox (22.49893pt too wide) in paragraph at lines 2543--2543
+Overfull \hbox (22.49893pt too wide) in paragraph at lines 2547--2547
 []\T1/lmtt/m/n/10 #>    2 dosing records (see x$get.dosing(); add with add.dosi
 ng or et)[] 
  []
 
 
-Overfull \hbox (59.24883pt too wide) in paragraph at lines 2543--2543
+Overfull \hbox (59.24883pt too wide) in paragraph at lines 2547--2547
 []\T1/lmtt/m/n/10 #>    0 observation times (see x$get.sampling(); add with add
 .sampling or et)[] 
  []
 
 
-Overfull \hbox (64.49881pt too wide) in paragraph at lines 2543--2543
+Overfull \hbox (64.49881pt too wide) in paragraph at lines 2547--2547
 []\T1/lmtt/m/n/10 #>    multiple doses in \TS1/lmtt/m/n/10 `\T1/lmtt/m/n/10 add
 l\TS1/lmtt/m/n/10 ` \T1/lmtt/m/n/10 columns, expand with x$expand(); or etExpan
 d(x)[] 
@@ -1119,22 +1464,22 @@ File: RxODE-manual_files/figure-latex/unnamed-chunk-69-1.pdf Graphic file (type
  pdf)
 <use RxODE-manual_files/figure-latex/unnamed-chunk-69-1.pdf>
 Package pdftex.def Info: RxODE-manual_files/figure-latex/unnamed-chunk-69-1.pdf
-  used on input line 2559.
+  used on input line 2563.
 (pdftex.def)             Requested size: 344.997pt x 238.84406pt.
 
-Overfull \hbox (22.49893pt too wide) in paragraph at lines 2584--2584
+Overfull \hbox (22.49893pt too wide) in paragraph at lines 2588--2588
 []\T1/lmtt/m/n/10 #>    1 dosing records (see x$get.dosing(); add with add.dosi
 ng or et)[] 
  []
 
 
-Overfull \hbox (59.24883pt too wide) in paragraph at lines 2584--2584
+Overfull \hbox (59.24883pt too wide) in paragraph at lines 2588--2588
 []\T1/lmtt/m/n/10 #>    0 observation times (see x$get.sampling(); add with add
 .sampling or et)[] 
  []
 
 
-Overfull \hbox (64.49881pt too wide) in paragraph at lines 2584--2584
+Overfull \hbox (64.49881pt too wide) in paragraph at lines 2588--2588
 []\T1/lmtt/m/n/10 #>    multiple doses in \TS1/lmtt/m/n/10 `\T1/lmtt/m/n/10 add
 l\TS1/lmtt/m/n/10 ` \T1/lmtt/m/n/10 columns, expand with x$expand(); or etExpan
 d(x)[] 
@@ -1147,22 +1492,22 @@ File: RxODE-manual_files/figure-latex/unnamed-chunk-71-1.pdf Graphic file (type
  pdf)
 <use RxODE-manual_files/figure-latex/unnamed-chunk-71-1.pdf>
 Package pdftex.def Info: RxODE-manual_files/figure-latex/unnamed-chunk-71-1.pdf
-  used on input line 2594.
+  used on input line 2598.
 (pdftex.def)             Requested size: 344.997pt x 238.84406pt.
 
-Overfull \hbox (22.49893pt too wide) in paragraph at lines 2638--2638
+Overfull \hbox (22.49893pt too wide) in paragraph at lines 2642--2642
 []\T1/lmtt/m/n/10 #>    1 dosing records (see x$get.dosing(); add with add.dosi
 ng or et)[] 
  []
 
 [61 <./RxODE-manual_files/figure-latex/unnamed-chunk-71-1.pdf>]
-Overfull \hbox (59.24883pt too wide) in paragraph at lines 2638--2638
+Overfull \hbox (59.24883pt too wide) in paragraph at lines 2642--2642
 []\T1/lmtt/m/n/10 #>    7 observation times (see x$get.sampling(); add with add
 .sampling or et)[] 
  []
 
 
-Overfull \hbox (64.49881pt too wide) in paragraph at lines 2638--2638
+Overfull \hbox (64.49881pt too wide) in paragraph at lines 2642--2642
 []\T1/lmtt/m/n/10 #>    multiple doses in \TS1/lmtt/m/n/10 `\T1/lmtt/m/n/10 add
 l\TS1/lmtt/m/n/10 ` \T1/lmtt/m/n/10 columns, expand with x$expand(); or etExpan
 d(x)[] 
@@ -1174,22 +1519,22 @@ File: RxODE-manual_files/figure-latex/unnamed-chunk-73-1.pdf Graphic file (type
  pdf)
 <use RxODE-manual_files/figure-latex/unnamed-chunk-73-1.pdf>
 Package pdftex.def Info: RxODE-manual_files/figure-latex/unnamed-chunk-73-1.pdf
-  used on input line 2648.
+  used on input line 2652.
 (pdftex.def)             Requested size: 344.997pt x 238.84406pt.
 [62 <./RxODE-manual_files/figure-latex/unnamed-chunk-73-1.pdf>]
-Overfull \hbox (22.49893pt too wide) in paragraph at lines 2680--2680
+Overfull \hbox (22.49893pt too wide) in paragraph at lines 2684--2684
 []\T1/lmtt/m/n/10 #>    1 dosing records (see x$get.dosing(); add with add.dosi
 ng or et)[] 
  []
 
 
-Overfull \hbox (59.24883pt too wide) in paragraph at lines 2680--2680
+Overfull \hbox (59.24883pt too wide) in paragraph at lines 2684--2684
 []\T1/lmtt/m/n/10 #>    7 observation times (see x$get.sampling(); add with add
 .sampling or et)[] 
  []
 
 
-Overfull \hbox (64.49881pt too wide) in paragraph at lines 2680--2680
+Overfull \hbox (64.49881pt too wide) in paragraph at lines 2684--2684
 []\T1/lmtt/m/n/10 #>    multiple doses in \TS1/lmtt/m/n/10 `\T1/lmtt/m/n/10 add
 l\TS1/lmtt/m/n/10 ` \T1/lmtt/m/n/10 columns, expand with x$expand(); or etExpan
 d(x)[] 
@@ -1201,32 +1546,32 @@ File: RxODE-manual_files/figure-latex/unnamed-chunk-75-1.pdf Graphic file (type
  pdf)
 <use RxODE-manual_files/figure-latex/unnamed-chunk-75-1.pdf>
 Package pdftex.def Info: RxODE-manual_files/figure-latex/unnamed-chunk-75-1.pdf
-  used on input line 2690.
+  used on input line 2694.
 (pdftex.def)             Requested size: 344.997pt x 238.84406pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 [63]
-Overfull \hbox (22.49893pt too wide) in paragraph at lines 2733--2733
+Overfull \hbox (22.49893pt too wide) in paragraph at lines 2737--2737
 []\T1/lmtt/m/n/10 #>    4 dosing records (see x$get.dosing(); add with add.dosi
 ng or et)[] 
  []
 
 
-Overfull \hbox (69.7488pt too wide) in paragraph at lines 2733--2733
+Overfull \hbox (69.7488pt too wide) in paragraph at lines 2737--2737
 []\T1/lmtt/m/n/10 #>    800 observation times (see x$get.sampling(); add with a
 dd.sampling or et)[] 
  []
 
 
-Overfull \hbox (64.49881pt too wide) in paragraph at lines 2733--2733
+Overfull \hbox (64.49881pt too wide) in paragraph at lines 2737--2737
 []\T1/lmtt/m/n/10 #>    multiple doses in \TS1/lmtt/m/n/10 `\T1/lmtt/m/n/10 add
 l\TS1/lmtt/m/n/10 ` \T1/lmtt/m/n/10 columns, expand with x$expand(); or etExpan
 d(x)[] 
  []
 
 [64 <./RxODE-manual_files/figure-latex/unnamed-chunk-75-1.pdf>]
-Overfull \hbox (74.99878pt too wide) in paragraph at lines 2749--2749
+Overfull \hbox (74.99878pt too wide) in paragraph at lines 2753--2753
 []\T1/lmtt/m/n/10 #> individual parameters are assumed to have the same order a
 s the event dataset[] 
  []
@@ -1237,28 +1582,22 @@ File: RxODE-manual_files/figure-latex/unnamed-chunk-77-1.pdf Graphic file (type
  pdf)
 <use RxODE-manual_files/figure-latex/unnamed-chunk-77-1.pdf>
 Package pdftex.def Info: RxODE-manual_files/figure-latex/unnamed-chunk-77-1.pdf
-  used on input line 2751.
+  used on input line 2755.
 (pdftex.def)             Requested size: 344.997pt x 238.84406pt.
-
-Overfull \hbox (16.83986pt too wide) has occurred while \output is active
-\T1/lmr/m/sl/10 7.3.  EXPAND THE EVENT TABLE TO A MULTI-SUBJECT EVENT TABLE. \T
-1/lmr/m/n/10 65
- []
-
 [65 <./RxODE-manual_files/figure-latex/unnamed-chunk-77-1.pdf>]
-Overfull \hbox (27.74892pt too wide) in paragraph at lines 2799--2799
+Overfull \hbox (27.74892pt too wide) in paragraph at lines 2803--2803
 []\T1/lmtt/m/n/10 #>    16 dosing records (see x$get.dosing(); add with add.dos
 ing or et)[] 
  []
 
 
-Overfull \hbox (59.24883pt too wide) in paragraph at lines 2799--2799
+Overfull \hbox (59.24883pt too wide) in paragraph at lines 2803--2803
 []\T1/lmtt/m/n/10 #>    0 observation times (see x$get.sampling(); add with add
 .sampling or et)[] 
  []
 
 [66]
-Overfull \hbox (74.99878pt too wide) in paragraph at lines 2814--2814
+Overfull \hbox (74.99878pt too wide) in paragraph at lines 2818--2818
 []\T1/lmtt/m/n/10 #> individual parameters are assumed to have the same order a
 s the event dataset[] 
  []
@@ -1269,10 +1608,10 @@ File: RxODE-manual_files/figure-latex/unnamed-chunk-79-1.pdf Graphic file (type
  pdf)
 <use RxODE-manual_files/figure-latex/unnamed-chunk-79-1.pdf>
 Package pdftex.def Info: RxODE-manual_files/figure-latex/unnamed-chunk-79-1.pdf
-  used on input line 2816.
+  used on input line 2820.
 (pdftex.def)             Requested size: 344.997pt x 238.84406pt.
 
-Overfull \hbox (74.99878pt too wide) in paragraph at lines 2835--2835
+Overfull \hbox (74.99878pt too wide) in paragraph at lines 2839--2839
 []\T1/lmtt/m/n/10 #> individual parameters are assumed to have the same order a
 s the event dataset[] 
  []
@@ -1283,13 +1622,13 @@ File: RxODE-manual_files/figure-latex/unnamed-chunk-80-1.pdf Graphic file (type
  pdf)
 <use RxODE-manual_files/figure-latex/unnamed-chunk-80-1.pdf>
 Package pdftex.def Info: RxODE-manual_files/figure-latex/unnamed-chunk-80-1.pdf
-  used on input line 2837.
+  used on input line 2841.
 (pdftex.def)             Requested size: 344.997pt x 238.84406pt.
 
-Underfull \vbox (badness 1776) has occurred while \output is active []
+Underfull \vbox (badness 1565) has occurred while \output is active []
 
 [67 <./RxODE-manual_files/figure-latex/unnamed-chunk-79-1.pdf>]
-Overfull \hbox (74.99878pt too wide) in paragraph at lines 2866--2866
+Overfull \hbox (74.99878pt too wide) in paragraph at lines 2870--2870
 []\T1/lmtt/m/n/10 #> individual parameters are assumed to have the same order a
 s the event dataset[] 
  []
@@ -1300,10 +1639,10 @@ File: RxODE-manual_files/figure-latex/unnamed-chunk-81-1.pdf Graphic file (type
  pdf)
 <use RxODE-manual_files/figure-latex/unnamed-chunk-81-1.pdf>
 Package pdftex.def Info: RxODE-manual_files/figure-latex/unnamed-chunk-81-1.pdf
-  used on input line 2868.
+  used on input line 2872.
 (pdftex.def)             Requested size: 344.997pt x 238.84406pt.
 
-Underfull \vbox (badness 4479) has occurred while \output is active []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
 [68 <./RxODE-manual_files/figure-latex/unnamed-chunk-80-1.pdf>] [69 <./RxODE-ma
 nual_files/figure-latex/unnamed-chunk-81-1.pdf>]
@@ -1313,7 +1652,7 @@ File: RxODE-manual_files/figure-latex/unnamed-chunk-82-1.pdf Graphic file (type
  pdf)
 <use RxODE-manual_files/figure-latex/unnamed-chunk-82-1.pdf>
 Package pdftex.def Info: RxODE-manual_files/figure-latex/unnamed-chunk-82-1.pdf
-  used on input line 2903.
+  used on input line 2907.
 (pdftex.def)             Requested size: 344.997pt x 238.84406pt.
 <RxODE-manual_files/figure-latex/unnamed-chunk-83-1.pdf, id=835, 469.755pt x 32
 5.215pt>
@@ -1321,7 +1660,7 @@ File: RxODE-manual_files/figure-latex/unnamed-chunk-83-1.pdf Graphic file (type
  pdf)
 <use RxODE-manual_files/figure-latex/unnamed-chunk-83-1.pdf>
 Package pdftex.def Info: RxODE-manual_files/figure-latex/unnamed-chunk-83-1.pdf
-  used on input line 2919.
+  used on input line 2923.
 (pdftex.def)             Requested size: 344.997pt x 238.84406pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -1333,7 +1672,7 @@ File: RxODE-manual_files/figure-latex/unnamed-chunk-84-1.pdf Graphic file (type
  pdf)
 <use RxODE-manual_files/figure-latex/unnamed-chunk-84-1.pdf>
 Package pdftex.def Info: RxODE-manual_files/figure-latex/unnamed-chunk-84-1.pdf
-  used on input line 2936.
+  used on input line 2940.
 (pdftex.def)             Requested size: 344.997pt x 238.84406pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -1345,20 +1684,25 @@ File: RxODE-manual_files/figure-latex/unnamed-chunk-85-1.pdf Graphic file (type
  pdf)
 <use RxODE-manual_files/figure-latex/unnamed-chunk-85-1.pdf>
 Package pdftex.def Info: RxODE-manual_files/figure-latex/unnamed-chunk-85-1.pdf
-  used on input line 2961.
+  used on input line 2965.
 (pdftex.def)             Requested size: 344.997pt x 238.84406pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[72 <./RxODE-manual_files/figure-latex/unnamed-chunk-84-1.pdf>] [73 <./RxODE-ma
-nual_files/figure-latex/unnamed-chunk-85-1.pdf>]
+[72 <./RxODE-manual_files/figure-latex/unnamed-chunk-84-1.pdf>]
+Underfull \hbox (badness 1275) in paragraph at lines 2967--2972
+\T1/mdput/m/n/10 of the same op-tions still ap-ply; That is \T1/lmtt/m/n/10 sam
+ples \T1/mdput/m/n/10 are cleared un-less you use
+ []
+
+[73 <./RxODE-manual_files/figure-latex/unnamed-chunk-85-1.pdf>]
 <RxODE-manual_files/figure-latex/unnamed-chunk-86-1.pdf, id=881, 469.755pt x 32
 5.215pt>
 File: RxODE-manual_files/figure-latex/unnamed-chunk-86-1.pdf Graphic file (type
  pdf)
 <use RxODE-manual_files/figure-latex/unnamed-chunk-86-1.pdf>
 Package pdftex.def Info: RxODE-manual_files/figure-latex/unnamed-chunk-86-1.pdf
-  used on input line 2996.
+  used on input line 3000.
 (pdftex.def)             Requested size: 344.997pt x 238.84406pt.
 <RxODE-manual_files/figure-latex/unnamed-chunk-87-1.pdf, id=882, 469.755pt x 32
 5.215pt>
@@ -1366,7 +1710,7 @@ File: RxODE-manual_files/figure-latex/unnamed-chunk-87-1.pdf Graphic file (type
  pdf)
 <use RxODE-manual_files/figure-latex/unnamed-chunk-87-1.pdf>
 Package pdftex.def Info: RxODE-manual_files/figure-latex/unnamed-chunk-87-1.pdf
-  used on input line 3010.
+  used on input line 3014.
 (pdftex.def)             Requested size: 344.997pt x 238.84406pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -1378,7 +1722,7 @@ File: RxODE-manual_files/figure-latex/unnamed-chunk-88-1.pdf Graphic file (type
  pdf)
 <use RxODE-manual_files/figure-latex/unnamed-chunk-88-1.pdf>
 Package pdftex.def Info: RxODE-manual_files/figure-latex/unnamed-chunk-88-1.pdf
-  used on input line 3023.
+  used on input line 3027.
 (pdftex.def)             Requested size: 344.997pt x 238.84406pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -1390,7 +1734,7 @@ File: RxODE-manual_files/figure-latex/unnamed-chunk-89-1.pdf Graphic file (type
  pdf)
 <use RxODE-manual_files/figure-latex/unnamed-chunk-89-1.pdf>
 Package pdftex.def Info: RxODE-manual_files/figure-latex/unnamed-chunk-89-1.pdf
-  used on input line 3041.
+  used on input line 3045.
 (pdftex.def)             Requested size: 344.997pt x 238.84406pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -1401,21 +1745,15 @@ nual_files/figure-latex/unnamed-chunk-89-1.pdf>] [78
 ]
 Chapter 8.
 [79] [80] [81]
-Underfull \hbox (badness 10000) in paragraph at lines 3204--3206
-\T1/lmtt/m/n/10 be changed at any time, but will not take effect until the next
-
- []
-
-
-Overfull \hbox (60.35553pt too wide) in paragraph at lines 3204--3206
-\T1/lmtt/m/n/10 change of\T1/lmr/m/n/10 H\T1/lmtt/m/n/10 is considered. This op
-tion is only considered with\T1/lmr/m/n/10 method=``liblsoda''`. 
+Underfull \hbox (badness 10000) in paragraph at lines 3208--3210
+\T1/lmtt/m/n/10 at any time, but will not take effect until the next change of\
+T1/mdput/m/n/10 H\T1/lmtt/m/n/10 is
  []
 
 [82] [83] [84] [85] [86] [87] [88] [89] [90] [91]
-Underfull \hbox (badness 1009) in paragraph at lines 3778--3781
-[]\T1/lmtt/m/n/10 EVID=-1 \T1/lmr/m/n/10 when the mod-eled rate in-fu-sions are
- turned off (matches
+Underfull \hbox (badness 2582) in paragraph at lines 3788--3791
+[]\T1/lmtt/m/n/10 EVID=-10 \T1/mdput/m/n/10 When the spec-i-fied \T1/lmtt/m/n/1
+0 rate \T1/mdput/m/n/10 in-fu-sions are turned off (matches
  []
 
 [92] [93] [94] [95] [96]
@@ -1423,68 +1761,68 @@ Chapter 9.
 [97
 
 ]
-Overfull \hbox (1.499pt too wide) in paragraph at lines 4031--4031
+Overfull \hbox (1.499pt too wide) in paragraph at lines 4035--4035
 []\T1/lmtt/m/n/10 #>      V2      V3      KA      CL       Q     Kin    Kout   
  EC50[] 
  []
 
 
-Overfull \hbox (1.499pt too wide) in paragraph at lines 4031--4031
+Overfull \hbox (1.499pt too wide) in paragraph at lines 4035--4035
 []\T1/lmtt/m/n/10 #>  40.200 297.000   0.294  18.600  10.500   1.000   1.000 20
 0.000[] 
  []
 
 
-Overfull \hbox (1.499pt too wide) in paragraph at lines 4062--4062
+Overfull \hbox (1.499pt too wide) in paragraph at lines 4066--4066
 []\T1/lmtt/m/n/10 #>      V2      V3      KA      CL       Q     Kin    Kout   
  EC50[] 
  []
 
 
-Overfull \hbox (1.499pt too wide) in paragraph at lines 4062--4062
+Overfull \hbox (1.499pt too wide) in paragraph at lines 4066--4066
 []\T1/lmtt/m/n/10 #>  40.200 297.000   0.294  18.600  10.500   1.000   1.000 20
 0.000[] 
  []
 
 [98]
-Overfull \hbox (1.499pt too wide) in paragraph at lines 4093--4093
+Overfull \hbox (1.499pt too wide) in paragraph at lines 4097--4097
 []\T1/lmtt/m/n/10 #>      V2      V3      KA      CL       Q     Kin    Kout   
  EC50[] 
  []
 
 
-Overfull \hbox (1.499pt too wide) in paragraph at lines 4093--4093
+Overfull \hbox (1.499pt too wide) in paragraph at lines 4097--4097
 []\T1/lmtt/m/n/10 #>  40.200 297.000   0.294  18.600  10.500   1.000   1.000 20
 0.000[] 
  []
 
 [99]
-Overfull \hbox (59.24883pt too wide) in paragraph at lines 4137--4137
+Overfull \hbox (59.24883pt too wide) in paragraph at lines 4141--4141
 []\T1/lmtt/m/n/10 #> Call \TS1/lmtt/m/n/10 `\T1/lmtt/m/n/10 lifecycle::last_war
 nings()\TS1/lmtt/m/n/10 ` \T1/lmtt/m/n/10 to see where this warning was generat
 ed.[] 
  []
 
 [100]
-Overfull \hbox (1.499pt too wide) in paragraph at lines 4194--4194
+Overfull \hbox (1.499pt too wide) in paragraph at lines 4198--4198
 []\T1/lmtt/m/n/10 #>      V2      V3      KA      CL       Q     Kin    Kout   
  EC50[] 
  []
 
 
-Overfull \hbox (1.499pt too wide) in paragraph at lines 4194--4194
+Overfull \hbox (1.499pt too wide) in paragraph at lines 4198--4198
 []\T1/lmtt/m/n/10 #>  40.200 297.000   0.294  18.600  10.500   1.000   1.000 20
 0.000[] 
  []
 
 
-Overfull \hbox (1.499pt too wide) in paragraph at lines 4244--4244
+Overfull \hbox (1.499pt too wide) in paragraph at lines 4248--4248
 []\T1/lmtt/m/n/10 #>      V2      V3      KA      CL       Q     Kin    Kout   
  EC50[] 
  []
 
 
-Overfull \hbox (1.499pt too wide) in paragraph at lines 4244--4244
+Overfull \hbox (1.499pt too wide) in paragraph at lines 4248--4248
 []\T1/lmtt/m/n/10 #>  40.200 297.000   0.294  18.600  10.500   1.000   1.000 20
 0.000[] 
  []
@@ -1496,16 +1834,16 @@ File: RxODE-manual_files/figure-latex/unnamed-chunk-96-1.pdf Graphic file (type
  pdf)
 <use RxODE-manual_files/figure-latex/unnamed-chunk-96-1.pdf>
 Package pdftex.def Info: RxODE-manual_files/figure-latex/unnamed-chunk-96-1.pdf
-  used on input line 4252.
+  used on input line 4256.
 (pdftex.def)             Requested size: 344.997pt x 238.84406pt.
 [102 <./RxODE-manual_files/figure-latex/unnamed-chunk-96-1.pdf>]
-Overfull \hbox (1.499pt too wide) in paragraph at lines 4289--4289
+Overfull \hbox (1.499pt too wide) in paragraph at lines 4293--4293
 []\T1/lmtt/m/n/10 #>      V2      V3      KA      CL       Q     Kin    Kout   
  EC50[] 
  []
 
 
-Overfull \hbox (1.499pt too wide) in paragraph at lines 4289--4289
+Overfull \hbox (1.499pt too wide) in paragraph at lines 4293--4293
 []\T1/lmtt/m/n/10 #>  40.200 297.000   0.294  18.600  10.500   1.000   1.000 20
 0.000[] 
  []
@@ -1516,7 +1854,7 @@ File: RxODE-manual_files/figure-latex/unnamed-chunk-97-1.pdf Graphic file (type
  pdf)
 <use RxODE-manual_files/figure-latex/unnamed-chunk-97-1.pdf>
 Package pdftex.def Info: RxODE-manual_files/figure-latex/unnamed-chunk-97-1.pdf
-  used on input line 4297.
+  used on input line 4301.
 (pdftex.def)             Requested size: 344.997pt x 238.84406pt.
 [103 <./RxODE-manual_files/figure-latex/unnamed-chunk-97-1.pdf>]
 <RxODE-manual_files/figure-latex/unnamed-chunk-99-1.pdf, id=1261, 469.755pt x 3
@@ -1525,13 +1863,15 @@ File: RxODE-manual_files/figure-latex/unnamed-chunk-99-1.pdf Graphic file (type
  pdf)
 <use RxODE-manual_files/figure-latex/unnamed-chunk-99-1.pdf>
 Package pdftex.def Info: RxODE-manual_files/figure-latex/unnamed-chunk-99-1.pdf
-  used on input line 4352.
+  used on input line 4356.
 (pdftex.def)             Requested size: 344.997pt x 238.84406pt.
 
-Underfull \vbox (badness 7256) has occurred while \output is active []
+Underfull \vbox (badness 6493) has occurred while \output is active []
 
-[104] [105 <./RxODE-manual_files/figure-latex/unnamed-chunk-99-1.pdf>] (./RxODE
--manual.aux)
+[104]
+No file RxODE-manual.bbl.
+[105 <./RxODE-manual_files/figure-latex/unnamed-chunk-99-1.pdf>] (./RxODE-manua
+l.aux)
 Package rerunfilecheck Info: File `RxODE-manual.out' has not changed.
 (rerunfilecheck)             Checksum: C481D747B995AD5558132045A7F05D74;8128.
 
@@ -1539,24 +1879,26 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 11878 strings out of 481331
- 176531 string characters out of 5917870
- 475043 words of memory out of 5000000
- 28055 multiletter control sequences out of 15000+600000
- 470280 words of font info for 78 fonts, out of 8000000 for 9000
+ 13473 strings out of 481331
+ 199290 string characters out of 5917870
+ 491226 words of memory out of 5000000
+ 29584 multiletter control sequences out of 15000+600000
+ 544823 words of font info for 123 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 66i,6n,72p,545b,470s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 66i,6n,72p,545b,473s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/home/matt/.TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}{/home/matt/.Ti
-nyTeX/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}</home/matt/.TinyTeX/texmf-dist/f
-onts/type1/public/lm/lmbx10.pfb></home/matt/.TinyTeX/texmf-dist/fonts/type1/pub
-lic/lm/lmbx12.pfb></home/matt/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmr10.p
-fb></home/matt/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmr12.pfb></home/matt/
-.TinyTeX/texmf-dist/fonts/type1/public/lm/lmr17.pfb></home/matt/.TinyTeX/texmf-
-dist/fonts/type1/public/lm/lmri10.pfb></home/matt/.TinyTeX/texmf-dist/fonts/typ
-e1/public/lm/lmro10.pfb></home/matt/.TinyTeX/texmf-dist/fonts/type1/public/lm/l
-mtk10.pfb></home/matt/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmtt10.pfb></ho
-me/matt/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmtti10.pfb>
-Output written on RxODE-manual.pdf (105 pages, 710643 bytes).
+nyTeX/texmf-dist/fonts/enc/dvips/ly1/texnansi.enc}{/home/matt/.TinyTeX/texmf-di
+st/fonts/enc/dvips/lm/lm-ec.enc}</home/matt/.TinyTeX/texmf-dist/fonts/type1/pub
+lic/lm/lmtk10.pfb></home/matt/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmtt10.
+pfb></home/matt/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmtti10.pfb></home/ma
+tt/.TinyTeX/texmf-dist/fonts/type1/public/mathdesign/mdput/md-utb8t.pfb></home/
+matt/.TinyTeX/texmf-dist/fonts/type1/public/mathdesign/mdput/md-utr8t.pfb></hom
+e/matt/.TinyTeX/texmf-dist/fonts/type1/public/mathdesign/mdput/md-utr8t.pfb></h
+ome/matt/.TinyTeX/texmf-dist/fonts/type1/adobe/utopia/putb8a.pfb></home/matt/.T
+inyTeX/texmf-dist/fonts/type1/adobe/utopia/putr8a.pfb></home/matt/.TinyTeX/texm
+f-dist/fonts/type1/adobe/utopia/putr8a.pfb></home/matt/.TinyTeX/texmf-dist/font
+s/type1/adobe/utopia/putri8a.pfb>
+Output written on RxODE-manual.pdf (105 pages, 593201 bytes).
 PDF statistics:
  1414 PDF objects out of 1440 (max. 8388607)
  1210 compressed objects within 13 object streams

@@ -10,6 +10,13 @@ link-citations: yes
 github-repo: nlmixrdevelopment/RxODE-manual
 toc: yes
 description: "This book is the user manual for RxODE"
+output:
+  bookdown::gitbook: default
+  bookdown::pdf_book:
+    includes:
+      in_header: preamble.tex
+    citation_package: natbib
+  bookdown::epub_book: default
 ---
 
 ```{r, echo=FALSE}
