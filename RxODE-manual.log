@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.11.22)  15 DEC 2020 18:01
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.11.22)  15 DEC 2020 18:42
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -544,15 +544,15 @@ Underfull \vbox (badness 10000) detected at line 932
  []
 
 [24]
-Overfull \hbox (69.7488pt too wide) in paragraph at lines 1032--1032
-[]\T1/lmtt/m/n/10 #> RxODE 1.0.0-0 model named rx_b16bf3219bce4489d0dc93c431c7a
-8a0 model (ready).[] 
+Overfull \hbox (59.24883pt too wide) in paragraph at lines 1032--1032
+[]\T1/lmtt/m/n/10 #> RxODE 1.0.1 model named rx_cb529f87d53ee398a0cae52b742263c
+7 model (ready).[] 
  []
 
 
 Overfull \hbox (258.74825pt too wide) in paragraph at lines 1032--1032
-[]\T1/lmtt/m/n/10 #> DLL: /home/matt/.cache/R/RxODE/rx_b16bf3219bce4489d0dc93c4
-31c7a8a0__.rxd/rx_b16bf3219bce4489d0dc93c431c7a8a0_.so[] 
+[]\T1/lmtt/m/n/10 #> DLL: /home/matt/.cache/R/RxODE/rx_cb529f87d53ee398a0cae52b
+742263c7__.rxd/rx_cb529f87d53ee398a0cae52b742263c7_.so[] 
  []
 
 
@@ -685,9 +685,9 @@ Underfull \vbox (badness 10000) detected at line 1146
  []
 
 [28]
-Overfull \hbox (69.7488pt too wide) in paragraph at lines 1161--1161
-[]\T1/lmtt/m/n/10 #> RxODE 1.0.0-0 model named rx_1fda8295091ca6d0012077b24d579
-018 model (ready).[] 
+Overfull \hbox (59.24883pt too wide) in paragraph at lines 1161--1161
+[]\T1/lmtt/m/n/10 #> RxODE 1.0.1 model named rx_b36e6f19a6e700a81cf72fe0f38fab9
+1 model (ready).[] 
  []
 
 
@@ -712,9 +712,9 @@ HT, KbSK, KbSP, KbPA, KbLI, KbST, KbGU, KbKI, S15, C15[]
  []
 
 [29]
-Overfull \hbox (69.7488pt too wide) in paragraph at lines 1192--1192
-[]\T1/lmtt/m/n/10 #> RxODE 1.0.0-0 model named rx_673f6105e66276a1ff77b53712cdf
-722 model (ready).[] 
+Overfull \hbox (59.24883pt too wide) in paragraph at lines 1192--1192
+[]\T1/lmtt/m/n/10 #> RxODE 1.0.1 model named rx_19b9e41504acaacf9c477fb16c15120
+9 model (ready).[] 
  []
 
 
@@ -1391,7 +1391,7 @@ Underfull \hbox (badness 1009) in paragraph at lines 3570--3573
 
 [91] [92] [93] [94] [95] [96] (./RxODE-manual.aux)
 Package rerunfilecheck Info: File `RxODE-manual.out' has not changed.
-(rerunfilecheck)             Checksum: 95AF22AC098792474F02F34757101FD7;12581.
+(rerunfilecheck)             Checksum: 85F8A34E081CA7F925F1FFEB3A9C5E14;12690.
 
 LaTeX Warning: There were undefined references.
 
@@ -1399,7 +1399,7 @@ LaTeX Warning: There were undefined references.
 Here is how much of TeX's memory you used:
  11799 strings out of 481433
  173821 string characters out of 5920460
- 470869 words of memory out of 5000000
+ 470889 words of memory out of 5000000
  27959 multiletter control sequences out of 15000+600000
  601938 words of font info for 80 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
@@ -1414,7 +1414,7 @@ dist/fonts/type1/public/lm/lmri10.pfb></home/matt/.TinyTeX/texmf-dist/fonts/typ
 e1/public/lm/lmro10.pfb></home/matt/.TinyTeX/texmf-dist/fonts/type1/public/lm/l
 mtk10.pfb></home/matt/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmtt10.pfb></ho
 me/matt/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmtti10.pfb>
-Output written on RxODE-manual.pdf (96 pages, 671085 bytes).
+Output written on RxODE-manual.pdf (96 pages, 671272 bytes).
 PDF statistics:
  1522 PDF objects out of 1728 (max. 8388607)
  1332 compressed objects within 14 object streams

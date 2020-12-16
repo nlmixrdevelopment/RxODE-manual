@@ -204,7 +204,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="7.7" data-path="et.html"><a href="et.html#repeating-event-tables"><i class="fa fa-check"></i><b>7.7</b> Repeating event tables</a></li>
 <li class="chapter" data-level="7.8" data-path="et.html"><a href="et.html#combining-event-tables-with-rbind"><i class="fa fa-check"></i><b>7.8</b> Combining event tables with rbind</a></li>
 </ul></li>
-<li class="chapter" data-level="8" data-path="solve.html"><a href="solve.html"><i class="fa fa-check"></i><b>8</b> Solving</a>
+<li class="chapter" data-level="8" data-path="solve.html"><a href="solve.html"><i class="fa fa-check"></i><b>8</b> Solving and solving options</a>
 <ul>
 <li class="chapter" data-level="8.1" data-path="solve.html"><a href="solve.html#params"><i class="fa fa-check"></i><b>8.1</b> params</a></li>
 <li class="chapter" data-level="8.2" data-path="solve.html"><a href="solve.html#events-1"><i class="fa fa-check"></i><b>8.2</b> events</a></li>
@@ -554,8 +554,8 @@ used:</p>
 <span id="cb35-89"><a href="syntax.html#cb35-89" aria-hidden="true"></a>})</span></code></pre></div>
 <p>If you look at the summary, you can see where RxODE assigned the compartment number(s)</p>
 <div class="sourceCode" id="cb36"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb36-1"><a href="syntax.html#cb36-1" aria-hidden="true"></a><span class="kw">summary</span>(pbpk)</span></code></pre></div>
-<pre><code>#&gt; RxODE 1.0.0-0 model named rx_b16bf3219bce4489d0dc93c431c7a8a0 model (✔ ready). 
-#&gt; DLL: /home/matt/.cache/R/RxODE/rx_b16bf3219bce4489d0dc93c431c7a8a0__.rxd/rx_b16bf3219bce4489d0dc93c431c7a8a0_.so
+<pre><code>#&gt; RxODE 1.0.1 model named rx_cb529f87d53ee398a0cae52b742263c7 model (✔ ready). 
+#&gt; DLL: /home/matt/.cache/R/RxODE/rx_cb529f87d53ee398a0cae52b742263c7__.rxd/rx_cb529f87d53ee398a0cae52b742263c7_.so
 #&gt; NULL
 #&gt; 
 #&gt; Calculated Variables:
@@ -752,7 +752,7 @@ compartments, respectively, is simple:</p>
 <span id="cb38-93"><a href="syntax.html#cb38-93" aria-hidden="true"></a>})</span></code></pre></div>
 <p>You can see this change in the simple printout</p>
 <div class="sourceCode" id="cb39"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb39-1"><a href="syntax.html#cb39-1" aria-hidden="true"></a>pbpk2</span></code></pre></div>
-<pre><code>#&gt; RxODE 1.0.0-0 model named rx_1fda8295091ca6d0012077b24d579018 model (✔ ready). 
+<pre><code>#&gt; RxODE 1.0.1 model named rx_b36e6f19a6e700a81cf72fe0f38fab91 model (✔ ready). 
 #&gt; x$state: Venous_Blood, Skin, Lungs, Heart, Brain, Muscles, Adipose, Spleen, Pancreas, Liver, Stomach, Gut, Bones, Kidneys, Arterial_Blood, Rest_of_Body
 #&gt; x$params: lKbBR, lKbMU, lKbAD, lCLint, eta.LClint, lKbBO, lKbRB, WT, BP, fup
 #&gt; x$lhs: KbBR, KbMU, KbAD, CLint, KbBO, KbRB, CO, QHT, QBR, QMU, QAD, QSK, QSP, QPA, QLI, QST, QGU, QHA, QBO, QKI, QRB, QLU, VLU, VHT, VBR, VMU, VAD, VSK, VSP, VPA, VLI, VST, VGU, VBO, VKI, VAB, VVB, VRB, fub, KbLU, KbHT, KbSK, KbSP, KbPA, KbLI, KbST, KbGU, KbKI, S15, C15</code></pre>
@@ -771,7 +771,7 @@ after all the differential equations are defined.</p>
 <span id="cb41-5"><a href="syntax.html#cb41-5" aria-hidden="true"></a>    <span class="kw">cmt</span>(eff);</span>
 <span id="cb41-6"><a href="syntax.html#cb41-6" aria-hidden="true"></a>})</span>
 <span id="cb41-7"><a href="syntax.html#cb41-7" aria-hidden="true"></a><span class="kw">print</span>(ode<span class="fl">.1</span>c.ka)</span></code></pre></div>
-<pre><code>#&gt; RxODE 1.0.0-0 model named rx_673f6105e66276a1ff77b53712cdf722 model (✔ ready). 
+<pre><code>#&gt; RxODE 1.0.1 model named rx_19b9e41504acaacf9c477fb16c151209 model (✔ ready). 
 #&gt; $state: depot, center
 #&gt; $stateExtra: eff
 #&gt; $params: V, KA, CL

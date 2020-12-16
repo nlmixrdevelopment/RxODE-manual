@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 8 Solving | RxODE user manual</title>
+  <title>Chapter 8 Solving and solving options | RxODE user manual</title>
   <meta name="description" content="This book is the user manual for RxODE" />
   <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 8 Solving | RxODE user manual" />
+  <meta property="og:title" content="Chapter 8 Solving and solving options | RxODE user manual" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="nlmixrdevelopment/RxODE-manual" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 8 Solving | RxODE user manual" />
+  <meta name="twitter:title" content="Chapter 8 Solving and solving options | RxODE user manual" />
   
   <meta name="twitter:description" content="This book is the user manual for RxODE" />
   
@@ -204,7 +204,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="7.7" data-path="et.html"><a href="et.html#repeating-event-tables"><i class="fa fa-check"></i><b>7.7</b> Repeating event tables</a></li>
 <li class="chapter" data-level="7.8" data-path="et.html"><a href="et.html#combining-event-tables-with-rbind"><i class="fa fa-check"></i><b>7.8</b> Combining event tables with rbind</a></li>
 </ul></li>
-<li class="chapter" data-level="8" data-path="solve.html"><a href="solve.html"><i class="fa fa-check"></i><b>8</b> Solving</a>
+<li class="chapter" data-level="8" data-path="solve.html"><a href="solve.html"><i class="fa fa-check"></i><b>8</b> Solving and solving options</a>
 <ul>
 <li class="chapter" data-level="8.1" data-path="solve.html"><a href="solve.html#params"><i class="fa fa-check"></i><b>8.1</b> params</a></li>
 <li class="chapter" data-level="8.2" data-path="solve.html"><a href="solve.html#events-1"><i class="fa fa-check"></i><b>8.2</b> events</a></li>
@@ -302,13 +302,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
             <section class="normal" id="section-">
 <div id="solve" class="section level1" number="8">
-<h1><span class="header-section-number">Chapter 8</span> Solving</h1>
+<h1><span class="header-section-number">Chapter 8</span> Solving and solving options</h1>
 <p>In general, ODEs are solved using a combination of:
 - A compiled model specification from <code>RxODE()</code>, specified with <code>object=</code>
 - Input parameters, specified with <code>params=</code> (and could be blank)
 - Input data or event table, specified with <code>events=</code>
 - Initial conditions, specified by <code>inits=</code> (and possibly in the model itself by <code>state(0)=</code>)</p>
-<p>The solving options are given in the sections below
+<p>The solving options are given in the sections below:
 ## object
 <code>object</code> is a either a RxODE family of objects, or a file-name
 with a RxODE model specification, or a string with a RxODE
@@ -663,13 +663,13 @@ This only works with a diagonal matrix.</p></li>
 </div>
 <div id="a" class="section level2" number="8.42">
 <h2><span class="header-section-number">8.42</span> a</h2>
-<p><code>a</code> when using <code>solve</code>, this is equivalent to the
+<p><code>a</code> when using <code>solve()</code>, this is equivalent to the
 <code>object</code> argument. If you specify <code>object</code> later in
 the argument list it overwrites this parameter.</p>
 </div>
 <div id="b" class="section level2" number="8.43">
 <h2><span class="header-section-number">8.43</span> b</h2>
-<p><code>b</code> when using <code>solve</code>, this is equivalent to the
+<p><code>b</code> when using <code>solve()</code>, this is equivalent to the
 <code>params</code> argument. If you specify <code>params</code> as a
 named argument, this overwrites the output</p>
 </div>

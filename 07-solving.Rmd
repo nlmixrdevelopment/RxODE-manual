@@ -1,4 +1,4 @@
-# Solving {#solve}
+# Solving and solving options {#solve}
 
 In general, ODEs are solved using a combination of:
 - A compiled model specification from `RxODE()`, specified with `object=`
@@ -6,7 +6,7 @@ In general, ODEs are solved using a combination of:
 - Input data or event table, specified with `events=`
 - Initial conditions, specified by `inits=` (and possibly in the model itself by `state(0)=`)
 
-The solving options are given in the sections below
+The solving options are given in the sections below:
 ## object
 `object` is a either a RxODE family of objects, or a file-name
 with a RxODE model specification, or a string with a RxODE
@@ -334,14 +334,13 @@ This only works with a diagonal matrix.
 
 
 
-
 ## a
-`a` when using `solve`, this is equivalent to the
+`a` when using `solve()`, this is equivalent to the
 `object` argument.  If you specify `object` later in
 the argument list it overwrites this parameter.
 
 ## b
-`b` when using `solve`, this is equivalent to the
+`b` when using `solve()`, this is equivalent to the
 `params` argument.  If you specify `params` as a
 named argument, this overwrites the output
 
