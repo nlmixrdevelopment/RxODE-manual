@@ -31,7 +31,10 @@ describes the communication of variables between `R` and the
 
 ## Syntax
 
-```{r child='RxODE/man/rmdhunks/RxODE-syntax-hunk.Rmd'}
+```{r echo=FALSE, results='asis'}
+cat(unlist(knitr::knit_child(text = gsub("vignette", "section",
+                                         gsub("http.*event.*\\.html", "#events", readLines('RxODE/man/rmdhunks/RxODE-syntax-hunk.Rmd'))),
+                             envir = environment(), quiet = TRUE)), sep="\n")
 ```
 
 ## cmt() changing compartment numbers for states

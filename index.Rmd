@@ -1,3 +1,4 @@
+
 --- 
 title: "RxODE user manual"
 author: "Matthew Fidler"
@@ -17,6 +18,12 @@ output:
       in_header: preamble.tex
     citation_package: natbib
   bookdown::epub_book: default
+header-includes:
+  - \usepackage{titling}
+  - \pretitle{\begin{center}
+    \includegraphics[width=2in,height=2in]{logo.png}\LARGE\\}
+  - \posttitle{\end{center}}
+urlcolor: blue
 ---
 
 ```{r, echo=FALSE}
