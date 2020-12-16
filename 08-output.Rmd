@@ -1,0 +1,6 @@
+# RxODE output {#output}
+
+```{r echo=FALSE, results='asis'}
+cat(unlist(knitr::knit_child(text = gsub("^#", "##", readLines("RxODE/vignettes/df.Rmdh")),
+                             envir = environment(), quiet = TRUE)), sep="\n")
+```
