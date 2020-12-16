@@ -11,12 +11,73 @@ l <- l[seq(1, w[1] - 1)]
 
 l <- sub("#+' *", "", l)
 
-l <- gsub("@param *([^ ]*)", "## \\1\n`\\1`", l)
+l <- gsub("@param *([^ ]*)", "### \\1\n`\\1`", l)
 
 w <- which(regexpr("@inheritParams", l) != -1)
 
-l <- l[-w]
+if (length(w) > 0) l <- l[-w]
 
+l[1] <- paste0("## General Solving Options\n\n", l[1])
+
+w <- which(regexpr("atol", l) != -1)
+if (length(w) > 0){
+  w <- w[1]
+  l[w] <- paste0("## lsoda/dop solving options\n\n", l[w])
+}
+
+w <- which(regexpr("indLinMatExpType", l) != -1)
+if (length(w) > 0) {
+  w <- w[1]
+  l[w] <- paste0("## Inductive Linerization Options\n\n", l[w])
+}
+
+w <- which(regexpr("minSS", l) != -1)
+if (length(w) > 0) {
+  w <- w[1]
+  l[w] <- paste0("## Steady State Solving Options\n\n", l[w])
+}
+
+w <- which(regexpr("maxAtolRtolFactor", l) != -1)
+if (length(w) > 0) {
+  w <- w[1]
+  l[w] <- paste0("## RxODE numeric stability options\n\n", l[w])
+}
+
+w <- which(regexpr("sensType", l) != -1)
+if (length(w) > 0) {
+  w <- w[1]
+  l[w] <- paste0("## Linear compartment model sensitivity options\n\n", l[w])
+}
+
+w <- which(regexpr("iCov", l) != -1)
+if (length(w) > 0) {
+  w <- w[1]
+  l[w] <- paste0("## Covariate Solving Options\n\n", l[w])
+}
+
+w <- which(regexpr("seed", l) != -1)
+if (length(w) > 0) {
+  w <- w[1]
+  l[w] <- paste0("## Simulation options\n\n", l[w])
+}
+
+w <- which(regexpr("returnType", l) != -1)
+if (length(w) > 0) {
+  w <- w[1]
+  l[w] <- paste0("## RxODE output options\n\n", l[w])
+}
+
+w <- which(regexpr("nDisplayProgress", l) != -1)
+if (length(w) > 0) {
+  w <- w[1]
+  l[w] <- paste0("## Internal RxODE options\n\n", l[w])
+}
+
+w <- which(regexpr("cores", l) != -1)
+if (length(w) > 0) {
+  w <- w[1]
+  l[w] <- paste0("## Parallel/Threaded Solve\n\n", l[w])
+}
 
 l2 <- readLines("07-solving.Rmd")
 
