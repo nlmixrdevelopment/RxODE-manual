@@ -7,6 +7,8 @@ In general, ODEs are solved using a combination of:
 - Initial conditions, specified by `inits=` (and possibly in the model itself by `state(0)=`)
 
 The solving options are given in the sections below:
+
+
 ## object
 `object` is a either a RxODE family of objects, or a file-name
 with a RxODE model specification, or a string with a RxODE

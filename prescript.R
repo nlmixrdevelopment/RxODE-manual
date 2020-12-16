@@ -23,4 +23,4 @@ l2 <- readLines("07-solving.Rmd")
 w <- which(regexpr("below", l2) != -1)
 l2 <- l2[1:w]
 
-writeLines(c(l2, l), "07-solving.Rmd")
+writeLines(c(l2, "", "", l), "07-solving.Rmd")
