@@ -23,6 +23,10 @@ solving. ODE solving using RxODE has a few key parts:
  
 While this is the user guide, there are other places that you can visit for help:
 
+- `RxODE` github [pkgdown page](https://nlmixrdevelopment.github.io/RxODE/)
+- `RxODE` tutorial (accessible in tutorials in Rstudio 1.3+)
+- `RxODE` [github discussions](https://github.com/nlmixrdevelopment/RxODE/discussions)
+
 This book was assembled on `r date()` with RxODE version 
 `r packageVersion("RxODE")` automatically by github actions.
 

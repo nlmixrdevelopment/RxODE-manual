@@ -1,5 +1,7 @@
 # Easily creating RxODE events {#et}
 
-```{r child='RxODE/vignettes/events-et.Rmdh'}
+```{r echo=FALSE, results='asis'}
+cat(unlist(knitr::knit_child(text = gsub("RxODE-event-types.html", "#events", readLines("RxODE/vignettes/events-et.Rmdh")),
+                             envir = environment(), quiet = TRUE)), sep="\n")
 ```
 
