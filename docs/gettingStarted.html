@@ -24,7 +24,7 @@
 <meta name="author" content="Matthew Fidler" />
 
 
-<meta name="date" content="2021-01-27" />
+<meta name="date" content="2021-01-28" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -51,7 +51,6 @@
 
 
 
-<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
 
 
 <style type="text/css">
@@ -153,36 +152,32 @@ file or an R expression. Both differential and algebraic equations are
 permitted. Differential equations are specified by <code>d/dt(var_name) =</code>. Each
 equation can be separated by a semicolon.</p>
 <p>To load <code>RxODE</code> package and compile the model:</p>
-<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="gettingStarted.html#cb13-1" aria-hidden="true"></a><span class="kw">library</span>(RxODE)</span></code></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="gettingStarted.html#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(RxODE)</span></code></pre></div>
 <pre><code>#&gt; RxODE 1.0.2 using 4 threads (see ?getRxThreads)</code></pre>
-<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="gettingStarted.html#cb15-1" aria-hidden="true"></a><span class="kw">library</span>(units)</span></code></pre></div>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="gettingStarted.html#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(units)</span></code></pre></div>
 <pre><code>#&gt; udunits system database from /usr/share/xml/udunits</code></pre>
-<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb17-1"><a href="gettingStarted.html#cb17-1" aria-hidden="true"></a>mod1 &lt;-<span class="kw">RxODE</span>({</span>
-<span id="cb17-2"><a href="gettingStarted.html#cb17-2" aria-hidden="true"></a>    C2 =<span class="st"> </span>centr<span class="op">/</span>V2;</span>
-<span id="cb17-3"><a href="gettingStarted.html#cb17-3" aria-hidden="true"></a>    C3 =<span class="st"> </span>peri<span class="op">/</span>V3;</span>
-<span id="cb17-4"><a href="gettingStarted.html#cb17-4" aria-hidden="true"></a>    d<span class="op">/</span><span class="kw">dt</span>(depot) =<span class="op">-</span>KA<span class="op">*</span>depot;</span>
-<span id="cb17-5"><a href="gettingStarted.html#cb17-5" aria-hidden="true"></a>    d<span class="op">/</span><span class="kw">dt</span>(centr) =<span class="st"> </span>KA<span class="op">*</span>depot <span class="op">-</span><span class="st"> </span>CL<span class="op">*</span>C2 <span class="op">-</span><span class="st"> </span>Q<span class="op">*</span>C2 <span class="op">+</span><span class="st"> </span>Q<span class="op">*</span>C3;</span>
-<span id="cb17-6"><a href="gettingStarted.html#cb17-6" aria-hidden="true"></a>    d<span class="op">/</span><span class="kw">dt</span>(peri)  =<span class="st">                    </span>Q<span class="op">*</span>C2 <span class="op">-</span><span class="st"> </span>Q<span class="op">*</span>C3;</span>
-<span id="cb17-7"><a href="gettingStarted.html#cb17-7" aria-hidden="true"></a>    d<span class="op">/</span><span class="kw">dt</span>(eff)  =<span class="st"> </span>Kin <span class="op">-</span><span class="st"> </span>Kout<span class="op">*</span>(<span class="dv">1</span><span class="op">-</span>C2<span class="op">/</span>(EC50<span class="op">+</span>C2))<span class="op">*</span>eff;</span>
-<span id="cb17-8"><a href="gettingStarted.html#cb17-8" aria-hidden="true"></a>})</span></code></pre></div>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="gettingStarted.html#cb10-1" aria-hidden="true" tabindex="-1"></a>mod1 <span class="ot">&lt;-</span><span class="fu">RxODE</span>({</span>
+<span id="cb10-2"><a href="gettingStarted.html#cb10-2" aria-hidden="true" tabindex="-1"></a>    C2 <span class="ot">=</span> centr<span class="sc">/</span>V2;</span>
+<span id="cb10-3"><a href="gettingStarted.html#cb10-3" aria-hidden="true" tabindex="-1"></a>    C3 <span class="ot">=</span> peri<span class="sc">/</span>V3;</span>
+<span id="cb10-4"><a href="gettingStarted.html#cb10-4" aria-hidden="true" tabindex="-1"></a>    d<span class="sc">/</span><span class="fu">dt</span>(depot) <span class="ot">=</span><span class="sc">-</span>KA<span class="sc">*</span>depot;</span>
+<span id="cb10-5"><a href="gettingStarted.html#cb10-5" aria-hidden="true" tabindex="-1"></a>    d<span class="sc">/</span><span class="fu">dt</span>(centr) <span class="ot">=</span> KA<span class="sc">*</span>depot <span class="sc">-</span> CL<span class="sc">*</span>C2 <span class="sc">-</span> Q<span class="sc">*</span>C2 <span class="sc">+</span> Q<span class="sc">*</span>C3;</span>
+<span id="cb10-6"><a href="gettingStarted.html#cb10-6" aria-hidden="true" tabindex="-1"></a>    d<span class="sc">/</span><span class="fu">dt</span>(peri)  <span class="ot">=</span>                    Q<span class="sc">*</span>C2 <span class="sc">-</span> Q<span class="sc">*</span>C3;</span>
+<span id="cb10-7"><a href="gettingStarted.html#cb10-7" aria-hidden="true" tabindex="-1"></a>    d<span class="sc">/</span><span class="fu">dt</span>(eff)  <span class="ot">=</span> Kin <span class="sc">-</span> Kout<span class="sc">*</span>(<span class="dv">1</span><span class="sc">-</span>C2<span class="sc">/</span>(EC50<span class="sc">+</span>C2))<span class="sc">*</span>eff;</span>
+<span id="cb10-8"><a href="gettingStarted.html#cb10-8" aria-hidden="true" tabindex="-1"></a>})</span></code></pre></div>
 <pre><code>#&gt; qs v0.23.5.</code></pre>
-<pre><code>#&gt; → creating RxODE include directory</code></pre>
-<pre><code>#&gt; → getting R compile options</code></pre>
-<pre><code>#&gt; → precompiling headers</code></pre>
-<pre><code>#&gt; ✔ done</code></pre>
 <div id="specify-ode-parameters-and-initial-conditions" class="section level2" number="4.1">
 <h2><span class="header-section-number">4.1</span> Specify ODE parameters and initial conditions</h2>
 <p>Model parameters can be defined as named vectors. Names of parameters in
 the vector must be a superset of parameters in the ODE model, and the
 order of parameters within the vector is not important.</p>
-<div class="sourceCode" id="cb23"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb23-1"><a href="gettingStarted.html#cb23-1" aria-hidden="true"></a>theta &lt;-<span class="st"> </span></span>
-<span id="cb23-2"><a href="gettingStarted.html#cb23-2" aria-hidden="true"></a><span class="st">   </span><span class="kw">c</span>(<span class="dt">KA=</span><span class="fl">2.94E-01</span>, <span class="dt">CL=</span><span class="fl">1.86E+01</span>, <span class="dt">V2=</span><span class="fl">4.02E+01</span>, <span class="co"># central </span></span>
-<span id="cb23-3"><a href="gettingStarted.html#cb23-3" aria-hidden="true"></a>     <span class="dt">Q=</span><span class="fl">1.05E+01</span>,  <span class="dt">V3=</span><span class="fl">2.97E+02</span>,              <span class="co"># peripheral</span></span>
-<span id="cb23-4"><a href="gettingStarted.html#cb23-4" aria-hidden="true"></a>     <span class="dt">Kin=</span><span class="dv">1</span>, <span class="dt">Kout=</span><span class="dv">1</span>, <span class="dt">EC50=</span><span class="dv">200</span>)               <span class="co"># effects</span></span></code></pre></div>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="gettingStarted.html#cb12-1" aria-hidden="true" tabindex="-1"></a>theta <span class="ot">&lt;-</span> </span>
+<span id="cb12-2"><a href="gettingStarted.html#cb12-2" aria-hidden="true" tabindex="-1"></a>   <span class="fu">c</span>(<span class="at">KA=</span><span class="fl">2.94E-01</span>, <span class="at">CL=</span><span class="fl">1.86E+01</span>, <span class="at">V2=</span><span class="fl">4.02E+01</span>, <span class="co"># central </span></span>
+<span id="cb12-3"><a href="gettingStarted.html#cb12-3" aria-hidden="true" tabindex="-1"></a>     <span class="at">Q=</span><span class="fl">1.05E+01</span>,  <span class="at">V3=</span><span class="fl">2.97E+02</span>,              <span class="co"># peripheral</span></span>
+<span id="cb12-4"><a href="gettingStarted.html#cb12-4" aria-hidden="true" tabindex="-1"></a>     <span class="at">Kin=</span><span class="dv">1</span>, <span class="at">Kout=</span><span class="dv">1</span>, <span class="at">EC50=</span><span class="dv">200</span>)               <span class="co"># effects</span></span></code></pre></div>
 <p>Initial conditions (ICs) can be defined through a vector as well. If the
 elements are not specified, the initial condition for the compartment
 is assumed to be zero.</p>
-<div class="sourceCode" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb24-1"><a href="gettingStarted.html#cb24-1" aria-hidden="true"></a>inits &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dt">eff=</span><span class="dv">1</span>);</span></code></pre></div>
+<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="gettingStarted.html#cb13-1" aria-hidden="true" tabindex="-1"></a>inits <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="at">eff=</span><span class="dv">1</span>);</span></code></pre></div>
 <p>If you want to specify the initial conditions in the model you can add:</p>
 <pre><code>eff(0) = 1</code></pre>
 </div>
@@ -191,7 +186,7 @@ is assumed to be zero.</p>
 <p><code>RxODE</code> provides a simple and very flexible way to specify dosing and
 sampling through functions that generate an event table. First, an
 empty event table is generated through the “eventTable()” function:</p>
-<div class="sourceCode" id="cb26"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb26-1"><a href="gettingStarted.html#cb26-1" aria-hidden="true"></a>ev &lt;-<span class="st"> </span><span class="kw">eventTable</span>(<span class="dt">amount.units=</span><span class="st">&#39;mg&#39;</span>, <span class="dt">time.units=</span><span class="st">&#39;hours&#39;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="gettingStarted.html#cb15-1" aria-hidden="true" tabindex="-1"></a>ev <span class="ot">&lt;-</span> <span class="fu">eventTable</span>(<span class="at">amount.units=</span><span class="st">&#39;mg&#39;</span>, <span class="at">time.units=</span><span class="st">&#39;hours&#39;</span>)</span></code></pre></div>
 <p>Next, use the <code>add.dosing()</code> and <code>add.sampling()</code> functions of the
 <code>EventTable</code> object to specify the dosing (amounts, frequency and/or
 times, etc.) and observation times at which to sample the state of the
@@ -199,23 +194,23 @@ system. These functions can be called multiple times to specify more
 complex dosing or sampling regiments. Here, these functions are used
 to specify 10mg BID dosing for 5 days, followed by 20mg QD dosing for
 5 days:</p>
-<div class="sourceCode" id="cb27"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb27-1"><a href="gettingStarted.html#cb27-1" aria-hidden="true"></a>ev<span class="op">$</span><span class="kw">add.dosing</span>(<span class="dt">dose=</span><span class="dv">10000</span>, <span class="dt">nbr.doses=</span><span class="dv">10</span>, <span class="dt">dosing.interval=</span><span class="dv">12</span>)</span>
-<span id="cb27-2"><a href="gettingStarted.html#cb27-2" aria-hidden="true"></a>ev<span class="op">$</span><span class="kw">add.dosing</span>(<span class="dt">dose=</span><span class="dv">20000</span>, <span class="dt">nbr.doses=</span><span class="dv">5</span>, <span class="dt">start.time=</span><span class="dv">120</span>,</span>
-<span id="cb27-3"><a href="gettingStarted.html#cb27-3" aria-hidden="true"></a>              <span class="dt">dosing.interval=</span><span class="dv">24</span>)</span>
-<span id="cb27-4"><a href="gettingStarted.html#cb27-4" aria-hidden="true"></a>ev<span class="op">$</span><span class="kw">add.sampling</span>(<span class="dv">0</span><span class="op">:</span><span class="dv">240</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb16-1"><a href="gettingStarted.html#cb16-1" aria-hidden="true" tabindex="-1"></a>ev<span class="sc">$</span><span class="fu">add.dosing</span>(<span class="at">dose=</span><span class="dv">10000</span>, <span class="at">nbr.doses=</span><span class="dv">10</span>, <span class="at">dosing.interval=</span><span class="dv">12</span>)</span>
+<span id="cb16-2"><a href="gettingStarted.html#cb16-2" aria-hidden="true" tabindex="-1"></a>ev<span class="sc">$</span><span class="fu">add.dosing</span>(<span class="at">dose=</span><span class="dv">20000</span>, <span class="at">nbr.doses=</span><span class="dv">5</span>, <span class="at">start.time=</span><span class="dv">120</span>,</span>
+<span id="cb16-3"><a href="gettingStarted.html#cb16-3" aria-hidden="true" tabindex="-1"></a>              <span class="at">dosing.interval=</span><span class="dv">24</span>)</span>
+<span id="cb16-4"><a href="gettingStarted.html#cb16-4" aria-hidden="true" tabindex="-1"></a>ev<span class="sc">$</span><span class="fu">add.sampling</span>(<span class="dv">0</span><span class="sc">:</span><span class="dv">240</span>)</span></code></pre></div>
 <p>If you wish you can also do this with the <code>mattigr</code> pipe operator <code>%&gt;%</code></p>
-<div class="sourceCode" id="cb28"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb28-1"><a href="gettingStarted.html#cb28-1" aria-hidden="true"></a>ev &lt;-<span class="st"> </span><span class="kw">eventTable</span>(<span class="dt">amount.units=</span><span class="st">&quot;mg&quot;</span>, <span class="dt">time.units=</span><span class="st">&quot;hours&quot;</span>) <span class="op">%&gt;%</span></span>
-<span id="cb28-2"><a href="gettingStarted.html#cb28-2" aria-hidden="true"></a><span class="st">  </span><span class="kw">add.dosing</span>(<span class="dt">dose=</span><span class="dv">10000</span>, <span class="dt">nbr.doses=</span><span class="dv">10</span>, <span class="dt">dosing.interval=</span><span class="dv">12</span>) <span class="op">%&gt;%</span></span>
-<span id="cb28-3"><a href="gettingStarted.html#cb28-3" aria-hidden="true"></a><span class="st">  </span><span class="kw">add.dosing</span>(<span class="dt">dose=</span><span class="dv">20000</span>, <span class="dt">nbr.doses=</span><span class="dv">5</span>, <span class="dt">start.time=</span><span class="dv">120</span>,</span>
-<span id="cb28-4"><a href="gettingStarted.html#cb28-4" aria-hidden="true"></a>             <span class="dt">dosing.interval=</span><span class="dv">24</span>) <span class="op">%&gt;%</span></span>
-<span id="cb28-5"><a href="gettingStarted.html#cb28-5" aria-hidden="true"></a><span class="st">  </span><span class="kw">add.sampling</span>(<span class="dv">0</span><span class="op">:</span><span class="dv">240</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb17-1"><a href="gettingStarted.html#cb17-1" aria-hidden="true" tabindex="-1"></a>ev <span class="ot">&lt;-</span> <span class="fu">eventTable</span>(<span class="at">amount.units=</span><span class="st">&quot;mg&quot;</span>, <span class="at">time.units=</span><span class="st">&quot;hours&quot;</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb17-2"><a href="gettingStarted.html#cb17-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">add.dosing</span>(<span class="at">dose=</span><span class="dv">10000</span>, <span class="at">nbr.doses=</span><span class="dv">10</span>, <span class="at">dosing.interval=</span><span class="dv">12</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb17-3"><a href="gettingStarted.html#cb17-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">add.dosing</span>(<span class="at">dose=</span><span class="dv">20000</span>, <span class="at">nbr.doses=</span><span class="dv">5</span>, <span class="at">start.time=</span><span class="dv">120</span>,</span>
+<span id="cb17-4"><a href="gettingStarted.html#cb17-4" aria-hidden="true" tabindex="-1"></a>             <span class="at">dosing.interval=</span><span class="dv">24</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb17-5"><a href="gettingStarted.html#cb17-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">add.sampling</span>(<span class="dv">0</span><span class="sc">:</span><span class="dv">240</span>)</span></code></pre></div>
 <p>The functions <code>get.dosing()</code> and <code>get.sampling()</code> can be used to
 retrieve information from the event table.</p>
-<div class="sourceCode" id="cb29"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb29-1"><a href="gettingStarted.html#cb29-1" aria-hidden="true"></a><span class="kw">head</span>(ev<span class="op">$</span><span class="kw">get.dosing</span>())</span></code></pre></div>
+<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb18-1"><a href="gettingStarted.html#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(ev<span class="sc">$</span><span class="fu">get.dosing</span>())</span></code></pre></div>
 <pre><code>#&gt;   id low time high       cmt   amt rate ii addl evid ss dur
 #&gt; 1  1  NA    0   NA (default) 10000    0 12    9    1  0   0
 #&gt; 2  1  NA  120   NA (default) 20000    0 24    4    1  0   0</code></pre>
-<div class="sourceCode" id="cb31"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb31-1"><a href="gettingStarted.html#cb31-1" aria-hidden="true"></a><span class="kw">head</span>(ev<span class="op">$</span><span class="kw">get.sampling</span>())</span></code></pre></div>
+<div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb20-1"><a href="gettingStarted.html#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(ev<span class="sc">$</span><span class="fu">get.sampling</span>())</span></code></pre></div>
 <pre><code>#&gt;   id low time high   cmt amt rate ii addl evid ss dur
 #&gt; 1  1  NA    0   NA (obs)  NA   NA NA   NA    0 NA  NA
 #&gt; 2  1  NA    1   NA (obs)  NA   NA NA   NA    0 NA  NA
@@ -226,10 +221,10 @@ retrieve information from the event table.</p>
 <p>You may notice that these are similar to NONMEM event tables; If you
 are more familiar with NONMEM data and events you could use them
 directly with the event table function <code>et</code></p>
-<div class="sourceCode" id="cb33"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb33-1"><a href="gettingStarted.html#cb33-1" aria-hidden="true"></a>ev  &lt;-<span class="st"> </span><span class="kw">et</span>(<span class="dt">amountUnits=</span><span class="st">&quot;mg&quot;</span>, <span class="dt">timeUnits=</span><span class="st">&quot;hours&quot;</span>) <span class="op">%&gt;%</span></span>
-<span id="cb33-2"><a href="gettingStarted.html#cb33-2" aria-hidden="true"></a><span class="st">  </span><span class="kw">et</span>(<span class="dt">amt=</span><span class="dv">10000</span>, <span class="dt">addl=</span><span class="dv">9</span>,<span class="dt">ii=</span><span class="dv">12</span>,<span class="dt">cmt=</span><span class="st">&quot;depot&quot;</span>) <span class="op">%&gt;%</span></span>
-<span id="cb33-3"><a href="gettingStarted.html#cb33-3" aria-hidden="true"></a><span class="st">  </span><span class="kw">et</span>(<span class="dt">time=</span><span class="dv">120</span>, <span class="dt">amt=</span><span class="dv">2000</span>, <span class="dt">addl=</span><span class="dv">4</span>, <span class="dt">ii=</span><span class="dv">14</span>, <span class="dt">cmt=</span><span class="st">&quot;depot&quot;</span>) <span class="op">%&gt;%</span></span>
-<span id="cb33-4"><a href="gettingStarted.html#cb33-4" aria-hidden="true"></a><span class="st">  </span><span class="kw">et</span>(<span class="dv">0</span><span class="op">:</span><span class="dv">240</span>) <span class="co"># Add sampling </span></span></code></pre></div>
+<div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb22-1"><a href="gettingStarted.html#cb22-1" aria-hidden="true" tabindex="-1"></a>ev  <span class="ot">&lt;-</span> <span class="fu">et</span>(<span class="at">amountUnits=</span><span class="st">&quot;mg&quot;</span>, <span class="at">timeUnits=</span><span class="st">&quot;hours&quot;</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb22-2"><a href="gettingStarted.html#cb22-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">et</span>(<span class="at">amt=</span><span class="dv">10000</span>, <span class="at">addl=</span><span class="dv">9</span>,<span class="at">ii=</span><span class="dv">12</span>,<span class="at">cmt=</span><span class="st">&quot;depot&quot;</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb22-3"><a href="gettingStarted.html#cb22-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">et</span>(<span class="at">time=</span><span class="dv">120</span>, <span class="at">amt=</span><span class="dv">2000</span>, <span class="at">addl=</span><span class="dv">4</span>, <span class="at">ii=</span><span class="dv">14</span>, <span class="at">cmt=</span><span class="st">&quot;depot&quot;</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb22-4"><a href="gettingStarted.html#cb22-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">et</span>(<span class="dv">0</span><span class="sc">:</span><span class="dv">240</span>) <span class="co"># Add sampling </span></span></code></pre></div>
 <p>You can see from the above code, you can dose to the compartment named
 in the RxODE model. This slight deviation from NONMEM can reduce the
 need for compartment renumbering.</p>
@@ -244,8 +239,8 @@ section</a>.</p>
 <p>The ODE can now be solved by calling the model object’s <code>run</code> or <code>solve</code>
 function. Simulation results for all variables in the model are stored
 in the output matrix x.</p>
-<div class="sourceCode" id="cb34"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb34-1"><a href="gettingStarted.html#cb34-1" aria-hidden="true"></a>x &lt;-<span class="st"> </span>mod1<span class="op">$</span><span class="kw">solve</span>(theta, ev, inits);</span>
-<span id="cb34-2"><a href="gettingStarted.html#cb34-2" aria-hidden="true"></a>knitr<span class="op">::</span><span class="kw">kable</span>(<span class="kw">head</span>(x))</span></code></pre></div>
+<div class="sourceCode" id="cb23"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb23-1"><a href="gettingStarted.html#cb23-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> mod1<span class="sc">$</span><span class="fu">solve</span>(theta, ev, inits);</span>
+<span id="cb23-2"><a href="gettingStarted.html#cb23-2" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">kable</span>(<span class="fu">head</span>(x))</span></code></pre></div>
 <table>
 <thead>
 <tr class="header">
@@ -316,8 +311,8 @@ in the output matrix x.</p>
 </tbody>
 </table>
 <p>You can also solve this and create a RxODE data frame:</p>
-<div class="sourceCode" id="cb35"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb35-1"><a href="gettingStarted.html#cb35-1" aria-hidden="true"></a>x &lt;-<span class="st"> </span>mod1 <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">rxSolve</span>(theta, ev, inits);</span>
-<span id="cb35-2"><a href="gettingStarted.html#cb35-2" aria-hidden="true"></a>x</span></code></pre></div>
+<div class="sourceCode" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb24-1"><a href="gettingStarted.html#cb24-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> mod1 <span class="sc">%&gt;%</span> <span class="fu">rxSolve</span>(theta, ev, inits);</span>
+<span id="cb24-2"><a href="gettingStarted.html#cb24-2" aria-hidden="true" tabindex="-1"></a>x</span></code></pre></div>
 <pre><code>#&gt; ▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂ Solved RxODE object ▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂
 #&gt; ── Parameters (x$params): ──────────────────────────────────
 #&gt;      V2      V3      KA      CL       Q     Kin    Kout    EC50 
@@ -339,11 +334,11 @@ in the output matrix x.</p>
 #&gt; ▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂</code></pre>
 <p>This returns a modified data frame. You can see the compartment
 values in the plot below:</p>
-<div class="sourceCode" id="cb37"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb37-1"><a href="gettingStarted.html#cb37-1" aria-hidden="true"></a><span class="kw">library</span>(ggplot2)</span>
-<span id="cb37-2"><a href="gettingStarted.html#cb37-2" aria-hidden="true"></a><span class="kw">plot</span>(x,C2) <span class="op">+</span><span class="st"> </span><span class="kw">ylab</span>(<span class="st">&quot;Central Concentration&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb26"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb26-1"><a href="gettingStarted.html#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb26-2"><a href="gettingStarted.html#cb26-2" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(x,C2) <span class="sc">+</span> <span class="fu">ylab</span>(<span class="st">&quot;Central Concentration&quot;</span>)</span></code></pre></div>
 <p><img src="RxODE-manual_files/figure-html/intro-central-1.png" width="672" /></p>
 <p>Or,</p>
-<div class="sourceCode" id="cb38"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb38-1"><a href="gettingStarted.html#cb38-1" aria-hidden="true"></a><span class="kw">plot</span>(x,eff)  <span class="op">+</span><span class="st"> </span><span class="kw">ylab</span>(<span class="st">&quot;Effect&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb27"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb27-1"><a href="gettingStarted.html#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(x,eff)  <span class="sc">+</span> <span class="fu">ylab</span>(<span class="st">&quot;Effect&quot;</span>)</span></code></pre></div>
 <p><img src="RxODE-manual_files/figure-html/intro-effect-1.png" width="672" /></p>
 <p>Note that the labels are automatically labeled with the units from the
 initial event table. RxODE extracts <code>units</code> to label the plot (if they

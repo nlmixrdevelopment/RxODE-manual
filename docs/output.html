@@ -24,7 +24,7 @@
 <meta name="author" content="Matthew Fidler" />
 
 
-<meta name="date" content="2021-01-27" />
+<meta name="date" content="2021-01-28" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -51,7 +51,6 @@
 
 
 
-<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
 
 
 <style type="text/css">
@@ -154,39 +153,39 @@ yes
 <h3><span class="header-section-number">9.1.1</span> Creating an interactive data frame</h3>
 <p>RxODE supports returning a solved object that is a modified data-frame.
 This is done by the <code>predict()</code>, <code>solve()</code>, or <code>rxSolve()</code> methods.</p>
-<div class="sourceCode" id="cb133"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb133-1"><a href="output.html#cb133-1" aria-hidden="true"></a><span class="kw">library</span>(RxODE)</span>
-<span id="cb133-2"><a href="output.html#cb133-2" aria-hidden="true"></a><span class="kw">library</span>(units)</span>
-<span id="cb133-3"><a href="output.html#cb133-3" aria-hidden="true"></a></span>
-<span id="cb133-4"><a href="output.html#cb133-4" aria-hidden="true"></a><span class="co">### Setup example model</span></span>
-<span id="cb133-5"><a href="output.html#cb133-5" aria-hidden="true"></a>mod1 &lt;-<span class="kw">RxODE</span>({</span>
-<span id="cb133-6"><a href="output.html#cb133-6" aria-hidden="true"></a>  C2 =<span class="st"> </span>centr<span class="op">/</span>V2;</span>
-<span id="cb133-7"><a href="output.html#cb133-7" aria-hidden="true"></a>  C3 =<span class="st"> </span>peri<span class="op">/</span>V3;</span>
-<span id="cb133-8"><a href="output.html#cb133-8" aria-hidden="true"></a>  d<span class="op">/</span><span class="kw">dt</span>(depot) =<span class="op">-</span>KA<span class="op">*</span>depot;</span>
-<span id="cb133-9"><a href="output.html#cb133-9" aria-hidden="true"></a>  d<span class="op">/</span><span class="kw">dt</span>(centr) =<span class="st"> </span>KA<span class="op">*</span>depot <span class="op">-</span><span class="st"> </span>CL<span class="op">*</span>C2 <span class="op">-</span><span class="st"> </span>Q<span class="op">*</span>C2 <span class="op">+</span><span class="st"> </span>Q<span class="op">*</span>C3;</span>
-<span id="cb133-10"><a href="output.html#cb133-10" aria-hidden="true"></a>  d<span class="op">/</span><span class="kw">dt</span>(peri)  =<span class="st">                    </span>Q<span class="op">*</span>C2 <span class="op">-</span><span class="st"> </span>Q<span class="op">*</span>C3;</span>
-<span id="cb133-11"><a href="output.html#cb133-11" aria-hidden="true"></a>  d<span class="op">/</span><span class="kw">dt</span>(eff)  =<span class="st"> </span>Kin <span class="op">-</span><span class="st"> </span>Kout<span class="op">*</span>(<span class="dv">1</span><span class="op">-</span>C2<span class="op">/</span>(EC50<span class="op">+</span>C2))<span class="op">*</span>eff;</span>
-<span id="cb133-12"><a href="output.html#cb133-12" aria-hidden="true"></a>})</span>
-<span id="cb133-13"><a href="output.html#cb133-13" aria-hidden="true"></a></span>
-<span id="cb133-14"><a href="output.html#cb133-14" aria-hidden="true"></a><span class="co">### Seup parameters and initial conditions</span></span>
-<span id="cb133-15"><a href="output.html#cb133-15" aria-hidden="true"></a></span>
-<span id="cb133-16"><a href="output.html#cb133-16" aria-hidden="true"></a>theta &lt;-<span class="st"> </span></span>
-<span id="cb133-17"><a href="output.html#cb133-17" aria-hidden="true"></a><span class="st">  </span><span class="kw">c</span>(<span class="dt">KA=</span><span class="fl">2.94E-01</span>, <span class="dt">CL=</span><span class="fl">1.86E+01</span>, <span class="dt">V2=</span><span class="fl">4.02E+01</span>, <span class="co"># central </span></span>
-<span id="cb133-18"><a href="output.html#cb133-18" aria-hidden="true"></a>    <span class="dt">Q=</span><span class="fl">1.05E+01</span>,  <span class="dt">V3=</span><span class="fl">2.97E+02</span>,              <span class="co"># peripheral</span></span>
-<span id="cb133-19"><a href="output.html#cb133-19" aria-hidden="true"></a>    <span class="dt">Kin=</span><span class="dv">1</span>, <span class="dt">Kout=</span><span class="dv">1</span>, <span class="dt">EC50=</span><span class="dv">200</span>)               <span class="co"># effects</span></span>
-<span id="cb133-20"><a href="output.html#cb133-20" aria-hidden="true"></a></span>
-<span id="cb133-21"><a href="output.html#cb133-21" aria-hidden="true"></a>inits &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dt">eff=</span><span class="dv">1</span>)</span>
-<span id="cb133-22"><a href="output.html#cb133-22" aria-hidden="true"></a></span>
-<span id="cb133-23"><a href="output.html#cb133-23" aria-hidden="true"></a><span class="co">### Setup dosing event information</span></span>
-<span id="cb133-24"><a href="output.html#cb133-24" aria-hidden="true"></a>ev &lt;-<span class="st"> </span><span class="kw">eventTable</span>(<span class="dt">amount.units=</span><span class="st">&quot;mg&quot;</span>, <span class="dt">time.units=</span><span class="st">&quot;hours&quot;</span>) <span class="op">%&gt;%</span></span>
-<span id="cb133-25"><a href="output.html#cb133-25" aria-hidden="true"></a><span class="st">  </span><span class="kw">add.dosing</span>(<span class="dt">dose=</span><span class="dv">10000</span>, <span class="dt">nbr.doses=</span><span class="dv">10</span>, <span class="dt">dosing.interval=</span><span class="dv">12</span>) <span class="op">%&gt;%</span></span>
-<span id="cb133-26"><a href="output.html#cb133-26" aria-hidden="true"></a><span class="st">  </span><span class="kw">add.dosing</span>(<span class="dt">dose=</span><span class="dv">20000</span>, <span class="dt">nbr.doses=</span><span class="dv">5</span>, <span class="dt">start.time=</span><span class="dv">120</span>,</span>
-<span id="cb133-27"><a href="output.html#cb133-27" aria-hidden="true"></a>             <span class="dt">dosing.interval=</span><span class="dv">24</span>) <span class="op">%&gt;%</span></span>
-<span id="cb133-28"><a href="output.html#cb133-28" aria-hidden="true"></a><span class="st">  </span><span class="kw">add.sampling</span>(<span class="dv">0</span><span class="op">:</span><span class="dv">240</span>);</span>
-<span id="cb133-29"><a href="output.html#cb133-29" aria-hidden="true"></a></span>
-<span id="cb133-30"><a href="output.html#cb133-30" aria-hidden="true"></a></span>
-<span id="cb133-31"><a href="output.html#cb133-31" aria-hidden="true"></a><span class="co">### Now solve</span></span>
-<span id="cb133-32"><a href="output.html#cb133-32" aria-hidden="true"></a>x &lt;-<span class="st"> </span><span class="kw">predict</span>(mod1,theta, ev, inits)</span>
-<span id="cb133-33"><a href="output.html#cb133-33" aria-hidden="true"></a><span class="kw">print</span>(x)</span></code></pre></div>
+<div class="sourceCode" id="cb122"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb122-1"><a href="output.html#cb122-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(RxODE)</span>
+<span id="cb122-2"><a href="output.html#cb122-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(units)</span>
+<span id="cb122-3"><a href="output.html#cb122-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb122-4"><a href="output.html#cb122-4" aria-hidden="true" tabindex="-1"></a><span class="do">### Setup example model</span></span>
+<span id="cb122-5"><a href="output.html#cb122-5" aria-hidden="true" tabindex="-1"></a>mod1 <span class="ot">&lt;-</span><span class="fu">RxODE</span>({</span>
+<span id="cb122-6"><a href="output.html#cb122-6" aria-hidden="true" tabindex="-1"></a>  C2 <span class="ot">=</span> centr<span class="sc">/</span>V2;</span>
+<span id="cb122-7"><a href="output.html#cb122-7" aria-hidden="true" tabindex="-1"></a>  C3 <span class="ot">=</span> peri<span class="sc">/</span>V3;</span>
+<span id="cb122-8"><a href="output.html#cb122-8" aria-hidden="true" tabindex="-1"></a>  d<span class="sc">/</span><span class="fu">dt</span>(depot) <span class="ot">=</span><span class="sc">-</span>KA<span class="sc">*</span>depot;</span>
+<span id="cb122-9"><a href="output.html#cb122-9" aria-hidden="true" tabindex="-1"></a>  d<span class="sc">/</span><span class="fu">dt</span>(centr) <span class="ot">=</span> KA<span class="sc">*</span>depot <span class="sc">-</span> CL<span class="sc">*</span>C2 <span class="sc">-</span> Q<span class="sc">*</span>C2 <span class="sc">+</span> Q<span class="sc">*</span>C3;</span>
+<span id="cb122-10"><a href="output.html#cb122-10" aria-hidden="true" tabindex="-1"></a>  d<span class="sc">/</span><span class="fu">dt</span>(peri)  <span class="ot">=</span>                    Q<span class="sc">*</span>C2 <span class="sc">-</span> Q<span class="sc">*</span>C3;</span>
+<span id="cb122-11"><a href="output.html#cb122-11" aria-hidden="true" tabindex="-1"></a>  d<span class="sc">/</span><span class="fu">dt</span>(eff)  <span class="ot">=</span> Kin <span class="sc">-</span> Kout<span class="sc">*</span>(<span class="dv">1</span><span class="sc">-</span>C2<span class="sc">/</span>(EC50<span class="sc">+</span>C2))<span class="sc">*</span>eff;</span>
+<span id="cb122-12"><a href="output.html#cb122-12" aria-hidden="true" tabindex="-1"></a>})</span>
+<span id="cb122-13"><a href="output.html#cb122-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb122-14"><a href="output.html#cb122-14" aria-hidden="true" tabindex="-1"></a><span class="do">### Seup parameters and initial conditions</span></span>
+<span id="cb122-15"><a href="output.html#cb122-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb122-16"><a href="output.html#cb122-16" aria-hidden="true" tabindex="-1"></a>theta <span class="ot">&lt;-</span> </span>
+<span id="cb122-17"><a href="output.html#cb122-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">c</span>(<span class="at">KA=</span><span class="fl">2.94E-01</span>, <span class="at">CL=</span><span class="fl">1.86E+01</span>, <span class="at">V2=</span><span class="fl">4.02E+01</span>, <span class="co"># central </span></span>
+<span id="cb122-18"><a href="output.html#cb122-18" aria-hidden="true" tabindex="-1"></a>    <span class="at">Q=</span><span class="fl">1.05E+01</span>,  <span class="at">V3=</span><span class="fl">2.97E+02</span>,              <span class="co"># peripheral</span></span>
+<span id="cb122-19"><a href="output.html#cb122-19" aria-hidden="true" tabindex="-1"></a>    <span class="at">Kin=</span><span class="dv">1</span>, <span class="at">Kout=</span><span class="dv">1</span>, <span class="at">EC50=</span><span class="dv">200</span>)               <span class="co"># effects</span></span>
+<span id="cb122-20"><a href="output.html#cb122-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb122-21"><a href="output.html#cb122-21" aria-hidden="true" tabindex="-1"></a>inits <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="at">eff=</span><span class="dv">1</span>)</span>
+<span id="cb122-22"><a href="output.html#cb122-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb122-23"><a href="output.html#cb122-23" aria-hidden="true" tabindex="-1"></a><span class="do">### Setup dosing event information</span></span>
+<span id="cb122-24"><a href="output.html#cb122-24" aria-hidden="true" tabindex="-1"></a>ev <span class="ot">&lt;-</span> <span class="fu">eventTable</span>(<span class="at">amount.units=</span><span class="st">&quot;mg&quot;</span>, <span class="at">time.units=</span><span class="st">&quot;hours&quot;</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb122-25"><a href="output.html#cb122-25" aria-hidden="true" tabindex="-1"></a>  <span class="fu">add.dosing</span>(<span class="at">dose=</span><span class="dv">10000</span>, <span class="at">nbr.doses=</span><span class="dv">10</span>, <span class="at">dosing.interval=</span><span class="dv">12</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb122-26"><a href="output.html#cb122-26" aria-hidden="true" tabindex="-1"></a>  <span class="fu">add.dosing</span>(<span class="at">dose=</span><span class="dv">20000</span>, <span class="at">nbr.doses=</span><span class="dv">5</span>, <span class="at">start.time=</span><span class="dv">120</span>,</span>
+<span id="cb122-27"><a href="output.html#cb122-27" aria-hidden="true" tabindex="-1"></a>             <span class="at">dosing.interval=</span><span class="dv">24</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb122-28"><a href="output.html#cb122-28" aria-hidden="true" tabindex="-1"></a>  <span class="fu">add.sampling</span>(<span class="dv">0</span><span class="sc">:</span><span class="dv">240</span>);</span>
+<span id="cb122-29"><a href="output.html#cb122-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb122-30"><a href="output.html#cb122-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb122-31"><a href="output.html#cb122-31" aria-hidden="true" tabindex="-1"></a><span class="do">### Now solve</span></span>
+<span id="cb122-32"><a href="output.html#cb122-32" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">predict</span>(mod1,theta, ev, inits)</span>
+<span id="cb122-33"><a href="output.html#cb122-33" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(x)</span></code></pre></div>
 <pre><code>#&gt; ▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂ Solved RxODE object ▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂
 #&gt; ── Parameters ($params): ───────────────────────────────────
 #&gt;      V2      V3      KA      CL       Q     Kin    Kout    EC50 
@@ -207,8 +206,8 @@ This is done by the <code>predict()</code>, <code>solve()</code>, or <code>rxSol
 #&gt; # … with 235 more rows
 #&gt; ▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂</code></pre>
 <p>or</p>
-<div class="sourceCode" id="cb135"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb135-1"><a href="output.html#cb135-1" aria-hidden="true"></a>x &lt;-<span class="st"> </span><span class="kw">solve</span>(mod1,theta, ev, inits)</span>
-<span id="cb135-2"><a href="output.html#cb135-2" aria-hidden="true"></a><span class="kw">print</span>(x)</span></code></pre></div>
+<div class="sourceCode" id="cb124"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb124-1"><a href="output.html#cb124-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">solve</span>(mod1,theta, ev, inits)</span>
+<span id="cb124-2"><a href="output.html#cb124-2" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(x)</span></code></pre></div>
 <pre><code>#&gt; ▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂ Solved RxODE object ▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂
 #&gt; ── Parameters ($params): ───────────────────────────────────
 #&gt;      V2      V3      KA      CL       Q     Kin    Kout    EC50 
@@ -229,8 +228,8 @@ This is done by the <code>predict()</code>, <code>solve()</code>, or <code>rxSol
 #&gt; # … with 235 more rows
 #&gt; ▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂</code></pre>
 <p>Or with <code>mattigr</code></p>
-<div class="sourceCode" id="cb137"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb137-1"><a href="output.html#cb137-1" aria-hidden="true"></a>x &lt;-<span class="st"> </span>mod1 <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">solve</span>(theta, ev, inits)</span>
-<span id="cb137-2"><a href="output.html#cb137-2" aria-hidden="true"></a><span class="kw">print</span>(x)</span></code></pre></div>
+<div class="sourceCode" id="cb126"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb126-1"><a href="output.html#cb126-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> mod1 <span class="sc">%&gt;%</span> <span class="fu">solve</span>(theta, ev, inits)</span>
+<span id="cb126-2"><a href="output.html#cb126-2" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(x)</span></code></pre></div>
 <pre><code>#&gt; ▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂ Solved RxODE object ▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂
 #&gt; ── Parameters ($params): ───────────────────────────────────
 #&gt;      V2      V3      KA      CL       Q     Kin    Kout    EC50 
@@ -258,7 +257,7 @@ This is done by the <code>predict()</code>, <code>solve()</code>, or <code>rxSol
 <h3><span class="header-section-number">9.1.3</span> Using the solved object as a simple data frame</h3>
 <p>The solved object acts as a <code>data.frame</code> or <code>tbl</code> that can be filtered
 by <code>dpylr</code>. For example you could filter it easily.</p>
-<div class="sourceCode" id="cb139"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb139-1"><a href="output.html#cb139-1" aria-hidden="true"></a><span class="kw">library</span>(dplyr)</span></code></pre></div>
+<div class="sourceCode" id="cb128"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb128-1"><a href="output.html#cb128-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span></code></pre></div>
 <pre><code>#&gt; 
 #&gt; Attaching package: &#39;dplyr&#39;</code></pre>
 <pre><code>#&gt; The following objects are masked from &#39;package:stats&#39;:
@@ -267,17 +266,17 @@ by <code>dpylr</code>. For example you could filter it easily.</p>
 <pre><code>#&gt; The following objects are masked from &#39;package:base&#39;:
 #&gt; 
 #&gt;     intersect, setdiff, setequal, union</code></pre>
-<div class="sourceCode" id="cb143"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb143-1"><a href="output.html#cb143-1" aria-hidden="true"></a><span class="co">### You can  drop units for comparisons and filtering</span></span>
-<span id="cb143-2"><a href="output.html#cb143-2" aria-hidden="true"></a>x &lt;-<span class="st"> </span>mod1 <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">solve</span>(theta,ev,inits) <span class="op">%&gt;%</span></span>
-<span id="cb143-3"><a href="output.html#cb143-3" aria-hidden="true"></a><span class="st">    </span>drop_units <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">filter</span>(time <span class="op">&lt;=</span><span class="st"> </span><span class="dv">3</span>) <span class="op">%&gt;%</span><span class="st"> </span>as.tbl</span></code></pre></div>
+<div class="sourceCode" id="cb132"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb132-1"><a href="output.html#cb132-1" aria-hidden="true" tabindex="-1"></a><span class="do">### You can  drop units for comparisons and filtering</span></span>
+<span id="cb132-2"><a href="output.html#cb132-2" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> mod1 <span class="sc">%&gt;%</span> <span class="fu">solve</span>(theta,ev,inits) <span class="sc">%&gt;%</span></span>
+<span id="cb132-3"><a href="output.html#cb132-3" aria-hidden="true" tabindex="-1"></a>    drop_units <span class="sc">%&gt;%</span> <span class="fu">filter</span>(time <span class="sc">&lt;=</span> <span class="dv">3</span>) <span class="sc">%&gt;%</span> as.tbl</span></code></pre></div>
 <pre><code>#&gt; Warning: `as.tbl()` is deprecated as of dplyr 1.0.0.
 #&gt; Please use `tibble::as_tibble()` instead.
 #&gt; This warning is displayed once every 8 hours.
 #&gt; Call `lifecycle::last_warnings()` to see where this warning was generated.</code></pre>
-<div class="sourceCode" id="cb145"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb145-1"><a href="output.html#cb145-1" aria-hidden="true"></a><span class="co">### or keep them and compare with the proper units.</span></span>
-<span id="cb145-2"><a href="output.html#cb145-2" aria-hidden="true"></a>x &lt;-<span class="st"> </span>mod1 <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">solve</span>(theta,ev,inits) <span class="op">%&gt;%</span></span>
-<span id="cb145-3"><a href="output.html#cb145-3" aria-hidden="true"></a><span class="st">    </span><span class="kw">filter</span>(time <span class="op">&lt;=</span><span class="st"> </span><span class="kw">set_units</span>(<span class="dv">3</span>, hr)) <span class="op">%&gt;%</span><span class="st"> </span>as.tbl</span>
-<span id="cb145-4"><a href="output.html#cb145-4" aria-hidden="true"></a>x</span></code></pre></div>
+<div class="sourceCode" id="cb134"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb134-1"><a href="output.html#cb134-1" aria-hidden="true" tabindex="-1"></a><span class="do">### or keep them and compare with the proper units.</span></span>
+<span id="cb134-2"><a href="output.html#cb134-2" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> mod1 <span class="sc">%&gt;%</span> <span class="fu">solve</span>(theta,ev,inits) <span class="sc">%&gt;%</span></span>
+<span id="cb134-3"><a href="output.html#cb134-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">filter</span>(time <span class="sc">&lt;=</span> <span class="fu">set_units</span>(<span class="dv">3</span>, hr)) <span class="sc">%&gt;%</span> as.tbl</span>
+<span id="cb134-4"><a href="output.html#cb134-4" aria-hidden="true" tabindex="-1"></a>x</span></code></pre></div>
 <pre><code>#&gt; # A tibble: 4 x 7
 #&gt;    time    C2    C3  depot centr  peri   eff
 #&gt;     [h] &lt;dbl&gt; &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
@@ -293,8 +292,8 @@ by <code>dpylr</code>. For example you could filter it easily.</p>
 object to update parameters on the fly, or even change the sampling
 time.</p>
 <p>First we need to recreate the original solved system:</p>
-<div class="sourceCode" id="cb147"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb147-1"><a href="output.html#cb147-1" aria-hidden="true"></a>x &lt;-<span class="st"> </span>mod1 <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">solve</span>(theta,ev,inits);</span>
-<span id="cb147-2"><a href="output.html#cb147-2" aria-hidden="true"></a><span class="kw">print</span>(x)</span></code></pre></div>
+<div class="sourceCode" id="cb136"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb136-1"><a href="output.html#cb136-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> mod1 <span class="sc">%&gt;%</span> <span class="fu">solve</span>(theta,ev,inits);</span>
+<span id="cb136-2"><a href="output.html#cb136-2" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(x)</span></code></pre></div>
 <pre><code>#&gt; ▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂ Solved RxODE object ▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂
 #&gt; ── Parameters ($params): ───────────────────────────────────
 #&gt;      V2      V3      KA      CL       Q     Kin    Kout    EC50 
@@ -319,13 +318,13 @@ time.</p>
 <p>To examine or change initial conditions, you can use the syntax
 <code>cmt.0</code>, <code>cmt0</code>, or <code>cmt_0</code>. In the case of the <code>eff</code> compartment
 defined by the model, this is:</p>
-<div class="sourceCode" id="cb149"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb149-1"><a href="output.html#cb149-1" aria-hidden="true"></a>x<span class="op">$</span>eff0</span></code></pre></div>
+<div class="sourceCode" id="cb138"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb138-1"><a href="output.html#cb138-1" aria-hidden="true" tabindex="-1"></a>x<span class="sc">$</span>eff0</span></code></pre></div>
 <pre><code>#&gt; [1] 1</code></pre>
 <p>which shows the initial condition of the effect compartment. If you
 wished to change this initial condition to 2, this can be done easily
 by:</p>
-<div class="sourceCode" id="cb151"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb151-1"><a href="output.html#cb151-1" aria-hidden="true"></a>x<span class="op">$</span>eff0 &lt;-<span class="st"> </span><span class="dv">2</span></span>
-<span id="cb151-2"><a href="output.html#cb151-2" aria-hidden="true"></a><span class="kw">print</span>(x)</span></code></pre></div>
+<div class="sourceCode" id="cb140"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb140-1"><a href="output.html#cb140-1" aria-hidden="true" tabindex="-1"></a>x<span class="sc">$</span>eff0 <span class="ot">&lt;-</span> <span class="dv">2</span></span>
+<span id="cb140-2"><a href="output.html#cb140-2" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(x)</span></code></pre></div>
 <pre><code>#&gt; ▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂ Solved RxODE object ▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂
 #&gt; ── Parameters ($params): ───────────────────────────────────
 #&gt;      V2      V3      KA      CL       Q     Kin    Kout    EC50 
@@ -345,7 +344,7 @@ by:</p>
 #&gt; 6     5  36.5 7.18   2299. 1467. 2132.  1.23
 #&gt; # … with 235 more rows
 #&gt; ▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂</code></pre>
-<div class="sourceCode" id="cb153"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb153-1"><a href="output.html#cb153-1" aria-hidden="true"></a><span class="kw">plot</span>(x)</span></code></pre></div>
+<div class="sourceCode" id="cb142"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb142-1"><a href="output.html#cb142-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(x)</span></code></pre></div>
 <p><img src="RxODE-manual_files/figure-html/unnamed-chunk-91-1.png" width="672" /></p>
 </div>
 <div id="modifying-observation-times-for-rxode" class="section level3" number="9.2.2">
@@ -353,8 +352,8 @@ by:</p>
 <p>Notice that the initial effect is now <code>2</code>.</p>
 <p>You can also change the sampling times easily by this method by
 changing <code>t</code> or <code>time</code>. For example:</p>
-<div class="sourceCode" id="cb154"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb154-1"><a href="output.html#cb154-1" aria-hidden="true"></a>x<span class="op">$</span>t &lt;-<span class="st"> </span><span class="kw">seq</span>(<span class="dv">0</span>,<span class="dv">5</span>,<span class="dt">length.out=</span><span class="dv">20</span>)</span>
-<span id="cb154-2"><a href="output.html#cb154-2" aria-hidden="true"></a><span class="kw">print</span>(x)</span></code></pre></div>
+<div class="sourceCode" id="cb143"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb143-1"><a href="output.html#cb143-1" aria-hidden="true" tabindex="-1"></a>x<span class="sc">$</span>t <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="dv">0</span>,<span class="dv">5</span>,<span class="at">length.out=</span><span class="dv">20</span>)</span>
+<span id="cb143-2"><a href="output.html#cb143-2" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(x)</span></code></pre></div>
 <pre><code>#&gt; ▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂ Solved RxODE object ▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂
 #&gt; ── Parameters ($params): ───────────────────────────────────
 #&gt;      V2      V3      KA      CL       Q     Kin    Kout    EC50 
@@ -374,18 +373,18 @@ changing <code>t</code> or <code>time</code>. For example:</p>
 #&gt; 6 1.3157895  50.1 1.44    6792. 2013. 427.   1.44
 #&gt; # … with 14 more rows
 #&gt; ▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂</code></pre>
-<div class="sourceCode" id="cb156"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb156-1"><a href="output.html#cb156-1" aria-hidden="true"></a><span class="kw">plot</span>(x)</span></code></pre></div>
+<div class="sourceCode" id="cb145"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb145-1"><a href="output.html#cb145-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(x)</span></code></pre></div>
 <p><img src="RxODE-manual_files/figure-html/unnamed-chunk-92-1.png" width="672" /></p>
 </div>
 <div id="modifying-simulation-parameters" class="section level3" number="9.2.3">
 <h3><span class="header-section-number">9.2.3</span> Modifying simulation parameters</h3>
 <p>You can also access or change parameters by the <code>$</code> operator. For
 example, accessing <code>KA</code> can be done by:</p>
-<div class="sourceCode" id="cb157"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb157-1"><a href="output.html#cb157-1" aria-hidden="true"></a>x<span class="op">$</span>KA</span></code></pre></div>
+<div class="sourceCode" id="cb146"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb146-1"><a href="output.html#cb146-1" aria-hidden="true" tabindex="-1"></a>x<span class="sc">$</span>KA</span></code></pre></div>
 <pre><code>#&gt; [1] 0.294</code></pre>
 <p>And you may change it by assigning it to a new value.</p>
-<div class="sourceCode" id="cb159"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb159-1"><a href="output.html#cb159-1" aria-hidden="true"></a>x<span class="op">$</span>KA &lt;-<span class="st"> </span><span class="dv">1</span></span>
-<span id="cb159-2"><a href="output.html#cb159-2" aria-hidden="true"></a><span class="kw">print</span>(x)</span></code></pre></div>
+<div class="sourceCode" id="cb148"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb148-1"><a href="output.html#cb148-1" aria-hidden="true" tabindex="-1"></a>x<span class="sc">$</span>KA <span class="ot">&lt;-</span> <span class="dv">1</span></span>
+<span id="cb148-2"><a href="output.html#cb148-2" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(x)</span></code></pre></div>
 <pre><code>#&gt; ▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂ Solved RxODE object ▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂
 #&gt; ── Parameters ($params): ───────────────────────────────────
 #&gt;    V2    V3    KA    CL     Q   Kin  Kout  EC50 
@@ -405,7 +404,7 @@ example, accessing <code>KA</code> can be done by:</p>
 #&gt; 6 1.3157895 106.  3.66   2683. 4272. 1086.   1.64
 #&gt; # … with 14 more rows
 #&gt; ▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂</code></pre>
-<div class="sourceCode" id="cb161"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb161-1"><a href="output.html#cb161-1" aria-hidden="true"></a><span class="kw">plot</span>(x)</span></code></pre></div>
+<div class="sourceCode" id="cb150"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb150-1"><a href="output.html#cb150-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(x)</span></code></pre></div>
 <p><img src="RxODE-manual_files/figure-html/unnamed-chunk-94-1.png" width="672" /></p>
 <p>You can access/change all the parameters, initialization(s) or events with
 the <code>$params</code>, <code>$inits</code>, <code>$events</code> accessor syntax, similar to what is
