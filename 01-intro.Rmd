@@ -43,7 +43,14 @@ for help:
 This book was assembled on `r date()` with RxODE version
 `r packageVersion("RxODE")` automatically by github actions.
 
+# Authors and Acknowledgments
+
+```{r echo=FALSE, results='asis'}
+cat(paste(gsub("^#", "##", readLines('RxODE/authors.md')), collapse="\n"), "\n\n")
+```
+
 # Related R packages
 
 ```{r child='RxODE/man-roxygen/rmdhunks/related-R-chunk.Rmd'}
 ```
+

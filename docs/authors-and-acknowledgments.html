@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>RxODE user manual</title>
+  <title>Chapter 2 Authors and Acknowledgments | RxODE user manual</title>
   <meta name="description" content="This book is the user manual for RxODE" />
   <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="RxODE user manual" />
+  <meta property="og:title" content="Chapter 2 Authors and Acknowledgments | RxODE user manual" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="nlmixrdevelopment/RxODE-manual" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="RxODE user manual" />
+  <meta name="twitter:title" content="Chapter 2 Authors and Acknowledgments | RxODE user manual" />
   
   <meta name="twitter:description" content="This book is the user manual for RxODE" />
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-
-<link rel="next" href="authors-and-acknowledgments.html"/>
+<link rel="prev" href="index.html"/>
+<link rel="next" href="related-r-packages.html"/>
 <script src="libs/header-attrs-2.6/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -146,57 +146,65 @@ yes
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="header">
-<h1 class="title">RxODE user manual</h1>
-<p class="author"><em>Matthew Fidler, Melissa Hallow, Wenping Wang</em></p>
-<p class="date"><em>2021-02-23</em></p>
+<div id="authors-and-acknowledgments" class="section level1" number="2">
+<h1><span class="header-section-number">Chapter 2</span> Authors and Acknowledgments</h1>
+<div id="authors" class="section level2" number="2.1">
+<h2><span class="header-section-number">2.1</span> Authors</h2>
+<ul>
+<li>Matthew L. Fidler (core team/developer/manual)</li>
+<li>Melissa Hallow (tutorial writer)</li>
+<li>Wenping Wang (core team/developer)</li>
+</ul>
 </div>
-<div id="index" class="section level1" number="1">
-<h1><span class="header-section-number">Chapter 1</span> Introduction</h1>
-<p>Welcome to the RxODE user guide; <strong>RxODE</strong> is an R package for solving
-and simulating from ode-based models. These models are convert the RxODE
-mini-language to C and create a compiled dll for fast solving. ODE
-solving using RxODE has a few key parts:</p>
+<div id="contributors" class="section level2" number="2.2">
+<h2><span class="header-section-number">2.2</span> Contributors</h2>
 <ul>
-<li><p><code>RxODE()</code> which creates the C code for fast ODE solving based on a
-simple syntax (Chapter <a href="syntax.html#syntax">6</a>) related to Leibnitz notation.</p></li>
-<li><p>The event data, which can be:</p>
-<ul>
-<li>a <code>NONMEM</code> or <code>deSolve</code> compatible data frame (Chapter
-<a href="events.html#events">7</a>), or</li>
-<li>created with <code>et()</code> or <code>EventTable()</code> for easy simulation of
-events (Chapter <a href="#simulation"><strong>??</strong></a>)</li>
-<li>The data frame can be augmented by adding time varying or adding
-individual covariates (<code>iCov=</code> as needed)</li>
-</ul></li>
-<li><p><code>rxSolve()</code> which solves the system of equations using initial
-conditions and parameters to make predictions</p>
-<ul>
-<li>With multiple subject data, this may be parallelized.</li>
-<li>With single subject the output data frame is adaptive</li>
-<li>Covariances and other metrics of uncertainty can be used to
-simulate while solving.</li>
-</ul></li>
+<li>Zufar Mulyukov – Wrote initial version of <code>rxShiny()</code> with modifications from Matthew Fidler</li>
+<li>Alan Hindmarsh – Lsoda author</li>
+<li>Awad H. Al-Mohy – Al-Mohy matrix exponential author</li>
+<li>Ernst Hairer – dop853 author</li>
+<li>Gerhard Wanner – dop853 author</li>
+<li>Goro Fuji – Timsort author</li>
+<li>Hadley Wickham – Author of original findLhs in RxODE, also original author of .s3register (used with permission to anyone, both changed by Matthew Fidler)</li>
+<li>Jack Dongarra – LApack author; CRAN asked us to add</li>
+<li>Linda Petzold – LSODA</li>
+<li>Martin Maechler – expm author, used routines from there for inductive linearization</li>
+<li>Morwenn – Timsort author</li>
+<li>Nicholas J. Higham – Author of Al-mohy matrix exponential</li>
+<li>Roger B. Sidje – expokit matrix exponential author</li>
+<li>Simon Frost – thread safe C implementation of liblsoda</li>
+<li>Kevin Ushey – Original author of fast factor, modified by Matthew Filder</li>
+<li>Yu Feng – thread safe liblsoda</li>
+<li>Matt Dowle – forder primary author (version modified by Matthew Fidler to allow different type of threading and exclude grouping)</li>
+<li>Cleve Moler – LApack author; CRAN asked us to add</li>
+<li>David Cooley – Author of fast_factor which was modified and now is used RxODE to quickly create factors for IDs without sorting them like R does</li>
+<li>Daniel C. Dillon – Author of stripping utility to reduce size of RxODE/nlmixr executable</li>
+<li>Drew Schmidt – Drew Schmidt author of edits for exponential matrix utility taken from R package expm</li>
+<li>Arun Srinivasan – forder secondary author (version modified by Matthew Fidler to allow different type of threading, indexing and exclude grouping)</li>
 </ul>
-<p>While this is the user guide, there are other places that you can visit
-for help:</p>
+</div>
+<div id="rxode-acknowledgments" class="section level2" number="2.3">
+<h2><span class="header-section-number">2.3</span> RxODE acknowledgments:</h2>
 <ul>
-<li><code>RxODE</code> github <a href="https://nlmixrdevelopment.github.io/RxODE/">pkgdown
-page</a></li>
-<li><code>RxODE</code> tutorial (accessible in tutorials in Rstudio 1.3+)</li>
-<li><code>RxODE</code> <a href="https://github.com/nlmixrdevelopment/RxODE/discussions">github
-discussions</a></li>
+<li>Justin Wilkins – Documentation updates, logo and testing</li>
+<li>Emma Schwager – R IJK distribution author</li>
+<li>J Coligne – dop853 fortran author</li>
+<li>Bill Denney – Documentation updates, manual and minor bug fixes</li>
+<li>Tim Waterhouse – Fixed one bug with mac working directories</li>
+<li>Richard Upton – Helped with solving the ADVAN linCmt() solutions</li>
+<li>Ross Ihaka – R author</li>
+<li>Robert Gentleman – R author</li>
+<li>R core team – R authors</li>
 </ul>
-<p>This book was assembled on Tue Feb 23 16:04:37 2021 with RxODE version
-1.0.4 automatically by github actions.</p>
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-
-<a href="authors-and-acknowledgments.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="related-r-packages.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
