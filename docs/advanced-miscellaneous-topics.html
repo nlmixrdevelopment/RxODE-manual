@@ -1,0 +1,1408 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 13 Advanced &amp; Miscellaneous Topics | RxODE user manual</title>
+  <meta name="description" content="This book is the user manual for RxODE" />
+  <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 13 Advanced &amp; Miscellaneous Topics | RxODE user manual" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="This book is the user manual for RxODE" />
+  <meta name="github-repo" content="nlmixrdevelopment/RxODE-manual" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 13 Advanced &amp; Miscellaneous Topics | RxODE user manual" />
+  
+  <meta name="twitter:description" content="This book is the user manual for RxODE" />
+  
+
+<meta name="author" content="Matthew Fidler, Melissa Hallow, Wenping Wang" />
+
+
+<meta name="date" content="2021-02-23" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="examples.html"/>
+
+<script src="libs/header-attrs-2.6/header-attrs.js"></script>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Introduction</a></li>
+<li class="chapter" data-level="2" data-path="author.html"><a href="author.html"><i class="fa fa-check"></i><b>2</b> Authors and Acknowledgments</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="author.html"><a href="author.html#authors"><i class="fa fa-check"></i><b>2.1</b> Authors</a></li>
+<li class="chapter" data-level="2.2" data-path="author.html"><a href="author.html#contributors"><i class="fa fa-check"></i><b>2.2</b> Contributors</a></li>
+<li class="chapter" data-level="2.3" data-path="author.html"><a href="author.html#rxode-acknowledgments"><i class="fa fa-check"></i><b>2.3</b> RxODE acknowledgments:</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="related.html"><a href="related.html"><i class="fa fa-check"></i><b>3</b> Related R packages</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="related.html"><a href="related.html#ode-solving"><i class="fa fa-check"></i><b>3.1</b> ODE solving</a></li>
+<li class="chapter" data-level="3.2" data-path="related.html"><a href="related.html#pk-solved-systems"><i class="fa fa-check"></i><b>3.2</b> PK Solved systems</a>
+<ul>
+<li class="chapter" data-level="3.2.1" data-path="related.html"><a href="related.html#the-following-packages-for-solved-pk-systems-are-on-cran"><i class="fa fa-check"></i><b>3.2.1</b> The following packages for solved PK systems are on CRAN</a></li>
+<li class="chapter" data-level="3.2.2" data-path="related.html"><a href="related.html#non-cran-libraries"><i class="fa fa-check"></i><b>3.2.2</b> Non-CRAN libraries:</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="install.html"><a href="install.html"><i class="fa fa-check"></i><b>4</b> Installation</a>
+<ul>
+<li class="chapter" data-level="4.0.1" data-path="install.html"><a href="install.html#windows"><i class="fa fa-check"></i><b>4.0.1</b> Windows</a></li>
+<li class="chapter" data-level="4.0.2" data-path="install.html"><a href="install.html#mac-osx"><i class="fa fa-check"></i><b>4.0.2</b> Mac OSX</a></li>
+<li class="chapter" data-level="4.0.3" data-path="install.html"><a href="install.html#linux"><i class="fa fa-check"></i><b>4.0.3</b> Linux</a></li>
+<li class="chapter" data-level="4.1" data-path="install.html"><a href="install.html#development-version"><i class="fa fa-check"></i><b>4.1</b> Development Version</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="gettingStarted.html"><a href="gettingStarted.html"><i class="fa fa-check"></i><b>5</b> Getting Started</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="gettingStarted.html"><a href="gettingStarted.html#specify-ode-parameters-and-initial-conditions"><i class="fa fa-check"></i><b>5.1</b> Specify ODE parameters and initial conditions</a></li>
+<li class="chapter" data-level="5.2" data-path="gettingStarted.html"><a href="gettingStarted.html#specify-dosing-and-sampling-in-rxode"><i class="fa fa-check"></i><b>5.2</b> Specify Dosing and sampling in RxODE</a></li>
+<li class="chapter" data-level="5.3" data-path="gettingStarted.html"><a href="gettingStarted.html#solving-odes"><i class="fa fa-check"></i><b>5.3</b> Solving ODEs</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="syntax.html"><a href="syntax.html"><i class="fa fa-check"></i><b>6</b> RxODE syntax</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="syntax.html"><a href="syntax.html#example"><i class="fa fa-check"></i><b>6.1</b> Example</a></li>
+<li class="chapter" data-level="6.2" data-path="syntax.html"><a href="syntax.html#syntax-1"><i class="fa fa-check"></i><b>6.2</b> Syntax</a>
+<ul>
+<li class="chapter" data-level="6.2.1" data-path="syntax.html"><a href="syntax.html#identifiers"><i class="fa fa-check"></i><b>6.2.1</b> Identifiers</a></li>
+</ul></li>
+<li class="chapter" data-level="6.3" data-path="syntax.html"><a href="syntax.html#logical-operators"><i class="fa fa-check"></i><b>6.3</b> Logical Operators</a></li>
+<li class="chapter" data-level="6.4" data-path="syntax.html"><a href="syntax.html#cmt-changing-compartment-numbers-for-states"><i class="fa fa-check"></i><b>6.4</b> cmt() changing compartment numbers for states</a>
+<ul>
+<li class="chapter" data-level="6.4.1" data-path="syntax.html"><a href="syntax.html#how-rxode-numbers-compartments"><i class="fa fa-check"></i><b>6.4.1</b> How RxODE numbers compartments</a></li>
+<li class="chapter" data-level="6.4.2" data-path="syntax.html"><a href="syntax.html#changing-compartments-by-pre-declaring-with-cmt"><i class="fa fa-check"></i><b>6.4.2</b> Changing compartments by pre-declaring with <code>cmt()</code></a></li>
+<li class="chapter" data-level="6.4.3" data-path="syntax.html"><a href="syntax.html#appending-compartments-to-the-model-with-cmt"><i class="fa fa-check"></i><b>6.4.3</b> Appending compartments to the model with <code>cmt()</code></a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="events.html"><a href="events.html"><i class="fa fa-check"></i><b>7</b> RxODE events</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="events.html"><a href="events.html#rxode-event-tables"><i class="fa fa-check"></i><b>7.1</b> RxODE event tables</a></li>
+<li class="chapter" data-level="7.2" data-path="events.html"><a href="events.html#bolusadditive-doses"><i class="fa fa-check"></i><b>7.2</b> Bolus/Additive Doses</a></li>
+<li class="chapter" data-level="7.3" data-path="events.html"><a href="events.html#infusion-doses"><i class="fa fa-check"></i><b>7.3</b> Infusion Doses</a>
+<ul>
+<li class="chapter" data-level="7.3.1" data-path="events.html"><a href="events.html#constant-infusion-in-terms-of-duration-and-rate"><i class="fa fa-check"></i><b>7.3.1</b> Constant Infusion (in terms of duration and rate)</a></li>
+<li class="chapter" data-level="7.3.2" data-path="events.html"><a href="events.html#modeled-rate-and-duration-of-infusion"><i class="fa fa-check"></i><b>7.3.2</b> Modeled Rate and Duration of Infusion</a></li>
+</ul></li>
+<li class="chapter" data-level="7.4" data-path="events.html"><a href="events.html#steady-state"><i class="fa fa-check"></i><b>7.4</b> Steady State</a>
+<ul>
+<li class="chapter" data-level="7.4.1" data-path="events.html"><a href="events.html#steady-state-for-complex-dosing"><i class="fa fa-check"></i><b>7.4.1</b> Steady state for complex dosing</a></li>
+<li class="chapter" data-level="7.4.2" data-path="events.html"><a href="events.html#steady-state-for-constant-infusion-or-zero-order-processes"><i class="fa fa-check"></i><b>7.4.2</b> Steady state for constant infusion or zero order processes</a></li>
+</ul></li>
+<li class="chapter" data-level="7.5" data-path="events.html"><a href="events.html#reset-events"><i class="fa fa-check"></i><b>7.5</b> Reset Events</a></li>
+<li class="chapter" data-level="7.6" data-path="events.html"><a href="events.html#turning-off-compartments"><i class="fa fa-check"></i><b>7.6</b> Turning off compartments</a></li>
+<li class="chapter" data-level="7.7" data-path="events.html"><a href="events.html#classic-et"><i class="fa fa-check"></i><b>7.7</b> Classic RxODE events</a>
+<ul>
+<li class="chapter" data-level="7.7.1" data-path="events.html"><a href="events.html#bolus-dose-examples"><i class="fa fa-check"></i><b>7.7.1</b> Bolus Dose Examples</a></li>
+<li class="chapter" data-level="7.7.2" data-path="events.html"><a href="events.html#infusion-event-examples"><i class="fa fa-check"></i><b>7.7.2</b> Infusion Event Examples</a></li>
+<li class="chapter" data-level="7.7.3" data-path="events.html"><a href="events.html#steady-state-for-classic-rxode-evid-example"><i class="fa fa-check"></i><b>7.7.3</b> Steady State for classic RxODE EVID example</a></li>
+<li class="chapter" data-level="7.7.4" data-path="events.html"><a href="events.html#turning-off-a-compartment-with-classic-rxode-evid"><i class="fa fa-check"></i><b>7.7.4</b> Turning off a compartment with classic RxODE EVID</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="et.html"><a href="et.html"><i class="fa fa-check"></i><b>8</b> Easily creating RxODE events</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="et.html"><a href="et.html#adding-doses-to-the-event-table"><i class="fa fa-check"></i><b>8.1</b> Adding doses to the event table</a></li>
+<li class="chapter" data-level="8.2" data-path="et.html"><a href="et.html#adding-sampling-to-an-event-table"><i class="fa fa-check"></i><b>8.2</b> Adding sampling to an event table</a></li>
+<li class="chapter" data-level="8.3" data-path="et.html"><a href="et.html#expand-the-event-table-to-a-multi-subject-event-table."><i class="fa fa-check"></i><b>8.3</b> Expand the event table to a multi-subject event table.</a></li>
+<li class="chapter" data-level="8.4" data-path="et.html"><a href="et.html#add-doses-and-samples-within-a-sampling-window"><i class="fa fa-check"></i><b>8.4</b> Add doses and samples within a sampling window</a></li>
+<li class="chapter" data-level="8.5" data-path="et.html"><a href="et.html#combining-event-tables"><i class="fa fa-check"></i><b>8.5</b> Combining event tables</a></li>
+<li class="chapter" data-level="8.6" data-path="et.html"><a href="et.html#sequencing-event-tables"><i class="fa fa-check"></i><b>8.6</b> Sequencing event tables</a></li>
+<li class="chapter" data-level="8.7" data-path="et.html"><a href="et.html#repeating-event-tables"><i class="fa fa-check"></i><b>8.7</b> Repeating event tables</a></li>
+<li class="chapter" data-level="8.8" data-path="et.html"><a href="et.html#combining-event-tables-with-rbind"><i class="fa fa-check"></i><b>8.8</b> Combining event tables with rbind</a></li>
+<li class="chapter" data-level="8.9" data-path="et.html"><a href="et.html#expanding-events"><i class="fa fa-check"></i><b>8.9</b> Expanding events</a></li>
+<li class="chapter" data-level="8.10" data-path="et.html"><a href="et.html#event-tables-in-rstudio-notebooks"><i class="fa fa-check"></i><b>8.10</b> Event tables in Rstudio Notebooks</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="solve.html"><a href="solve.html"><i class="fa fa-check"></i><b>9</b> Solving and solving options</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="solve.html"><a href="solve.html#general-solving-options"><i class="fa fa-check"></i><b>9.1</b> General Solving Options</a>
+<ul>
+<li class="chapter" data-level="9.1.1" data-path="solve.html"><a href="solve.html#object"><i class="fa fa-check"></i><b>9.1.1</b> object</a></li>
+<li class="chapter" data-level="9.1.2" data-path="solve.html"><a href="solve.html#params"><i class="fa fa-check"></i><b>9.1.2</b> params</a></li>
+<li class="chapter" data-level="9.1.3" data-path="solve.html"><a href="solve.html#events-1"><i class="fa fa-check"></i><b>9.1.3</b> events</a></li>
+<li class="chapter" data-level="9.1.4" data-path="solve.html"><a href="solve.html#inits"><i class="fa fa-check"></i><b>9.1.4</b> inits</a></li>
+<li class="chapter" data-level="9.1.5" data-path="solve.html"><a href="solve.html#method"><i class="fa fa-check"></i><b>9.1.5</b> method</a></li>
+<li class="chapter" data-level="9.1.6" data-path="solve.html"><a href="solve.html#stiff"><i class="fa fa-check"></i><b>9.1.6</b> stiff</a></li>
+</ul></li>
+<li class="chapter" data-level="9.2" data-path="solve.html"><a href="solve.html#lsodadop-solving-options"><i class="fa fa-check"></i><b>9.2</b> lsoda/dop solving options</a>
+<ul>
+<li class="chapter" data-level="9.2.1" data-path="solve.html"><a href="solve.html#atol"><i class="fa fa-check"></i><b>9.2.1</b> atol</a></li>
+<li class="chapter" data-level="9.2.2" data-path="solve.html"><a href="solve.html#rtol"><i class="fa fa-check"></i><b>9.2.2</b> rtol</a></li>
+<li class="chapter" data-level="9.2.3" data-path="solve.html"><a href="solve.html#maxsteps"><i class="fa fa-check"></i><b>9.2.3</b> maxsteps</a></li>
+<li class="chapter" data-level="9.2.4" data-path="solve.html"><a href="solve.html#hmin"><i class="fa fa-check"></i><b>9.2.4</b> hmin</a></li>
+<li class="chapter" data-level="9.2.5" data-path="solve.html"><a href="solve.html#hmax"><i class="fa fa-check"></i><b>9.2.5</b> hmax</a></li>
+<li class="chapter" data-level="9.2.6" data-path="solve.html"><a href="solve.html#hmaxsd"><i class="fa fa-check"></i><b>9.2.6</b> hmaxSd</a></li>
+<li class="chapter" data-level="9.2.7" data-path="solve.html"><a href="solve.html#hini"><i class="fa fa-check"></i><b>9.2.7</b> hini</a></li>
+<li class="chapter" data-level="9.2.8" data-path="solve.html"><a href="solve.html#maxordn"><i class="fa fa-check"></i><b>9.2.8</b> maxordn</a></li>
+<li class="chapter" data-level="9.2.9" data-path="solve.html"><a href="solve.html#maxords"><i class="fa fa-check"></i><b>9.2.9</b> maxords</a></li>
+<li class="chapter" data-level="9.2.10" data-path="solve.html"><a href="solve.html#mxhnil"><i class="fa fa-check"></i><b>9.2.10</b> mxhnil</a></li>
+<li class="chapter" data-level="9.2.11" data-path="solve.html"><a href="solve.html#hmxi"><i class="fa fa-check"></i><b>9.2.11</b> hmxi</a></li>
+<li class="chapter" data-level="9.2.12" data-path="solve.html"><a href="solve.html#istatereset"><i class="fa fa-check"></i><b>9.2.12</b> istateReset</a></li>
+</ul></li>
+<li class="chapter" data-level="9.3" data-path="solve.html"><a href="solve.html#inductive-linerization-options"><i class="fa fa-check"></i><b>9.3</b> Inductive Linerization Options</a>
+<ul>
+<li class="chapter" data-level="9.3.1" data-path="solve.html"><a href="solve.html#indlinmatexptype"><i class="fa fa-check"></i><b>9.3.1</b> indLinMatExpType</a></li>
+<li class="chapter" data-level="9.3.2" data-path="solve.html"><a href="solve.html#indlinmatexporder"><i class="fa fa-check"></i><b>9.3.2</b> indLinMatExpOrder</a></li>
+<li class="chapter" data-level="9.3.3" data-path="solve.html"><a href="solve.html#indlinphitol"><i class="fa fa-check"></i><b>9.3.3</b> indLinPhiTol</a></li>
+<li class="chapter" data-level="9.3.4" data-path="solve.html"><a href="solve.html#indlinphim"><i class="fa fa-check"></i><b>9.3.4</b> indLinPhiM</a></li>
+</ul></li>
+<li class="chapter" data-level="9.4" data-path="solve.html"><a href="solve.html#steady-state-solving-options"><i class="fa fa-check"></i><b>9.4</b> Steady State Solving Options</a>
+<ul>
+<li class="chapter" data-level="9.4.1" data-path="solve.html"><a href="solve.html#minss"><i class="fa fa-check"></i><b>9.4.1</b> minSS</a></li>
+<li class="chapter" data-level="9.4.2" data-path="solve.html"><a href="solve.html#maxss"><i class="fa fa-check"></i><b>9.4.2</b> maxSS</a></li>
+<li class="chapter" data-level="9.4.3" data-path="solve.html"><a href="solve.html#strictss"><i class="fa fa-check"></i><b>9.4.3</b> strictSS</a></li>
+<li class="chapter" data-level="9.4.4" data-path="solve.html"><a href="solve.html#infssstep"><i class="fa fa-check"></i><b>9.4.4</b> infSSstep</a></li>
+<li class="chapter" data-level="9.4.5" data-path="solve.html"><a href="solve.html#ssatol"><i class="fa fa-check"></i><b>9.4.5</b> ssAtol</a></li>
+<li class="chapter" data-level="9.4.6" data-path="solve.html"><a href="solve.html#ssrtol"><i class="fa fa-check"></i><b>9.4.6</b> ssRtol</a></li>
+</ul></li>
+<li class="chapter" data-level="9.5" data-path="solve.html"><a href="solve.html#rxode-numeric-stability-options"><i class="fa fa-check"></i><b>9.5</b> RxODE numeric stability options</a>
+<ul>
+<li class="chapter" data-level="9.5.1" data-path="solve.html"><a href="solve.html#maxatolrtolfactor"><i class="fa fa-check"></i><b>9.5.1</b> maxAtolRtolFactor</a></li>
+<li class="chapter" data-level="9.5.2" data-path="solve.html"><a href="solve.html#statetrim"><i class="fa fa-check"></i><b>9.5.2</b> stateTrim</a></li>
+<li class="chapter" data-level="9.5.3" data-path="solve.html"><a href="solve.html#safezero"><i class="fa fa-check"></i><b>9.5.3</b> safeZero</a></li>
+<li class="chapter" data-level="9.5.4" data-path="solve.html"><a href="solve.html#sumtype"><i class="fa fa-check"></i><b>9.5.4</b> sumType</a></li>
+<li class="chapter" data-level="9.5.5" data-path="solve.html"><a href="solve.html#prodtype"><i class="fa fa-check"></i><b>9.5.5</b> prodType</a></li>
+<li class="chapter" data-level="9.5.6" data-path="solve.html"><a href="solve.html#maxwhile"><i class="fa fa-check"></i><b>9.5.6</b> maxwhile</a></li>
+<li class="chapter" data-level="9.5.7" data-path="solve.html"><a href="solve.html#transitabs"><i class="fa fa-check"></i><b>9.5.7</b> transitAbs</a></li>
+</ul></li>
+<li class="chapter" data-level="9.6" data-path="solve.html"><a href="solve.html#linear-compartment-model-sensitivity-options"><i class="fa fa-check"></i><b>9.6</b> Linear compartment model sensitivity options</a>
+<ul>
+<li class="chapter" data-level="9.6.1" data-path="solve.html"><a href="solve.html#senstype"><i class="fa fa-check"></i><b>9.6.1</b> sensType</a></li>
+<li class="chapter" data-level="9.6.2" data-path="solve.html"><a href="solve.html#lindiff"><i class="fa fa-check"></i><b>9.6.2</b> linDiff</a></li>
+<li class="chapter" data-level="9.6.3" data-path="solve.html"><a href="solve.html#lindiffcentral"><i class="fa fa-check"></i><b>9.6.3</b> linDiffCentral</a></li>
+</ul></li>
+<li class="chapter" data-level="9.7" data-path="solve.html"><a href="solve.html#covariate-solving-options"><i class="fa fa-check"></i><b>9.7</b> Covariate Solving Options</a>
+<ul>
+<li class="chapter" data-level="9.7.1" data-path="solve.html"><a href="solve.html#icov"><i class="fa fa-check"></i><b>9.7.1</b> iCov</a></li>
+<li class="chapter" data-level="9.7.2" data-path="solve.html"><a href="solve.html#covsinterpolation"><i class="fa fa-check"></i><b>9.7.2</b> covsInterpolation</a></li>
+<li class="chapter" data-level="9.7.3" data-path="solve.html"><a href="solve.html#addcov"><i class="fa fa-check"></i><b>9.7.3</b> addCov</a></li>
+</ul></li>
+<li class="chapter" data-level="9.8" data-path="solve.html"><a href="solve.html#simulation-options"><i class="fa fa-check"></i><b>9.8</b> Simulation options</a>
+<ul>
+<li class="chapter" data-level="9.8.1" data-path="solve.html"><a href="solve.html#seed"><i class="fa fa-check"></i><b>9.8.1</b> seed</a></li>
+<li class="chapter" data-level="9.8.2" data-path="solve.html"><a href="solve.html#nsim"><i class="fa fa-check"></i><b>9.8.2</b> nsim</a></li>
+<li class="chapter" data-level="9.8.3" data-path="solve.html"><a href="solve.html#thetamat"><i class="fa fa-check"></i><b>9.8.3</b> thetaMat</a></li>
+<li class="chapter" data-level="9.8.4" data-path="solve.html"><a href="solve.html#thetalower"><i class="fa fa-check"></i><b>9.8.4</b> thetaLower</a></li>
+<li class="chapter" data-level="9.8.5" data-path="solve.html"><a href="solve.html#thetaupper"><i class="fa fa-check"></i><b>9.8.5</b> thetaUpper</a></li>
+<li class="chapter" data-level="9.8.6" data-path="solve.html"><a href="solve.html#thetadf"><i class="fa fa-check"></i><b>9.8.6</b> thetaDf</a></li>
+<li class="chapter" data-level="9.8.7" data-path="solve.html"><a href="solve.html#thetaischol"><i class="fa fa-check"></i><b>9.8.7</b> thetaIsChol</a></li>
+<li class="chapter" data-level="9.8.8" data-path="solve.html"><a href="solve.html#nstud"><i class="fa fa-check"></i><b>9.8.8</b> nStud</a></li>
+<li class="chapter" data-level="9.8.9" data-path="solve.html"><a href="solve.html#omega"><i class="fa fa-check"></i><b>9.8.9</b> omega</a></li>
+<li class="chapter" data-level="9.8.10" data-path="solve.html"><a href="solve.html#omegaischol"><i class="fa fa-check"></i><b>9.8.10</b> omegaIsChol</a></li>
+<li class="chapter" data-level="9.8.11" data-path="solve.html"><a href="solve.html#omegaseparation"><i class="fa fa-check"></i><b>9.8.11</b> omegaSeparation</a></li>
+<li class="chapter" data-level="9.8.12" data-path="solve.html"><a href="solve.html#omegaxform"><i class="fa fa-check"></i><b>9.8.12</b> omegaXform</a></li>
+<li class="chapter" data-level="9.8.13" data-path="solve.html"><a href="solve.html#omegalower"><i class="fa fa-check"></i><b>9.8.13</b> omegaLower</a></li>
+<li class="chapter" data-level="9.8.14" data-path="solve.html"><a href="solve.html#omegaupper"><i class="fa fa-check"></i><b>9.8.14</b> omegaUpper</a></li>
+<li class="chapter" data-level="9.8.15" data-path="solve.html"><a href="solve.html#omegadf"><i class="fa fa-check"></i><b>9.8.15</b> omegaDf</a></li>
+<li class="chapter" data-level="9.8.16" data-path="solve.html"><a href="solve.html#nsub"><i class="fa fa-check"></i><b>9.8.16</b> nSub</a></li>
+<li class="chapter" data-level="9.8.17" data-path="solve.html"><a href="solve.html#dfsub"><i class="fa fa-check"></i><b>9.8.17</b> dfSub</a></li>
+<li class="chapter" data-level="9.8.18" data-path="solve.html"><a href="solve.html#sigma"><i class="fa fa-check"></i><b>9.8.18</b> sigma</a></li>
+<li class="chapter" data-level="9.8.19" data-path="solve.html"><a href="solve.html#sigmalower"><i class="fa fa-check"></i><b>9.8.19</b> sigmaLower</a></li>
+<li class="chapter" data-level="9.8.20" data-path="solve.html"><a href="solve.html#sigmaupper"><i class="fa fa-check"></i><b>9.8.20</b> sigmaUpper</a></li>
+<li class="chapter" data-level="9.8.21" data-path="solve.html"><a href="solve.html#sigmaxform"><i class="fa fa-check"></i><b>9.8.21</b> sigmaXform</a></li>
+<li class="chapter" data-level="9.8.22" data-path="solve.html"><a href="solve.html#sigmadf"><i class="fa fa-check"></i><b>9.8.22</b> sigmaDf</a></li>
+<li class="chapter" data-level="9.8.23" data-path="solve.html"><a href="solve.html#sigmaischol"><i class="fa fa-check"></i><b>9.8.23</b> sigmaIsChol</a></li>
+<li class="chapter" data-level="9.8.24" data-path="solve.html"><a href="solve.html#sigmaseparation"><i class="fa fa-check"></i><b>9.8.24</b> sigmaSeparation</a></li>
+<li class="chapter" data-level="9.8.25" data-path="solve.html"><a href="solve.html#dfobs"><i class="fa fa-check"></i><b>9.8.25</b> dfObs</a></li>
+<li class="chapter" data-level="9.8.26" data-path="solve.html"><a href="solve.html#resample"><i class="fa fa-check"></i><b>9.8.26</b> resample</a></li>
+<li class="chapter" data-level="9.8.27" data-path="solve.html"><a href="solve.html#resampleid"><i class="fa fa-check"></i><b>9.8.27</b> resampleID</a></li>
+</ul></li>
+<li class="chapter" data-level="9.9" data-path="solve.html"><a href="solve.html#rxode-output-options"><i class="fa fa-check"></i><b>9.9</b> RxODE output options</a>
+<ul>
+<li class="chapter" data-level="9.9.1" data-path="solve.html"><a href="solve.html#returntype"><i class="fa fa-check"></i><b>9.9.1</b> returnType</a></li>
+<li class="chapter" data-level="9.9.2" data-path="solve.html"><a href="solve.html#adddosing"><i class="fa fa-check"></i><b>9.9.2</b> addDosing</a></li>
+<li class="chapter" data-level="9.9.3" data-path="solve.html"><a href="solve.html#keep"><i class="fa fa-check"></i><b>9.9.3</b> keep</a></li>
+<li class="chapter" data-level="9.9.4" data-path="solve.html"><a href="solve.html#drop"><i class="fa fa-check"></i><b>9.9.4</b> drop</a></li>
+<li class="chapter" data-level="9.9.5" data-path="solve.html"><a href="solve.html#idfactor"><i class="fa fa-check"></i><b>9.9.5</b> idFactor</a></li>
+<li class="chapter" data-level="9.9.6" data-path="solve.html"><a href="solve.html#subsetnonmem"><i class="fa fa-check"></i><b>9.9.6</b> subsetNonmem</a></li>
+<li class="chapter" data-level="9.9.7" data-path="solve.html"><a href="solve.html#matrix"><i class="fa fa-check"></i><b>9.9.7</b> matrix</a></li>
+<li class="chapter" data-level="9.9.8" data-path="solve.html"><a href="solve.html#scale"><i class="fa fa-check"></i><b>9.9.8</b> scale</a></li>
+<li class="chapter" data-level="9.9.9" data-path="solve.html"><a href="solve.html#amountunits"><i class="fa fa-check"></i><b>9.9.9</b> amountUnits</a></li>
+<li class="chapter" data-level="9.9.10" data-path="solve.html"><a href="solve.html#timeunits"><i class="fa fa-check"></i><b>9.9.10</b> timeUnits</a></li>
+<li class="chapter" data-level="9.9.11" data-path="solve.html"><a href="solve.html#theta"><i class="fa fa-check"></i><b>9.9.11</b> theta</a></li>
+<li class="chapter" data-level="9.9.12" data-path="solve.html"><a href="solve.html#eta"><i class="fa fa-check"></i><b>9.9.12</b> eta</a></li>
+<li class="chapter" data-level="9.9.13" data-path="solve.html"><a href="solve.html#from"><i class="fa fa-check"></i><b>9.9.13</b> from</a></li>
+<li class="chapter" data-level="9.9.14" data-path="solve.html"><a href="solve.html#to"><i class="fa fa-check"></i><b>9.9.14</b> to</a></li>
+<li class="chapter" data-level="9.9.15" data-path="solve.html"><a href="solve.html#length.out"><i class="fa fa-check"></i><b>9.9.15</b> length.out</a></li>
+<li class="chapter" data-level="9.9.16" data-path="solve.html"><a href="solve.html#by"><i class="fa fa-check"></i><b>9.9.16</b> by</a></li>
+<li class="chapter" data-level="9.9.17" data-path="solve.html"><a href="solve.html#warnidsort"><i class="fa fa-check"></i><b>9.9.17</b> warnIdSort</a></li>
+<li class="chapter" data-level="9.9.18" data-path="solve.html"><a href="solve.html#warndrop"><i class="fa fa-check"></i><b>9.9.18</b> warnDrop</a></li>
+</ul></li>
+<li class="chapter" data-level="9.10" data-path="solve.html"><a href="solve.html#internal-rxode-options"><i class="fa fa-check"></i><b>9.10</b> Internal RxODE options</a>
+<ul>
+<li class="chapter" data-level="9.10.1" data-path="solve.html"><a href="solve.html#ndisplayprogress"><i class="fa fa-check"></i><b>9.10.1</b> nDisplayProgress</a></li>
+<li class="chapter" data-level="9.10.2" data-path="solve.html"><a href="solve.html#section"><i class="fa fa-check"></i><b>9.10.2</b> …</a></li>
+<li class="chapter" data-level="9.10.3" data-path="solve.html"><a href="solve.html#a"><i class="fa fa-check"></i><b>9.10.3</b> a</a></li>
+<li class="chapter" data-level="9.10.4" data-path="solve.html"><a href="solve.html#b"><i class="fa fa-check"></i><b>9.10.4</b> b</a></li>
+<li class="chapter" data-level="9.10.5" data-path="solve.html"><a href="solve.html#updateobject"><i class="fa fa-check"></i><b>9.10.5</b> updateObject</a></li>
+</ul></li>
+<li class="chapter" data-level="9.11" data-path="solve.html"><a href="solve.html#parallelthreaded-solve"><i class="fa fa-check"></i><b>9.11</b> Parallel/Threaded Solve</a>
+<ul>
+<li class="chapter" data-level="9.11.1" data-path="solve.html"><a href="solve.html#cores"><i class="fa fa-check"></i><b>9.11.1</b> cores</a></li>
+<li class="chapter" data-level="9.11.2" data-path="solve.html"><a href="solve.html#ncoresrv"><i class="fa fa-check"></i><b>9.11.2</b> nCoresRV</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="output.html"><a href="output.html"><i class="fa fa-check"></i><b>10</b> RxODE output</a>
+<ul>
+<li class="chapter" data-level="10.1" data-path="output.html"><a href="output.html#using-rxode-data-frames"><i class="fa fa-check"></i><b>10.1</b> Using RxODE data frames</a>
+<ul>
+<li class="chapter" data-level="10.1.1" data-path="output.html"><a href="output.html#creating-an-interactive-data-frame"><i class="fa fa-check"></i><b>10.1.1</b> Creating an interactive data frame</a></li>
+<li class="chapter" data-level="10.1.2" data-path="output.html"><a href="output.html#rxode-solved-object-properties"><i class="fa fa-check"></i><b>10.1.2</b> RxODE solved object properties</a></li>
+<li class="chapter" data-level="10.1.3" data-path="output.html"><a href="output.html#using-the-solved-object-as-a-simple-data-frame"><i class="fa fa-check"></i><b>10.1.3</b> Using the solved object as a simple data frame</a></li>
+</ul></li>
+<li class="chapter" data-level="10.2" data-path="output.html"><a href="output.html#updating-the-data-set-interactively"><i class="fa fa-check"></i><b>10.2</b> Updating the data-set interactively</a>
+<ul>
+<li class="chapter" data-level="10.2.1" data-path="output.html"><a href="output.html#modifying-initial-conditions"><i class="fa fa-check"></i><b>10.2.1</b> Modifying initial conditions</a></li>
+<li class="chapter" data-level="10.2.2" data-path="output.html"><a href="output.html#modifying-observation-times-for-rxode"><i class="fa fa-check"></i><b>10.2.2</b> Modifying observation times for RxODE</a></li>
+<li class="chapter" data-level="10.2.3" data-path="output.html"><a href="output.html#modifying-simulation-parameters"><i class="fa fa-check"></i><b>10.2.3</b> Modifying simulation parameters</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="simulation.html"><a href="simulation.html"><i class="fa fa-check"></i><b>11</b> Simulation</a></li>
+<li class="chapter" data-level="12" data-path="examples.html"><a href="examples.html"><i class="fa fa-check"></i><b>12</b> Examples</a>
+<ul>
+<li class="chapter" data-level="12.1" data-path="examples.html"><a href="examples.html#weight-based-dosing"><i class="fa fa-check"></i><b>12.1</b> Weight based dosing</a>
+<ul>
+<li class="chapter" data-level="12.1.1" data-path="examples.html"><a href="examples.html#creating-a-2-compartment-model-in-rxode"><i class="fa fa-check"></i><b>12.1.1</b> Creating a 2-compartment model in RxODE</a></li>
+<li class="chapter" data-level="12.1.2" data-path="examples.html"><a href="examples.html#simulating-covariates"><i class="fa fa-check"></i><b>12.1.2</b> Simulating Covariates</a></li>
+<li class="chapter" data-level="12.1.3" data-path="examples.html"><a href="examples.html#creating-weight-based-event-table"><i class="fa fa-check"></i><b>12.1.3</b> Creating weight based event table</a></li>
+<li class="chapter" data-level="12.1.4" data-path="examples.html"><a href="examples.html#solving-daptomycin-simulation"><i class="fa fa-check"></i><b>12.1.4</b> Solving Daptomycin simulation</a></li>
+<li class="chapter" data-level="12.1.5" data-path="examples.html"><a href="examples.html#daptomycin-reference"><i class="fa fa-check"></i><b>12.1.5</b> Daptomycin Reference</a></li>
+</ul></li>
+<li class="chapter" data-level="12.2" data-path="examples.html"><a href="examples.html#inter-occasion-and-other-nesting-examples"><i class="fa fa-check"></i><b>12.2</b> Inter-occasion and other nesting examples</a>
+<ul>
+<li class="chapter" data-level="12.2.1" data-path="examples.html"><a href="examples.html#event-table"><i class="fa fa-check"></i><b>12.2.1</b> Event table</a></li>
+<li class="chapter" data-level="12.2.2" data-path="examples.html"><a href="examples.html#rxode-model"><i class="fa fa-check"></i><b>12.2.2</b> RxODE model</a></li>
+<li class="chapter" data-level="12.2.3" data-path="examples.html"><a href="examples.html#uncertainty-in-model-parameters"><i class="fa fa-check"></i><b>12.2.3</b> Uncertainty in Model parameters</a></li>
+<li class="chapter" data-level="12.2.4" data-path="examples.html"><a href="examples.html#nesting-variability"><i class="fa fa-check"></i><b>12.2.4</b> Nesting Variability</a></li>
+<li class="chapter" data-level="12.2.5" data-path="examples.html"><a href="examples.html#unexplained-variability"><i class="fa fa-check"></i><b>12.2.5</b> Unexplained variability</a></li>
+<li class="chapter" data-level="12.2.6" data-path="examples.html"><a href="examples.html#solving-the-problem"><i class="fa fa-check"></i><b>12.2.6</b> Solving the problem</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="13" data-path="advanced-miscellaneous-topics.html"><a href="advanced-miscellaneous-topics.html"><i class="fa fa-check"></i><b>13</b> Advanced &amp; Miscellaneous Topics</a>
+<ul>
+<li class="chapter" data-level="13.1" data-path="advanced-miscellaneous-topics.html"><a href="advanced-miscellaneous-topics.html#using-rxode-with-a-pipeline"><i class="fa fa-check"></i><b>13.1</b> Using RxODE with a pipeline</a>
+<ul>
+<li class="chapter" data-level="13.1.1" data-path="advanced-miscellaneous-topics.html"><a href="advanced-miscellaneous-topics.html#setting-up-the-rxode-model-for-the-pipeline"><i class="fa fa-check"></i><b>13.1.1</b> Setting up the RxODE model for the pipeline</a></li>
+<li class="chapter" data-level="13.1.2" data-path="advanced-miscellaneous-topics.html"><a href="advanced-miscellaneous-topics.html#simulating-one-event-table"><i class="fa fa-check"></i><b>13.1.2</b> Simulating one event table</a></li>
+<li class="chapter" data-level="13.1.3" data-path="advanced-miscellaneous-topics.html"><a href="advanced-miscellaneous-topics.html#simulating-multiple-subjects-from-a-single-event-table"><i class="fa fa-check"></i><b>13.1.3</b> Simulating multiple subjects from a single event table</a></li>
+<li class="chapter" data-level="13.1.4" data-path="advanced-miscellaneous-topics.html"><a href="advanced-miscellaneous-topics.html#summarizing-the-simulation-output"><i class="fa fa-check"></i><b>13.1.4</b> Summarizing the simulation output</a></li>
+</ul></li>
+<li class="chapter" data-level="13.2" data-path="advanced-miscellaneous-topics.html"><a href="advanced-miscellaneous-topics.html#speeding-up-rxode"><i class="fa fa-check"></i><b>13.2</b> Speeding up RxODE</a>
+<ul>
+<li class="chapter" data-level="13.2.1" data-path="advanced-miscellaneous-topics.html"><a href="advanced-miscellaneous-topics.html#increasing-rxode-speed-by-multi-subject-parallel-solving"><i class="fa fa-check"></i><b>13.2.1</b> Increasing RxODE speed by multi-subject parallel solving</a></li>
+<li class="chapter" data-level="13.2.2" data-path="advanced-miscellaneous-topics.html"><a href="advanced-miscellaneous-topics.html#a-real-life-example"><i class="fa fa-check"></i><b>13.2.2</b> A real life example</a></li>
+</ul></li>
+<li class="chapter" data-level="13.3" data-path="advanced-miscellaneous-topics.html"><a href="advanced-miscellaneous-topics.html#integrating-rxode-models-in-your-package"><i class="fa fa-check"></i><b>13.3</b> Integrating RxODE models in your package</a>
+<ul>
+<li class="chapter" data-level="13.3.1" data-path="advanced-miscellaneous-topics.html"><a href="advanced-miscellaneous-topics.html#using-pre-compiled-models-in-your-packages"><i class="fa fa-check"></i><b>13.3.1</b> Using Pre-compiled models in your packages</a></li>
+<li class="chapter" data-level="13.3.2" data-path="advanced-miscellaneous-topics.html"><a href="advanced-miscellaneous-topics.html#using-models-in-a-already-present-package"><i class="fa fa-check"></i><b>13.3.2</b> Using Models in a already present package</a></li>
+</ul></li>
+<li class="chapter" data-level="13.4" data-path="advanced-miscellaneous-topics.html"><a href="advanced-miscellaneous-topics.html#stiff-odes-with-jacobian-specification"><i class="fa fa-check"></i><b>13.4</b> Stiff ODEs with Jacobian Specification</a></li>
+</ul></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">RxODE user manual</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="advanced-miscellaneous-topics" class="section level1" number="13">
+<h1><span class="header-section-number">Chapter 13</span> Advanced &amp; Miscellaneous Topics</h1>
+<p>This covers advanced or miscellaneous topics in <code>RxODE</code></p>
+<div id="using-rxode-with-a-pipeline" class="section level2" number="13.1">
+<h2><span class="header-section-number">13.1</span> Using RxODE with a pipeline</h2>
+<div id="setting-up-the-rxode-model-for-the-pipeline" class="section level3" number="13.1.1">
+<h3><span class="header-section-number">13.1.1</span> Setting up the RxODE model for the pipeline</h3>
+<p>In this example we will show how to use RxODE in a simple pipeline.</p>
+<p>We can start with a model that can be used for the different
+simulation workflows that RxODE can handle:</p>
+<div class="sourceCode" id="cb179"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb179-1"><a href="advanced-miscellaneous-topics.html#cb179-1" aria-hidden="true"></a><span class="kw">library</span>(RxODE)</span>
+<span id="cb179-2"><a href="advanced-miscellaneous-topics.html#cb179-2" aria-hidden="true"></a></span>
+<span id="cb179-3"><a href="advanced-miscellaneous-topics.html#cb179-3" aria-hidden="true"></a>Ribba2012 &lt;-<span class="st"> </span><span class="kw">RxODE</span>({</span>
+<span id="cb179-4"><a href="advanced-miscellaneous-topics.html#cb179-4" aria-hidden="true"></a>    k =<span class="st"> </span><span class="dv">100</span></span>
+<span id="cb179-5"><a href="advanced-miscellaneous-topics.html#cb179-5" aria-hidden="true"></a></span>
+<span id="cb179-6"><a href="advanced-miscellaneous-topics.html#cb179-6" aria-hidden="true"></a>    tkde =<span class="st"> </span><span class="fl">0.24</span></span>
+<span id="cb179-7"><a href="advanced-miscellaneous-topics.html#cb179-7" aria-hidden="true"></a>    eta.tkde =<span class="st"> </span><span class="dv">0</span></span>
+<span id="cb179-8"><a href="advanced-miscellaneous-topics.html#cb179-8" aria-hidden="true"></a>    kde <span class="op">~</span><span class="st"> </span>tkde<span class="op">*</span><span class="kw">exp</span>(eta.tkde)</span>
+<span id="cb179-9"><a href="advanced-miscellaneous-topics.html#cb179-9" aria-hidden="true"></a></span>
+<span id="cb179-10"><a href="advanced-miscellaneous-topics.html#cb179-10" aria-hidden="true"></a>    tkpq =<span class="st"> </span><span class="fl">0.0295</span></span>
+<span id="cb179-11"><a href="advanced-miscellaneous-topics.html#cb179-11" aria-hidden="true"></a>    eta.kpq =<span class="st"> </span><span class="dv">0</span></span>
+<span id="cb179-12"><a href="advanced-miscellaneous-topics.html#cb179-12" aria-hidden="true"></a>    kpq <span class="op">~</span><span class="st"> </span>tkpq <span class="op">*</span><span class="st"> </span><span class="kw">exp</span>(eta.kpq)</span>
+<span id="cb179-13"><a href="advanced-miscellaneous-topics.html#cb179-13" aria-hidden="true"></a></span>
+<span id="cb179-14"><a href="advanced-miscellaneous-topics.html#cb179-14" aria-hidden="true"></a>    tkqpp =<span class="st"> </span><span class="fl">0.0031</span></span>
+<span id="cb179-15"><a href="advanced-miscellaneous-topics.html#cb179-15" aria-hidden="true"></a>    eta.kqpp =<span class="st"> </span><span class="dv">0</span></span>
+<span id="cb179-16"><a href="advanced-miscellaneous-topics.html#cb179-16" aria-hidden="true"></a>    kqpp <span class="op">~</span><span class="st"> </span>tkqpp <span class="op">*</span><span class="st"> </span><span class="kw">exp</span>(eta.kqpp)</span>
+<span id="cb179-17"><a href="advanced-miscellaneous-topics.html#cb179-17" aria-hidden="true"></a></span>
+<span id="cb179-18"><a href="advanced-miscellaneous-topics.html#cb179-18" aria-hidden="true"></a>    tlambdap =<span class="st"> </span><span class="fl">0.121</span></span>
+<span id="cb179-19"><a href="advanced-miscellaneous-topics.html#cb179-19" aria-hidden="true"></a>    eta.lambdap =<span class="st"> </span><span class="dv">0</span></span>
+<span id="cb179-20"><a href="advanced-miscellaneous-topics.html#cb179-20" aria-hidden="true"></a>    lambdap <span class="op">~</span><span class="st"> </span>tlambdap<span class="op">*</span><span class="kw">exp</span>(eta.lambdap)</span>
+<span id="cb179-21"><a href="advanced-miscellaneous-topics.html#cb179-21" aria-hidden="true"></a></span>
+<span id="cb179-22"><a href="advanced-miscellaneous-topics.html#cb179-22" aria-hidden="true"></a>    tgamma =<span class="st"> </span><span class="fl">0.729</span></span>
+<span id="cb179-23"><a href="advanced-miscellaneous-topics.html#cb179-23" aria-hidden="true"></a>    eta.gamma =<span class="st"> </span><span class="dv">0</span></span>
+<span id="cb179-24"><a href="advanced-miscellaneous-topics.html#cb179-24" aria-hidden="true"></a>    gamma <span class="op">~</span><span class="st"> </span>tgamma<span class="op">*</span><span class="kw">exp</span>(eta.gamma)</span>
+<span id="cb179-25"><a href="advanced-miscellaneous-topics.html#cb179-25" aria-hidden="true"></a></span>
+<span id="cb179-26"><a href="advanced-miscellaneous-topics.html#cb179-26" aria-hidden="true"></a>    tdeltaqp =<span class="st"> </span><span class="fl">0.00867</span></span>
+<span id="cb179-27"><a href="advanced-miscellaneous-topics.html#cb179-27" aria-hidden="true"></a>    eta.deltaqp =<span class="st"> </span><span class="dv">0</span></span>
+<span id="cb179-28"><a href="advanced-miscellaneous-topics.html#cb179-28" aria-hidden="true"></a>    deltaqp <span class="op">~</span><span class="st"> </span>tdeltaqp<span class="op">*</span><span class="kw">exp</span>(eta.deltaqp)</span>
+<span id="cb179-29"><a href="advanced-miscellaneous-topics.html#cb179-29" aria-hidden="true"></a></span>
+<span id="cb179-30"><a href="advanced-miscellaneous-topics.html#cb179-30" aria-hidden="true"></a>    prop.err &lt;-<span class="st"> </span><span class="dv">0</span></span>
+<span id="cb179-31"><a href="advanced-miscellaneous-topics.html#cb179-31" aria-hidden="true"></a>    pstar &lt;-<span class="st"> </span>(pt<span class="op">+</span>q<span class="op">+</span>qp)<span class="op">*</span>(<span class="dv">1</span><span class="op">+</span>prop.err)</span>
+<span id="cb179-32"><a href="advanced-miscellaneous-topics.html#cb179-32" aria-hidden="true"></a>    d<span class="op">/</span><span class="kw">dt</span>(c) =<span class="st"> </span><span class="op">-</span>kde <span class="op">*</span><span class="st"> </span>c</span>
+<span id="cb179-33"><a href="advanced-miscellaneous-topics.html#cb179-33" aria-hidden="true"></a>    d<span class="op">/</span><span class="kw">dt</span>(pt) =<span class="st"> </span>lambdap <span class="op">*</span><span class="st"> </span>pt <span class="op">*</span>(<span class="dv">1</span><span class="op">-</span>pstar<span class="op">/</span>k) <span class="op">+</span><span class="st"> </span>kqpp<span class="op">*</span>qp <span class="op">-</span></span>
+<span id="cb179-34"><a href="advanced-miscellaneous-topics.html#cb179-34" aria-hidden="true"></a><span class="st">        </span>kpq<span class="op">*</span>pt <span class="op">-</span><span class="st"> </span>gamma<span class="op">*</span>c<span class="op">*</span>kde<span class="op">*</span>pt</span>
+<span id="cb179-35"><a href="advanced-miscellaneous-topics.html#cb179-35" aria-hidden="true"></a>    d<span class="op">/</span><span class="kw">dt</span>(q) =<span class="st"> </span>kpq<span class="op">*</span>pt <span class="op">-</span>gamma<span class="op">*</span>c<span class="op">*</span>kde<span class="op">*</span>q</span>
+<span id="cb179-36"><a href="advanced-miscellaneous-topics.html#cb179-36" aria-hidden="true"></a>    d<span class="op">/</span><span class="kw">dt</span>(qp) =<span class="st"> </span>gamma<span class="op">*</span>c<span class="op">*</span>kde<span class="op">*</span>q <span class="op">-</span><span class="st"> </span>kqpp<span class="op">*</span>qp <span class="op">-</span><span class="st"> </span>deltaqp<span class="op">*</span>qp</span>
+<span id="cb179-37"><a href="advanced-miscellaneous-topics.html#cb179-37" aria-hidden="true"></a><span class="co">#### initial conditions</span></span>
+<span id="cb179-38"><a href="advanced-miscellaneous-topics.html#cb179-38" aria-hidden="true"></a>    tpt0 =<span class="st"> </span><span class="fl">7.13</span></span>
+<span id="cb179-39"><a href="advanced-miscellaneous-topics.html#cb179-39" aria-hidden="true"></a>    eta.pt0 =<span class="st"> </span><span class="dv">0</span></span>
+<span id="cb179-40"><a href="advanced-miscellaneous-topics.html#cb179-40" aria-hidden="true"></a>    pt0 <span class="op">~</span><span class="st"> </span>tpt0<span class="op">*</span><span class="kw">exp</span>(eta.pt0)</span>
+<span id="cb179-41"><a href="advanced-miscellaneous-topics.html#cb179-41" aria-hidden="true"></a>    tq0 =<span class="st"> </span><span class="fl">41.2</span></span>
+<span id="cb179-42"><a href="advanced-miscellaneous-topics.html#cb179-42" aria-hidden="true"></a>    eta.q0 =<span class="st"> </span><span class="dv">0</span></span>
+<span id="cb179-43"><a href="advanced-miscellaneous-topics.html#cb179-43" aria-hidden="true"></a>    q0 <span class="op">~</span><span class="st"> </span>tq0<span class="op">*</span><span class="kw">exp</span>(eta.q0)</span>
+<span id="cb179-44"><a href="advanced-miscellaneous-topics.html#cb179-44" aria-hidden="true"></a>    <span class="kw">pt</span>(<span class="dv">0</span>) =<span class="st"> </span>pt0</span>
+<span id="cb179-45"><a href="advanced-miscellaneous-topics.html#cb179-45" aria-hidden="true"></a>    <span class="kw">q</span>(<span class="dv">0</span>) =<span class="st"> </span>q0</span>
+<span id="cb179-46"><a href="advanced-miscellaneous-topics.html#cb179-46" aria-hidden="true"></a>})</span></code></pre></div>
+<p>This is a tumor growth model described in Ribba 2012. In this case, we
+compiled the model into an R object <code>Ribba2012</code>, though in an RxODE
+simulation pipeline, you do not <em>have</em> to assign the compiled model to
+any object, though I think it makes sense.</p>
+</div>
+<div id="simulating-one-event-table" class="section level3" number="13.1.2">
+<h3><span class="header-section-number">13.1.2</span> Simulating one event table</h3>
+<p>Simulating a single event table is quite simple:</p>
+<ul>
+<li>You pipe the RxODE simulation object into an event table object by <code>et()</code>.<br />
+</li>
+<li>When the events are completely specified, you simply solve the ODE system with
+<code>rxSolve()</code>.</li>
+<li>In this case you can pipe the output to <code>plot()</code> to conveniently view the results.</li>
+<li>Note for the plot we are only selecting the selecting following:
+<ul>
+<li><code>pt</code> (Proliferative Tissue),</li>
+<li><code>q</code> (quiescent tissue)</li>
+<li><code>qp</code> (DNA-Damaged quiescent tissue) and</li>
+<li><code>pstar</code> (total tumor tissue)</li>
+</ul></li>
+</ul>
+<div class="sourceCode" id="cb180"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb180-1"><a href="advanced-miscellaneous-topics.html#cb180-1" aria-hidden="true"></a>Ribba2012 <span class="op">%&gt;%</span><span class="st"> </span><span class="co"># Use RxODE</span></span>
+<span id="cb180-2"><a href="advanced-miscellaneous-topics.html#cb180-2" aria-hidden="true"></a><span class="st">    </span><span class="kw">et</span>(<span class="dt">time.units=</span><span class="st">&quot;months&quot;</span>) <span class="op">%&gt;%</span><span class="st"> </span><span class="co"># Pipe to a new event table</span></span>
+<span id="cb180-3"><a href="advanced-miscellaneous-topics.html#cb180-3" aria-hidden="true"></a><span class="st">    </span><span class="kw">et</span>(<span class="dt">amt=</span><span class="dv">1</span>, <span class="dt">time=</span><span class="dv">50</span>, <span class="dt">until=</span><span class="dv">58</span>, <span class="dt">ii=</span><span class="fl">1.5</span>) <span class="op">%&gt;%</span><span class="st"> </span><span class="co"># Add dosing every 1.5 months</span></span>
+<span id="cb180-4"><a href="advanced-miscellaneous-topics.html#cb180-4" aria-hidden="true"></a><span class="st">    </span><span class="kw">et</span>(<span class="dv">0</span>, <span class="dv">250</span>, <span class="dt">by=</span><span class="fl">0.5</span>) <span class="op">%&gt;%</span><span class="st"> </span><span class="co"># Add some sampling times (not required)</span></span>
+<span id="cb180-5"><a href="advanced-miscellaneous-topics.html#cb180-5" aria-hidden="true"></a><span class="st">    </span><span class="kw">rxSolve</span>() <span class="op">%&gt;%</span><span class="st"> </span><span class="co"># Solve the simulation</span></span>
+<span id="cb180-6"><a href="advanced-miscellaneous-topics.html#cb180-6" aria-hidden="true"></a><span class="st">    </span><span class="kw">plot</span>(pt, q, qp, pstar) <span class="co"># Plot it, plotting the variables of interest</span></span></code></pre></div>
+<p><img src="RxODE-manual_files/figure-html/unnamed-chunk-116-1.png" width="672" /></p>
+</div>
+<div id="simulating-multiple-subjects-from-a-single-event-table" class="section level3" number="13.1.3">
+<h3><span class="header-section-number">13.1.3</span> Simulating multiple subjects from a single event table</h3>
+<div id="simulating-with-between-subject-variability" class="section level4" number="13.1.3.1">
+<h4><span class="header-section-number">13.1.3.1</span> Simulating with between subject variability</h4>
+<p>The next sort of simulation that may be useful is simulating multiple
+patients with the same treatments. In this case, we will use the
+<code>omega</code> matrix specified by the paper:</p>
+<div class="sourceCode" id="cb181"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb181-1"><a href="advanced-miscellaneous-topics.html#cb181-1" aria-hidden="true"></a><span class="co">#### Add CVs from paper for individual simulation</span></span>
+<span id="cb181-2"><a href="advanced-miscellaneous-topics.html#cb181-2" aria-hidden="true"></a><span class="co">#### Uses exact formula:</span></span>
+<span id="cb181-3"><a href="advanced-miscellaneous-topics.html#cb181-3" aria-hidden="true"></a></span>
+<span id="cb181-4"><a href="advanced-miscellaneous-topics.html#cb181-4" aria-hidden="true"></a>lognCv =<span class="st"> </span><span class="cf">function</span>(x){<span class="kw">log</span>((x<span class="op">/</span><span class="dv">100</span>)<span class="op">^</span><span class="dv">2</span><span class="op">+</span><span class="dv">1</span>)}</span>
+<span id="cb181-5"><a href="advanced-miscellaneous-topics.html#cb181-5" aria-hidden="true"></a></span>
+<span id="cb181-6"><a href="advanced-miscellaneous-topics.html#cb181-6" aria-hidden="true"></a><span class="kw">library</span>(lotri)</span>
+<span id="cb181-7"><a href="advanced-miscellaneous-topics.html#cb181-7" aria-hidden="true"></a><span class="co">#### Now create omega matrix</span></span>
+<span id="cb181-8"><a href="advanced-miscellaneous-topics.html#cb181-8" aria-hidden="true"></a><span class="co">#### I&#39;m using lotri to quickly specify names/diagonals</span></span>
+<span id="cb181-9"><a href="advanced-miscellaneous-topics.html#cb181-9" aria-hidden="true"></a>omega &lt;-<span class="st"> </span><span class="kw">lotri</span>(eta.pt0 <span class="op">~</span><span class="st"> </span><span class="kw">lognCv</span>(<span class="dv">94</span>),</span>
+<span id="cb181-10"><a href="advanced-miscellaneous-topics.html#cb181-10" aria-hidden="true"></a>               eta.q0 <span class="op">~</span><span class="st"> </span><span class="kw">lognCv</span>(<span class="dv">54</span>),</span>
+<span id="cb181-11"><a href="advanced-miscellaneous-topics.html#cb181-11" aria-hidden="true"></a>               eta.lambdap <span class="op">~</span><span class="st"> </span><span class="kw">lognCv</span>(<span class="dv">72</span>),</span>
+<span id="cb181-12"><a href="advanced-miscellaneous-topics.html#cb181-12" aria-hidden="true"></a>               eta.kqp <span class="op">~</span><span class="st"> </span><span class="kw">lognCv</span>(<span class="dv">76</span>),</span>
+<span id="cb181-13"><a href="advanced-miscellaneous-topics.html#cb181-13" aria-hidden="true"></a>               eta.qpp <span class="op">~</span><span class="st"> </span><span class="kw">lognCv</span>(<span class="dv">97</span>),</span>
+<span id="cb181-14"><a href="advanced-miscellaneous-topics.html#cb181-14" aria-hidden="true"></a>               eta.deltaqp <span class="op">~</span><span class="st"> </span><span class="kw">lognCv</span>(<span class="dv">115</span>),</span>
+<span id="cb181-15"><a href="advanced-miscellaneous-topics.html#cb181-15" aria-hidden="true"></a>               eta.kde <span class="op">~</span><span class="st"> </span><span class="kw">lognCv</span>(<span class="dv">70</span>))</span>
+<span id="cb181-16"><a href="advanced-miscellaneous-topics.html#cb181-16" aria-hidden="true"></a></span>
+<span id="cb181-17"><a href="advanced-miscellaneous-topics.html#cb181-17" aria-hidden="true"></a>omega</span></code></pre></div>
+<pre><code>#&gt;               eta.pt0    eta.q0 eta.lambdap   eta.kqp   eta.qpp eta.deltaqp
+#&gt; eta.pt0     0.6331848 0.0000000   0.0000000 0.0000000 0.0000000   0.0000000
+#&gt; eta.q0      0.0000000 0.2558818   0.0000000 0.0000000 0.0000000   0.0000000
+#&gt; eta.lambdap 0.0000000 0.0000000   0.4176571 0.0000000 0.0000000   0.0000000
+#&gt; eta.kqp     0.0000000 0.0000000   0.0000000 0.4559047 0.0000000   0.0000000
+#&gt; eta.qpp     0.0000000 0.0000000   0.0000000 0.0000000 0.6631518   0.0000000
+#&gt; eta.deltaqp 0.0000000 0.0000000   0.0000000 0.0000000 0.0000000   0.8426442
+#&gt; eta.kde     0.0000000 0.0000000   0.0000000 0.0000000 0.0000000   0.0000000
+#&gt;               eta.kde
+#&gt; eta.pt0     0.0000000
+#&gt; eta.q0      0.0000000
+#&gt; eta.lambdap 0.0000000
+#&gt; eta.kqp     0.0000000
+#&gt; eta.qpp     0.0000000
+#&gt; eta.deltaqp 0.0000000
+#&gt; eta.kde     0.3987761</code></pre>
+<p>With this information, it is easy to simulate 3 subjects from the
+model-based parameters:</p>
+<div class="sourceCode" id="cb183"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb183-1"><a href="advanced-miscellaneous-topics.html#cb183-1" aria-hidden="true"></a><span class="kw">set.seed</span>(<span class="dv">1089</span>)</span>
+<span id="cb183-2"><a href="advanced-miscellaneous-topics.html#cb183-2" aria-hidden="true"></a>Ribba2012 <span class="op">%&gt;%</span><span class="st"> </span><span class="co"># Use RxODE</span></span>
+<span id="cb183-3"><a href="advanced-miscellaneous-topics.html#cb183-3" aria-hidden="true"></a><span class="st">    </span><span class="kw">et</span>(<span class="dt">time.units=</span><span class="st">&quot;months&quot;</span>) <span class="op">%&gt;%</span><span class="st"> </span><span class="co"># Pipe to a new event table</span></span>
+<span id="cb183-4"><a href="advanced-miscellaneous-topics.html#cb183-4" aria-hidden="true"></a><span class="st">    </span><span class="kw">et</span>(<span class="dt">amt=</span><span class="dv">1</span>, <span class="dt">time=</span><span class="dv">50</span>, <span class="dt">until=</span><span class="dv">58</span>, <span class="dt">ii=</span><span class="fl">1.5</span>) <span class="op">%&gt;%</span><span class="st"> </span><span class="co"># Add dosing every 1.5 months</span></span>
+<span id="cb183-5"><a href="advanced-miscellaneous-topics.html#cb183-5" aria-hidden="true"></a><span class="st">    </span><span class="kw">et</span>(<span class="dv">0</span>, <span class="dv">250</span>, <span class="dt">by=</span><span class="fl">0.5</span>) <span class="op">%&gt;%</span><span class="st"> </span><span class="co"># Add some sampling times (not required)</span></span>
+<span id="cb183-6"><a href="advanced-miscellaneous-topics.html#cb183-6" aria-hidden="true"></a><span class="st">    </span><span class="kw">rxSolve</span>(<span class="dt">nSub=</span><span class="dv">3</span>, <span class="dt">omega=</span>omega) <span class="op">%&gt;%</span><span class="st"> </span><span class="co"># Solve the simulation</span></span>
+<span id="cb183-7"><a href="advanced-miscellaneous-topics.html#cb183-7" aria-hidden="true"></a><span class="st">    </span><span class="kw">plot</span>(pt, q, qp, pstar) <span class="co"># Plot it, plotting the variables of interest</span></span></code></pre></div>
+<p><img src="RxODE-manual_files/figure-html/unnamed-chunk-118-1.png" width="672" /></p>
+<p>Note there are two different things that were added to this simulation:
+- <code>nSub</code> to specify how many subjects are in the model
+- <code>omega</code> to specify the between subject variability.</p>
+</div>
+<div id="simulation-with-unexplained-variability" class="section level4" number="13.1.3.2">
+<h4><span class="header-section-number">13.1.3.2</span> Simulation with unexplained variability</h4>
+<p>You can even add unexplained variability quite easily:</p>
+<div class="sourceCode" id="cb184"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb184-1"><a href="advanced-miscellaneous-topics.html#cb184-1" aria-hidden="true"></a>Ribba2012 <span class="op">%&gt;%</span><span class="st"> </span><span class="co"># Use RxODE</span></span>
+<span id="cb184-2"><a href="advanced-miscellaneous-topics.html#cb184-2" aria-hidden="true"></a><span class="st">    </span><span class="kw">et</span>(<span class="dt">time.units=</span><span class="st">&quot;months&quot;</span>) <span class="op">%&gt;%</span><span class="st"> </span><span class="co"># Pipe to a new event table</span></span>
+<span id="cb184-3"><a href="advanced-miscellaneous-topics.html#cb184-3" aria-hidden="true"></a><span class="st">    </span><span class="kw">et</span>(<span class="dt">amt=</span><span class="dv">1</span>, <span class="dt">time=</span><span class="dv">50</span>, <span class="dt">until=</span><span class="dv">58</span>, <span class="dt">ii=</span><span class="fl">1.5</span>) <span class="op">%&gt;%</span><span class="st"> </span><span class="co"># Add dosing every 1.5 months</span></span>
+<span id="cb184-4"><a href="advanced-miscellaneous-topics.html#cb184-4" aria-hidden="true"></a><span class="st">     </span><span class="kw">et</span>(<span class="dv">0</span>, <span class="dv">250</span>, <span class="dt">by=</span><span class="fl">0.5</span>) <span class="op">%&gt;%</span><span class="st"> </span><span class="co"># Add some sampling times (not required)</span></span>
+<span id="cb184-5"><a href="advanced-miscellaneous-topics.html#cb184-5" aria-hidden="true"></a><span class="st">    </span><span class="kw">rxSolve</span>(<span class="dt">nSub=</span><span class="dv">3</span>, <span class="dt">omega=</span>omega, <span class="dt">sigma=</span><span class="kw">lotri</span>(prop.err <span class="op">~</span><span class="st"> </span><span class="fl">0.05</span><span class="op">^</span><span class="dv">2</span>)) <span class="op">%&gt;%</span><span class="st"> </span><span class="co"># Solve the simulation</span></span>
+<span id="cb184-6"><a href="advanced-miscellaneous-topics.html#cb184-6" aria-hidden="true"></a><span class="st">    </span><span class="kw">plot</span>(pt, q, qp, pstar) <span class="co"># Plot it, plotting the variables of interest</span></span></code></pre></div>
+<p><img src="RxODE-manual_files/figure-html/unnamed-chunk-119-1.png" width="672" /></p>
+<p>In this case we only added the <code>sigma</code> matrix to have unexplained
+variability on the <code>pstar</code> or total tumor tissue.</p>
+<p>You can even simulate with uncertainty in the <code>theta</code> <code>omega</code> and <code>sigma</code> values if you wish.</p>
+</div>
+<div id="simulation-with-uncertainty-in-all-the-parameters-by-matrices" class="section level4" number="13.1.3.3">
+<h4><span class="header-section-number">13.1.3.3</span> Simulation with uncertainty in all the parameters (by matrices)</h4>
+<p>If we assume these parameters came from <code>95</code> subjects with <code>8</code>
+observations apiece, the degrees of freedom for the omega matrix would
+be <code>95</code>, and the degrees of freedom of the <code>sigma</code> matrix would be
+<code>95*8=760</code> because <code>95</code> items informed the <code>omega</code> matrix, and <code>760</code>
+items informed the <code>sigma</code> matrix.</p>
+<div class="sourceCode" id="cb185"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb185-1"><a href="advanced-miscellaneous-topics.html#cb185-1" aria-hidden="true"></a>Ribba2012 <span class="op">%&gt;%</span><span class="st"> </span><span class="co"># Use RxODE</span></span>
+<span id="cb185-2"><a href="advanced-miscellaneous-topics.html#cb185-2" aria-hidden="true"></a><span class="st">    </span><span class="kw">et</span>(<span class="dt">time.units=</span><span class="st">&quot;months&quot;</span>) <span class="op">%&gt;%</span><span class="st"> </span><span class="co"># Pipe to a new event table</span></span>
+<span id="cb185-3"><a href="advanced-miscellaneous-topics.html#cb185-3" aria-hidden="true"></a><span class="st">    </span><span class="kw">et</span>(<span class="dt">amt=</span><span class="dv">1</span>, <span class="dt">time=</span><span class="dv">50</span>, <span class="dt">until=</span><span class="dv">58</span>, <span class="dt">ii=</span><span class="fl">1.5</span>) <span class="op">%&gt;%</span><span class="st"> </span><span class="co"># Add dosing every 1.5 months</span></span>
+<span id="cb185-4"><a href="advanced-miscellaneous-topics.html#cb185-4" aria-hidden="true"></a><span class="st">    </span><span class="kw">et</span>(<span class="dv">0</span>, <span class="dv">250</span>, <span class="dt">by=</span><span class="fl">0.5</span>) <span class="op">%&gt;%</span><span class="st"> </span><span class="co"># Add some sampling times (not required)</span></span>
+<span id="cb185-5"><a href="advanced-miscellaneous-topics.html#cb185-5" aria-hidden="true"></a><span class="st">    </span><span class="kw">rxSolve</span>(<span class="dt">nSub=</span><span class="dv">3</span>, <span class="dt">nStud=</span><span class="dv">3</span>, <span class="dt">omega=</span>omega, <span class="dt">sigma=</span><span class="kw">lotri</span>(prop.err <span class="op">~</span><span class="st"> </span><span class="fl">0.05</span><span class="op">^</span><span class="dv">2</span>),</span>
+<span id="cb185-6"><a href="advanced-miscellaneous-topics.html#cb185-6" aria-hidden="true"></a>            <span class="dt">dfSub=</span><span class="dv">760</span>, <span class="dt">dfObs=</span><span class="dv">95</span>) <span class="op">%&gt;%</span><span class="st"> </span><span class="co"># Solve the simulation</span></span>
+<span id="cb185-7"><a href="advanced-miscellaneous-topics.html#cb185-7" aria-hidden="true"></a><span class="st">    </span><span class="kw">plot</span>(pt, q, qp, pstar) <span class="co"># Plot it, plotting the variables of interest</span></span></code></pre></div>
+<p><img src="RxODE-manual_files/figure-html/unnamed-chunk-120-1.png" width="672" /></p>
+<p>Often in simulations we have a full covariance matrix for the fixed
+effect parameters. In this case, we do not have the matrix, but it
+could be specified by <code>thetaMat</code>.</p>
+<p>While we do not have a full covariance matrix, we can have information
+about the diagonal elements of the covariance matrix from the model
+paper. These can be converted as follows:</p>
+<div class="sourceCode" id="cb186"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb186-1"><a href="advanced-miscellaneous-topics.html#cb186-1" aria-hidden="true"></a>rseVar &lt;-<span class="st"> </span><span class="cf">function</span>(est, rse){</span>
+<span id="cb186-2"><a href="advanced-miscellaneous-topics.html#cb186-2" aria-hidden="true"></a>    <span class="kw">return</span>(est<span class="op">*</span>rse<span class="op">/</span><span class="dv">100</span>)<span class="op">^</span><span class="dv">2</span></span>
+<span id="cb186-3"><a href="advanced-miscellaneous-topics.html#cb186-3" aria-hidden="true"></a>}</span>
+<span id="cb186-4"><a href="advanced-miscellaneous-topics.html#cb186-4" aria-hidden="true"></a></span>
+<span id="cb186-5"><a href="advanced-miscellaneous-topics.html#cb186-5" aria-hidden="true"></a>thetaMat &lt;-<span class="st"> </span><span class="kw">lotri</span>(tpt0 <span class="op">~</span><span class="st"> </span><span class="kw">rseVar</span>(<span class="fl">7.13</span>,<span class="dv">25</span>),</span>
+<span id="cb186-6"><a href="advanced-miscellaneous-topics.html#cb186-6" aria-hidden="true"></a>                  tq0 <span class="op">~</span><span class="st"> </span><span class="kw">rseVar</span>(<span class="fl">41.2</span>,<span class="dv">7</span>),</span>
+<span id="cb186-7"><a href="advanced-miscellaneous-topics.html#cb186-7" aria-hidden="true"></a>                  tlambdap <span class="op">~</span><span class="st"> </span><span class="kw">rseVar</span>(<span class="fl">0.121</span>, <span class="dv">16</span>),</span>
+<span id="cb186-8"><a href="advanced-miscellaneous-topics.html#cb186-8" aria-hidden="true"></a>                  tkqpp <span class="op">~</span><span class="st"> </span><span class="kw">rseVar</span>(<span class="fl">0.0031</span>, <span class="dv">35</span>),</span>
+<span id="cb186-9"><a href="advanced-miscellaneous-topics.html#cb186-9" aria-hidden="true"></a>                  tdeltaqp <span class="op">~</span><span class="st"> </span><span class="kw">rseVar</span>(<span class="fl">0.00867</span>, <span class="dv">21</span>),</span>
+<span id="cb186-10"><a href="advanced-miscellaneous-topics.html#cb186-10" aria-hidden="true"></a>                  tgamma <span class="op">~</span><span class="st"> </span><span class="kw">rseVar</span>(<span class="fl">0.729</span>, <span class="dv">37</span>),</span>
+<span id="cb186-11"><a href="advanced-miscellaneous-topics.html#cb186-11" aria-hidden="true"></a>                  tkde <span class="op">~</span><span class="st"> </span><span class="kw">rseVar</span>(<span class="fl">0.24</span>, <span class="dv">33</span>)</span>
+<span id="cb186-12"><a href="advanced-miscellaneous-topics.html#cb186-12" aria-hidden="true"></a>                  );</span>
+<span id="cb186-13"><a href="advanced-miscellaneous-topics.html#cb186-13" aria-hidden="true"></a></span>
+<span id="cb186-14"><a href="advanced-miscellaneous-topics.html#cb186-14" aria-hidden="true"></a>thetaMat</span></code></pre></div>
+<pre><code>#&gt;            tpt0   tq0 tlambdap    tkqpp  tdeltaqp  tgamma   tkde
+#&gt; tpt0     1.7825 0.000  0.00000 0.000000 0.0000000 0.00000 0.0000
+#&gt; tq0      0.0000 2.884  0.00000 0.000000 0.0000000 0.00000 0.0000
+#&gt; tlambdap 0.0000 0.000  0.01936 0.000000 0.0000000 0.00000 0.0000
+#&gt; tkqpp    0.0000 0.000  0.00000 0.001085 0.0000000 0.00000 0.0000
+#&gt; tdeltaqp 0.0000 0.000  0.00000 0.000000 0.0018207 0.00000 0.0000
+#&gt; tgamma   0.0000 0.000  0.00000 0.000000 0.0000000 0.26973 0.0000
+#&gt; tkde     0.0000 0.000  0.00000 0.000000 0.0000000 0.00000 0.0792</code></pre>
+<p>Now we have a <code>thetaMat</code> to represent the uncertainty in the <code>theta</code>
+matrix, as well as the other pieces in the simulation. Typically you
+can put this information into your simulation with the <code>thetaMat</code>
+matrix.</p>
+<p>With such large variability in <code>theta</code> it is easy to sample a negative
+rate constant, which does not make sense. For example:</p>
+<pre><code>Ribba2012 %&gt;% # Use RxODE
+et(time.units=&quot;months&quot;) %&gt;% # Pipe to a new event table
+et(amt=1, time=50, until=58, ii=1.5) %&gt;% # Add dosing every 1.5 months
+et(0, 250, by=0.5) %&gt;% # Add some sampling times (not required)
+rxSolve(nSub=2, nStud=2, omega=omega, sigma=lotri(prop.err ~ 0.05^2),
+thetaMat=thetaMat, 
+dfSub=760, dfObs=95) %&gt;% # Solve the simulation
+plot(pt, q, qp, pstar) # Plot it, plotting the variables of interest
+
+#&gt; unhandled error message: EE:[lsoda] 70000 steps taken before reaching tout
+#&gt; @(lsoda.c:750
+#&gt; Warning message:
+#&gt; In rxSolve_(object, .ctl, .nms, .xtra, params, events, inits, setupOnly = .setupOnly) :
+#&gt;  Some ID(s) could not solve the ODEs correctly; These values are replaced with NA.</code></pre>
+<p>To correct these problems you simply need to use a truncated
+multivariate normal and specify the reasonable ranges for the
+parameters. For <code>theta</code> this is specified by <code>thetaLower</code> and
+<code>thetaUpper</code>. Similar parameters are there for the other matrices:
+<code>omegaLower</code>, <code>omegaUpper</code>, <code>sigmaLower</code> and <code>sigmaUpper</code>. These may
+be named vectors, one numeric value, or a numeric vector matching the
+number of parameters specified in the <code>thetaMat</code> matrix.</p>
+<p>In this case the simulation simply has to be modified to have
+<code>thetaLower=0</code> to make sure all rates are positive:</p>
+<div class="sourceCode" id="cb189"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb189-1"><a href="advanced-miscellaneous-topics.html#cb189-1" aria-hidden="true"></a>Ribba2012 <span class="op">%&gt;%</span><span class="st"> </span><span class="co"># Use RxODE</span></span>
+<span id="cb189-2"><a href="advanced-miscellaneous-topics.html#cb189-2" aria-hidden="true"></a><span class="st">    </span><span class="kw">et</span>(<span class="dt">time.units=</span><span class="st">&quot;months&quot;</span>) <span class="op">%&gt;%</span><span class="st"> </span><span class="co"># Pipe to a new event table</span></span>
+<span id="cb189-3"><a href="advanced-miscellaneous-topics.html#cb189-3" aria-hidden="true"></a><span class="st">    </span><span class="kw">et</span>(<span class="dt">amt=</span><span class="dv">1</span>, <span class="dt">time=</span><span class="dv">50</span>, <span class="dt">until=</span><span class="dv">58</span>, <span class="dt">ii=</span><span class="fl">1.5</span>) <span class="op">%&gt;%</span><span class="st"> </span><span class="co"># Add dosing every 1.5 months</span></span>
+<span id="cb189-4"><a href="advanced-miscellaneous-topics.html#cb189-4" aria-hidden="true"></a><span class="st">    </span><span class="kw">et</span>(<span class="dv">0</span>, <span class="dv">250</span>, <span class="dt">by=</span><span class="fl">0.5</span>) <span class="op">%&gt;%</span><span class="st"> </span><span class="co"># Add some sampling times (not required)</span></span>
+<span id="cb189-5"><a href="advanced-miscellaneous-topics.html#cb189-5" aria-hidden="true"></a><span class="st">    </span><span class="kw">rxSolve</span>(<span class="dt">nSub=</span><span class="dv">2</span>, <span class="dt">nStud=</span><span class="dv">2</span>, <span class="dt">omega=</span>omega, <span class="dt">sigma=</span><span class="kw">lotri</span>(prop.err <span class="op">~</span><span class="st"> </span><span class="fl">0.05</span><span class="op">^</span><span class="dv">2</span>),</span>
+<span id="cb189-6"><a href="advanced-miscellaneous-topics.html#cb189-6" aria-hidden="true"></a>            <span class="dt">thetaMat=</span>thetaMat,</span>
+<span id="cb189-7"><a href="advanced-miscellaneous-topics.html#cb189-7" aria-hidden="true"></a>            <span class="dt">thetaLower=</span><span class="dv">0</span>, <span class="co"># Make sure the rates are reasonable</span></span>
+<span id="cb189-8"><a href="advanced-miscellaneous-topics.html#cb189-8" aria-hidden="true"></a>            <span class="dt">dfSub=</span><span class="dv">760</span>, <span class="dt">dfObs=</span><span class="dv">95</span>) <span class="op">%&gt;%</span><span class="st"> </span><span class="co"># Solve the simulation</span></span>
+<span id="cb189-9"><a href="advanced-miscellaneous-topics.html#cb189-9" aria-hidden="true"></a><span class="st">    </span><span class="kw">plot</span>(pt, q, qp, pstar) <span class="co"># Plot it, plotting the variables of interest</span></span></code></pre></div>
+<p><img src="RxODE-manual_files/figure-html/unnamed-chunk-122-1.png" width="672" /></p>
+</div>
+</div>
+<div id="summarizing-the-simulation-output" class="section level3" number="13.1.4">
+<h3><span class="header-section-number">13.1.4</span> Summarizing the simulation output</h3>
+<p>While it is easy to use <code>dplyr</code> and <code>data.table</code> to perform your own
+summary of simulations, <code>RxODE</code> also provides this ability by the
+<code>confint</code> function.</p>
+<div class="sourceCode" id="cb190"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb190-1"><a href="advanced-miscellaneous-topics.html#cb190-1" aria-hidden="true"></a><span class="co">#### This takes a little more time; Most of the time is the summary</span></span>
+<span id="cb190-2"><a href="advanced-miscellaneous-topics.html#cb190-2" aria-hidden="true"></a><span class="co">#### time.</span></span>
+<span id="cb190-3"><a href="advanced-miscellaneous-topics.html#cb190-3" aria-hidden="true"></a></span>
+<span id="cb190-4"><a href="advanced-miscellaneous-topics.html#cb190-4" aria-hidden="true"></a>sim0 &lt;-<span class="st"> </span>Ribba2012 <span class="op">%&gt;%</span><span class="st"> </span><span class="co"># Use RxODE</span></span>
+<span id="cb190-5"><a href="advanced-miscellaneous-topics.html#cb190-5" aria-hidden="true"></a><span class="st">    </span><span class="kw">et</span>(<span class="dt">time.units=</span><span class="st">&quot;months&quot;</span>) <span class="op">%&gt;%</span><span class="st"> </span><span class="co"># Pipe to a new event table</span></span>
+<span id="cb190-6"><a href="advanced-miscellaneous-topics.html#cb190-6" aria-hidden="true"></a><span class="st">    </span><span class="kw">et</span>(<span class="dt">amt=</span><span class="dv">1</span>, <span class="dt">time=</span><span class="dv">50</span>, <span class="dt">until=</span><span class="dv">58</span>, <span class="dt">ii=</span><span class="fl">1.5</span>) <span class="op">%&gt;%</span><span class="st"> </span><span class="co"># Add dosing every 1.5 months</span></span>
+<span id="cb190-7"><a href="advanced-miscellaneous-topics.html#cb190-7" aria-hidden="true"></a><span class="st">    </span><span class="kw">et</span>(<span class="dv">0</span>, <span class="dv">250</span>, <span class="dt">by=</span><span class="fl">0.5</span>) <span class="op">%&gt;%</span><span class="st"> </span><span class="co"># Add some sampling times (not required)</span></span>
+<span id="cb190-8"><a href="advanced-miscellaneous-topics.html#cb190-8" aria-hidden="true"></a><span class="st">    </span><span class="kw">rxSolve</span>(<span class="dt">nSub=</span><span class="dv">10</span>, <span class="dt">nStud=</span><span class="dv">10</span>, <span class="dt">omega=</span>omega, <span class="dt">sigma=</span><span class="kw">lotri</span>(prop.err <span class="op">~</span><span class="st"> </span><span class="fl">0.05</span><span class="op">^</span><span class="dv">2</span>),</span>
+<span id="cb190-9"><a href="advanced-miscellaneous-topics.html#cb190-9" aria-hidden="true"></a>            <span class="dt">thetaMat=</span>thetaMat,</span>
+<span id="cb190-10"><a href="advanced-miscellaneous-topics.html#cb190-10" aria-hidden="true"></a>            <span class="dt">thetaLower=</span><span class="dv">0</span>, <span class="co"># Make sure the rates are reasonable</span></span>
+<span id="cb190-11"><a href="advanced-miscellaneous-topics.html#cb190-11" aria-hidden="true"></a>            <span class="dt">dfSub=</span><span class="dv">760</span>, <span class="dt">dfObs=</span><span class="dv">95</span>) <span class="op">%&gt;%</span><span class="st"> </span><span class="co"># Solve the simulation</span></span>
+<span id="cb190-12"><a href="advanced-miscellaneous-topics.html#cb190-12" aria-hidden="true"></a><span class="st">    </span><span class="kw">confint</span>(<span class="kw">c</span>(<span class="st">&quot;pt&quot;</span>,<span class="st">&quot;q&quot;</span>,<span class="st">&quot;qp&quot;</span>,<span class="st">&quot;pstar&quot;</span>),<span class="dt">level=</span><span class="fl">0.90</span>); <span class="co"># Create Simulation intervals</span></span></code></pre></div>
+<pre><code>#&gt; summarizing data...done</code></pre>
+<div class="sourceCode" id="cb192"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb192-1"><a href="advanced-miscellaneous-topics.html#cb192-1" aria-hidden="true"></a>sim0 <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">plot</span>() <span class="co"># Plot the simulation intervals</span></span></code></pre></div>
+<p><img src="RxODE-manual_files/figure-html/unnamed-chunk-123-1.png" width="672" /></p>
+<div id="simulating-from-a-data-frame-of-parameters" class="section level4" number="13.1.4.1">
+<h4><span class="header-section-number">13.1.4.1</span> Simulating from a data-frame of parameters</h4>
+<p>While the simulation from matrices can be very useful and a fast way
+to simulate information, sometimes you may want to simulate more
+complex scenarios. For instance, there may be some reason to believe
+that <code>tkde</code> needs to be above <code>tlambdap</code>, therefore these need to be
+simulated more carefully. You can generate the data frame in whatever
+way you want. The internal method of simulating the new parameters is
+exported too.</p>
+<div class="sourceCode" id="cb193"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb193-1"><a href="advanced-miscellaneous-topics.html#cb193-1" aria-hidden="true"></a><span class="kw">library</span>(dplyr)</span>
+<span id="cb193-2"><a href="advanced-miscellaneous-topics.html#cb193-2" aria-hidden="true"></a>pars &lt;-<span class="st"> </span><span class="kw">rxInits</span>(Ribba2012);</span>
+<span id="cb193-3"><a href="advanced-miscellaneous-topics.html#cb193-3" aria-hidden="true"></a>pars &lt;-<span class="st"> </span>pars[<span class="kw">regexpr</span>(<span class="st">&quot;(prop|eta)&quot;</span>,<span class="kw">names</span>(pars)) <span class="op">==</span><span class="st"> </span><span class="dv">-1</span>]</span>
+<span id="cb193-4"><a href="advanced-miscellaneous-topics.html#cb193-4" aria-hidden="true"></a><span class="kw">print</span>(pars)</span></code></pre></div>
+<pre><code>#&gt;        k     tkde     tkpq    tkqpp tlambdap   tgamma tdeltaqp     tpt0 
+#&gt; 1.00e+02 2.40e-01 2.95e-02 3.10e-03 1.21e-01 7.29e-01 8.67e-03 7.13e+00 
+#&gt;      tq0 
+#&gt; 4.12e+01</code></pre>
+<div class="sourceCode" id="cb195"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb195-1"><a href="advanced-miscellaneous-topics.html#cb195-1" aria-hidden="true"></a><span class="co">#### This is the exported method for simulation of Theta/Omega internally in RxODE</span></span>
+<span id="cb195-2"><a href="advanced-miscellaneous-topics.html#cb195-2" aria-hidden="true"></a>df &lt;-<span class="st"> </span><span class="kw">rxSimThetaOmega</span>(<span class="dt">params=</span>pars, <span class="dt">omega=</span>omega,<span class="dt">dfSub=</span><span class="dv">760</span>,</span>
+<span id="cb195-3"><a href="advanced-miscellaneous-topics.html#cb195-3" aria-hidden="true"></a>                      <span class="dt">thetaMat=</span>thetaMat, <span class="dt">thetaLower=</span><span class="dv">0</span>, <span class="dt">nSub=</span><span class="dv">60</span>,<span class="dt">nStud=</span><span class="dv">60</span>) <span class="op">%&gt;%</span></span>
+<span id="cb195-4"><a href="advanced-miscellaneous-topics.html#cb195-4" aria-hidden="true"></a><span class="st">    </span><span class="kw">filter</span>(tkde <span class="op">&gt;</span><span class="st"> </span>tlambdap) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">as.tbl</span>()</span>
+<span id="cb195-5"><a href="advanced-miscellaneous-topics.html#cb195-5" aria-hidden="true"></a><span class="co">#### You could also simulate more and bind them together to a data frame.</span></span>
+<span id="cb195-6"><a href="advanced-miscellaneous-topics.html#cb195-6" aria-hidden="true"></a><span class="kw">print</span>(df)</span></code></pre></div>
+<pre><code>#&gt; # A tibble: 2,340 x 16
+#&gt;        k  tkde   tkpq tkqpp tlambdap tgamma tdeltaqp  tpt0   tq0 eta.pt0 eta.q0
+#&gt;    &lt;dbl&gt; &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt;    &lt;dbl&gt;  &lt;dbl&gt;    &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;   &lt;dbl&gt;  &lt;dbl&gt;
+#&gt;  1   100  2.83 0.0295 0.239    0.683  0.861     1.25  7.67  42.0  0.559   0.136
+#&gt;  2   100  2.83 0.0295 0.239    0.683  0.861     1.25  7.67  42.0  0.0465 -0.581
+#&gt;  3   100  2.83 0.0295 0.239    0.683  0.861     1.25  7.67  42.0 -0.188  -0.180
+#&gt;  4   100  2.83 0.0295 0.239    0.683  0.861     1.25  7.67  42.0  0.321   0.614
+#&gt;  5   100  2.83 0.0295 0.239    0.683  0.861     1.25  7.67  42.0  0.0656 -0.232
+#&gt;  6   100  2.83 0.0295 0.239    0.683  0.861     1.25  7.67  42.0  0.0194  0.517
+#&gt;  7   100  2.83 0.0295 0.239    0.683  0.861     1.25  7.67  42.0 -0.218   0.260
+#&gt;  8   100  2.83 0.0295 0.239    0.683  0.861     1.25  7.67  42.0 -0.258  -0.761
+#&gt;  9   100  2.83 0.0295 0.239    0.683  0.861     1.25  7.67  42.0 -1.28   -1.34 
+#&gt; 10   100  2.83 0.0295 0.239    0.683  0.861     1.25  7.67  42.0 -0.495   0.161
+#&gt; # ... with 2,330 more rows, and 5 more variables: eta.lambdap &lt;dbl&gt;,
+#&gt; #   eta.kqp &lt;dbl&gt;, eta.qpp &lt;dbl&gt;, eta.deltaqp &lt;dbl&gt;, eta.kde &lt;dbl&gt;</code></pre>
+<div class="sourceCode" id="cb197"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb197-1"><a href="advanced-miscellaneous-topics.html#cb197-1" aria-hidden="true"></a><span class="co">#### Quick check to make sure that all the parameters are OK.</span></span>
+<span id="cb197-2"><a href="advanced-miscellaneous-topics.html#cb197-2" aria-hidden="true"></a><span class="kw">all</span>(df<span class="op">$</span>tkde<span class="op">&gt;</span>df<span class="op">$</span>tlambdap)</span></code></pre></div>
+<pre><code>#&gt; [1] TRUE</code></pre>
+<div class="sourceCode" id="cb199"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb199-1"><a href="advanced-miscellaneous-topics.html#cb199-1" aria-hidden="true"></a>sim1 &lt;-<span class="st"> </span>Ribba2012 <span class="op">%&gt;%</span><span class="st"> </span><span class="co"># Use RxODE</span></span>
+<span id="cb199-2"><a href="advanced-miscellaneous-topics.html#cb199-2" aria-hidden="true"></a><span class="st">    </span><span class="kw">et</span>(<span class="dt">time.units=</span><span class="st">&quot;months&quot;</span>) <span class="op">%&gt;%</span><span class="st"> </span><span class="co"># Pipe to a new event table</span></span>
+<span id="cb199-3"><a href="advanced-miscellaneous-topics.html#cb199-3" aria-hidden="true"></a><span class="st">    </span><span class="kw">et</span>(<span class="dt">amt=</span><span class="dv">1</span>, <span class="dt">time=</span><span class="dv">50</span>, <span class="dt">until=</span><span class="dv">58</span>, <span class="dt">ii=</span><span class="fl">1.5</span>) <span class="op">%&gt;%</span><span class="st"> </span><span class="co"># Add dosing every 1.5 months</span></span>
+<span id="cb199-4"><a href="advanced-miscellaneous-topics.html#cb199-4" aria-hidden="true"></a><span class="st">    </span><span class="kw">et</span>(<span class="dv">0</span>, <span class="dv">250</span>, <span class="dt">by=</span><span class="fl">0.5</span>) <span class="op">%&gt;%</span><span class="st"> </span><span class="co"># Add some sampling times (not required)</span></span>
+<span id="cb199-5"><a href="advanced-miscellaneous-topics.html#cb199-5" aria-hidden="true"></a><span class="st">    </span><span class="kw">rxSolve</span>(df)</span>
+<span id="cb199-6"><a href="advanced-miscellaneous-topics.html#cb199-6" aria-hidden="true"></a><span class="co">#### Note this information looses information about which ID is in a</span></span>
+<span id="cb199-7"><a href="advanced-miscellaneous-topics.html#cb199-7" aria-hidden="true"></a><span class="co">#### &quot;study&quot;, so it summarizes the confidence intervals by dividing the</span></span>
+<span id="cb199-8"><a href="advanced-miscellaneous-topics.html#cb199-8" aria-hidden="true"></a><span class="co">#### subjects into sqrt(#subjects) subjects and then summarizes the</span></span>
+<span id="cb199-9"><a href="advanced-miscellaneous-topics.html#cb199-9" aria-hidden="true"></a><span class="co">#### confidence intervals</span></span>
+<span id="cb199-10"><a href="advanced-miscellaneous-topics.html#cb199-10" aria-hidden="true"></a>sim2 &lt;-<span class="st"> </span>sim1 <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">confint</span>(<span class="kw">c</span>(<span class="st">&quot;pt&quot;</span>,<span class="st">&quot;q&quot;</span>,<span class="st">&quot;qp&quot;</span>,<span class="st">&quot;pstar&quot;</span>),<span class="dt">level=</span><span class="fl">0.90</span>); <span class="co"># Create Simulation intervals</span></span></code></pre></div>
+<pre><code>#&gt; ! in order to put confidence bands around the intervals, you need at least 2500 simulations</code></pre>
+<pre><code>#&gt; summarizing data...done</code></pre>
+<div class="sourceCode" id="cb202"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb202-1"><a href="advanced-miscellaneous-topics.html#cb202-1" aria-hidden="true"></a><span class="kw">save</span>(sim2, <span class="dt">file =</span> <span class="kw">file.path</span>(<span class="kw">system.file</span>(<span class="dt">package =</span> <span class="st">&quot;RxODE&quot;</span>), <span class="st">&quot;pipeline-sim2.rds&quot;</span>), <span class="dt">version =</span> <span class="dv">2</span>)</span>
+<span id="cb202-2"><a href="advanced-miscellaneous-topics.html#cb202-2" aria-hidden="true"></a>sim2 <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">plot</span>()</span></code></pre></div>
+<p><img src="RxODE-manual_files/figure-html/unnamed-chunk-124-1.png" width="672" /></p>
+</div>
+</div>
+</div>
+<div id="speeding-up-rxode" class="section level2" number="13.2">
+<h2><span class="header-section-number">13.2</span> Speeding up RxODE</h2>
+<div id="increasing-rxode-speed-by-multi-subject-parallel-solving" class="section level3" number="13.2.1">
+<h3><span class="header-section-number">13.2.1</span> Increasing RxODE speed by multi-subject parallel solving</h3>
+<p><code>RxODE</code> originally developed as an ODE solver that allowed an ODE
+solve for a single subject. This flexibility is still supported.</p>
+<p>The original code from the <code>RxODE</code> tutorial is below:</p>
+<div class="sourceCode" id="cb203"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb203-1"><a href="advanced-miscellaneous-topics.html#cb203-1" aria-hidden="true"></a><span class="kw">library</span>(RxODE)</span>
+<span id="cb203-2"><a href="advanced-miscellaneous-topics.html#cb203-2" aria-hidden="true"></a></span>
+<span id="cb203-3"><a href="advanced-miscellaneous-topics.html#cb203-3" aria-hidden="true"></a><span class="kw">library</span>(microbenchmark)</span>
+<span id="cb203-4"><a href="advanced-miscellaneous-topics.html#cb203-4" aria-hidden="true"></a><span class="kw">library</span>(ggplot2)</span>
+<span id="cb203-5"><a href="advanced-miscellaneous-topics.html#cb203-5" aria-hidden="true"></a></span>
+<span id="cb203-6"><a href="advanced-miscellaneous-topics.html#cb203-6" aria-hidden="true"></a>mod1 &lt;-<span class="st"> </span><span class="kw">RxODE</span>({</span>
+<span id="cb203-7"><a href="advanced-miscellaneous-topics.html#cb203-7" aria-hidden="true"></a>    C2 =<span class="st"> </span>centr<span class="op">/</span>V2;</span>
+<span id="cb203-8"><a href="advanced-miscellaneous-topics.html#cb203-8" aria-hidden="true"></a>    C3 =<span class="st"> </span>peri<span class="op">/</span>V3;</span>
+<span id="cb203-9"><a href="advanced-miscellaneous-topics.html#cb203-9" aria-hidden="true"></a>    d<span class="op">/</span><span class="kw">dt</span>(depot) =<span class="st"> </span><span class="op">-</span>KA<span class="op">*</span>depot;</span>
+<span id="cb203-10"><a href="advanced-miscellaneous-topics.html#cb203-10" aria-hidden="true"></a>    d<span class="op">/</span><span class="kw">dt</span>(centr) =<span class="st"> </span>KA<span class="op">*</span>depot <span class="op">-</span><span class="st"> </span>CL<span class="op">*</span>C2 <span class="op">-</span><span class="st"> </span>Q<span class="op">*</span>C2 <span class="op">+</span><span class="st"> </span>Q<span class="op">*</span>C3;</span>
+<span id="cb203-11"><a href="advanced-miscellaneous-topics.html#cb203-11" aria-hidden="true"></a>    d<span class="op">/</span><span class="kw">dt</span>(peri) =<span class="st"> </span>Q<span class="op">*</span>C2 <span class="op">-</span><span class="st"> </span>Q<span class="op">*</span>C3;</span>
+<span id="cb203-12"><a href="advanced-miscellaneous-topics.html#cb203-12" aria-hidden="true"></a>    d<span class="op">/</span><span class="kw">dt</span>(eff) =<span class="st"> </span>Kin <span class="op">-</span><span class="st"> </span>Kout<span class="op">*</span>(<span class="dv">1</span><span class="op">-</span>C2<span class="op">/</span>(EC50<span class="op">+</span>C2))<span class="op">*</span>eff;</span>
+<span id="cb203-13"><a href="advanced-miscellaneous-topics.html#cb203-13" aria-hidden="true"></a>    <span class="kw">eff</span>(<span class="dv">0</span>) =<span class="st"> </span><span class="dv">1</span></span>
+<span id="cb203-14"><a href="advanced-miscellaneous-topics.html#cb203-14" aria-hidden="true"></a>})</span>
+<span id="cb203-15"><a href="advanced-miscellaneous-topics.html#cb203-15" aria-hidden="true"></a></span>
+<span id="cb203-16"><a href="advanced-miscellaneous-topics.html#cb203-16" aria-hidden="true"></a><span class="co">#### Create an event table</span></span>
+<span id="cb203-17"><a href="advanced-miscellaneous-topics.html#cb203-17" aria-hidden="true"></a></span>
+<span id="cb203-18"><a href="advanced-miscellaneous-topics.html#cb203-18" aria-hidden="true"></a>ev &lt;-<span class="st"> </span><span class="kw">et</span>() <span class="op">%&gt;%</span></span>
+<span id="cb203-19"><a href="advanced-miscellaneous-topics.html#cb203-19" aria-hidden="true"></a><span class="st">    </span><span class="kw">et</span>(<span class="dt">amt=</span><span class="dv">10000</span>, <span class="dt">addl=</span><span class="dv">9</span>,<span class="dt">ii=</span><span class="dv">12</span>) <span class="op">%&gt;%</span></span>
+<span id="cb203-20"><a href="advanced-miscellaneous-topics.html#cb203-20" aria-hidden="true"></a><span class="st">    </span><span class="kw">et</span>(<span class="dt">time=</span><span class="dv">120</span>, <span class="dt">amt=</span><span class="dv">20000</span>, <span class="dt">addl=</span><span class="dv">4</span>, <span class="dt">ii=</span><span class="dv">24</span>) <span class="op">%&gt;%</span></span>
+<span id="cb203-21"><a href="advanced-miscellaneous-topics.html#cb203-21" aria-hidden="true"></a><span class="st">    </span><span class="kw">et</span>(<span class="dv">0</span><span class="op">:</span><span class="dv">240</span>) <span class="co">## Add Sampling</span></span>
+<span id="cb203-22"><a href="advanced-miscellaneous-topics.html#cb203-22" aria-hidden="true"></a></span>
+<span id="cb203-23"><a href="advanced-miscellaneous-topics.html#cb203-23" aria-hidden="true"></a>nsub &lt;-<span class="st"> </span><span class="dv">100</span> <span class="co"># 100 sub-problems</span></span>
+<span id="cb203-24"><a href="advanced-miscellaneous-topics.html#cb203-24" aria-hidden="true"></a>sigma &lt;-<span class="st"> </span><span class="kw">matrix</span>(<span class="kw">c</span>(<span class="fl">0.09</span>,<span class="fl">0.08</span>,<span class="fl">0.08</span>,<span class="fl">0.25</span>),<span class="dv">2</span>,<span class="dv">2</span>) <span class="co"># IIV covariance matrix</span></span>
+<span id="cb203-25"><a href="advanced-miscellaneous-topics.html#cb203-25" aria-hidden="true"></a>mv &lt;-<span class="st"> </span><span class="kw">rxRmvn</span>(<span class="dt">n=</span>nsub, <span class="kw">rep</span>(<span class="dv">0</span>,<span class="dv">2</span>), sigma) <span class="co"># Sample from covariance matrix</span></span>
+<span id="cb203-26"><a href="advanced-miscellaneous-topics.html#cb203-26" aria-hidden="true"></a>CL &lt;-<span class="st"> </span><span class="dv">7</span><span class="op">*</span><span class="kw">exp</span>(mv[,<span class="dv">1</span>])</span>
+<span id="cb203-27"><a href="advanced-miscellaneous-topics.html#cb203-27" aria-hidden="true"></a>V2 &lt;-<span class="st"> </span><span class="dv">40</span><span class="op">*</span><span class="kw">exp</span>(mv[,<span class="dv">2</span>])</span>
+<span id="cb203-28"><a href="advanced-miscellaneous-topics.html#cb203-28" aria-hidden="true"></a>params.all &lt;-<span class="st"> </span><span class="kw">cbind</span>(<span class="dt">KA=</span><span class="fl">0.3</span>, <span class="dt">CL=</span>CL, <span class="dt">V2=</span>V2, <span class="dt">Q=</span><span class="dv">10</span>, <span class="dt">V3=</span><span class="dv">300</span>,</span>
+<span id="cb203-29"><a href="advanced-miscellaneous-topics.html#cb203-29" aria-hidden="true"></a>                    <span class="dt">Kin=</span><span class="fl">0.2</span>, <span class="dt">Kout=</span><span class="fl">0.2</span>, <span class="dt">EC50=</span><span class="dv">8</span>)</span></code></pre></div>
+<div id="for-loop" class="section level4" number="13.2.1.1">
+<h4><span class="header-section-number">13.2.1.1</span> For Loop</h4>
+<p>The slowest way to code this is to use a <code>for</code> loop. In this example
+we will enclose it in a function to compare timing.</p>
+<div class="sourceCode" id="cb204"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb204-1"><a href="advanced-miscellaneous-topics.html#cb204-1" aria-hidden="true"></a>runFor &lt;-<span class="st"> </span><span class="cf">function</span>(){</span>
+<span id="cb204-2"><a href="advanced-miscellaneous-topics.html#cb204-2" aria-hidden="true"></a>    res &lt;-<span class="st"> </span><span class="ot">NULL</span></span>
+<span id="cb204-3"><a href="advanced-miscellaneous-topics.html#cb204-3" aria-hidden="true"></a>    <span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="op">:</span>nsub) {</span>
+<span id="cb204-4"><a href="advanced-miscellaneous-topics.html#cb204-4" aria-hidden="true"></a>        params &lt;-<span class="st"> </span>params.all[i,]</span>
+<span id="cb204-5"><a href="advanced-miscellaneous-topics.html#cb204-5" aria-hidden="true"></a>        x &lt;-<span class="st"> </span>mod1<span class="op">$</span><span class="kw">solve</span>(params, ev, <span class="dt">cacheEvent=</span><span class="ot">FALSE</span>)</span>
+<span id="cb204-6"><a href="advanced-miscellaneous-topics.html#cb204-6" aria-hidden="true"></a>        <span class="co">##Store results for effect compartment</span></span>
+<span id="cb204-7"><a href="advanced-miscellaneous-topics.html#cb204-7" aria-hidden="true"></a>        res &lt;-<span class="st"> </span><span class="kw">cbind</span>(res, x[, <span class="st">&quot;eff&quot;</span>])</span>
+<span id="cb204-8"><a href="advanced-miscellaneous-topics.html#cb204-8" aria-hidden="true"></a>    }</span>
+<span id="cb204-9"><a href="advanced-miscellaneous-topics.html#cb204-9" aria-hidden="true"></a>    <span class="kw">return</span>(res)</span>
+<span id="cb204-10"><a href="advanced-miscellaneous-topics.html#cb204-10" aria-hidden="true"></a>}</span></code></pre></div>
+</div>
+<div id="running-with-apply" class="section level4" number="13.2.1.2">
+<h4><span class="header-section-number">13.2.1.2</span> Running with apply</h4>
+<p>In general for R, the <code>apply</code> types of functions perform better than a
+<code>for</code> loop, so the tutorial also suggests this speed enhancement</p>
+<div class="sourceCode" id="cb205"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb205-1"><a href="advanced-miscellaneous-topics.html#cb205-1" aria-hidden="true"></a>runSapply &lt;-<span class="st"> </span><span class="cf">function</span>(){</span>
+<span id="cb205-2"><a href="advanced-miscellaneous-topics.html#cb205-2" aria-hidden="true"></a>    res &lt;-<span class="st"> </span><span class="kw">apply</span>(params.all, <span class="dv">1</span>, <span class="cf">function</span>(theta)</span>
+<span id="cb205-3"><a href="advanced-miscellaneous-topics.html#cb205-3" aria-hidden="true"></a>        mod1<span class="op">$</span><span class="kw">run</span>(theta, ev, <span class="dt">cacheEvent=</span><span class="ot">FALSE</span>)[, <span class="st">&quot;eff&quot;</span>])</span>
+<span id="cb205-4"><a href="advanced-miscellaneous-topics.html#cb205-4" aria-hidden="true"></a>}</span></code></pre></div>
+</div>
+<div id="run-using-a-single-threaded-solve" class="section level4" number="13.2.1.3">
+<h4><span class="header-section-number">13.2.1.3</span> Run using a single-threaded solve</h4>
+<p>You can also have RxODE solve all the subject simultaneously without
+collecting the results in R, using a single threaded solve.</p>
+<p>The data output is slightly different here, but still gives the same
+information:</p>
+<div class="sourceCode" id="cb206"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb206-1"><a href="advanced-miscellaneous-topics.html#cb206-1" aria-hidden="true"></a>runSingleThread &lt;-<span class="st"> </span><span class="cf">function</span>(){</span>
+<span id="cb206-2"><a href="advanced-miscellaneous-topics.html#cb206-2" aria-hidden="true"></a>    <span class="kw">solve</span>(mod1, params.all, ev, <span class="dt">cores=</span><span class="dv">1</span>, <span class="dt">cacheEvent=</span><span class="ot">FALSE</span>)[,<span class="kw">c</span>(<span class="st">&quot;sim.id&quot;</span>, <span class="st">&quot;time&quot;</span>, <span class="st">&quot;eff&quot;</span>)]</span>
+<span id="cb206-3"><a href="advanced-miscellaneous-topics.html#cb206-3" aria-hidden="true"></a>}</span></code></pre></div>
+</div>
+<div id="run-a-2-threaded-solve" class="section level4" number="13.2.1.4">
+<h4><span class="header-section-number">13.2.1.4</span> Run a 2 threaded solve</h4>
+<p>RxODE supports multi-threaded solves, so another option is to have <code>2</code>
+threads (called <code>cores</code> in the solve options, you can see the options
+in <code>rxControl()</code> or <code>rxSolve()</code>).</p>
+<div class="sourceCode" id="cb207"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb207-1"><a href="advanced-miscellaneous-topics.html#cb207-1" aria-hidden="true"></a>run2Thread &lt;-<span class="st"> </span><span class="cf">function</span>(){</span>
+<span id="cb207-2"><a href="advanced-miscellaneous-topics.html#cb207-2" aria-hidden="true"></a>    <span class="kw">solve</span>(mod1, params.all, ev, <span class="dt">cores=</span><span class="dv">2</span>, <span class="dt">cacheEvent=</span><span class="ot">FALSE</span>)[,<span class="kw">c</span>(<span class="st">&quot;sim.id&quot;</span>, <span class="st">&quot;time&quot;</span>, <span class="st">&quot;eff&quot;</span>)]</span>
+<span id="cb207-3"><a href="advanced-miscellaneous-topics.html#cb207-3" aria-hidden="true"></a>}</span></code></pre></div>
+</div>
+<div id="compare-the-times-between-all-the-methods" class="section level4" number="13.2.1.5">
+<h4><span class="header-section-number">13.2.1.5</span> Compare the times between all the methods</h4>
+<p>Now the moment of truth, the timings:</p>
+<div class="sourceCode" id="cb208"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb208-1"><a href="advanced-miscellaneous-topics.html#cb208-1" aria-hidden="true"></a>bench &lt;-<span class="st"> </span><span class="kw">microbenchmark</span>(<span class="kw">runFor</span>(), <span class="kw">runSapply</span>(), <span class="kw">runSingleThread</span>(),<span class="kw">run2Thread</span>())</span>
+<span id="cb208-2"><a href="advanced-miscellaneous-topics.html#cb208-2" aria-hidden="true"></a><span class="kw">print</span>(bench)</span></code></pre></div>
+<pre><code>#&gt; Unit: milliseconds
+#&gt;               expr       min        lq      mean    median        uq       max
+#&gt;           runFor() 151.18400 157.66553 162.67572 158.84069 162.37120 239.10057
+#&gt;        runSapply() 151.75343 156.66703 161.97255 157.73591 162.25877 249.70089
+#&gt;  runSingleThread()  20.50783  21.64060  22.64279  22.68426  23.02610  29.05329
+#&gt;       run2Thread()  11.99006  12.56674  13.14836  12.70261  13.19353  18.97867
+#&gt;  neval
+#&gt;    100
+#&gt;    100
+#&gt;    100
+#&gt;    100</code></pre>
+<div class="sourceCode" id="cb210"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb210-1"><a href="advanced-miscellaneous-topics.html#cb210-1" aria-hidden="true"></a><span class="kw">autoplot</span>(bench)</span></code></pre></div>
+<pre><code>#&gt; Coordinate system already present. Adding new coordinate system, which will replace the existing one.</code></pre>
+<p><img src="RxODE-manual_files/figure-html/unnamed-chunk-131-1.png" width="672" /></p>
+<p>It is clear that the <strong>largest</strong> jump in performance when using the
+<code>solve</code> method and providing <em>all</em> the parameters to RxODE to solve
+without looping over each subject with either a <code>for</code> or a <code>sapply</code>.
+The number of cores/threads applied to the solve also plays a role in
+the solving.</p>
+<p>We can explore the number of threads further with the following code:</p>
+<div class="sourceCode" id="cb212"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb212-1"><a href="advanced-miscellaneous-topics.html#cb212-1" aria-hidden="true"></a>runThread &lt;-<span class="st"> </span><span class="cf">function</span>(n){</span>
+<span id="cb212-2"><a href="advanced-miscellaneous-topics.html#cb212-2" aria-hidden="true"></a>    <span class="kw">solve</span>(mod1, params.all, ev, <span class="dt">cores=</span>n, <span class="dt">cacheEvent=</span><span class="ot">FALSE</span>)[,<span class="kw">c</span>(<span class="st">&quot;sim.id&quot;</span>, <span class="st">&quot;time&quot;</span>, <span class="st">&quot;eff&quot;</span>)]</span>
+<span id="cb212-3"><a href="advanced-miscellaneous-topics.html#cb212-3" aria-hidden="true"></a>}</span>
+<span id="cb212-4"><a href="advanced-miscellaneous-topics.html#cb212-4" aria-hidden="true"></a></span>
+<span id="cb212-5"><a href="advanced-miscellaneous-topics.html#cb212-5" aria-hidden="true"></a>bench &lt;-<span class="st"> </span><span class="kw">eval</span>(<span class="kw">parse</span>(<span class="dt">text=</span><span class="kw">sprintf</span>(<span class="st">&quot;microbenchmark(%s)&quot;</span>,</span>
+<span id="cb212-6"><a href="advanced-miscellaneous-topics.html#cb212-6" aria-hidden="true"></a>                                     <span class="kw">paste</span>(<span class="kw">paste0</span>(<span class="st">&quot;runThread(&quot;</span>, <span class="kw">seq</span>(<span class="dv">1</span>, <span class="dv">2</span> <span class="op">*</span><span class="st"> </span><span class="kw">rxCores</span>()),<span class="st">&quot;)&quot;</span>),</span>
+<span id="cb212-7"><a href="advanced-miscellaneous-topics.html#cb212-7" aria-hidden="true"></a>                                           <span class="dt">collapse=</span><span class="st">&quot;,&quot;</span>))))</span>
+<span id="cb212-8"><a href="advanced-miscellaneous-topics.html#cb212-8" aria-hidden="true"></a><span class="kw">print</span>(bench)</span></code></pre></div>
+<pre><code>#&gt; Unit: milliseconds
+#&gt;          expr       min       lq     mean   median       uq      max neval
+#&gt;  runThread(1) 20.781918 29.42607 31.24408 31.37568 34.87578 42.72050   100
+#&gt;  runThread(2) 12.163180 16.41305 16.83222 17.37169 17.96068 22.60283   100
+#&gt;  runThread(3)  9.625613 12.77419 14.11573 13.31121 14.15611 23.91771   100
+#&gt;  runThread(4)  8.085683 10.81663 11.78512 11.09432 11.59764 20.89609   100
+#&gt;  runThread(5) 11.181492 14.79644 15.40274 15.67125 16.08092 22.81768   100
+#&gt;  runThread(6) 10.328293 13.04040 13.70663 14.05554 14.53701 20.04240   100
+#&gt;  runThread(7)  9.724644 12.50862 12.96491 13.01402 13.39745 18.72338   100
+#&gt;  runThread(8)  8.906964 11.72104 13.41285 12.19061 12.77713 42.66462   100</code></pre>
+<div class="sourceCode" id="cb214"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb214-1"><a href="advanced-miscellaneous-topics.html#cb214-1" aria-hidden="true"></a><span class="kw">autoplot</span>(bench)</span></code></pre></div>
+<pre><code>#&gt; Coordinate system already present. Adding new coordinate system, which will replace the existing one.</code></pre>
+<p><img src="RxODE-manual_files/figure-html/unnamed-chunk-133-1.png" width="672" /></p>
+<p>There can be a suite spot in speed vs number or cores. The system type
+(mac, linux, windows and/or processor), complexity of the ODE solving
+and the number of subjects may affect this arbitrary number of
+threads. 4 threads is a good number to use without any prior knowledge
+because most systems these days have at least 4 threads (or 2
+processors with 4 threads).</p>
+</div>
+</div>
+<div id="a-real-life-example" class="section level3" number="13.2.2">
+<h3><span class="header-section-number">13.2.2</span> A real life example</h3>
+<p>Before some of the parallel solving was implemented, the fastest way
+to run <code>RxODE</code> was with <code>lapply</code>. This is how Rik Schoemaker created
+the data-set for <code>nlmixr</code> comparisons, but reduced to run faster
+automatic building of the pkgdown website.</p>
+<div class="sourceCode" id="cb216"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb216-1"><a href="advanced-miscellaneous-topics.html#cb216-1" aria-hidden="true"></a><span class="kw">library</span>(RxODE)</span>
+<span id="cb216-2"><a href="advanced-miscellaneous-topics.html#cb216-2" aria-hidden="true"></a><span class="kw">library</span>(data.table)</span></code></pre></div>
+<pre><code>#&gt; 
+#&gt; Attaching package: &#39;data.table&#39;</code></pre>
+<pre><code>#&gt; The following objects are masked from &#39;package:dplyr&#39;:
+#&gt; 
+#&gt;     between, first, last</code></pre>
+<div class="sourceCode" id="cb219"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb219-1"><a href="advanced-miscellaneous-topics.html#cb219-1" aria-hidden="true"></a><span class="co">#Define the RxODE model</span></span>
+<span id="cb219-2"><a href="advanced-miscellaneous-topics.html#cb219-2" aria-hidden="true"></a>  ode1 &lt;-<span class="st"> &quot;</span></span>
+<span id="cb219-3"><a href="advanced-miscellaneous-topics.html#cb219-3" aria-hidden="true"></a><span class="st">  d/dt(abs)    = -KA*abs;</span></span>
+<span id="cb219-4"><a href="advanced-miscellaneous-topics.html#cb219-4" aria-hidden="true"></a><span class="st">  d/dt(centr)  =  KA*abs-(CL/V)*centr;</span></span>
+<span id="cb219-5"><a href="advanced-miscellaneous-topics.html#cb219-5" aria-hidden="true"></a><span class="st">  C2=centr/V;</span></span>
+<span id="cb219-6"><a href="advanced-miscellaneous-topics.html#cb219-6" aria-hidden="true"></a><span class="st">  &quot;</span></span>
+<span id="cb219-7"><a href="advanced-miscellaneous-topics.html#cb219-7" aria-hidden="true"></a>  </span>
+<span id="cb219-8"><a href="advanced-miscellaneous-topics.html#cb219-8" aria-hidden="true"></a><span class="co">#Create the RxODE simulation object</span></span>
+<span id="cb219-9"><a href="advanced-miscellaneous-topics.html#cb219-9" aria-hidden="true"></a>mod1 &lt;-<span class="st"> </span><span class="kw">RxODE</span>(<span class="dt">model =</span> ode1)</span>
+<span id="cb219-10"><a href="advanced-miscellaneous-topics.html#cb219-10" aria-hidden="true"></a></span>
+<span id="cb219-11"><a href="advanced-miscellaneous-topics.html#cb219-11" aria-hidden="true"></a><span class="co">#Population parameter values on log-scale</span></span>
+<span id="cb219-12"><a href="advanced-miscellaneous-topics.html#cb219-12" aria-hidden="true"></a>  paramsl &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dt">CL =</span> <span class="kw">log</span>(<span class="dv">4</span>),</span>
+<span id="cb219-13"><a href="advanced-miscellaneous-topics.html#cb219-13" aria-hidden="true"></a>               <span class="dt">V =</span> <span class="kw">log</span>(<span class="dv">70</span>),</span>
+<span id="cb219-14"><a href="advanced-miscellaneous-topics.html#cb219-14" aria-hidden="true"></a>               <span class="dt">KA =</span> <span class="kw">log</span>(<span class="dv">1</span>))</span>
+<span id="cb219-15"><a href="advanced-miscellaneous-topics.html#cb219-15" aria-hidden="true"></a><span class="co">#make 10,000 subjects to sample from:</span></span>
+<span id="cb219-16"><a href="advanced-miscellaneous-topics.html#cb219-16" aria-hidden="true"></a>  nsubg &lt;-<span class="st"> </span><span class="dv">300</span> <span class="co"># subjects per dose</span></span>
+<span id="cb219-17"><a href="advanced-miscellaneous-topics.html#cb219-17" aria-hidden="true"></a>  doses &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">10</span>, <span class="dv">30</span>, <span class="dv">60</span>, <span class="dv">120</span>)</span>
+<span id="cb219-18"><a href="advanced-miscellaneous-topics.html#cb219-18" aria-hidden="true"></a>  nsub &lt;-<span class="st"> </span>nsubg <span class="op">*</span><span class="st"> </span><span class="kw">length</span>(doses)</span>
+<span id="cb219-19"><a href="advanced-miscellaneous-topics.html#cb219-19" aria-hidden="true"></a><span class="co">#IIV of 30% for each parameter</span></span>
+<span id="cb219-20"><a href="advanced-miscellaneous-topics.html#cb219-20" aria-hidden="true"></a>  omega &lt;-<span class="st"> </span><span class="kw">diag</span>(<span class="kw">c</span>(<span class="fl">0.09</span>, <span class="fl">0.09</span>, <span class="fl">0.09</span>))<span class="co"># IIV covariance matrix</span></span>
+<span id="cb219-21"><a href="advanced-miscellaneous-topics.html#cb219-21" aria-hidden="true"></a>  sigma &lt;-<span class="st"> </span><span class="fl">0.2</span></span>
+<span id="cb219-22"><a href="advanced-miscellaneous-topics.html#cb219-22" aria-hidden="true"></a><span class="co">#Sample from the multivariate normal</span></span>
+<span id="cb219-23"><a href="advanced-miscellaneous-topics.html#cb219-23" aria-hidden="true"></a>  <span class="kw">set.seed</span>(<span class="dv">98176247</span>)</span>
+<span id="cb219-24"><a href="advanced-miscellaneous-topics.html#cb219-24" aria-hidden="true"></a>  <span class="kw">library</span>(MASS)</span></code></pre></div>
+<pre><code>#&gt; 
+#&gt; Attaching package: &#39;MASS&#39;</code></pre>
+<pre><code>#&gt; The following object is masked from &#39;package:dplyr&#39;:
+#&gt; 
+#&gt;     select</code></pre>
+<pre><code>#&gt; The following object is masked from &#39;package:patchwork&#39;:
+#&gt; 
+#&gt;     area</code></pre>
+<div class="sourceCode" id="cb223"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb223-1"><a href="advanced-miscellaneous-topics.html#cb223-1" aria-hidden="true"></a>  mv &lt;-</span>
+<span id="cb223-2"><a href="advanced-miscellaneous-topics.html#cb223-2" aria-hidden="true"></a><span class="st">    </span><span class="kw">mvrnorm</span>(nsub, <span class="kw">rep</span>(<span class="dv">0</span>, <span class="kw">dim</span>(omega)[<span class="dv">1</span>]), omega) <span class="co"># Sample from covariance matrix</span></span>
+<span id="cb223-3"><a href="advanced-miscellaneous-topics.html#cb223-3" aria-hidden="true"></a><span class="co">#Combine population parameters with IIV</span></span>
+<span id="cb223-4"><a href="advanced-miscellaneous-topics.html#cb223-4" aria-hidden="true"></a>  params.all &lt;-</span>
+<span id="cb223-5"><a href="advanced-miscellaneous-topics.html#cb223-5" aria-hidden="true"></a><span class="st">    </span><span class="kw">data.table</span>(</span>
+<span id="cb223-6"><a href="advanced-miscellaneous-topics.html#cb223-6" aria-hidden="true"></a>      <span class="st">&quot;ID&quot;</span> =<span class="st"> </span><span class="kw">seq</span>(<span class="dv">1</span><span class="op">:</span>nsub),</span>
+<span id="cb223-7"><a href="advanced-miscellaneous-topics.html#cb223-7" aria-hidden="true"></a>      <span class="st">&quot;CL&quot;</span> =<span class="st"> </span><span class="kw">exp</span>(paramsl[<span class="st">&#39;CL&#39;</span>] <span class="op">+</span><span class="st"> </span>mv[, <span class="dv">1</span>]),</span>
+<span id="cb223-8"><a href="advanced-miscellaneous-topics.html#cb223-8" aria-hidden="true"></a>      <span class="st">&quot;V&quot;</span> =<span class="st"> </span><span class="kw">exp</span>(paramsl[<span class="st">&#39;V&#39;</span>] <span class="op">+</span><span class="st"> </span>mv[, <span class="dv">2</span>]),</span>
+<span id="cb223-9"><a href="advanced-miscellaneous-topics.html#cb223-9" aria-hidden="true"></a>      <span class="st">&quot;KA&quot;</span> =<span class="st"> </span><span class="kw">exp</span>(paramsl[<span class="st">&#39;KA&#39;</span>] <span class="op">+</span><span class="st"> </span>mv[, <span class="dv">3</span>])</span>
+<span id="cb223-10"><a href="advanced-miscellaneous-topics.html#cb223-10" aria-hidden="true"></a>    )</span>
+<span id="cb223-11"><a href="advanced-miscellaneous-topics.html#cb223-11" aria-hidden="true"></a><span class="co">#set the doses (looping through the 4 doses)</span></span>
+<span id="cb223-12"><a href="advanced-miscellaneous-topics.html#cb223-12" aria-hidden="true"></a>params.all[, AMT <span class="op">:</span><span class="er">=</span><span class="st"> </span><span class="kw">rep</span>(<span class="dv">100</span> <span class="op">*</span><span class="st"> </span>doses,nsubg)]</span>
+<span id="cb223-13"><a href="advanced-miscellaneous-topics.html#cb223-13" aria-hidden="true"></a></span>
+<span id="cb223-14"><a href="advanced-miscellaneous-topics.html#cb223-14" aria-hidden="true"></a>Startlapply &lt;-<span class="st"> </span><span class="kw">Sys.time</span>()</span>
+<span id="cb223-15"><a href="advanced-miscellaneous-topics.html#cb223-15" aria-hidden="true"></a>  </span>
+<span id="cb223-16"><a href="advanced-miscellaneous-topics.html#cb223-16" aria-hidden="true"></a><span class="co">#Run the simulations using lapply for speed</span></span>
+<span id="cb223-17"><a href="advanced-miscellaneous-topics.html#cb223-17" aria-hidden="true"></a>  s =<span class="st"> </span><span class="kw">lapply</span>(<span class="dv">1</span><span class="op">:</span>nsub, <span class="cf">function</span>(i) {</span>
+<span id="cb223-18"><a href="advanced-miscellaneous-topics.html#cb223-18" aria-hidden="true"></a><span class="co">#selects the parameters associated with the subject to be simulated</span></span>
+<span id="cb223-19"><a href="advanced-miscellaneous-topics.html#cb223-19" aria-hidden="true"></a>    params &lt;-<span class="st"> </span>params.all[i]</span>
+<span id="cb223-20"><a href="advanced-miscellaneous-topics.html#cb223-20" aria-hidden="true"></a><span class="co">#creates an eventTable with 7 doses every 24 hours</span></span>
+<span id="cb223-21"><a href="advanced-miscellaneous-topics.html#cb223-21" aria-hidden="true"></a>    ev &lt;-<span class="st"> </span><span class="kw">eventTable</span>()</span>
+<span id="cb223-22"><a href="advanced-miscellaneous-topics.html#cb223-22" aria-hidden="true"></a>    ev<span class="op">$</span><span class="kw">add.dosing</span>(</span>
+<span id="cb223-23"><a href="advanced-miscellaneous-topics.html#cb223-23" aria-hidden="true"></a>      <span class="dt">dose =</span> params<span class="op">$</span>AMT,</span>
+<span id="cb223-24"><a href="advanced-miscellaneous-topics.html#cb223-24" aria-hidden="true"></a>      <span class="dt">nbr.doses =</span> <span class="dv">1</span>,</span>
+<span id="cb223-25"><a href="advanced-miscellaneous-topics.html#cb223-25" aria-hidden="true"></a>      <span class="dt">dosing.to =</span> <span class="dv">1</span>,</span>
+<span id="cb223-26"><a href="advanced-miscellaneous-topics.html#cb223-26" aria-hidden="true"></a>      <span class="dt">rate =</span> <span class="ot">NULL</span>,</span>
+<span id="cb223-27"><a href="advanced-miscellaneous-topics.html#cb223-27" aria-hidden="true"></a>      <span class="dt">start.time =</span> <span class="dv">0</span></span>
+<span id="cb223-28"><a href="advanced-miscellaneous-topics.html#cb223-28" aria-hidden="true"></a>    )</span>
+<span id="cb223-29"><a href="advanced-miscellaneous-topics.html#cb223-29" aria-hidden="true"></a><span class="co">#generates 4 random samples in a 24 hour period</span></span>
+<span id="cb223-30"><a href="advanced-miscellaneous-topics.html#cb223-30" aria-hidden="true"></a>    ev<span class="op">$</span><span class="kw">add.sampling</span>(<span class="kw">c</span>(<span class="dv">0</span>, <span class="kw">sort</span>(<span class="kw">round</span>(<span class="kw">sample</span>(<span class="kw">runif</span>(<span class="dv">600</span>, <span class="dv">0</span>, <span class="dv">1440</span>), <span class="dv">4</span>) <span class="op">/</span><span class="st"> </span><span class="dv">60</span>, <span class="dv">2</span>))))</span>
+<span id="cb223-31"><a href="advanced-miscellaneous-topics.html#cb223-31" aria-hidden="true"></a><span class="co">#runs the RxODE simulation</span></span>
+<span id="cb223-32"><a href="advanced-miscellaneous-topics.html#cb223-32" aria-hidden="true"></a>    x &lt;-<span class="st"> </span><span class="kw">as.data.table</span>(mod1<span class="op">$</span><span class="kw">run</span>(params, ev))</span>
+<span id="cb223-33"><a href="advanced-miscellaneous-topics.html#cb223-33" aria-hidden="true"></a><span class="co">#merges the parameters and ID number to the simulation output</span></span>
+<span id="cb223-34"><a href="advanced-miscellaneous-topics.html#cb223-34" aria-hidden="true"></a>    x[, <span class="kw">names</span>(params) <span class="op">:</span><span class="er">=</span><span class="st"> </span>params]</span>
+<span id="cb223-35"><a href="advanced-miscellaneous-topics.html#cb223-35" aria-hidden="true"></a>  })</span>
+<span id="cb223-36"><a href="advanced-miscellaneous-topics.html#cb223-36" aria-hidden="true"></a>  </span>
+<span id="cb223-37"><a href="advanced-miscellaneous-topics.html#cb223-37" aria-hidden="true"></a><span class="co">#runs the entire sequence of 100 subjects and binds the results to the object res</span></span>
+<span id="cb223-38"><a href="advanced-miscellaneous-topics.html#cb223-38" aria-hidden="true"></a>  res =<span class="st"> </span><span class="kw">as.data.table</span>(<span class="kw">do.call</span>(<span class="st">&quot;rbind&quot;</span>, s))</span>
+<span id="cb223-39"><a href="advanced-miscellaneous-topics.html#cb223-39" aria-hidden="true"></a>  </span>
+<span id="cb223-40"><a href="advanced-miscellaneous-topics.html#cb223-40" aria-hidden="true"></a>Stoplapply &lt;-<span class="st"> </span><span class="kw">Sys.time</span>()</span>
+<span id="cb223-41"><a href="advanced-miscellaneous-topics.html#cb223-41" aria-hidden="true"></a>  </span>
+<span id="cb223-42"><a href="advanced-miscellaneous-topics.html#cb223-42" aria-hidden="true"></a><span class="kw">print</span>(Stoplapply <span class="op">-</span><span class="st"> </span>Startlapply)</span></code></pre></div>
+<pre><code>#&gt; Time difference of 5.359287 secs</code></pre>
+<p>By applying some of the new parallel solving concepts you can simply
+run the same simulation both with less code and faster:</p>
+<div class="sourceCode" id="cb225"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb225-1"><a href="advanced-miscellaneous-topics.html#cb225-1" aria-hidden="true"></a>rx &lt;-<span class="st"> </span><span class="kw">RxODE</span>({</span>
+<span id="cb225-2"><a href="advanced-miscellaneous-topics.html#cb225-2" aria-hidden="true"></a>    CL =<span class="st">  </span><span class="kw">log</span>(<span class="dv">4</span>)</span>
+<span id="cb225-3"><a href="advanced-miscellaneous-topics.html#cb225-3" aria-hidden="true"></a>    V =<span class="st"> </span><span class="kw">log</span>(<span class="dv">70</span>)</span>
+<span id="cb225-4"><a href="advanced-miscellaneous-topics.html#cb225-4" aria-hidden="true"></a>    KA =<span class="st"> </span><span class="kw">log</span>(<span class="dv">1</span>)</span>
+<span id="cb225-5"><a href="advanced-miscellaneous-topics.html#cb225-5" aria-hidden="true"></a>    CL =<span class="st"> </span><span class="kw">exp</span>(CL <span class="op">+</span><span class="st"> </span>eta.CL)</span>
+<span id="cb225-6"><a href="advanced-miscellaneous-topics.html#cb225-6" aria-hidden="true"></a>    V =<span class="st"> </span><span class="kw">exp</span>(V <span class="op">+</span><span class="st"> </span>eta.V)</span>
+<span id="cb225-7"><a href="advanced-miscellaneous-topics.html#cb225-7" aria-hidden="true"></a>    KA =<span class="st"> </span><span class="kw">exp</span>(KA <span class="op">+</span><span class="st"> </span>eta.KA)</span>
+<span id="cb225-8"><a href="advanced-miscellaneous-topics.html#cb225-8" aria-hidden="true"></a>    d<span class="op">/</span><span class="kw">dt</span>(abs)    =<span class="st"> </span><span class="op">-</span>KA<span class="op">*</span>abs;</span>
+<span id="cb225-9"><a href="advanced-miscellaneous-topics.html#cb225-9" aria-hidden="true"></a>    d<span class="op">/</span><span class="kw">dt</span>(centr)  =<span class="st">  </span>KA<span class="op">*</span>abs<span class="op">-</span>(CL<span class="op">/</span>V)<span class="op">*</span>centr;</span>
+<span id="cb225-10"><a href="advanced-miscellaneous-topics.html#cb225-10" aria-hidden="true"></a>    C2=centr<span class="op">/</span>V;</span>
+<span id="cb225-11"><a href="advanced-miscellaneous-topics.html#cb225-11" aria-hidden="true"></a>})</span>
+<span id="cb225-12"><a href="advanced-miscellaneous-topics.html#cb225-12" aria-hidden="true"></a></span>
+<span id="cb225-13"><a href="advanced-miscellaneous-topics.html#cb225-13" aria-hidden="true"></a>omega &lt;-<span class="st"> </span><span class="kw">lotri</span>(eta.CL <span class="op">~</span><span class="st"> </span><span class="fl">0.09</span>,</span>
+<span id="cb225-14"><a href="advanced-miscellaneous-topics.html#cb225-14" aria-hidden="true"></a>               eta.V <span class="op">~</span><span class="st"> </span><span class="fl">0.09</span>,</span>
+<span id="cb225-15"><a href="advanced-miscellaneous-topics.html#cb225-15" aria-hidden="true"></a>               eta.KA <span class="op">~</span><span class="st"> </span><span class="fl">0.09</span>)</span>
+<span id="cb225-16"><a href="advanced-miscellaneous-topics.html#cb225-16" aria-hidden="true"></a></span>
+<span id="cb225-17"><a href="advanced-miscellaneous-topics.html#cb225-17" aria-hidden="true"></a>doses &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">10</span>, <span class="dv">30</span>, <span class="dv">60</span>, <span class="dv">120</span>)</span>
+<span id="cb225-18"><a href="advanced-miscellaneous-topics.html#cb225-18" aria-hidden="true"></a></span>
+<span id="cb225-19"><a href="advanced-miscellaneous-topics.html#cb225-19" aria-hidden="true"></a></span>
+<span id="cb225-20"><a href="advanced-miscellaneous-topics.html#cb225-20" aria-hidden="true"></a>startParallel &lt;-<span class="st"> </span><span class="kw">Sys.time</span>()</span>
+<span id="cb225-21"><a href="advanced-miscellaneous-topics.html#cb225-21" aria-hidden="true"></a>ev &lt;-<span class="st"> </span><span class="kw">do.call</span>(<span class="st">&quot;rbind&quot;</span>,</span>
+<span id="cb225-22"><a href="advanced-miscellaneous-topics.html#cb225-22" aria-hidden="true"></a>        <span class="kw">lapply</span>(<span class="kw">seq_along</span>(doses), <span class="cf">function</span>(i){</span>
+<span id="cb225-23"><a href="advanced-miscellaneous-topics.html#cb225-23" aria-hidden="true"></a>            <span class="kw">et</span>() <span class="op">%&gt;%</span></span>
+<span id="cb225-24"><a href="advanced-miscellaneous-topics.html#cb225-24" aria-hidden="true"></a><span class="st">                </span><span class="kw">et</span>(<span class="dt">amt=</span>doses[i]) <span class="op">%&gt;%</span><span class="st"> </span><span class="co"># Add single dose</span></span>
+<span id="cb225-25"><a href="advanced-miscellaneous-topics.html#cb225-25" aria-hidden="true"></a><span class="st">                </span><span class="kw">et</span>(<span class="dv">0</span>) <span class="op">%&gt;%</span><span class="st"> </span><span class="co"># Add 0 observation</span></span>
+<span id="cb225-26"><a href="advanced-miscellaneous-topics.html#cb225-26" aria-hidden="true"></a><span class="co">#### Generate 4 samples in 24 hour period</span></span>
+<span id="cb225-27"><a href="advanced-miscellaneous-topics.html#cb225-27" aria-hidden="true"></a><span class="st">                </span><span class="kw">et</span>(<span class="kw">lapply</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">4</span>, <span class="cf">function</span>(...){<span class="kw">c</span>(<span class="dv">0</span>, <span class="dv">24</span>)})) <span class="op">%&gt;%</span></span>
+<span id="cb225-28"><a href="advanced-miscellaneous-topics.html#cb225-28" aria-hidden="true"></a><span class="st">                </span><span class="kw">et</span>(<span class="dt">id=</span><span class="kw">seq</span>(<span class="dv">1</span>, nsubg) <span class="op">+</span><span class="st"> </span>(i <span class="op">-</span><span class="st"> </span><span class="dv">1</span>) <span class="op">*</span><span class="st"> </span>nsubg) <span class="op">%&gt;%</span></span>
+<span id="cb225-29"><a href="advanced-miscellaneous-topics.html#cb225-29" aria-hidden="true"></a><span class="co">#### Convert to data frame to skip sorting the data</span></span>
+<span id="cb225-30"><a href="advanced-miscellaneous-topics.html#cb225-30" aria-hidden="true"></a><span class="co">#### When binding the data together</span></span>
+<span id="cb225-31"><a href="advanced-miscellaneous-topics.html#cb225-31" aria-hidden="true"></a><span class="st">                </span>as.data.frame </span>
+<span id="cb225-32"><a href="advanced-miscellaneous-topics.html#cb225-32" aria-hidden="true"></a>        }))</span>
+<span id="cb225-33"><a href="advanced-miscellaneous-topics.html#cb225-33" aria-hidden="true"></a><span class="co">#### To better compare, use the same output, that is data.table</span></span>
+<span id="cb225-34"><a href="advanced-miscellaneous-topics.html#cb225-34" aria-hidden="true"></a>res &lt;-<span class="st"> </span><span class="kw">rxSolve</span>(rx, ev, <span class="dt">omega=</span>omega, <span class="dt">returnType=</span><span class="st">&quot;data.table&quot;</span>)</span>
+<span id="cb225-35"><a href="advanced-miscellaneous-topics.html#cb225-35" aria-hidden="true"></a>endParallel &lt;-<span class="st"> </span><span class="kw">Sys.time</span>()</span>
+<span id="cb225-36"><a href="advanced-miscellaneous-topics.html#cb225-36" aria-hidden="true"></a><span class="kw">print</span>(endParallel <span class="op">-</span><span class="st"> </span>startParallel)</span></code></pre></div>
+<pre><code>#&gt; Time difference of 0.06294489 secs</code></pre>
+<p>You can see a striking time difference between the two methods; A few
+things to keep in mind:</p>
+<ul>
+<li><p><code>RxODE</code> use the thread-safe sitmo <code>threefry</code> routines for simulation of <code>eta</code>
+values. Therefore the results are expected to be different (also the random
+samples are taken in a different order which would be different)</p></li>
+<li><p>This prior simulation was run in R 3.5, which has a different
+random number generator so the results in this simulation will be
+different from the actual nlmixr comparison when using the slower
+simulation.</p></li>
+<li><p>This speed comparison used <code>data.table</code>. <code>RxODE</code> uses <code>data.table</code>
+internally (when available) try to speed up sorting, so this would
+be different than installations where <code>data.table</code> is not
+installed. You can force RxODE to use <code>order()</code> when sorting by
+using <code>forderForceBase(TRUE)</code>. In this case there is little
+difference between the two, though in other examples <code>data.table</code>’s
+presence leads to a speed increase (and less likely it could lead
+to a slowdown).</p></li>
+</ul>
+<div id="want-more-ways-to-run-multi-subject-simulations" class="section level4" number="13.2.2.1">
+<h4><span class="header-section-number">13.2.2.1</span> Want more ways to run multi-subject simulations</h4>
+<p>The version since the tutorial has even more ways to run multi-subject
+simulations, including adding variability in sampling and dosing times
+with <code>et()</code> (see <a href="https://nlmixrdevelopment.github.io/RxODE/articles/RxODE-events.html#add-doses-and-samples-within-a-sampling-window">RxODE
+events</a>
+for more information), ability to supply both an <code>omega</code> and <code>sigma</code>
+matrix as well as adding as a <code>thetaMat</code> to R to simulate with
+uncertainty in the <code>omega</code>, <code>sigma</code> and <code>theta</code> matrices; see <a href="https://nlmixrdevelopment.github.io/RxODE/articles/RxODE-sim-var.html">RxODE
+simulation
+vignette</a>.</p>
+</div>
+</div>
+</div>
+<div id="integrating-rxode-models-in-your-package" class="section level2" number="13.3">
+<h2><span class="header-section-number">13.3</span> Integrating RxODE models in your package</h2>
+<div id="using-pre-compiled-models-in-your-packages" class="section level3" number="13.3.1">
+<h3><span class="header-section-number">13.3.1</span> Using Pre-compiled models in your packages</h3>
+<p>If you have a package and would like to include pre-compiled RxODE
+models in your package it is easy to create the package. You simple
+make the package with the <code>rxPkg()</code> command.</p>
+<pre><code>library(RxODE);
+#### Now Create a model
+idr &lt;- RxODE({
+    C2 = centr/V2;
+    C3 = peri/V3;
+    d/dt(depot) =-KA*depot;
+    d/dt(centr) = KA*depot - CL*C2 - Q*C2 + Q*C3;
+    d/dt(peri)  =                    Q*C2 - Q*C3;
+    d/dt(eff)  = Kin - Kout*(1-C2/(EC50+C2))*eff;
+})
+
+#### You can specify as many models as you want to add
+
+rxPkg(idr, package=&quot;myPackage&quot;); ## Add the idr model to your package</code></pre>
+<p>This will:</p>
+<ul>
+<li><p>Add the model to your package; You can use the package data as <code>idr</code> once the package loads</p></li>
+<li><p>Add the right package requirements to the DESCRIPTION file. You
+will want to update this to describe the package and modify authors,
+license etc.</p></li>
+<li><p>Create skeleton model documentation files you can add to for your
+package documentation. In this case it would be the file
+<code>idr-doc.R</code> in your <code>R</code> directory</p></li>
+<li><p>Create a <code>configure</code> and <code>configure.win</code> script that removes and
+regenerates the <code>src</code> directory based on whatever version of <code>RxODE</code>
+this is compiled against. This should be modified if you plan to
+have your own compiled code, though this is not suggested.</p></li>
+<li><p>You can write your own R code in your package that interacts with
+the RxODE object so you can distribute shiny apps and similar things
+in the package context.</p></li>
+</ul>
+<p>Once this is present you can add more models to your package by
+<code>rxUse()</code>. Simply compile the RxODE model in your package then add
+the model with <code>rxUse()</code></p>
+<pre><code>rxUse(model)</code></pre>
+<p>Now both <code>model</code> and <code>idr</code> are in the model library. This will also
+create <code>model-doc.R</code> in your R directory so you can document this
+model.</p>
+<p>You can then use <code>devtools</code> methods to install/test your model</p>
+<pre><code>devtools::load_all() # Load all the functions in the package
+devtools::document() # Create package documentation
+devtools::install() # Install package
+devtools::check() # Check the package
+devtools::build() # build the package so you can submit it to places like CRAN</code></pre>
+</div>
+<div id="using-models-in-a-already-present-package" class="section level3" number="13.3.2">
+<h3><span class="header-section-number">13.3.2</span> Using Models in a already present package</h3>
+<p>To illustrate, lets start with a
+blank package</p>
+<pre><code>library(RxODE)
+library(usethis)
+pkgPath  &lt;- file.path(rxTempDir(),&quot;MyRxModel&quot;)
+create_package(pkgPath);
+use_gpl3_license(&quot;Matt&quot;)
+use_package(&quot;RxODE&quot;, &quot;LinkingTo&quot;)
+use_package(&quot;RxODE&quot;, &quot;Depends&quot;) ##  library(RxODE) on load; Can use imports instead.
+use_roxygen_md()
+##use_readme_md()
+library(RxODE);
+#### Now Create a model
+idr &lt;- RxODE({
+    C2 = centr/V2;
+    C3 = peri/V3;
+    d/dt(depot) =-KA*depot;
+    d/dt(centr) = KA*depot - CL*C2 - Q*C2 + Q*C3;
+    d/dt(peri)  =                    Q*C2 - Q*C3;
+    d/dt(eff)  = Kin - Kout*(1-C2/(EC50+C2))*eff;
+});
+
+rxUse(idr); ## Add the idr model to your package
+rxUse(); # Update the compiled RxODE sources for all of your packages
+</code></pre>
+<p>The <code>rxUse()</code> will:
+- Create <code>RxODE</code> sources and move them into the package’s <code>src/</code>
+directory. If there is only R source in the package, it will also
+finish off the directory with an <code>library-init.c</code> which registers
+all the RxODE models in the package for use in R.
+- Create stub R documentation for each of the models your are
+including in your package. You will be able to see the R
+documentation when loading your package by the standard <code>?</code> interface.</p>
+<p>You will still need to:
+- Export at least one function. If you do not have a function that
+you wish to export, you can add a re-export of <code>RxODE</code> using roxygen
+as follows:</p>
+<pre><code>##&#39; @importFrom RxODE RxODE
+##&#39; @export
+RxODE::RxODE</code></pre>
+<p>If you want to use <code>Suggests</code> instead of <code>Depends</code> in your package,
+you way want to export all of RxODE’s normal routines</p>
+<pre><code>##&#39; @importFrom RxODE RxODE
+##&#39; @export
+RxODE::RxODE
+
+##&#39; @importFrom RxODE et
+##&#39; @export
+RxODE::et
+
+##&#39; @importFrom RxODE etRep
+##&#39; @export
+RxODE::etRep
+
+##&#39; @importFrom RxODE etSeq
+##&#39; @export
+RxODE::etSeq
+
+##&#39; @importFrom RxODE as.et
+##&#39; @export
+RxODE::as.et
+
+##&#39; @importFrom RxODE eventTable
+##&#39; @export
+RxODE::eventTable
+
+##&#39; @importFrom RxODE add.dosing
+##&#39; @export
+RxODE::add.dosing
+
+##&#39; @importFrom RxODE add.sampling
+##&#39; @export
+RxODE::add.sampling
+
+##&#39; @importFrom RxODE rxSolve
+##&#39; @export
+RxODE::rxSolve
+
+##&#39; @importFrom RxODE rxControl
+##&#39; @export
+RxODE::rxControl
+
+##&#39; @importFrom RxODE rxClean
+##&#39; @export
+RxODE::rxClean
+
+##&#39; @importFrom RxODE rxUse
+##&#39; @export
+RxODE::rxUse
+
+##&#39; @importFrom RxODE rxShiny
+##&#39; @export
+RxODE::rxShiny
+
+##&#39; @importFrom RxODE genShinyApp.template
+##&#39; @export
+RxODE::genShinyApp.template
+
+##&#39; @importFrom RxODE cvPost
+##&#39; @export
+RxODE::cvPost
+
+### This is actually from `magrittr` but allows less imports
+##&#39; @importFrom RxODE %&gt;%
+##&#39; @export
+RxODE::`%&gt;%`</code></pre>
+<ul>
+<li>You also need to instruct R to load the model library models
+included in the model’s dll. This is done by:</li>
+</ul>
+<pre><code>### In this case `rxModels` is the package name
+##&#39; @useDynLib rxModels, .registration=TRUE</code></pre>
+<p>If this is a R package with RxODE models and you do not intend to add
+any other compiled sources (recommended), you can add the following configure scripts</p>
+<div class="sourceCode" id="cb234"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb234-1"><a href="advanced-miscellaneous-topics.html#cb234-1" aria-hidden="true"></a><span class="co">#!/bin/sh</span></span>
+<span id="cb234-2"><a href="advanced-miscellaneous-topics.html#cb234-2" aria-hidden="true"></a><span class="co">### This should be used for both configure and configure.win</span></span>
+<span id="cb234-3"><a href="advanced-miscellaneous-topics.html#cb234-3" aria-hidden="true"></a><span class="bu">echo</span> <span class="st">&quot;unlink(&#39;src&#39;, recursive=TRUE);RxODE::rxUse()&quot;</span> <span class="op">&gt;</span> build.R</span>
+<span id="cb234-4"><a href="advanced-miscellaneous-topics.html#cb234-4" aria-hidden="true"></a><span class="va">${R_HOME}</span><span class="ex">/bin/Rscript</span> build.R</span>
+<span id="cb234-5"><a href="advanced-miscellaneous-topics.html#cb234-5" aria-hidden="true"></a><span class="fu">rm</span> build.R</span></code></pre></div>
+<p>Depending on the <code>check</code> you may need a dummy autoconf script,</p>
+<div class="sourceCode" id="cb235"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb235-1"><a href="advanced-miscellaneous-topics.html#cb235-1" aria-hidden="true"></a><span class="co">#### dummy autoconf script</span></span>
+<span id="cb235-2"><a href="advanced-miscellaneous-topics.html#cb235-2" aria-hidden="true"></a><span class="co">#### It is saved to configure.ac</span></span></code></pre></div>
+<p>If you want to integrate with other sources in your <code>Rcpp</code> or
+<code>C</code>/<code>Fortan</code> based packages, you need to include <code>rxModels-compiled.h</code> and:
+- Add the define macro <code>compiledModelCall</code> to the list of registered
+<code>.Call</code> functions.
+- Register C interface to allow model solving by
+<code>R_init0_rxModels_RxODE_models()</code> (again <code>rxModels</code> would be
+replaced by your package name).</p>
+<p>Once this is complete, you can compile/document by the standard methods:</p>
+<pre><code>devtools::load_all()
+devtools::document()
+devtools::install()</code></pre>
+<p>If you load the package with a new version of RxODE, the models
+will be recompiled when they are used.</p>
+<p>However, if you want the models recompiled for the most recent version
+of RxODE, you simply need to call <code>rxUse()</code> again in the project
+directory followed by the standard methods for install/create a
+package.</p>
+<pre><code>devtools::load_all()
+devtools::document()
+devtools::install()</code></pre>
+<p><strong>Note</strong> you do not have to include the <code>RxODE</code> code required to
+generate the model to regenerate the RxODE c-code in the <code>src</code>
+directory. As with all RxODE objects, a <code>summary</code> will show one way to recreate the same model.</p>
+<p>An example of compiled models package can be found in the
+<a href="https://github.com/nlmixrdevelopment/rxModels">rxModels</a> repository.</p>
+</div>
+</div>
+<div id="stiff-odes-with-jacobian-specification" class="section level2" number="13.4">
+<h2><span class="header-section-number">13.4</span> Stiff ODEs with Jacobian Specification</h2>
+<div id="stiff-odes-with-jacobian-specification-1" class="section level4" number="13.4.0.1">
+<h4><span class="header-section-number">13.4.0.1</span> Stiff ODEs with Jacobian Specification</h4>
+<p>Occasionally, you may come across
+a
+<a href="https://en.wikipedia.org/wiki/Stiff_equation"><strong>stiff</strong> differential equation</a>,
+that is a differential equation that is numerically unstable and small
+variations in parameters cause different solutions to the ODEs. One
+way to tackle this is to choose a stiff-solver, or hybrid stiff solver
+(like the default LSODA). Typically this is enough. However exact
+Jacobian solutions may increase the stability of the ODE. (Note the
+Jacobian is the derivative of the ODE specification with respect to
+each variable). In RxODE you can specify the Jacobian with the
+<code>df(state)/dy(variable)=</code> statement. A classic ODE that has stiff
+properties under various conditions is
+the
+<a href="http://www.ece.northwestern.edu/local-apps/matlabhelp/techdoc/math_anal/diffeq6.html">Van der Pol</a> differential
+equations.</p>
+<p>In RxODE these can be specified by the following:</p>
+<div class="sourceCode" id="cb238"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb238-1"><a href="advanced-miscellaneous-topics.html#cb238-1" aria-hidden="true"></a><span class="kw">library</span>(RxODE)</span>
+<span id="cb238-2"><a href="advanced-miscellaneous-topics.html#cb238-2" aria-hidden="true"></a></span>
+<span id="cb238-3"><a href="advanced-miscellaneous-topics.html#cb238-3" aria-hidden="true"></a>Vtpol2 &lt;-<span class="st"> </span><span class="kw">RxODE</span>({</span>
+<span id="cb238-4"><a href="advanced-miscellaneous-topics.html#cb238-4" aria-hidden="true"></a>    d<span class="op">/</span><span class="kw">dt</span>(y)  =<span class="st"> </span>dy</span>
+<span id="cb238-5"><a href="advanced-miscellaneous-topics.html#cb238-5" aria-hidden="true"></a>    d<span class="op">/</span><span class="kw">dt</span>(dy) =<span class="st"> </span>mu<span class="op">*</span>(<span class="dv">1</span><span class="op">-</span>y<span class="op">^</span><span class="dv">2</span>)<span class="op">*</span>dy <span class="op">-</span><span class="st"> </span>y</span>
+<span id="cb238-6"><a href="advanced-miscellaneous-topics.html#cb238-6" aria-hidden="true"></a><span class="co">##### Jacobian</span></span>
+<span id="cb238-7"><a href="advanced-miscellaneous-topics.html#cb238-7" aria-hidden="true"></a>    <span class="kw">df</span>(y)<span class="op">/</span><span class="kw">dy</span>(dy)  =<span class="st"> </span><span class="dv">1</span></span>
+<span id="cb238-8"><a href="advanced-miscellaneous-topics.html#cb238-8" aria-hidden="true"></a>    <span class="kw">df</span>(dy)<span class="op">/</span><span class="kw">dy</span>(y)  =<span class="st"> </span><span class="dv">-2</span><span class="op">*</span>dy<span class="op">*</span>mu<span class="op">*</span>y <span class="op">-</span><span class="st"> </span><span class="dv">1</span></span>
+<span id="cb238-9"><a href="advanced-miscellaneous-topics.html#cb238-9" aria-hidden="true"></a>    <span class="kw">df</span>(dy)<span class="op">/</span><span class="kw">dy</span>(dy) =<span class="st"> </span>mu<span class="op">*</span>(<span class="dv">1</span><span class="op">-</span>y<span class="op">^</span><span class="dv">2</span>)</span>
+<span id="cb238-10"><a href="advanced-miscellaneous-topics.html#cb238-10" aria-hidden="true"></a><span class="co">##### Initial conditions</span></span>
+<span id="cb238-11"><a href="advanced-miscellaneous-topics.html#cb238-11" aria-hidden="true"></a>    <span class="kw">y</span>(<span class="dv">0</span>) =<span class="st"> </span><span class="dv">2</span></span>
+<span id="cb238-12"><a href="advanced-miscellaneous-topics.html#cb238-12" aria-hidden="true"></a>    <span class="kw">dy</span>(<span class="dv">0</span>) =<span class="st"> </span><span class="dv">0</span></span>
+<span id="cb238-13"><a href="advanced-miscellaneous-topics.html#cb238-13" aria-hidden="true"></a><span class="co">##### mu</span></span>
+<span id="cb238-14"><a href="advanced-miscellaneous-topics.html#cb238-14" aria-hidden="true"></a>    mu =<span class="st"> </span><span class="dv">1</span> <span class="co">## nonstiff; 10 moderately stiff; 1000 stiff</span></span>
+<span id="cb238-15"><a href="advanced-miscellaneous-topics.html#cb238-15" aria-hidden="true"></a>})</span>
+<span id="cb238-16"><a href="advanced-miscellaneous-topics.html#cb238-16" aria-hidden="true"></a></span>
+<span id="cb238-17"><a href="advanced-miscellaneous-topics.html#cb238-17" aria-hidden="true"></a>et &lt;-<span class="st"> </span><span class="kw">eventTable</span>();</span>
+<span id="cb238-18"><a href="advanced-miscellaneous-topics.html#cb238-18" aria-hidden="true"></a>et<span class="op">$</span><span class="kw">add.sampling</span>(<span class="kw">seq</span>(<span class="dv">0</span>, <span class="dv">10</span>, <span class="dt">length.out=</span><span class="dv">200</span>));</span>
+<span id="cb238-19"><a href="advanced-miscellaneous-topics.html#cb238-19" aria-hidden="true"></a>et<span class="op">$</span><span class="kw">add.dosing</span>(<span class="dv">20</span>, <span class="dt">start.time=</span><span class="dv">0</span>);</span>
+<span id="cb238-20"><a href="advanced-miscellaneous-topics.html#cb238-20" aria-hidden="true"></a></span>
+<span id="cb238-21"><a href="advanced-miscellaneous-topics.html#cb238-21" aria-hidden="true"></a>s1 &lt;-<span class="st"> </span>Vtpol2 <span class="op">%&gt;%</span><span class="st">  </span><span class="kw">solve</span>(et, <span class="dt">method=</span><span class="st">&quot;lsoda&quot;</span>)</span>
+<span id="cb238-22"><a href="advanced-miscellaneous-topics.html#cb238-22" aria-hidden="true"></a><span class="kw">print</span>(s1)</span></code></pre></div>
+<pre><code>#&gt; ______________________________ Solved RxODE object _____________________________
+#&gt; -- Parameters ($params): -------------------------------------------------------
+#&gt; mu 
+#&gt;  1 
+#&gt; -- Initial Conditions ($inits): ------------------------------------------------
+#&gt;  y dy 
+#&gt;  2  0 
+#&gt; -- First part of data (object): ------------------------------------------------
+#&gt; # A tibble: 200 x 3
+#&gt;     time     y      dy
+#&gt;    &lt;dbl&gt; &lt;dbl&gt;   &lt;dbl&gt;
+#&gt; 1 0       22    0     
+#&gt; 2 0.0503  22.0 -0.0456
+#&gt; 3 0.101   22.0 -0.0456
+#&gt; 4 0.151   22.0 -0.0456
+#&gt; 5 0.201   22.0 -0.0456
+#&gt; 6 0.251   22.0 -0.0456
+#&gt; # ... with 194 more rows
+#&gt; ________________________________________________________________________________</code></pre>
+<p>While this is not stiff at mu=1, mu=1000 is a stiff system</p>
+<div class="sourceCode" id="cb240"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb240-1"><a href="advanced-miscellaneous-topics.html#cb240-1" aria-hidden="true"></a>s2 &lt;-<span class="st"> </span>Vtpol2 <span class="op">%&gt;%</span><span class="st">  </span><span class="kw">solve</span>(<span class="kw">c</span>(<span class="dt">mu=</span><span class="dv">1000</span>), et)</span>
+<span id="cb240-2"><a href="advanced-miscellaneous-topics.html#cb240-2" aria-hidden="true"></a><span class="kw">print</span>(s2)</span></code></pre></div>
+<pre><code>#&gt; ______________________________ Solved RxODE object _____________________________
+#&gt; -- Parameters ($params): -------------------------------------------------------
+#&gt;   mu 
+#&gt; 1000 
+#&gt; -- Initial Conditions ($inits): ------------------------------------------------
+#&gt;  y dy 
+#&gt;  2  0 
+#&gt; -- First part of data (object): ------------------------------------------------
+#&gt; # A tibble: 200 x 3
+#&gt;     time     y         dy
+#&gt;    &lt;dbl&gt; &lt;dbl&gt;      &lt;dbl&gt;
+#&gt; 1 0       22    0        
+#&gt; 2 0.0503  22.0 -0.0000455
+#&gt; 3 0.101   22.0 -0.0000455
+#&gt; 4 0.151   22.0 -0.0000455
+#&gt; 5 0.201   22.0 -0.0000455
+#&gt; 6 0.251   22.0 -0.0000455
+#&gt; # ... with 194 more rows
+#&gt; ________________________________________________________________________________</code></pre>
+<p>While this is easy enough to do, it is a bit tedious. If you have
+RxODE setup appropriately, that is you have:</p>
+<ul>
+<li><strong>Python</strong> installed in your system</li>
+<li><strong>sympy</strong> installed in your system</li>
+<li><strong>SnakeCharmR</strong> installed in R</li>
+</ul>
+<p>You can use the computer algebra system sympy to calculate the
+Jacobian automatically.</p>
+<p>This is done by the RxODE option <code>calcJac</code> option:</p>
+<pre><code>Vtpol &lt;- RxODE({
+    d/dt(y)  = dy
+    d/dt(dy) = mu*(1-y^2)*dy - y
+##### Initial conditions
+    y(0) = 2
+    dy(0) = 0
+##### mu
+    mu = 1 ## nonstiff; 10 moderately stiff; 1000 stiff
+}, calcJac=TRUE)
+</code></pre>
+<p>To see the generated model, you can use <code>rxCat()</code>:</p>
+<pre><code>&gt; rxCat(Vtpol)
+d/dt(y)=dy;
+d/dt(dy)=mu*(1-y^2)*dy-y;
+y(0)=2;
+dy(0)=0;
+mu=1;
+df(y)/dy(y)=0;
+df(dy)/dy(y)=-2*dy*mu*y-1;
+df(y)/dy(dy)=1;
+df(dy)/dy(dy)=mu*(-Rx_pow_di(y,2)+1);
+</code></pre>
+
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="examples.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": null,
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["RxODE-manual.pdf"],
+"toc": {
+"collapse": "subsection"
+},
+"toolbar": {
+"position": "fixed"
+},
+"search": true
+});
+});
+</script>
+
+</body>
+
+</html>

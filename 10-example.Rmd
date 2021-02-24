@@ -4,8 +4,17 @@ This section is for example models to get you started in common
 simulation scenarios.
 
 ## Weight based dosing 
+
 ```{r echo=FALSE, results='asis'}
 cat(gsub("(^|\n) *# ", "\\1### ",
          unlist(knitr::knit_child(text = readLines("RxODE/man-roxygen/rmdhunks/RxODE-wt.Rmd"),
+                                  envir = environment(), quiet = TRUE))), sep="\n")
+```
+
+## Inter-occasion and other nesting examples
+
+```{r echo=FALSE, results='asis'}
+cat(gsub("(^|\n) *# ", "\\1## ",
+         unlist(knitr::knit_child(text = readLines("RxODE/man-roxygen/rmdhunks/nesting.Rmdh"),
                                   envir = environment(), quiet = TRUE))), sep="\n")
 ```

@@ -366,6 +366,36 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="12.1.4" data-path="examples.html"><a href="examples.html#solving-daptomycin-simulation"><i class="fa fa-check"></i><b>12.1.4</b> Solving Daptomycin simulation</a></li>
 <li class="chapter" data-level="12.1.5" data-path="examples.html"><a href="examples.html#daptomycin-reference"><i class="fa fa-check"></i><b>12.1.5</b> Daptomycin Reference</a></li>
 </ul></li>
+<li class="chapter" data-level="12.2" data-path="examples.html"><a href="examples.html#inter-occasion-and-other-nesting-examples"><i class="fa fa-check"></i><b>12.2</b> Inter-occasion and other nesting examples</a>
+<ul>
+<li class="chapter" data-level="12.2.1" data-path="examples.html"><a href="examples.html#event-table"><i class="fa fa-check"></i><b>12.2.1</b> Event table</a></li>
+<li class="chapter" data-level="12.2.2" data-path="examples.html"><a href="examples.html#rxode-model"><i class="fa fa-check"></i><b>12.2.2</b> RxODE model</a></li>
+<li class="chapter" data-level="12.2.3" data-path="examples.html"><a href="examples.html#uncertainty-in-model-parameters"><i class="fa fa-check"></i><b>12.2.3</b> Uncertainty in Model parameters</a></li>
+<li class="chapter" data-level="12.2.4" data-path="examples.html"><a href="examples.html#nesting-variability"><i class="fa fa-check"></i><b>12.2.4</b> Nesting Variability</a></li>
+<li class="chapter" data-level="12.2.5" data-path="examples.html"><a href="examples.html#unexplained-variability"><i class="fa fa-check"></i><b>12.2.5</b> Unexplained variability</a></li>
+<li class="chapter" data-level="12.2.6" data-path="examples.html"><a href="examples.html#solving-the-problem"><i class="fa fa-check"></i><b>12.2.6</b> Solving the problem</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="13" data-path="advanced-miscellaneous-topics.html"><a href="advanced-miscellaneous-topics.html"><i class="fa fa-check"></i><b>13</b> Advanced &amp; Miscellaneous Topics</a>
+<ul>
+<li class="chapter" data-level="13.1" data-path="advanced-miscellaneous-topics.html"><a href="advanced-miscellaneous-topics.html#using-rxode-with-a-pipeline"><i class="fa fa-check"></i><b>13.1</b> Using RxODE with a pipeline</a>
+<ul>
+<li class="chapter" data-level="13.1.1" data-path="advanced-miscellaneous-topics.html"><a href="advanced-miscellaneous-topics.html#setting-up-the-rxode-model-for-the-pipeline"><i class="fa fa-check"></i><b>13.1.1</b> Setting up the RxODE model for the pipeline</a></li>
+<li class="chapter" data-level="13.1.2" data-path="advanced-miscellaneous-topics.html"><a href="advanced-miscellaneous-topics.html#simulating-one-event-table"><i class="fa fa-check"></i><b>13.1.2</b> Simulating one event table</a></li>
+<li class="chapter" data-level="13.1.3" data-path="advanced-miscellaneous-topics.html"><a href="advanced-miscellaneous-topics.html#simulating-multiple-subjects-from-a-single-event-table"><i class="fa fa-check"></i><b>13.1.3</b> Simulating multiple subjects from a single event table</a></li>
+<li class="chapter" data-level="13.1.4" data-path="advanced-miscellaneous-topics.html"><a href="advanced-miscellaneous-topics.html#summarizing-the-simulation-output"><i class="fa fa-check"></i><b>13.1.4</b> Summarizing the simulation output</a></li>
+</ul></li>
+<li class="chapter" data-level="13.2" data-path="advanced-miscellaneous-topics.html"><a href="advanced-miscellaneous-topics.html#speeding-up-rxode"><i class="fa fa-check"></i><b>13.2</b> Speeding up RxODE</a>
+<ul>
+<li class="chapter" data-level="13.2.1" data-path="advanced-miscellaneous-topics.html"><a href="advanced-miscellaneous-topics.html#increasing-rxode-speed-by-multi-subject-parallel-solving"><i class="fa fa-check"></i><b>13.2.1</b> Increasing RxODE speed by multi-subject parallel solving</a></li>
+<li class="chapter" data-level="13.2.2" data-path="advanced-miscellaneous-topics.html"><a href="advanced-miscellaneous-topics.html#a-real-life-example"><i class="fa fa-check"></i><b>13.2.2</b> A real life example</a></li>
+</ul></li>
+<li class="chapter" data-level="13.3" data-path="advanced-miscellaneous-topics.html"><a href="advanced-miscellaneous-topics.html#integrating-rxode-models-in-your-package"><i class="fa fa-check"></i><b>13.3</b> Integrating RxODE models in your package</a>
+<ul>
+<li class="chapter" data-level="13.3.1" data-path="advanced-miscellaneous-topics.html"><a href="advanced-miscellaneous-topics.html#using-pre-compiled-models-in-your-packages"><i class="fa fa-check"></i><b>13.3.1</b> Using Pre-compiled models in your packages</a></li>
+<li class="chapter" data-level="13.3.2" data-path="advanced-miscellaneous-topics.html"><a href="advanced-miscellaneous-topics.html#using-models-in-a-already-present-package"><i class="fa fa-check"></i><b>13.3.2</b> Using Models in a already present package</a></li>
+</ul></li>
+<li class="chapter" data-level="13.4" data-path="advanced-miscellaneous-topics.html"><a href="advanced-miscellaneous-topics.html#stiff-odes-with-jacobian-specification"><i class="fa fa-check"></i><b>13.4</b> Stiff ODEs with Jacobian Specification</a></li>
 </ul></li>
 </ul>
 
@@ -554,7 +584,7 @@ them if needed. Additionally, <code>ggforce</code> uses them to label the
 drop the RxODE event table units.</p>
 <p>In this example, you can see the time axes is labeled:</p>
 <div class="sourceCode" id="cb84"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb84-1"><a href="et.html#cb84-1" aria-hidden="true"></a><span class="kw">rxSolve</span>(m1, ev) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">plot</span>(C2)</span></code></pre></div>
-<p><img src="RxODE-manual_files/figure-html/unnamed-chunk-62-1.png" width="672" /></p>
+<p><img src="RxODE-manual_files/figure-html/unnamed-chunk-67-1.png" width="672" /></p>
 <p>If you are more familiar with the NONMEM/RxODE event records, you can
 also specify dosing using <code>et</code> with the dose elements directly:</p>
 <div class="sourceCode" id="cb85"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb85-1"><a href="et.html#cb85-1" aria-hidden="true"></a>ev &lt;-<span class="st"> </span><span class="kw">et</span>(<span class="dt">timeUnits=</span><span class="st">&quot;hr&quot;</span>) <span class="op">%&gt;%</span></span>
@@ -574,7 +604,7 @@ also specify dosing using <code>et</code> with the dose elements directly:</p>
 #&gt; 1     0 10000    12     6 1:Dose (Add)</code></pre>
 <p>Which gives:</p>
 <div class="sourceCode" id="cb87"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb87-1"><a href="et.html#cb87-1" aria-hidden="true"></a><span class="kw">rxSolve</span>(m1, ev) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">plot</span>(C2)</span></code></pre></div>
-<p><img src="RxODE-manual_files/figure-html/unnamed-chunk-64-1.png" width="672" /></p>
+<p><img src="RxODE-manual_files/figure-html/unnamed-chunk-69-1.png" width="672" /></p>
 <p>This shows how easy creating event tables can be.</p>
 </div>
 <div id="adding-sampling-to-an-event-table" class="section level2" number="8.2">
@@ -611,7 +641,7 @@ RxODE event table by <code>add.sampling</code> or <code>et</code></p>
 #&gt; 8    24    NA    NA    NA 0:Observation</code></pre>
 <p>Which gives:</p>
 <div class="sourceCode" id="cb90"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb90-1"><a href="et.html#cb90-1" aria-hidden="true"></a><span class="kw">solve</span>(m1, ev) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">plot</span>(C2)</span></code></pre></div>
-<p><img src="RxODE-manual_files/figure-html/unnamed-chunk-66-1.png" width="672" /></p>
+<p><img src="RxODE-manual_files/figure-html/unnamed-chunk-71-1.png" width="672" /></p>
 <p>Or if you use <code>et</code> you can simply add them in a similar way to <code>add.sampling</code>:</p>
 <div class="sourceCode" id="cb91"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb91-1"><a href="et.html#cb91-1" aria-hidden="true"></a>ev &lt;-<span class="st"> </span><span class="kw">et</span>(<span class="dt">timeUnits=</span><span class="st">&quot;hr&quot;</span>) <span class="op">%&gt;%</span></span>
 <span id="cb91-2"><a href="et.html#cb91-2" aria-hidden="true"></a><span class="st">  </span><span class="kw">et</span>(<span class="dt">amt=</span><span class="dv">10000</span>, <span class="dt">until =</span> <span class="kw">set_units</span>(<span class="dv">3</span>, days),</span>
@@ -638,7 +668,7 @@ RxODE event table by <code>add.sampling</code> or <code>et</code></p>
 #&gt; 8    24    NA    NA    NA 0:Observation</code></pre>
 <p>which gives the following RxODE solve:</p>
 <div class="sourceCode" id="cb93"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb93-1"><a href="et.html#cb93-1" aria-hidden="true"></a><span class="kw">solve</span>(m1, ev) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">plot</span>(C2)</span></code></pre></div>
-<p><img src="RxODE-manual_files/figure-html/unnamed-chunk-68-1.png" width="672" /></p>
+<p><img src="RxODE-manual_files/figure-html/unnamed-chunk-73-1.png" width="672" /></p>
 <p>Note the jagged nature of these plots since there was only a few
 sample times.</p>
 </div>
@@ -681,7 +711,7 @@ IDs that you want to expand;</p>
 <span id="cb96-5"><a href="et.html#cb96-5" aria-hidden="true"></a><span class="st">    </span><span class="kw">plot</span>(C2)</span></code></pre></div>
 <pre><code>#&gt; Warning: &#39;ID&#39; missing in &#39;parameters&#39; dataset
 #&gt; individual parameters are assumed to have the same order as the event dataset</code></pre>
-<p><img src="RxODE-manual_files/figure-html/unnamed-chunk-70-1.png" width="672" /></p>
+<p><img src="RxODE-manual_files/figure-html/unnamed-chunk-75-1.png" width="672" /></p>
 </div>
 <div id="add-doses-and-samples-within-a-sampling-window" class="section level2" number="8.4">
 <h2><span class="header-section-number">8.4</span> Add doses and samples within a sampling window</h2>
@@ -730,7 +760,7 @@ dosing time and the highest dosing time inside a list.</p>
 <span id="cb100-6"><a href="et.html#cb100-6" aria-hidden="true"></a><span class="st">  </span><span class="kw">plot</span>(C2)</span></code></pre></div>
 <pre><code>#&gt; Warning: &#39;ID&#39; missing in &#39;parameters&#39; dataset
 #&gt; individual parameters are assumed to have the same order as the event dataset</code></pre>
-<p><img src="RxODE-manual_files/figure-html/unnamed-chunk-72-1.png" width="672" /></p>
+<p><img src="RxODE-manual_files/figure-html/unnamed-chunk-77-1.png" width="672" /></p>
 <p>Of course in reality the dosing interval may only be 2 hours:</p>
 <div class="sourceCode" id="cb102"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb102-1"><a href="et.html#cb102-1" aria-hidden="true"></a><span class="kw">set.seed</span>(<span class="dv">42</span>)</span>
 <span id="cb102-2"><a href="et.html#cb102-2" aria-hidden="true"></a>ev &lt;-<span class="st"> </span><span class="kw">et</span>(<span class="dt">timeUnits=</span><span class="st">&quot;hr&quot;</span>) <span class="op">%&gt;%</span></span>
@@ -745,7 +775,7 @@ dosing time and the highest dosing time inside a list.</p>
 <span id="cb102-11"><a href="et.html#cb102-11" aria-hidden="true"></a><span class="st">  </span><span class="kw">plot</span>(C2)</span></code></pre></div>
 <pre><code>#&gt; Warning: &#39;ID&#39; missing in &#39;parameters&#39; dataset
 #&gt; individual parameters are assumed to have the same order as the event dataset</code></pre>
-<p><img src="RxODE-manual_files/figure-html/unnamed-chunk-73-1.png" width="672" /></p>
+<p><img src="RxODE-manual_files/figure-html/unnamed-chunk-78-1.png" width="672" /></p>
 <p>The same sort of thing can be specified with sampling times. To
 specify the sampling times in terms of a sampling window, you can
 create a list of the sampling times. Each sampling time will be a two
@@ -770,7 +800,7 @@ element ordered numeric vector.</p>
 <span id="cb104-18"><a href="et.html#cb104-18" aria-hidden="true"></a><span class="st">  </span><span class="kw">plot</span>(C2) <span class="op">+</span><span class="st"> </span><span class="kw">geom_point</span>()</span></code></pre></div>
 <pre><code>#&gt; Warning: &#39;ID&#39; missing in &#39;parameters&#39; dataset
 #&gt; individual parameters are assumed to have the same order as the event dataset</code></pre>
-<p><img src="RxODE-manual_files/figure-html/unnamed-chunk-74-1.png" width="672" /></p>
+<p><img src="RxODE-manual_files/figure-html/unnamed-chunk-79-1.png" width="672" /></p>
 <p>This shows the flexibility in dosing and sampling that the RxODE event tables allow.</p>
 </div>
 <div id="combining-event-tables" class="section level2" number="8.5">
@@ -796,7 +826,7 @@ inter-dose interval between them:</p>
 <span id="cb106-10"><a href="et.html#cb106-10" aria-hidden="true"></a>et &lt;-<span class="st"> </span><span class="kw">seq</span>(bid,qd) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">et</span>(<span class="kw">seq</span>(<span class="dv">0</span>,<span class="dv">11</span><span class="op">*</span><span class="dv">24</span>,<span class="dt">length.out=</span><span class="dv">100</span>));</span>
 <span id="cb106-11"><a href="et.html#cb106-11" aria-hidden="true"></a></span>
 <span id="cb106-12"><a href="et.html#cb106-12" aria-hidden="true"></a><span class="kw">rxSolve</span>(m1, et) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">plot</span>(C2)</span></code></pre></div>
-<p><img src="RxODE-manual_files/figure-html/unnamed-chunk-75-1.png" width="672" /></p>
+<p><img src="RxODE-manual_files/figure-html/unnamed-chunk-80-1.png" width="672" /></p>
 <p>When sequencing events, you can also separate this sequence by a
 period of time; For example if you wanted to separate this by a week,
 you could easily do that with the following sequence of event tables:</p>
@@ -805,7 +835,7 @@ you could easily do that with the following sequence of event tables:</p>
 <span id="cb107-3"><a href="et.html#cb107-3" aria-hidden="true"></a><span class="st">    </span><span class="kw">et</span>(<span class="kw">seq</span>(<span class="dv">0</span>,<span class="dv">18</span><span class="op">*</span><span class="dv">24</span>,<span class="dt">length.out=</span><span class="dv">100</span>));</span>
 <span id="cb107-4"><a href="et.html#cb107-4" aria-hidden="true"></a></span>
 <span id="cb107-5"><a href="et.html#cb107-5" aria-hidden="true"></a><span class="kw">rxSolve</span>(m1, et) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">plot</span>(C2)</span></code></pre></div>
-<p><img src="RxODE-manual_files/figure-html/unnamed-chunk-76-1.png" width="672" /></p>
+<p><img src="RxODE-manual_files/figure-html/unnamed-chunk-81-1.png" width="672" /></p>
 <p>Note that in this example the time between the bid and the qd event
 tables is exactly one week, not 1 week plus 24 hours because of the
 inter-dose interval. If you want that behavior, you can sequence it
@@ -815,7 +845,7 @@ using the <code>wait="+ii"</code>.</p>
 <span id="cb108-3"><a href="et.html#cb108-3" aria-hidden="true"></a><span class="st">    </span><span class="kw">et</span>(<span class="kw">seq</span>(<span class="dv">0</span>,<span class="dv">18</span><span class="op">*</span><span class="dv">24</span>,<span class="dt">length.out=</span><span class="dv">100</span>));</span>
 <span id="cb108-4"><a href="et.html#cb108-4" aria-hidden="true"></a></span>
 <span id="cb108-5"><a href="et.html#cb108-5" aria-hidden="true"></a><span class="kw">rxSolve</span>(m1, et) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">plot</span>(C2)</span></code></pre></div>
-<p><img src="RxODE-manual_files/figure-html/unnamed-chunk-77-1.png" width="672" /></p>
+<p><img src="RxODE-manual_files/figure-html/unnamed-chunk-82-1.png" width="672" /></p>
 <p>Also note, that RxODE assumes that the dosing is what you want to
 space the event tables by, and clears out any sampling records when
 you combine the event tables. If that is not true, you can also use
@@ -833,7 +863,7 @@ therapy can be simply specified:</p>
 <span id="cb109-5"><a href="et.html#cb109-5" aria-hidden="true"></a><span class="st">      </span><span class="kw">add.sampling</span>(<span class="kw">set_units</span>(<span class="kw">seq</span>(<span class="dv">0</span>, <span class="fl">12.5</span>,<span class="dt">by=</span><span class="fl">0.005</span>),weeks))</span>
 <span id="cb109-6"><a href="et.html#cb109-6" aria-hidden="true"></a></span>
 <span id="cb109-7"><a href="et.html#cb109-7" aria-hidden="true"></a><span class="kw">rxSolve</span>(m1, et)  <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">plot</span>(C2)</span></code></pre></div>
-<p><img src="RxODE-manual_files/figure-html/unnamed-chunk-78-1.png" width="672" /></p>
+<p><img src="RxODE-manual_files/figure-html/unnamed-chunk-83-1.png" width="672" /></p>
 <p>This is a simplified way to use a sequence of event tables.
 Therefore, many of the same options still apply; That is <code>samples</code> are
 cleared unless you use <code>samples="use"</code>, and the time between event
@@ -859,20 +889,20 @@ not consider the inter-dose interval.</p>
 <span id="cb110-10"><a href="et.html#cb110-10" aria-hidden="true"></a><span class="st">    </span><span class="kw">et</span>(<span class="kw">seq</span>(<span class="dv">0</span>,<span class="dv">18</span><span class="op">*</span><span class="dv">24</span>,<span class="dt">length.out=</span><span class="dv">500</span>));</span>
 <span id="cb110-11"><a href="et.html#cb110-11" aria-hidden="true"></a></span>
 <span id="cb110-12"><a href="et.html#cb110-12" aria-hidden="true"></a><span class="kw">rxSolve</span>(m1, et) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">plot</span>(C2)</span></code></pre></div>
-<p><img src="RxODE-manual_files/figure-html/unnamed-chunk-79-1.png" width="672" /></p>
+<p><img src="RxODE-manual_files/figure-html/unnamed-chunk-84-1.png" width="672" /></p>
 <p>But if you bind them together with <code>rbind</code></p>
 <div class="sourceCode" id="cb111"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb111-1"><a href="et.html#cb111-1" aria-hidden="true"></a><span class="co">## bid for 5 days</span></span>
 <span id="cb111-2"><a href="et.html#cb111-2" aria-hidden="true"></a>et &lt;-<span class="st"> </span><span class="kw">rbind</span>(bid,qd) <span class="op">%&gt;%</span></span>
 <span id="cb111-3"><a href="et.html#cb111-3" aria-hidden="true"></a><span class="st">    </span><span class="kw">et</span>(<span class="kw">seq</span>(<span class="dv">0</span>,<span class="dv">18</span><span class="op">*</span><span class="dv">24</span>,<span class="dt">length.out=</span><span class="dv">500</span>));</span>
 <span id="cb111-4"><a href="et.html#cb111-4" aria-hidden="true"></a></span>
 <span id="cb111-5"><a href="et.html#cb111-5" aria-hidden="true"></a><span class="kw">rxSolve</span>(m1, et) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">plot</span>(C2)</span></code></pre></div>
-<p><img src="RxODE-manual_files/figure-html/unnamed-chunk-80-1.png" width="672" /></p>
+<p><img src="RxODE-manual_files/figure-html/unnamed-chunk-85-1.png" width="672" /></p>
 <p>Still the waiting period applies (but does not consider the inter-dose interval)</p>
 <div class="sourceCode" id="cb112"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb112-1"><a href="et.html#cb112-1" aria-hidden="true"></a>et &lt;-<span class="st"> </span><span class="kw">rbind</span>(bid,<span class="dt">wait=</span><span class="kw">set_units</span>(<span class="dv">10</span>,days),qd) <span class="op">%&gt;%</span></span>
 <span id="cb112-2"><a href="et.html#cb112-2" aria-hidden="true"></a><span class="st">    </span><span class="kw">et</span>(<span class="kw">seq</span>(<span class="dv">0</span>,<span class="dv">18</span><span class="op">*</span><span class="dv">24</span>,<span class="dt">length.out=</span><span class="dv">500</span>));</span>
 <span id="cb112-3"><a href="et.html#cb112-3" aria-hidden="true"></a></span>
 <span id="cb112-4"><a href="et.html#cb112-4" aria-hidden="true"></a><span class="kw">rxSolve</span>(m1, et) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">plot</span>(C2)</span></code></pre></div>
-<p><img src="RxODE-manual_files/figure-html/unnamed-chunk-81-1.png" width="672" /></p>
+<p><img src="RxODE-manual_files/figure-html/unnamed-chunk-86-1.png" width="672" /></p>
 <p>You can also bind the tables together and make each ID in the event
 table unique; This can be good to combine cohorts with different
 expected dosing and sampling times. This requires the <code>id="unique"</code>
@@ -883,7 +913,7 @@ option; Using the first example shows how this is different in this case:</p>
 <span id="cb113-4"><a href="et.html#cb113-4" aria-hidden="true"></a></span>
 <span id="cb113-5"><a href="et.html#cb113-5" aria-hidden="true"></a><span class="kw">library</span>(ggplot2)</span>
 <span id="cb113-6"><a href="et.html#cb113-6" aria-hidden="true"></a><span class="kw">rxSolve</span>(m1, et) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">plot</span>(C2) <span class="op">+</span><span class="st"> </span><span class="kw">facet_wrap</span>( <span class="op">~</span><span class="st"> </span>id)</span></code></pre></div>
-<p><img src="RxODE-manual_files/figure-html/unnamed-chunk-82-1.png" width="672" /></p>
+<p><img src="RxODE-manual_files/figure-html/unnamed-chunk-87-1.png" width="672" /></p>
 </div>
 <div id="expanding-events" class="section level2" number="8.9">
 <h2><span class="header-section-number">8.9</span> Expanding events</h2>
