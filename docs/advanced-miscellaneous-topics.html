@@ -817,10 +817,10 @@ in <code>rxControl()</code> or <code>rxSolve()</code>).</p>
 <span id="cb208-2"><a href="advanced-miscellaneous-topics.html#cb208-2" aria-hidden="true"></a><span class="kw">print</span>(bench)</span></code></pre></div>
 <pre><code>#&gt; Unit: milliseconds
 #&gt;               expr       min        lq      mean    median        uq       max
-#&gt;           runFor() 151.18400 157.66553 162.67572 158.84069 162.37120 239.10057
-#&gt;        runSapply() 151.75343 156.66703 161.97255 157.73591 162.25877 249.70089
-#&gt;  runSingleThread()  20.50783  21.64060  22.64279  22.68426  23.02610  29.05329
-#&gt;       run2Thread()  11.99006  12.56674  13.14836  12.70261  13.19353  18.97867
+#&gt;           runFor() 148.66206 152.57910 158.41411 155.67576 158.32866 279.74290
+#&gt;        runSapply() 147.64793 151.02122 157.22436 153.72549 156.25596 228.70809
+#&gt;  runSingleThread()  20.24493  21.17918  22.11988  22.27978  22.45961  28.45250
+#&gt;       run2Thread()  11.98098  12.40674  13.19612  12.56279  12.98034  22.86049
 #&gt;  neval
 #&gt;    100
 #&gt;    100
@@ -845,14 +845,14 @@ the solving.</p>
 <span id="cb212-8"><a href="advanced-miscellaneous-topics.html#cb212-8" aria-hidden="true"></a><span class="kw">print</span>(bench)</span></code></pre></div>
 <pre><code>#&gt; Unit: milliseconds
 #&gt;          expr       min       lq     mean   median       uq      max neval
-#&gt;  runThread(1) 20.781918 29.42607 31.24408 31.37568 34.87578 42.72050   100
-#&gt;  runThread(2) 12.163180 16.41305 16.83222 17.37169 17.96068 22.60283   100
-#&gt;  runThread(3)  9.625613 12.77419 14.11573 13.31121 14.15611 23.91771   100
-#&gt;  runThread(4)  8.085683 10.81663 11.78512 11.09432 11.59764 20.89609   100
-#&gt;  runThread(5) 11.181492 14.79644 15.40274 15.67125 16.08092 22.81768   100
-#&gt;  runThread(6) 10.328293 13.04040 13.70663 14.05554 14.53701 20.04240   100
-#&gt;  runThread(7)  9.724644 12.50862 12.96491 13.01402 13.39745 18.72338   100
-#&gt;  runThread(8)  8.906964 11.72104 13.41285 12.19061 12.77713 42.66462   100</code></pre>
+#&gt;  runThread(1) 20.917777 29.05484 30.68335 30.68215 33.45669 39.16169   100
+#&gt;  runThread(2) 12.217905 16.59670 16.75115 17.31661 17.59796 21.05228   100
+#&gt;  runThread(3)  9.735416 12.39132 12.91206 12.92660 13.27688 24.51652   100
+#&gt;  runThread(4)  8.147927 10.62355 11.88529 10.97865 11.38901 19.25076   100
+#&gt;  runThread(5) 11.198133 14.67646 15.18815 15.40934 15.78556 20.37662   100
+#&gt;  runThread(6) 10.466986 13.15882 13.56781 13.79844 14.18326 18.41598   100
+#&gt;  runThread(7)  9.599145 12.33340 12.76269 12.79014 13.09314 18.41629   100
+#&gt;  runThread(8)  8.932449 11.51744 12.03653 11.92809 12.34235 25.84464   100</code></pre>
 <div class="sourceCode" id="cb214"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb214-1"><a href="advanced-miscellaneous-topics.html#cb214-1" aria-hidden="true"></a><span class="kw">autoplot</span>(bench)</span></code></pre></div>
 <pre><code>#&gt; Coordinate system already present. Adding new coordinate system, which will replace the existing one.</code></pre>
 <p><img src="RxODE-manual_files/figure-html/unnamed-chunk-133-1.png" width="672" /></p>
@@ -872,35 +872,36 @@ the data-set for <code>nlmixr</code> comparisons, but reduced to run faster
 automatic building of the pkgdown website.</p>
 <div class="sourceCode" id="cb216"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb216-1"><a href="advanced-miscellaneous-topics.html#cb216-1" aria-hidden="true"></a><span class="kw">library</span>(RxODE)</span>
 <span id="cb216-2"><a href="advanced-miscellaneous-topics.html#cb216-2" aria-hidden="true"></a><span class="kw">library</span>(data.table)</span></code></pre></div>
+<pre><code>#&gt; data.table 1.13.6 using 4 threads (see ?getDTthreads).  Latest news: r-datatable.com</code></pre>
 <pre><code>#&gt; 
 #&gt; Attaching package: &#39;data.table&#39;</code></pre>
 <pre><code>#&gt; The following objects are masked from &#39;package:dplyr&#39;:
 #&gt; 
 #&gt;     between, first, last</code></pre>
-<div class="sourceCode" id="cb219"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb219-1"><a href="advanced-miscellaneous-topics.html#cb219-1" aria-hidden="true"></a><span class="co">#Define the RxODE model</span></span>
-<span id="cb219-2"><a href="advanced-miscellaneous-topics.html#cb219-2" aria-hidden="true"></a>  ode1 &lt;-<span class="st"> &quot;</span></span>
-<span id="cb219-3"><a href="advanced-miscellaneous-topics.html#cb219-3" aria-hidden="true"></a><span class="st">  d/dt(abs)    = -KA*abs;</span></span>
-<span id="cb219-4"><a href="advanced-miscellaneous-topics.html#cb219-4" aria-hidden="true"></a><span class="st">  d/dt(centr)  =  KA*abs-(CL/V)*centr;</span></span>
-<span id="cb219-5"><a href="advanced-miscellaneous-topics.html#cb219-5" aria-hidden="true"></a><span class="st">  C2=centr/V;</span></span>
-<span id="cb219-6"><a href="advanced-miscellaneous-topics.html#cb219-6" aria-hidden="true"></a><span class="st">  &quot;</span></span>
-<span id="cb219-7"><a href="advanced-miscellaneous-topics.html#cb219-7" aria-hidden="true"></a>  </span>
-<span id="cb219-8"><a href="advanced-miscellaneous-topics.html#cb219-8" aria-hidden="true"></a><span class="co">#Create the RxODE simulation object</span></span>
-<span id="cb219-9"><a href="advanced-miscellaneous-topics.html#cb219-9" aria-hidden="true"></a>mod1 &lt;-<span class="st"> </span><span class="kw">RxODE</span>(<span class="dt">model =</span> ode1)</span>
-<span id="cb219-10"><a href="advanced-miscellaneous-topics.html#cb219-10" aria-hidden="true"></a></span>
-<span id="cb219-11"><a href="advanced-miscellaneous-topics.html#cb219-11" aria-hidden="true"></a><span class="co">#Population parameter values on log-scale</span></span>
-<span id="cb219-12"><a href="advanced-miscellaneous-topics.html#cb219-12" aria-hidden="true"></a>  paramsl &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dt">CL =</span> <span class="kw">log</span>(<span class="dv">4</span>),</span>
-<span id="cb219-13"><a href="advanced-miscellaneous-topics.html#cb219-13" aria-hidden="true"></a>               <span class="dt">V =</span> <span class="kw">log</span>(<span class="dv">70</span>),</span>
-<span id="cb219-14"><a href="advanced-miscellaneous-topics.html#cb219-14" aria-hidden="true"></a>               <span class="dt">KA =</span> <span class="kw">log</span>(<span class="dv">1</span>))</span>
-<span id="cb219-15"><a href="advanced-miscellaneous-topics.html#cb219-15" aria-hidden="true"></a><span class="co">#make 10,000 subjects to sample from:</span></span>
-<span id="cb219-16"><a href="advanced-miscellaneous-topics.html#cb219-16" aria-hidden="true"></a>  nsubg &lt;-<span class="st"> </span><span class="dv">300</span> <span class="co"># subjects per dose</span></span>
-<span id="cb219-17"><a href="advanced-miscellaneous-topics.html#cb219-17" aria-hidden="true"></a>  doses &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">10</span>, <span class="dv">30</span>, <span class="dv">60</span>, <span class="dv">120</span>)</span>
-<span id="cb219-18"><a href="advanced-miscellaneous-topics.html#cb219-18" aria-hidden="true"></a>  nsub &lt;-<span class="st"> </span>nsubg <span class="op">*</span><span class="st"> </span><span class="kw">length</span>(doses)</span>
-<span id="cb219-19"><a href="advanced-miscellaneous-topics.html#cb219-19" aria-hidden="true"></a><span class="co">#IIV of 30% for each parameter</span></span>
-<span id="cb219-20"><a href="advanced-miscellaneous-topics.html#cb219-20" aria-hidden="true"></a>  omega &lt;-<span class="st"> </span><span class="kw">diag</span>(<span class="kw">c</span>(<span class="fl">0.09</span>, <span class="fl">0.09</span>, <span class="fl">0.09</span>))<span class="co"># IIV covariance matrix</span></span>
-<span id="cb219-21"><a href="advanced-miscellaneous-topics.html#cb219-21" aria-hidden="true"></a>  sigma &lt;-<span class="st"> </span><span class="fl">0.2</span></span>
-<span id="cb219-22"><a href="advanced-miscellaneous-topics.html#cb219-22" aria-hidden="true"></a><span class="co">#Sample from the multivariate normal</span></span>
-<span id="cb219-23"><a href="advanced-miscellaneous-topics.html#cb219-23" aria-hidden="true"></a>  <span class="kw">set.seed</span>(<span class="dv">98176247</span>)</span>
-<span id="cb219-24"><a href="advanced-miscellaneous-topics.html#cb219-24" aria-hidden="true"></a>  <span class="kw">library</span>(MASS)</span></code></pre></div>
+<div class="sourceCode" id="cb220"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb220-1"><a href="advanced-miscellaneous-topics.html#cb220-1" aria-hidden="true"></a><span class="co">#Define the RxODE model</span></span>
+<span id="cb220-2"><a href="advanced-miscellaneous-topics.html#cb220-2" aria-hidden="true"></a>  ode1 &lt;-<span class="st"> &quot;</span></span>
+<span id="cb220-3"><a href="advanced-miscellaneous-topics.html#cb220-3" aria-hidden="true"></a><span class="st">  d/dt(abs)    = -KA*abs;</span></span>
+<span id="cb220-4"><a href="advanced-miscellaneous-topics.html#cb220-4" aria-hidden="true"></a><span class="st">  d/dt(centr)  =  KA*abs-(CL/V)*centr;</span></span>
+<span id="cb220-5"><a href="advanced-miscellaneous-topics.html#cb220-5" aria-hidden="true"></a><span class="st">  C2=centr/V;</span></span>
+<span id="cb220-6"><a href="advanced-miscellaneous-topics.html#cb220-6" aria-hidden="true"></a><span class="st">  &quot;</span></span>
+<span id="cb220-7"><a href="advanced-miscellaneous-topics.html#cb220-7" aria-hidden="true"></a>  </span>
+<span id="cb220-8"><a href="advanced-miscellaneous-topics.html#cb220-8" aria-hidden="true"></a><span class="co">#Create the RxODE simulation object</span></span>
+<span id="cb220-9"><a href="advanced-miscellaneous-topics.html#cb220-9" aria-hidden="true"></a>mod1 &lt;-<span class="st"> </span><span class="kw">RxODE</span>(<span class="dt">model =</span> ode1)</span>
+<span id="cb220-10"><a href="advanced-miscellaneous-topics.html#cb220-10" aria-hidden="true"></a></span>
+<span id="cb220-11"><a href="advanced-miscellaneous-topics.html#cb220-11" aria-hidden="true"></a><span class="co">#Population parameter values on log-scale</span></span>
+<span id="cb220-12"><a href="advanced-miscellaneous-topics.html#cb220-12" aria-hidden="true"></a>  paramsl &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dt">CL =</span> <span class="kw">log</span>(<span class="dv">4</span>),</span>
+<span id="cb220-13"><a href="advanced-miscellaneous-topics.html#cb220-13" aria-hidden="true"></a>               <span class="dt">V =</span> <span class="kw">log</span>(<span class="dv">70</span>),</span>
+<span id="cb220-14"><a href="advanced-miscellaneous-topics.html#cb220-14" aria-hidden="true"></a>               <span class="dt">KA =</span> <span class="kw">log</span>(<span class="dv">1</span>))</span>
+<span id="cb220-15"><a href="advanced-miscellaneous-topics.html#cb220-15" aria-hidden="true"></a><span class="co">#make 10,000 subjects to sample from:</span></span>
+<span id="cb220-16"><a href="advanced-miscellaneous-topics.html#cb220-16" aria-hidden="true"></a>  nsubg &lt;-<span class="st"> </span><span class="dv">300</span> <span class="co"># subjects per dose</span></span>
+<span id="cb220-17"><a href="advanced-miscellaneous-topics.html#cb220-17" aria-hidden="true"></a>  doses &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">10</span>, <span class="dv">30</span>, <span class="dv">60</span>, <span class="dv">120</span>)</span>
+<span id="cb220-18"><a href="advanced-miscellaneous-topics.html#cb220-18" aria-hidden="true"></a>  nsub &lt;-<span class="st"> </span>nsubg <span class="op">*</span><span class="st"> </span><span class="kw">length</span>(doses)</span>
+<span id="cb220-19"><a href="advanced-miscellaneous-topics.html#cb220-19" aria-hidden="true"></a><span class="co">#IIV of 30% for each parameter</span></span>
+<span id="cb220-20"><a href="advanced-miscellaneous-topics.html#cb220-20" aria-hidden="true"></a>  omega &lt;-<span class="st"> </span><span class="kw">diag</span>(<span class="kw">c</span>(<span class="fl">0.09</span>, <span class="fl">0.09</span>, <span class="fl">0.09</span>))<span class="co"># IIV covariance matrix</span></span>
+<span id="cb220-21"><a href="advanced-miscellaneous-topics.html#cb220-21" aria-hidden="true"></a>  sigma &lt;-<span class="st"> </span><span class="fl">0.2</span></span>
+<span id="cb220-22"><a href="advanced-miscellaneous-topics.html#cb220-22" aria-hidden="true"></a><span class="co">#Sample from the multivariate normal</span></span>
+<span id="cb220-23"><a href="advanced-miscellaneous-topics.html#cb220-23" aria-hidden="true"></a>  <span class="kw">set.seed</span>(<span class="dv">98176247</span>)</span>
+<span id="cb220-24"><a href="advanced-miscellaneous-topics.html#cb220-24" aria-hidden="true"></a>  <span class="kw">library</span>(MASS)</span></code></pre></div>
 <pre><code>#&gt; 
 #&gt; Attaching package: &#39;MASS&#39;</code></pre>
 <pre><code>#&gt; The following object is masked from &#39;package:dplyr&#39;:
@@ -909,88 +910,88 @@ automatic building of the pkgdown website.</p>
 <pre><code>#&gt; The following object is masked from &#39;package:patchwork&#39;:
 #&gt; 
 #&gt;     area</code></pre>
-<div class="sourceCode" id="cb223"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb223-1"><a href="advanced-miscellaneous-topics.html#cb223-1" aria-hidden="true"></a>  mv &lt;-</span>
-<span id="cb223-2"><a href="advanced-miscellaneous-topics.html#cb223-2" aria-hidden="true"></a><span class="st">    </span><span class="kw">mvrnorm</span>(nsub, <span class="kw">rep</span>(<span class="dv">0</span>, <span class="kw">dim</span>(omega)[<span class="dv">1</span>]), omega) <span class="co"># Sample from covariance matrix</span></span>
-<span id="cb223-3"><a href="advanced-miscellaneous-topics.html#cb223-3" aria-hidden="true"></a><span class="co">#Combine population parameters with IIV</span></span>
-<span id="cb223-4"><a href="advanced-miscellaneous-topics.html#cb223-4" aria-hidden="true"></a>  params.all &lt;-</span>
-<span id="cb223-5"><a href="advanced-miscellaneous-topics.html#cb223-5" aria-hidden="true"></a><span class="st">    </span><span class="kw">data.table</span>(</span>
-<span id="cb223-6"><a href="advanced-miscellaneous-topics.html#cb223-6" aria-hidden="true"></a>      <span class="st">&quot;ID&quot;</span> =<span class="st"> </span><span class="kw">seq</span>(<span class="dv">1</span><span class="op">:</span>nsub),</span>
-<span id="cb223-7"><a href="advanced-miscellaneous-topics.html#cb223-7" aria-hidden="true"></a>      <span class="st">&quot;CL&quot;</span> =<span class="st"> </span><span class="kw">exp</span>(paramsl[<span class="st">&#39;CL&#39;</span>] <span class="op">+</span><span class="st"> </span>mv[, <span class="dv">1</span>]),</span>
-<span id="cb223-8"><a href="advanced-miscellaneous-topics.html#cb223-8" aria-hidden="true"></a>      <span class="st">&quot;V&quot;</span> =<span class="st"> </span><span class="kw">exp</span>(paramsl[<span class="st">&#39;V&#39;</span>] <span class="op">+</span><span class="st"> </span>mv[, <span class="dv">2</span>]),</span>
-<span id="cb223-9"><a href="advanced-miscellaneous-topics.html#cb223-9" aria-hidden="true"></a>      <span class="st">&quot;KA&quot;</span> =<span class="st"> </span><span class="kw">exp</span>(paramsl[<span class="st">&#39;KA&#39;</span>] <span class="op">+</span><span class="st"> </span>mv[, <span class="dv">3</span>])</span>
-<span id="cb223-10"><a href="advanced-miscellaneous-topics.html#cb223-10" aria-hidden="true"></a>    )</span>
-<span id="cb223-11"><a href="advanced-miscellaneous-topics.html#cb223-11" aria-hidden="true"></a><span class="co">#set the doses (looping through the 4 doses)</span></span>
-<span id="cb223-12"><a href="advanced-miscellaneous-topics.html#cb223-12" aria-hidden="true"></a>params.all[, AMT <span class="op">:</span><span class="er">=</span><span class="st"> </span><span class="kw">rep</span>(<span class="dv">100</span> <span class="op">*</span><span class="st"> </span>doses,nsubg)]</span>
-<span id="cb223-13"><a href="advanced-miscellaneous-topics.html#cb223-13" aria-hidden="true"></a></span>
-<span id="cb223-14"><a href="advanced-miscellaneous-topics.html#cb223-14" aria-hidden="true"></a>Startlapply &lt;-<span class="st"> </span><span class="kw">Sys.time</span>()</span>
-<span id="cb223-15"><a href="advanced-miscellaneous-topics.html#cb223-15" aria-hidden="true"></a>  </span>
-<span id="cb223-16"><a href="advanced-miscellaneous-topics.html#cb223-16" aria-hidden="true"></a><span class="co">#Run the simulations using lapply for speed</span></span>
-<span id="cb223-17"><a href="advanced-miscellaneous-topics.html#cb223-17" aria-hidden="true"></a>  s =<span class="st"> </span><span class="kw">lapply</span>(<span class="dv">1</span><span class="op">:</span>nsub, <span class="cf">function</span>(i) {</span>
-<span id="cb223-18"><a href="advanced-miscellaneous-topics.html#cb223-18" aria-hidden="true"></a><span class="co">#selects the parameters associated with the subject to be simulated</span></span>
-<span id="cb223-19"><a href="advanced-miscellaneous-topics.html#cb223-19" aria-hidden="true"></a>    params &lt;-<span class="st"> </span>params.all[i]</span>
-<span id="cb223-20"><a href="advanced-miscellaneous-topics.html#cb223-20" aria-hidden="true"></a><span class="co">#creates an eventTable with 7 doses every 24 hours</span></span>
-<span id="cb223-21"><a href="advanced-miscellaneous-topics.html#cb223-21" aria-hidden="true"></a>    ev &lt;-<span class="st"> </span><span class="kw">eventTable</span>()</span>
-<span id="cb223-22"><a href="advanced-miscellaneous-topics.html#cb223-22" aria-hidden="true"></a>    ev<span class="op">$</span><span class="kw">add.dosing</span>(</span>
-<span id="cb223-23"><a href="advanced-miscellaneous-topics.html#cb223-23" aria-hidden="true"></a>      <span class="dt">dose =</span> params<span class="op">$</span>AMT,</span>
-<span id="cb223-24"><a href="advanced-miscellaneous-topics.html#cb223-24" aria-hidden="true"></a>      <span class="dt">nbr.doses =</span> <span class="dv">1</span>,</span>
-<span id="cb223-25"><a href="advanced-miscellaneous-topics.html#cb223-25" aria-hidden="true"></a>      <span class="dt">dosing.to =</span> <span class="dv">1</span>,</span>
-<span id="cb223-26"><a href="advanced-miscellaneous-topics.html#cb223-26" aria-hidden="true"></a>      <span class="dt">rate =</span> <span class="ot">NULL</span>,</span>
-<span id="cb223-27"><a href="advanced-miscellaneous-topics.html#cb223-27" aria-hidden="true"></a>      <span class="dt">start.time =</span> <span class="dv">0</span></span>
-<span id="cb223-28"><a href="advanced-miscellaneous-topics.html#cb223-28" aria-hidden="true"></a>    )</span>
-<span id="cb223-29"><a href="advanced-miscellaneous-topics.html#cb223-29" aria-hidden="true"></a><span class="co">#generates 4 random samples in a 24 hour period</span></span>
-<span id="cb223-30"><a href="advanced-miscellaneous-topics.html#cb223-30" aria-hidden="true"></a>    ev<span class="op">$</span><span class="kw">add.sampling</span>(<span class="kw">c</span>(<span class="dv">0</span>, <span class="kw">sort</span>(<span class="kw">round</span>(<span class="kw">sample</span>(<span class="kw">runif</span>(<span class="dv">600</span>, <span class="dv">0</span>, <span class="dv">1440</span>), <span class="dv">4</span>) <span class="op">/</span><span class="st"> </span><span class="dv">60</span>, <span class="dv">2</span>))))</span>
-<span id="cb223-31"><a href="advanced-miscellaneous-topics.html#cb223-31" aria-hidden="true"></a><span class="co">#runs the RxODE simulation</span></span>
-<span id="cb223-32"><a href="advanced-miscellaneous-topics.html#cb223-32" aria-hidden="true"></a>    x &lt;-<span class="st"> </span><span class="kw">as.data.table</span>(mod1<span class="op">$</span><span class="kw">run</span>(params, ev))</span>
-<span id="cb223-33"><a href="advanced-miscellaneous-topics.html#cb223-33" aria-hidden="true"></a><span class="co">#merges the parameters and ID number to the simulation output</span></span>
-<span id="cb223-34"><a href="advanced-miscellaneous-topics.html#cb223-34" aria-hidden="true"></a>    x[, <span class="kw">names</span>(params) <span class="op">:</span><span class="er">=</span><span class="st"> </span>params]</span>
-<span id="cb223-35"><a href="advanced-miscellaneous-topics.html#cb223-35" aria-hidden="true"></a>  })</span>
-<span id="cb223-36"><a href="advanced-miscellaneous-topics.html#cb223-36" aria-hidden="true"></a>  </span>
-<span id="cb223-37"><a href="advanced-miscellaneous-topics.html#cb223-37" aria-hidden="true"></a><span class="co">#runs the entire sequence of 100 subjects and binds the results to the object res</span></span>
-<span id="cb223-38"><a href="advanced-miscellaneous-topics.html#cb223-38" aria-hidden="true"></a>  res =<span class="st"> </span><span class="kw">as.data.table</span>(<span class="kw">do.call</span>(<span class="st">&quot;rbind&quot;</span>, s))</span>
-<span id="cb223-39"><a href="advanced-miscellaneous-topics.html#cb223-39" aria-hidden="true"></a>  </span>
-<span id="cb223-40"><a href="advanced-miscellaneous-topics.html#cb223-40" aria-hidden="true"></a>Stoplapply &lt;-<span class="st"> </span><span class="kw">Sys.time</span>()</span>
-<span id="cb223-41"><a href="advanced-miscellaneous-topics.html#cb223-41" aria-hidden="true"></a>  </span>
-<span id="cb223-42"><a href="advanced-miscellaneous-topics.html#cb223-42" aria-hidden="true"></a><span class="kw">print</span>(Stoplapply <span class="op">-</span><span class="st"> </span>Startlapply)</span></code></pre></div>
-<pre><code>#&gt; Time difference of 5.359287 secs</code></pre>
+<div class="sourceCode" id="cb224"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb224-1"><a href="advanced-miscellaneous-topics.html#cb224-1" aria-hidden="true"></a>  mv &lt;-</span>
+<span id="cb224-2"><a href="advanced-miscellaneous-topics.html#cb224-2" aria-hidden="true"></a><span class="st">    </span><span class="kw">mvrnorm</span>(nsub, <span class="kw">rep</span>(<span class="dv">0</span>, <span class="kw">dim</span>(omega)[<span class="dv">1</span>]), omega) <span class="co"># Sample from covariance matrix</span></span>
+<span id="cb224-3"><a href="advanced-miscellaneous-topics.html#cb224-3" aria-hidden="true"></a><span class="co">#Combine population parameters with IIV</span></span>
+<span id="cb224-4"><a href="advanced-miscellaneous-topics.html#cb224-4" aria-hidden="true"></a>  params.all &lt;-</span>
+<span id="cb224-5"><a href="advanced-miscellaneous-topics.html#cb224-5" aria-hidden="true"></a><span class="st">    </span><span class="kw">data.table</span>(</span>
+<span id="cb224-6"><a href="advanced-miscellaneous-topics.html#cb224-6" aria-hidden="true"></a>      <span class="st">&quot;ID&quot;</span> =<span class="st"> </span><span class="kw">seq</span>(<span class="dv">1</span><span class="op">:</span>nsub),</span>
+<span id="cb224-7"><a href="advanced-miscellaneous-topics.html#cb224-7" aria-hidden="true"></a>      <span class="st">&quot;CL&quot;</span> =<span class="st"> </span><span class="kw">exp</span>(paramsl[<span class="st">&#39;CL&#39;</span>] <span class="op">+</span><span class="st"> </span>mv[, <span class="dv">1</span>]),</span>
+<span id="cb224-8"><a href="advanced-miscellaneous-topics.html#cb224-8" aria-hidden="true"></a>      <span class="st">&quot;V&quot;</span> =<span class="st"> </span><span class="kw">exp</span>(paramsl[<span class="st">&#39;V&#39;</span>] <span class="op">+</span><span class="st"> </span>mv[, <span class="dv">2</span>]),</span>
+<span id="cb224-9"><a href="advanced-miscellaneous-topics.html#cb224-9" aria-hidden="true"></a>      <span class="st">&quot;KA&quot;</span> =<span class="st"> </span><span class="kw">exp</span>(paramsl[<span class="st">&#39;KA&#39;</span>] <span class="op">+</span><span class="st"> </span>mv[, <span class="dv">3</span>])</span>
+<span id="cb224-10"><a href="advanced-miscellaneous-topics.html#cb224-10" aria-hidden="true"></a>    )</span>
+<span id="cb224-11"><a href="advanced-miscellaneous-topics.html#cb224-11" aria-hidden="true"></a><span class="co">#set the doses (looping through the 4 doses)</span></span>
+<span id="cb224-12"><a href="advanced-miscellaneous-topics.html#cb224-12" aria-hidden="true"></a>params.all[, AMT <span class="op">:</span><span class="er">=</span><span class="st"> </span><span class="kw">rep</span>(<span class="dv">100</span> <span class="op">*</span><span class="st"> </span>doses,nsubg)]</span>
+<span id="cb224-13"><a href="advanced-miscellaneous-topics.html#cb224-13" aria-hidden="true"></a></span>
+<span id="cb224-14"><a href="advanced-miscellaneous-topics.html#cb224-14" aria-hidden="true"></a>Startlapply &lt;-<span class="st"> </span><span class="kw">Sys.time</span>()</span>
+<span id="cb224-15"><a href="advanced-miscellaneous-topics.html#cb224-15" aria-hidden="true"></a>  </span>
+<span id="cb224-16"><a href="advanced-miscellaneous-topics.html#cb224-16" aria-hidden="true"></a><span class="co">#Run the simulations using lapply for speed</span></span>
+<span id="cb224-17"><a href="advanced-miscellaneous-topics.html#cb224-17" aria-hidden="true"></a>  s =<span class="st"> </span><span class="kw">lapply</span>(<span class="dv">1</span><span class="op">:</span>nsub, <span class="cf">function</span>(i) {</span>
+<span id="cb224-18"><a href="advanced-miscellaneous-topics.html#cb224-18" aria-hidden="true"></a><span class="co">#selects the parameters associated with the subject to be simulated</span></span>
+<span id="cb224-19"><a href="advanced-miscellaneous-topics.html#cb224-19" aria-hidden="true"></a>    params &lt;-<span class="st"> </span>params.all[i]</span>
+<span id="cb224-20"><a href="advanced-miscellaneous-topics.html#cb224-20" aria-hidden="true"></a><span class="co">#creates an eventTable with 7 doses every 24 hours</span></span>
+<span id="cb224-21"><a href="advanced-miscellaneous-topics.html#cb224-21" aria-hidden="true"></a>    ev &lt;-<span class="st"> </span><span class="kw">eventTable</span>()</span>
+<span id="cb224-22"><a href="advanced-miscellaneous-topics.html#cb224-22" aria-hidden="true"></a>    ev<span class="op">$</span><span class="kw">add.dosing</span>(</span>
+<span id="cb224-23"><a href="advanced-miscellaneous-topics.html#cb224-23" aria-hidden="true"></a>      <span class="dt">dose =</span> params<span class="op">$</span>AMT,</span>
+<span id="cb224-24"><a href="advanced-miscellaneous-topics.html#cb224-24" aria-hidden="true"></a>      <span class="dt">nbr.doses =</span> <span class="dv">1</span>,</span>
+<span id="cb224-25"><a href="advanced-miscellaneous-topics.html#cb224-25" aria-hidden="true"></a>      <span class="dt">dosing.to =</span> <span class="dv">1</span>,</span>
+<span id="cb224-26"><a href="advanced-miscellaneous-topics.html#cb224-26" aria-hidden="true"></a>      <span class="dt">rate =</span> <span class="ot">NULL</span>,</span>
+<span id="cb224-27"><a href="advanced-miscellaneous-topics.html#cb224-27" aria-hidden="true"></a>      <span class="dt">start.time =</span> <span class="dv">0</span></span>
+<span id="cb224-28"><a href="advanced-miscellaneous-topics.html#cb224-28" aria-hidden="true"></a>    )</span>
+<span id="cb224-29"><a href="advanced-miscellaneous-topics.html#cb224-29" aria-hidden="true"></a><span class="co">#generates 4 random samples in a 24 hour period</span></span>
+<span id="cb224-30"><a href="advanced-miscellaneous-topics.html#cb224-30" aria-hidden="true"></a>    ev<span class="op">$</span><span class="kw">add.sampling</span>(<span class="kw">c</span>(<span class="dv">0</span>, <span class="kw">sort</span>(<span class="kw">round</span>(<span class="kw">sample</span>(<span class="kw">runif</span>(<span class="dv">600</span>, <span class="dv">0</span>, <span class="dv">1440</span>), <span class="dv">4</span>) <span class="op">/</span><span class="st"> </span><span class="dv">60</span>, <span class="dv">2</span>))))</span>
+<span id="cb224-31"><a href="advanced-miscellaneous-topics.html#cb224-31" aria-hidden="true"></a><span class="co">#runs the RxODE simulation</span></span>
+<span id="cb224-32"><a href="advanced-miscellaneous-topics.html#cb224-32" aria-hidden="true"></a>    x &lt;-<span class="st"> </span><span class="kw">as.data.table</span>(mod1<span class="op">$</span><span class="kw">run</span>(params, ev))</span>
+<span id="cb224-33"><a href="advanced-miscellaneous-topics.html#cb224-33" aria-hidden="true"></a><span class="co">#merges the parameters and ID number to the simulation output</span></span>
+<span id="cb224-34"><a href="advanced-miscellaneous-topics.html#cb224-34" aria-hidden="true"></a>    x[, <span class="kw">names</span>(params) <span class="op">:</span><span class="er">=</span><span class="st"> </span>params]</span>
+<span id="cb224-35"><a href="advanced-miscellaneous-topics.html#cb224-35" aria-hidden="true"></a>  })</span>
+<span id="cb224-36"><a href="advanced-miscellaneous-topics.html#cb224-36" aria-hidden="true"></a>  </span>
+<span id="cb224-37"><a href="advanced-miscellaneous-topics.html#cb224-37" aria-hidden="true"></a><span class="co">#runs the entire sequence of 100 subjects and binds the results to the object res</span></span>
+<span id="cb224-38"><a href="advanced-miscellaneous-topics.html#cb224-38" aria-hidden="true"></a>  res =<span class="st"> </span><span class="kw">as.data.table</span>(<span class="kw">do.call</span>(<span class="st">&quot;rbind&quot;</span>, s))</span>
+<span id="cb224-39"><a href="advanced-miscellaneous-topics.html#cb224-39" aria-hidden="true"></a>  </span>
+<span id="cb224-40"><a href="advanced-miscellaneous-topics.html#cb224-40" aria-hidden="true"></a>Stoplapply &lt;-<span class="st"> </span><span class="kw">Sys.time</span>()</span>
+<span id="cb224-41"><a href="advanced-miscellaneous-topics.html#cb224-41" aria-hidden="true"></a>  </span>
+<span id="cb224-42"><a href="advanced-miscellaneous-topics.html#cb224-42" aria-hidden="true"></a><span class="kw">print</span>(Stoplapply <span class="op">-</span><span class="st"> </span>Startlapply)</span></code></pre></div>
+<pre><code>#&gt; Time difference of 6.868098 secs</code></pre>
 <p>By applying some of the new parallel solving concepts you can simply
 run the same simulation both with less code and faster:</p>
-<div class="sourceCode" id="cb225"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb225-1"><a href="advanced-miscellaneous-topics.html#cb225-1" aria-hidden="true"></a>rx &lt;-<span class="st"> </span><span class="kw">RxODE</span>({</span>
-<span id="cb225-2"><a href="advanced-miscellaneous-topics.html#cb225-2" aria-hidden="true"></a>    CL =<span class="st">  </span><span class="kw">log</span>(<span class="dv">4</span>)</span>
-<span id="cb225-3"><a href="advanced-miscellaneous-topics.html#cb225-3" aria-hidden="true"></a>    V =<span class="st"> </span><span class="kw">log</span>(<span class="dv">70</span>)</span>
-<span id="cb225-4"><a href="advanced-miscellaneous-topics.html#cb225-4" aria-hidden="true"></a>    KA =<span class="st"> </span><span class="kw">log</span>(<span class="dv">1</span>)</span>
-<span id="cb225-5"><a href="advanced-miscellaneous-topics.html#cb225-5" aria-hidden="true"></a>    CL =<span class="st"> </span><span class="kw">exp</span>(CL <span class="op">+</span><span class="st"> </span>eta.CL)</span>
-<span id="cb225-6"><a href="advanced-miscellaneous-topics.html#cb225-6" aria-hidden="true"></a>    V =<span class="st"> </span><span class="kw">exp</span>(V <span class="op">+</span><span class="st"> </span>eta.V)</span>
-<span id="cb225-7"><a href="advanced-miscellaneous-topics.html#cb225-7" aria-hidden="true"></a>    KA =<span class="st"> </span><span class="kw">exp</span>(KA <span class="op">+</span><span class="st"> </span>eta.KA)</span>
-<span id="cb225-8"><a href="advanced-miscellaneous-topics.html#cb225-8" aria-hidden="true"></a>    d<span class="op">/</span><span class="kw">dt</span>(abs)    =<span class="st"> </span><span class="op">-</span>KA<span class="op">*</span>abs;</span>
-<span id="cb225-9"><a href="advanced-miscellaneous-topics.html#cb225-9" aria-hidden="true"></a>    d<span class="op">/</span><span class="kw">dt</span>(centr)  =<span class="st">  </span>KA<span class="op">*</span>abs<span class="op">-</span>(CL<span class="op">/</span>V)<span class="op">*</span>centr;</span>
-<span id="cb225-10"><a href="advanced-miscellaneous-topics.html#cb225-10" aria-hidden="true"></a>    C2=centr<span class="op">/</span>V;</span>
-<span id="cb225-11"><a href="advanced-miscellaneous-topics.html#cb225-11" aria-hidden="true"></a>})</span>
-<span id="cb225-12"><a href="advanced-miscellaneous-topics.html#cb225-12" aria-hidden="true"></a></span>
-<span id="cb225-13"><a href="advanced-miscellaneous-topics.html#cb225-13" aria-hidden="true"></a>omega &lt;-<span class="st"> </span><span class="kw">lotri</span>(eta.CL <span class="op">~</span><span class="st"> </span><span class="fl">0.09</span>,</span>
-<span id="cb225-14"><a href="advanced-miscellaneous-topics.html#cb225-14" aria-hidden="true"></a>               eta.V <span class="op">~</span><span class="st"> </span><span class="fl">0.09</span>,</span>
-<span id="cb225-15"><a href="advanced-miscellaneous-topics.html#cb225-15" aria-hidden="true"></a>               eta.KA <span class="op">~</span><span class="st"> </span><span class="fl">0.09</span>)</span>
-<span id="cb225-16"><a href="advanced-miscellaneous-topics.html#cb225-16" aria-hidden="true"></a></span>
-<span id="cb225-17"><a href="advanced-miscellaneous-topics.html#cb225-17" aria-hidden="true"></a>doses &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">10</span>, <span class="dv">30</span>, <span class="dv">60</span>, <span class="dv">120</span>)</span>
-<span id="cb225-18"><a href="advanced-miscellaneous-topics.html#cb225-18" aria-hidden="true"></a></span>
-<span id="cb225-19"><a href="advanced-miscellaneous-topics.html#cb225-19" aria-hidden="true"></a></span>
-<span id="cb225-20"><a href="advanced-miscellaneous-topics.html#cb225-20" aria-hidden="true"></a>startParallel &lt;-<span class="st"> </span><span class="kw">Sys.time</span>()</span>
-<span id="cb225-21"><a href="advanced-miscellaneous-topics.html#cb225-21" aria-hidden="true"></a>ev &lt;-<span class="st"> </span><span class="kw">do.call</span>(<span class="st">&quot;rbind&quot;</span>,</span>
-<span id="cb225-22"><a href="advanced-miscellaneous-topics.html#cb225-22" aria-hidden="true"></a>        <span class="kw">lapply</span>(<span class="kw">seq_along</span>(doses), <span class="cf">function</span>(i){</span>
-<span id="cb225-23"><a href="advanced-miscellaneous-topics.html#cb225-23" aria-hidden="true"></a>            <span class="kw">et</span>() <span class="op">%&gt;%</span></span>
-<span id="cb225-24"><a href="advanced-miscellaneous-topics.html#cb225-24" aria-hidden="true"></a><span class="st">                </span><span class="kw">et</span>(<span class="dt">amt=</span>doses[i]) <span class="op">%&gt;%</span><span class="st"> </span><span class="co"># Add single dose</span></span>
-<span id="cb225-25"><a href="advanced-miscellaneous-topics.html#cb225-25" aria-hidden="true"></a><span class="st">                </span><span class="kw">et</span>(<span class="dv">0</span>) <span class="op">%&gt;%</span><span class="st"> </span><span class="co"># Add 0 observation</span></span>
-<span id="cb225-26"><a href="advanced-miscellaneous-topics.html#cb225-26" aria-hidden="true"></a><span class="co">#### Generate 4 samples in 24 hour period</span></span>
-<span id="cb225-27"><a href="advanced-miscellaneous-topics.html#cb225-27" aria-hidden="true"></a><span class="st">                </span><span class="kw">et</span>(<span class="kw">lapply</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">4</span>, <span class="cf">function</span>(...){<span class="kw">c</span>(<span class="dv">0</span>, <span class="dv">24</span>)})) <span class="op">%&gt;%</span></span>
-<span id="cb225-28"><a href="advanced-miscellaneous-topics.html#cb225-28" aria-hidden="true"></a><span class="st">                </span><span class="kw">et</span>(<span class="dt">id=</span><span class="kw">seq</span>(<span class="dv">1</span>, nsubg) <span class="op">+</span><span class="st"> </span>(i <span class="op">-</span><span class="st"> </span><span class="dv">1</span>) <span class="op">*</span><span class="st"> </span>nsubg) <span class="op">%&gt;%</span></span>
-<span id="cb225-29"><a href="advanced-miscellaneous-topics.html#cb225-29" aria-hidden="true"></a><span class="co">#### Convert to data frame to skip sorting the data</span></span>
-<span id="cb225-30"><a href="advanced-miscellaneous-topics.html#cb225-30" aria-hidden="true"></a><span class="co">#### When binding the data together</span></span>
-<span id="cb225-31"><a href="advanced-miscellaneous-topics.html#cb225-31" aria-hidden="true"></a><span class="st">                </span>as.data.frame </span>
-<span id="cb225-32"><a href="advanced-miscellaneous-topics.html#cb225-32" aria-hidden="true"></a>        }))</span>
-<span id="cb225-33"><a href="advanced-miscellaneous-topics.html#cb225-33" aria-hidden="true"></a><span class="co">#### To better compare, use the same output, that is data.table</span></span>
-<span id="cb225-34"><a href="advanced-miscellaneous-topics.html#cb225-34" aria-hidden="true"></a>res &lt;-<span class="st"> </span><span class="kw">rxSolve</span>(rx, ev, <span class="dt">omega=</span>omega, <span class="dt">returnType=</span><span class="st">&quot;data.table&quot;</span>)</span>
-<span id="cb225-35"><a href="advanced-miscellaneous-topics.html#cb225-35" aria-hidden="true"></a>endParallel &lt;-<span class="st"> </span><span class="kw">Sys.time</span>()</span>
-<span id="cb225-36"><a href="advanced-miscellaneous-topics.html#cb225-36" aria-hidden="true"></a><span class="kw">print</span>(endParallel <span class="op">-</span><span class="st"> </span>startParallel)</span></code></pre></div>
-<pre><code>#&gt; Time difference of 0.06294489 secs</code></pre>
+<div class="sourceCode" id="cb226"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb226-1"><a href="advanced-miscellaneous-topics.html#cb226-1" aria-hidden="true"></a>rx &lt;-<span class="st"> </span><span class="kw">RxODE</span>({</span>
+<span id="cb226-2"><a href="advanced-miscellaneous-topics.html#cb226-2" aria-hidden="true"></a>    CL =<span class="st">  </span><span class="kw">log</span>(<span class="dv">4</span>)</span>
+<span id="cb226-3"><a href="advanced-miscellaneous-topics.html#cb226-3" aria-hidden="true"></a>    V =<span class="st"> </span><span class="kw">log</span>(<span class="dv">70</span>)</span>
+<span id="cb226-4"><a href="advanced-miscellaneous-topics.html#cb226-4" aria-hidden="true"></a>    KA =<span class="st"> </span><span class="kw">log</span>(<span class="dv">1</span>)</span>
+<span id="cb226-5"><a href="advanced-miscellaneous-topics.html#cb226-5" aria-hidden="true"></a>    CL =<span class="st"> </span><span class="kw">exp</span>(CL <span class="op">+</span><span class="st"> </span>eta.CL)</span>
+<span id="cb226-6"><a href="advanced-miscellaneous-topics.html#cb226-6" aria-hidden="true"></a>    V =<span class="st"> </span><span class="kw">exp</span>(V <span class="op">+</span><span class="st"> </span>eta.V)</span>
+<span id="cb226-7"><a href="advanced-miscellaneous-topics.html#cb226-7" aria-hidden="true"></a>    KA =<span class="st"> </span><span class="kw">exp</span>(KA <span class="op">+</span><span class="st"> </span>eta.KA)</span>
+<span id="cb226-8"><a href="advanced-miscellaneous-topics.html#cb226-8" aria-hidden="true"></a>    d<span class="op">/</span><span class="kw">dt</span>(abs)    =<span class="st"> </span><span class="op">-</span>KA<span class="op">*</span>abs;</span>
+<span id="cb226-9"><a href="advanced-miscellaneous-topics.html#cb226-9" aria-hidden="true"></a>    d<span class="op">/</span><span class="kw">dt</span>(centr)  =<span class="st">  </span>KA<span class="op">*</span>abs<span class="op">-</span>(CL<span class="op">/</span>V)<span class="op">*</span>centr;</span>
+<span id="cb226-10"><a href="advanced-miscellaneous-topics.html#cb226-10" aria-hidden="true"></a>    C2=centr<span class="op">/</span>V;</span>
+<span id="cb226-11"><a href="advanced-miscellaneous-topics.html#cb226-11" aria-hidden="true"></a>})</span>
+<span id="cb226-12"><a href="advanced-miscellaneous-topics.html#cb226-12" aria-hidden="true"></a></span>
+<span id="cb226-13"><a href="advanced-miscellaneous-topics.html#cb226-13" aria-hidden="true"></a>omega &lt;-<span class="st"> </span><span class="kw">lotri</span>(eta.CL <span class="op">~</span><span class="st"> </span><span class="fl">0.09</span>,</span>
+<span id="cb226-14"><a href="advanced-miscellaneous-topics.html#cb226-14" aria-hidden="true"></a>               eta.V <span class="op">~</span><span class="st"> </span><span class="fl">0.09</span>,</span>
+<span id="cb226-15"><a href="advanced-miscellaneous-topics.html#cb226-15" aria-hidden="true"></a>               eta.KA <span class="op">~</span><span class="st"> </span><span class="fl">0.09</span>)</span>
+<span id="cb226-16"><a href="advanced-miscellaneous-topics.html#cb226-16" aria-hidden="true"></a></span>
+<span id="cb226-17"><a href="advanced-miscellaneous-topics.html#cb226-17" aria-hidden="true"></a>doses &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">10</span>, <span class="dv">30</span>, <span class="dv">60</span>, <span class="dv">120</span>)</span>
+<span id="cb226-18"><a href="advanced-miscellaneous-topics.html#cb226-18" aria-hidden="true"></a></span>
+<span id="cb226-19"><a href="advanced-miscellaneous-topics.html#cb226-19" aria-hidden="true"></a></span>
+<span id="cb226-20"><a href="advanced-miscellaneous-topics.html#cb226-20" aria-hidden="true"></a>startParallel &lt;-<span class="st"> </span><span class="kw">Sys.time</span>()</span>
+<span id="cb226-21"><a href="advanced-miscellaneous-topics.html#cb226-21" aria-hidden="true"></a>ev &lt;-<span class="st"> </span><span class="kw">do.call</span>(<span class="st">&quot;rbind&quot;</span>,</span>
+<span id="cb226-22"><a href="advanced-miscellaneous-topics.html#cb226-22" aria-hidden="true"></a>        <span class="kw">lapply</span>(<span class="kw">seq_along</span>(doses), <span class="cf">function</span>(i){</span>
+<span id="cb226-23"><a href="advanced-miscellaneous-topics.html#cb226-23" aria-hidden="true"></a>            <span class="kw">et</span>() <span class="op">%&gt;%</span></span>
+<span id="cb226-24"><a href="advanced-miscellaneous-topics.html#cb226-24" aria-hidden="true"></a><span class="st">                </span><span class="kw">et</span>(<span class="dt">amt=</span>doses[i]) <span class="op">%&gt;%</span><span class="st"> </span><span class="co"># Add single dose</span></span>
+<span id="cb226-25"><a href="advanced-miscellaneous-topics.html#cb226-25" aria-hidden="true"></a><span class="st">                </span><span class="kw">et</span>(<span class="dv">0</span>) <span class="op">%&gt;%</span><span class="st"> </span><span class="co"># Add 0 observation</span></span>
+<span id="cb226-26"><a href="advanced-miscellaneous-topics.html#cb226-26" aria-hidden="true"></a><span class="co">#### Generate 4 samples in 24 hour period</span></span>
+<span id="cb226-27"><a href="advanced-miscellaneous-topics.html#cb226-27" aria-hidden="true"></a><span class="st">                </span><span class="kw">et</span>(<span class="kw">lapply</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">4</span>, <span class="cf">function</span>(...){<span class="kw">c</span>(<span class="dv">0</span>, <span class="dv">24</span>)})) <span class="op">%&gt;%</span></span>
+<span id="cb226-28"><a href="advanced-miscellaneous-topics.html#cb226-28" aria-hidden="true"></a><span class="st">                </span><span class="kw">et</span>(<span class="dt">id=</span><span class="kw">seq</span>(<span class="dv">1</span>, nsubg) <span class="op">+</span><span class="st"> </span>(i <span class="op">-</span><span class="st"> </span><span class="dv">1</span>) <span class="op">*</span><span class="st"> </span>nsubg) <span class="op">%&gt;%</span></span>
+<span id="cb226-29"><a href="advanced-miscellaneous-topics.html#cb226-29" aria-hidden="true"></a><span class="co">#### Convert to data frame to skip sorting the data</span></span>
+<span id="cb226-30"><a href="advanced-miscellaneous-topics.html#cb226-30" aria-hidden="true"></a><span class="co">#### When binding the data together</span></span>
+<span id="cb226-31"><a href="advanced-miscellaneous-topics.html#cb226-31" aria-hidden="true"></a><span class="st">                </span>as.data.frame </span>
+<span id="cb226-32"><a href="advanced-miscellaneous-topics.html#cb226-32" aria-hidden="true"></a>        }))</span>
+<span id="cb226-33"><a href="advanced-miscellaneous-topics.html#cb226-33" aria-hidden="true"></a><span class="co">#### To better compare, use the same output, that is data.table</span></span>
+<span id="cb226-34"><a href="advanced-miscellaneous-topics.html#cb226-34" aria-hidden="true"></a>res &lt;-<span class="st"> </span><span class="kw">rxSolve</span>(rx, ev, <span class="dt">omega=</span>omega, <span class="dt">returnType=</span><span class="st">&quot;data.table&quot;</span>)</span>
+<span id="cb226-35"><a href="advanced-miscellaneous-topics.html#cb226-35" aria-hidden="true"></a>endParallel &lt;-<span class="st"> </span><span class="kw">Sys.time</span>()</span>
+<span id="cb226-36"><a href="advanced-miscellaneous-topics.html#cb226-36" aria-hidden="true"></a><span class="kw">print</span>(endParallel <span class="op">-</span><span class="st"> </span>startParallel)</span></code></pre></div>
+<pre><code>#&gt; Time difference of 0.06054115 secs</code></pre>
 <p>You can see a striking time difference between the two methods; A few
 things to keep in mind:</p>
 <ul>
@@ -1192,14 +1193,14 @@ included in the model’s dll. This is done by:</li>
 ##&#39; @useDynLib rxModels, .registration=TRUE</code></pre>
 <p>If this is a R package with RxODE models and you do not intend to add
 any other compiled sources (recommended), you can add the following configure scripts</p>
-<div class="sourceCode" id="cb234"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb234-1"><a href="advanced-miscellaneous-topics.html#cb234-1" aria-hidden="true"></a><span class="co">#!/bin/sh</span></span>
-<span id="cb234-2"><a href="advanced-miscellaneous-topics.html#cb234-2" aria-hidden="true"></a><span class="co">### This should be used for both configure and configure.win</span></span>
-<span id="cb234-3"><a href="advanced-miscellaneous-topics.html#cb234-3" aria-hidden="true"></a><span class="bu">echo</span> <span class="st">&quot;unlink(&#39;src&#39;, recursive=TRUE);RxODE::rxUse()&quot;</span> <span class="op">&gt;</span> build.R</span>
-<span id="cb234-4"><a href="advanced-miscellaneous-topics.html#cb234-4" aria-hidden="true"></a><span class="va">${R_HOME}</span><span class="ex">/bin/Rscript</span> build.R</span>
-<span id="cb234-5"><a href="advanced-miscellaneous-topics.html#cb234-5" aria-hidden="true"></a><span class="fu">rm</span> build.R</span></code></pre></div>
+<div class="sourceCode" id="cb235"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb235-1"><a href="advanced-miscellaneous-topics.html#cb235-1" aria-hidden="true"></a><span class="co">#!/bin/sh</span></span>
+<span id="cb235-2"><a href="advanced-miscellaneous-topics.html#cb235-2" aria-hidden="true"></a><span class="co">### This should be used for both configure and configure.win</span></span>
+<span id="cb235-3"><a href="advanced-miscellaneous-topics.html#cb235-3" aria-hidden="true"></a><span class="bu">echo</span> <span class="st">&quot;unlink(&#39;src&#39;, recursive=TRUE);RxODE::rxUse()&quot;</span> <span class="op">&gt;</span> build.R</span>
+<span id="cb235-4"><a href="advanced-miscellaneous-topics.html#cb235-4" aria-hidden="true"></a><span class="va">${R_HOME}</span><span class="ex">/bin/Rscript</span> build.R</span>
+<span id="cb235-5"><a href="advanced-miscellaneous-topics.html#cb235-5" aria-hidden="true"></a><span class="fu">rm</span> build.R</span></code></pre></div>
 <p>Depending on the <code>check</code> you may need a dummy autoconf script,</p>
-<div class="sourceCode" id="cb235"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb235-1"><a href="advanced-miscellaneous-topics.html#cb235-1" aria-hidden="true"></a><span class="co">#### dummy autoconf script</span></span>
-<span id="cb235-2"><a href="advanced-miscellaneous-topics.html#cb235-2" aria-hidden="true"></a><span class="co">#### It is saved to configure.ac</span></span></code></pre></div>
+<div class="sourceCode" id="cb236"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb236-1"><a href="advanced-miscellaneous-topics.html#cb236-1" aria-hidden="true"></a><span class="co">#### dummy autoconf script</span></span>
+<span id="cb236-2"><a href="advanced-miscellaneous-topics.html#cb236-2" aria-hidden="true"></a><span class="co">#### It is saved to configure.ac</span></span></code></pre></div>
 <p>If you want to integrate with other sources in your <code>Rcpp</code> or
 <code>C</code>/<code>Fortan</code> based packages, you need to include <code>rxModels-compiled.h</code> and:
 - Add the define macro <code>compiledModelCall</code> to the list of registered
@@ -1247,28 +1248,28 @@ the
 <a href="http://www.ece.northwestern.edu/local-apps/matlabhelp/techdoc/math_anal/diffeq6.html">Van der Pol</a> differential
 equations.</p>
 <p>In RxODE these can be specified by the following:</p>
-<div class="sourceCode" id="cb238"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb238-1"><a href="advanced-miscellaneous-topics.html#cb238-1" aria-hidden="true"></a><span class="kw">library</span>(RxODE)</span>
-<span id="cb238-2"><a href="advanced-miscellaneous-topics.html#cb238-2" aria-hidden="true"></a></span>
-<span id="cb238-3"><a href="advanced-miscellaneous-topics.html#cb238-3" aria-hidden="true"></a>Vtpol2 &lt;-<span class="st"> </span><span class="kw">RxODE</span>({</span>
-<span id="cb238-4"><a href="advanced-miscellaneous-topics.html#cb238-4" aria-hidden="true"></a>    d<span class="op">/</span><span class="kw">dt</span>(y)  =<span class="st"> </span>dy</span>
-<span id="cb238-5"><a href="advanced-miscellaneous-topics.html#cb238-5" aria-hidden="true"></a>    d<span class="op">/</span><span class="kw">dt</span>(dy) =<span class="st"> </span>mu<span class="op">*</span>(<span class="dv">1</span><span class="op">-</span>y<span class="op">^</span><span class="dv">2</span>)<span class="op">*</span>dy <span class="op">-</span><span class="st"> </span>y</span>
-<span id="cb238-6"><a href="advanced-miscellaneous-topics.html#cb238-6" aria-hidden="true"></a><span class="co">##### Jacobian</span></span>
-<span id="cb238-7"><a href="advanced-miscellaneous-topics.html#cb238-7" aria-hidden="true"></a>    <span class="kw">df</span>(y)<span class="op">/</span><span class="kw">dy</span>(dy)  =<span class="st"> </span><span class="dv">1</span></span>
-<span id="cb238-8"><a href="advanced-miscellaneous-topics.html#cb238-8" aria-hidden="true"></a>    <span class="kw">df</span>(dy)<span class="op">/</span><span class="kw">dy</span>(y)  =<span class="st"> </span><span class="dv">-2</span><span class="op">*</span>dy<span class="op">*</span>mu<span class="op">*</span>y <span class="op">-</span><span class="st"> </span><span class="dv">1</span></span>
-<span id="cb238-9"><a href="advanced-miscellaneous-topics.html#cb238-9" aria-hidden="true"></a>    <span class="kw">df</span>(dy)<span class="op">/</span><span class="kw">dy</span>(dy) =<span class="st"> </span>mu<span class="op">*</span>(<span class="dv">1</span><span class="op">-</span>y<span class="op">^</span><span class="dv">2</span>)</span>
-<span id="cb238-10"><a href="advanced-miscellaneous-topics.html#cb238-10" aria-hidden="true"></a><span class="co">##### Initial conditions</span></span>
-<span id="cb238-11"><a href="advanced-miscellaneous-topics.html#cb238-11" aria-hidden="true"></a>    <span class="kw">y</span>(<span class="dv">0</span>) =<span class="st"> </span><span class="dv">2</span></span>
-<span id="cb238-12"><a href="advanced-miscellaneous-topics.html#cb238-12" aria-hidden="true"></a>    <span class="kw">dy</span>(<span class="dv">0</span>) =<span class="st"> </span><span class="dv">0</span></span>
-<span id="cb238-13"><a href="advanced-miscellaneous-topics.html#cb238-13" aria-hidden="true"></a><span class="co">##### mu</span></span>
-<span id="cb238-14"><a href="advanced-miscellaneous-topics.html#cb238-14" aria-hidden="true"></a>    mu =<span class="st"> </span><span class="dv">1</span> <span class="co">## nonstiff; 10 moderately stiff; 1000 stiff</span></span>
-<span id="cb238-15"><a href="advanced-miscellaneous-topics.html#cb238-15" aria-hidden="true"></a>})</span>
-<span id="cb238-16"><a href="advanced-miscellaneous-topics.html#cb238-16" aria-hidden="true"></a></span>
-<span id="cb238-17"><a href="advanced-miscellaneous-topics.html#cb238-17" aria-hidden="true"></a>et &lt;-<span class="st"> </span><span class="kw">eventTable</span>();</span>
-<span id="cb238-18"><a href="advanced-miscellaneous-topics.html#cb238-18" aria-hidden="true"></a>et<span class="op">$</span><span class="kw">add.sampling</span>(<span class="kw">seq</span>(<span class="dv">0</span>, <span class="dv">10</span>, <span class="dt">length.out=</span><span class="dv">200</span>));</span>
-<span id="cb238-19"><a href="advanced-miscellaneous-topics.html#cb238-19" aria-hidden="true"></a>et<span class="op">$</span><span class="kw">add.dosing</span>(<span class="dv">20</span>, <span class="dt">start.time=</span><span class="dv">0</span>);</span>
-<span id="cb238-20"><a href="advanced-miscellaneous-topics.html#cb238-20" aria-hidden="true"></a></span>
-<span id="cb238-21"><a href="advanced-miscellaneous-topics.html#cb238-21" aria-hidden="true"></a>s1 &lt;-<span class="st"> </span>Vtpol2 <span class="op">%&gt;%</span><span class="st">  </span><span class="kw">solve</span>(et, <span class="dt">method=</span><span class="st">&quot;lsoda&quot;</span>)</span>
-<span id="cb238-22"><a href="advanced-miscellaneous-topics.html#cb238-22" aria-hidden="true"></a><span class="kw">print</span>(s1)</span></code></pre></div>
+<div class="sourceCode" id="cb239"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb239-1"><a href="advanced-miscellaneous-topics.html#cb239-1" aria-hidden="true"></a><span class="kw">library</span>(RxODE)</span>
+<span id="cb239-2"><a href="advanced-miscellaneous-topics.html#cb239-2" aria-hidden="true"></a></span>
+<span id="cb239-3"><a href="advanced-miscellaneous-topics.html#cb239-3" aria-hidden="true"></a>Vtpol2 &lt;-<span class="st"> </span><span class="kw">RxODE</span>({</span>
+<span id="cb239-4"><a href="advanced-miscellaneous-topics.html#cb239-4" aria-hidden="true"></a>    d<span class="op">/</span><span class="kw">dt</span>(y)  =<span class="st"> </span>dy</span>
+<span id="cb239-5"><a href="advanced-miscellaneous-topics.html#cb239-5" aria-hidden="true"></a>    d<span class="op">/</span><span class="kw">dt</span>(dy) =<span class="st"> </span>mu<span class="op">*</span>(<span class="dv">1</span><span class="op">-</span>y<span class="op">^</span><span class="dv">2</span>)<span class="op">*</span>dy <span class="op">-</span><span class="st"> </span>y</span>
+<span id="cb239-6"><a href="advanced-miscellaneous-topics.html#cb239-6" aria-hidden="true"></a><span class="co">##### Jacobian</span></span>
+<span id="cb239-7"><a href="advanced-miscellaneous-topics.html#cb239-7" aria-hidden="true"></a>    <span class="kw">df</span>(y)<span class="op">/</span><span class="kw">dy</span>(dy)  =<span class="st"> </span><span class="dv">1</span></span>
+<span id="cb239-8"><a href="advanced-miscellaneous-topics.html#cb239-8" aria-hidden="true"></a>    <span class="kw">df</span>(dy)<span class="op">/</span><span class="kw">dy</span>(y)  =<span class="st"> </span><span class="dv">-2</span><span class="op">*</span>dy<span class="op">*</span>mu<span class="op">*</span>y <span class="op">-</span><span class="st"> </span><span class="dv">1</span></span>
+<span id="cb239-9"><a href="advanced-miscellaneous-topics.html#cb239-9" aria-hidden="true"></a>    <span class="kw">df</span>(dy)<span class="op">/</span><span class="kw">dy</span>(dy) =<span class="st"> </span>mu<span class="op">*</span>(<span class="dv">1</span><span class="op">-</span>y<span class="op">^</span><span class="dv">2</span>)</span>
+<span id="cb239-10"><a href="advanced-miscellaneous-topics.html#cb239-10" aria-hidden="true"></a><span class="co">##### Initial conditions</span></span>
+<span id="cb239-11"><a href="advanced-miscellaneous-topics.html#cb239-11" aria-hidden="true"></a>    <span class="kw">y</span>(<span class="dv">0</span>) =<span class="st"> </span><span class="dv">2</span></span>
+<span id="cb239-12"><a href="advanced-miscellaneous-topics.html#cb239-12" aria-hidden="true"></a>    <span class="kw">dy</span>(<span class="dv">0</span>) =<span class="st"> </span><span class="dv">0</span></span>
+<span id="cb239-13"><a href="advanced-miscellaneous-topics.html#cb239-13" aria-hidden="true"></a><span class="co">##### mu</span></span>
+<span id="cb239-14"><a href="advanced-miscellaneous-topics.html#cb239-14" aria-hidden="true"></a>    mu =<span class="st"> </span><span class="dv">1</span> <span class="co">## nonstiff; 10 moderately stiff; 1000 stiff</span></span>
+<span id="cb239-15"><a href="advanced-miscellaneous-topics.html#cb239-15" aria-hidden="true"></a>})</span>
+<span id="cb239-16"><a href="advanced-miscellaneous-topics.html#cb239-16" aria-hidden="true"></a></span>
+<span id="cb239-17"><a href="advanced-miscellaneous-topics.html#cb239-17" aria-hidden="true"></a>et &lt;-<span class="st"> </span><span class="kw">eventTable</span>();</span>
+<span id="cb239-18"><a href="advanced-miscellaneous-topics.html#cb239-18" aria-hidden="true"></a>et<span class="op">$</span><span class="kw">add.sampling</span>(<span class="kw">seq</span>(<span class="dv">0</span>, <span class="dv">10</span>, <span class="dt">length.out=</span><span class="dv">200</span>));</span>
+<span id="cb239-19"><a href="advanced-miscellaneous-topics.html#cb239-19" aria-hidden="true"></a>et<span class="op">$</span><span class="kw">add.dosing</span>(<span class="dv">20</span>, <span class="dt">start.time=</span><span class="dv">0</span>);</span>
+<span id="cb239-20"><a href="advanced-miscellaneous-topics.html#cb239-20" aria-hidden="true"></a></span>
+<span id="cb239-21"><a href="advanced-miscellaneous-topics.html#cb239-21" aria-hidden="true"></a>s1 &lt;-<span class="st"> </span>Vtpol2 <span class="op">%&gt;%</span><span class="st">  </span><span class="kw">solve</span>(et, <span class="dt">method=</span><span class="st">&quot;lsoda&quot;</span>)</span>
+<span id="cb239-22"><a href="advanced-miscellaneous-topics.html#cb239-22" aria-hidden="true"></a><span class="kw">print</span>(s1)</span></code></pre></div>
 <pre><code>#&gt; ______________________________ Solved RxODE object _____________________________
 #&gt; -- Parameters ($params): -------------------------------------------------------
 #&gt; mu 
@@ -1289,8 +1290,8 @@ equations.</p>
 #&gt; # ... with 194 more rows
 #&gt; ________________________________________________________________________________</code></pre>
 <p>While this is not stiff at mu=1, mu=1000 is a stiff system</p>
-<div class="sourceCode" id="cb240"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb240-1"><a href="advanced-miscellaneous-topics.html#cb240-1" aria-hidden="true"></a>s2 &lt;-<span class="st"> </span>Vtpol2 <span class="op">%&gt;%</span><span class="st">  </span><span class="kw">solve</span>(<span class="kw">c</span>(<span class="dt">mu=</span><span class="dv">1000</span>), et)</span>
-<span id="cb240-2"><a href="advanced-miscellaneous-topics.html#cb240-2" aria-hidden="true"></a><span class="kw">print</span>(s2)</span></code></pre></div>
+<div class="sourceCode" id="cb241"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb241-1"><a href="advanced-miscellaneous-topics.html#cb241-1" aria-hidden="true"></a>s2 &lt;-<span class="st"> </span>Vtpol2 <span class="op">%&gt;%</span><span class="st">  </span><span class="kw">solve</span>(<span class="kw">c</span>(<span class="dt">mu=</span><span class="dv">1000</span>), et)</span>
+<span id="cb241-2"><a href="advanced-miscellaneous-topics.html#cb241-2" aria-hidden="true"></a><span class="kw">print</span>(s2)</span></code></pre></div>
 <pre><code>#&gt; ______________________________ Solved RxODE object _____________________________
 #&gt; -- Parameters ($params): -------------------------------------------------------
 #&gt;   mu 
