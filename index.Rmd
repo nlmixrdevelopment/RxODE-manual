@@ -1,4 +1,3 @@
-
 --- 
 title: "RxODE user manual"
 author: "Matthew Fidler, Melissa Hallow, Wenping Wang"
@@ -9,15 +8,7 @@ bibliography: [book.bib, packages.bib]
 biblio-style: apalike
 link-citations: yes
 github-repo: nlmixrdevelopment/RxODE-manual
-toc: yes
 description: "This book is the user manual for RxODE"
-output:
-  bookdown::gitbook: default
-  bookdown::pdf_book:
-    includes:
-      in_header: preamble.tex
-    citation_package: natbib
-  bookdown::epub_book: default
 header-includes:
   - \usepackage{titling}
   - \pretitle{\begin{center}

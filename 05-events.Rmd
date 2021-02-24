@@ -2,7 +2,7 @@
 
 ```{r echo=FALSE, results='asis'}
 cat(unlist(knitr::knit_child(text = gsub("RxODE-event-table.html", "#et",
-                                         gsub("RxODE-events-classic.htmgl", "#classic-et", gsub("^#", "##", readLines("RxODE/vignettes/RxODE-event-types.Rmdh")))),
+                                         gsub("RxODE-events-classic.html", "#classic-et", gsub("^#", "##", readLines("RxODE/vignettes/RxODE-event-types.Rmdh")))),
                              envir = environment(), quiet = TRUE)), sep="\n")
 ```
 

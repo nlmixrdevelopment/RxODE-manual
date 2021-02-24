@@ -59,8 +59,6 @@ Below is an example of how RxODE numbers compartments
 
 ### Appending compartments to the model with `cmt()`
 
-
-
 ```{r child='RxODE/man/rmdhunks/rxode-cmt-preassign-2.Rmd'}
 ```
 
