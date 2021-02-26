@@ -22,3 +22,8 @@ cat(gsub("(^|\n) *# ", "\\1## ",
          unlist(knitr::knit_child(text = readLines("RxODE/man-roxygen/rmdhunks/nesting.Rmdh"),
                                   envir = environment(), quiet = TRUE))), sep="\n")
 ```
+
+## Transit compartment models
+
+```{r child='RxODE/man-roxygen/rmdhunks/transit-compartments.Rmdh'}
+```

@@ -390,6 +390,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="12.5.5" data-path="examples.html"><a href="examples.html#unexplained-variability"><i class="fa fa-check"></i><b>12.5.5</b> Unexplained variability</a></li>
 <li class="chapter" data-level="12.5.6" data-path="examples.html"><a href="examples.html#solving-the-problem"><i class="fa fa-check"></i><b>12.5.6</b> Solving the problem</a></li>
 </ul></li>
+<li class="chapter" data-level="12.6" data-path="examples.html"><a href="examples.html#transit-compartment-models"><i class="fa fa-check"></i><b>12.6</b> Transit compartment models</a></li>
 </ul></li>
 <li class="chapter" data-level="13" data-path="advanced-miscellaneous-topics.html"><a href="advanced-miscellaneous-topics.html"><i class="fa fa-check"></i><b>13</b> Advanced &amp; Miscellaneous Topics</a>
 <ul>
@@ -627,7 +628,7 @@ by:</p>
 #&gt; # … with 235 more rows
 #&gt; ▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂</code></pre>
 <div class="sourceCode" id="cb142"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb142-1"><a href="output.html#cb142-1" aria-hidden="true"></a><span class="kw">plot</span>(x)</span></code></pre></div>
-<p><img src="RxODE-manual_files/figure-html/unnamed-chunk-99-1.png" width="672" /></p>
+<p><img src="RxODE-manual_files/figure-html/unnamed-chunk-100-1.png" width="672" /></p>
 </div>
 <div id="modifying-observation-times-for-rxode" class="section level3" number="10.2.2">
 <h3><span class="header-section-number">10.2.2</span> Modifying observation times for RxODE</h3>
@@ -656,7 +657,7 @@ changing <code>t</code> or <code>time</code>. For example:</p>
 #&gt; # … with 14 more rows
 #&gt; ▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂</code></pre>
 <div class="sourceCode" id="cb145"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb145-1"><a href="output.html#cb145-1" aria-hidden="true"></a><span class="kw">plot</span>(x)</span></code></pre></div>
-<p><img src="RxODE-manual_files/figure-html/unnamed-chunk-100-1.png" width="672" /></p>
+<p><img src="RxODE-manual_files/figure-html/unnamed-chunk-101-1.png" width="672" /></p>
 </div>
 <div id="modifying-simulation-parameters" class="section level3" number="10.2.3">
 <h3><span class="header-section-number">10.2.3</span> Modifying simulation parameters</h3>
@@ -687,7 +688,7 @@ example, accessing <code>KA</code> can be done by:</p>
 #&gt; # … with 14 more rows
 #&gt; ▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂</code></pre>
 <div class="sourceCode" id="cb150"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb150-1"><a href="output.html#cb150-1" aria-hidden="true"></a><span class="kw">plot</span>(x)</span></code></pre></div>
-<p><img src="RxODE-manual_files/figure-html/unnamed-chunk-102-1.png" width="672" /></p>
+<p><img src="RxODE-manual_files/figure-html/unnamed-chunk-103-1.png" width="672" /></p>
 <p>You can access/change all the parameters, initialization(s) or events with
 the <code>$params</code>, <code>$inits</code>, <code>$events</code> accessor syntax, similar to what is
 used above.</p>

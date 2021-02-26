@@ -390,6 +390,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="12.5.5" data-path="examples.html"><a href="examples.html#unexplained-variability"><i class="fa fa-check"></i><b>12.5.5</b> Unexplained variability</a></li>
 <li class="chapter" data-level="12.5.6" data-path="examples.html"><a href="examples.html#solving-the-problem"><i class="fa fa-check"></i><b>12.5.6</b> Solving the problem</a></li>
 </ul></li>
+<li class="chapter" data-level="12.6" data-path="examples.html"><a href="examples.html#transit-compartment-models"><i class="fa fa-check"></i><b>12.6</b> Transit compartment models</a></li>
 </ul></li>
 <li class="chapter" data-level="13" data-path="advanced-miscellaneous-topics.html"><a href="advanced-miscellaneous-topics.html"><i class="fa fa-check"></i><b>13</b> Advanced &amp; Miscellaneous Topics</a>
 <ul>
@@ -850,7 +851,7 @@ using weight based dosing, this needs to be simulated first</p>
 <div class="sourceCode" id="cb179"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb179-1"><a href="examples.html#cb179-1" aria-hidden="true"></a><span class="kw">plot</span>(data, <span class="dt">log=</span><span class="st">&quot;y&quot;</span>)</span></code></pre></div>
 <pre><code>#&gt; Warning in self$trans$transform(x): NaNs produced</code></pre>
 <pre><code>#&gt; Warning: Transformation introduced infinite values in continuous y-axis</code></pre>
-<p><img src="RxODE-manual_files/figure-html/unnamed-chunk-120-1.png" width="672" /></p>
+<p><img src="RxODE-manual_files/figure-html/unnamed-chunk-121-1.png" width="672" /></p>
 </div>
 <div id="daptomycin-reference" class="section level3" number="12.4.5">
 <h3><span class="header-section-number">12.4.5</span> Daptomycin Reference</h3>
@@ -1053,8 +1054,6 @@ for each parameter; For <code>RxODE</code> this is the <code>nu</code> parameter
 <span id="cb189-3"><a href="examples.html#cb189-3" aria-hidden="true"></a>             <span class="dt">sigma=</span>sigma, <span class="dt">sigmaDf=</span><span class="dv">400</span>,</span>
 <span id="cb189-4"><a href="examples.html#cb189-4" aria-hidden="true"></a>             <span class="dt">nStud=</span><span class="dv">400</span>)</span></code></pre></div>
 <pre><code>#&gt; unhandled error message: EE:[lsoda] 70000 steps taken before reaching tout
-#&gt;  @(lsoda.c:748
-#&gt; unhandled error message: EE:[lsoda] 70000 steps taken before reaching tout
 #&gt;  @(lsoda.c:748</code></pre>
 <pre><code>#&gt; Warning: some ID(s) could not solve the ODEs correctly; These values are
 #&gt; replaced with &#39;NA&#39;</code></pre>
@@ -1181,8 +1180,65 @@ and between occasion variability; In the case of the eye:</p>
 individual and when combined make the between eye variability or the
 between occasion variability that can be seen in some pharamcometric
 models.</p>
-
 </div>
+</div>
+<div id="transit-compartment-models" class="section level2" number="12.6">
+<h2><span class="header-section-number">12.6</span> Transit compartment models</h2>
+<p>Savic 2008 first introduced the idea of transit compartments being a
+mechanistic explanation of a a lag-time type phenomena. RxODE has special handling of these models:</p>
+<p>You can specify this in a similar manner as the original paper:</p>
+<div class="sourceCode" id="cb200"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb200-1"><a href="examples.html#cb200-1" aria-hidden="true"></a><span class="kw">library</span>(RxODE)</span>
+<span id="cb200-2"><a href="examples.html#cb200-2" aria-hidden="true"></a>mod &lt;-<span class="st"> </span><span class="kw">RxODE</span>({</span>
+<span id="cb200-3"><a href="examples.html#cb200-3" aria-hidden="true"></a>    <span class="co">## Table 3 from Savic 2007</span></span>
+<span id="cb200-4"><a href="examples.html#cb200-4" aria-hidden="true"></a>    cl =<span class="st"> </span><span class="fl">17.2</span> <span class="co"># (L/hr)</span></span>
+<span id="cb200-5"><a href="examples.html#cb200-5" aria-hidden="true"></a>    vc =<span class="st"> </span><span class="fl">45.1</span> <span class="co"># L</span></span>
+<span id="cb200-6"><a href="examples.html#cb200-6" aria-hidden="true"></a>    ka =<span class="st"> </span><span class="fl">0.38</span> <span class="co"># 1/hr</span></span>
+<span id="cb200-7"><a href="examples.html#cb200-7" aria-hidden="true"></a>    mtt =<span class="st"> </span><span class="fl">0.37</span> <span class="co"># hr</span></span>
+<span id="cb200-8"><a href="examples.html#cb200-8" aria-hidden="true"></a>    bio=<span class="dv">1</span></span>
+<span id="cb200-9"><a href="examples.html#cb200-9" aria-hidden="true"></a>    n =<span class="st"> </span><span class="fl">20.1</span></span>
+<span id="cb200-10"><a href="examples.html#cb200-10" aria-hidden="true"></a>    k =<span class="st"> </span>cl<span class="op">/</span>vc</span>
+<span id="cb200-11"><a href="examples.html#cb200-11" aria-hidden="true"></a>    ktr =<span class="st"> </span>(n<span class="op">+</span><span class="dv">1</span>)<span class="op">/</span>mtt</span>
+<span id="cb200-12"><a href="examples.html#cb200-12" aria-hidden="true"></a>    <span class="co">## note that lgammafn is the same as lgamma in R.</span></span>
+<span id="cb200-13"><a href="examples.html#cb200-13" aria-hidden="true"></a>    d<span class="op">/</span><span class="kw">dt</span>(depot) =<span class="st"> </span><span class="kw">exp</span>(<span class="kw">log</span>(bio<span class="op">*</span>podo)<span class="op">+</span><span class="kw">log</span>(ktr)<span class="op">+</span>n<span class="op">*</span><span class="kw">log</span>(ktr<span class="op">*</span>t)<span class="op">-</span>ktr<span class="op">*</span>t<span class="op">-</span><span class="kw">lgammafn</span>(n<span class="op">+</span><span class="dv">1</span>))<span class="op">-</span>ka<span class="op">*</span>depot</span>
+<span id="cb200-14"><a href="examples.html#cb200-14" aria-hidden="true"></a>    d<span class="op">/</span><span class="kw">dt</span>(cen) =<span class="st"> </span>ka<span class="op">*</span>depot<span class="op">-</span>k<span class="op">*</span>cen</span>
+<span id="cb200-15"><a href="examples.html#cb200-15" aria-hidden="true"></a>})</span>
+<span id="cb200-16"><a href="examples.html#cb200-16" aria-hidden="true"></a></span>
+<span id="cb200-17"><a href="examples.html#cb200-17" aria-hidden="true"></a>et &lt;-<span class="st"> </span><span class="kw">eventTable</span>();</span>
+<span id="cb200-18"><a href="examples.html#cb200-18" aria-hidden="true"></a>et<span class="op">$</span><span class="kw">add.sampling</span>(<span class="kw">seq</span>(<span class="dv">0</span>, <span class="dv">7</span>, <span class="dt">length.out=</span><span class="dv">200</span>));</span>
+<span id="cb200-19"><a href="examples.html#cb200-19" aria-hidden="true"></a>et<span class="op">$</span><span class="kw">add.dosing</span>(<span class="dv">20</span>, <span class="dt">start.time=</span><span class="dv">0</span>);</span>
+<span id="cb200-20"><a href="examples.html#cb200-20" aria-hidden="true"></a></span>
+<span id="cb200-21"><a href="examples.html#cb200-21" aria-hidden="true"></a>transit &lt;-<span class="st"> </span><span class="kw">rxSolve</span>(mod, et, <span class="dt">transit_abs=</span><span class="ot">TRUE</span>)</span>
+<span id="cb200-22"><a href="examples.html#cb200-22" aria-hidden="true"></a></span>
+<span id="cb200-23"><a href="examples.html#cb200-23" aria-hidden="true"></a><span class="kw">plot</span>(transit, cen, <span class="dt">ylab=</span><span class="st">&quot;Central Concentration&quot;</span>)</span></code></pre></div>
+<p><img src="RxODE-manual_files/figure-html/unnamed-chunk-130-1.png" width="100%" /></p>
+<p>Another option is to specify the transit compartment function
+<code>transit</code> syntax. This specifies the parameters <code>transit(number of transit compartments, mean transit time, bioavailability)</code>. The
+bioavailability term is optional.</p>
+<p>Using the <code>transit</code> code also automatically turns on the <code>transit_abs</code>
+option. Therefore, the same model can be specified by:</p>
+<div class="sourceCode" id="cb201"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb201-1"><a href="examples.html#cb201-1" aria-hidden="true"></a>mod &lt;-<span class="st"> </span><span class="kw">RxODE</span>({</span>
+<span id="cb201-2"><a href="examples.html#cb201-2" aria-hidden="true"></a>    <span class="co">## Table 3 from Savic 2007</span></span>
+<span id="cb201-3"><a href="examples.html#cb201-3" aria-hidden="true"></a>    cl =<span class="st"> </span><span class="fl">17.2</span> <span class="co"># (L/hr)</span></span>
+<span id="cb201-4"><a href="examples.html#cb201-4" aria-hidden="true"></a>    vc =<span class="st"> </span><span class="fl">45.1</span> <span class="co"># L</span></span>
+<span id="cb201-5"><a href="examples.html#cb201-5" aria-hidden="true"></a>    ka =<span class="st"> </span><span class="fl">0.38</span> <span class="co"># 1/hr</span></span>
+<span id="cb201-6"><a href="examples.html#cb201-6" aria-hidden="true"></a>    mtt =<span class="st"> </span><span class="fl">0.37</span> <span class="co"># hr</span></span>
+<span id="cb201-7"><a href="examples.html#cb201-7" aria-hidden="true"></a>    bio=<span class="dv">1</span></span>
+<span id="cb201-8"><a href="examples.html#cb201-8" aria-hidden="true"></a>    n =<span class="st"> </span><span class="fl">20.1</span></span>
+<span id="cb201-9"><a href="examples.html#cb201-9" aria-hidden="true"></a>    k =<span class="st"> </span>cl<span class="op">/</span>vc</span>
+<span id="cb201-10"><a href="examples.html#cb201-10" aria-hidden="true"></a>    ktr =<span class="st"> </span>(n<span class="op">+</span><span class="dv">1</span>)<span class="op">/</span>mtt</span>
+<span id="cb201-11"><a href="examples.html#cb201-11" aria-hidden="true"></a>    d<span class="op">/</span><span class="kw">dt</span>(depot) =<span class="st"> </span><span class="kw">transit</span>(n,mtt,bio)<span class="op">-</span>ka<span class="op">*</span>depot</span>
+<span id="cb201-12"><a href="examples.html#cb201-12" aria-hidden="true"></a>    d<span class="op">/</span><span class="kw">dt</span>(cen) =<span class="st"> </span>ka<span class="op">*</span>depot<span class="op">-</span>k<span class="op">*</span>cen</span>
+<span id="cb201-13"><a href="examples.html#cb201-13" aria-hidden="true"></a>})</span>
+<span id="cb201-14"><a href="examples.html#cb201-14" aria-hidden="true"></a></span>
+<span id="cb201-15"><a href="examples.html#cb201-15" aria-hidden="true"></a>et &lt;-<span class="st"> </span><span class="kw">eventTable</span>();</span>
+<span id="cb201-16"><a href="examples.html#cb201-16" aria-hidden="true"></a>et<span class="op">$</span><span class="kw">add.sampling</span>(<span class="kw">seq</span>(<span class="dv">0</span>, <span class="dv">7</span>, <span class="dt">length.out=</span><span class="dv">200</span>));</span>
+<span id="cb201-17"><a href="examples.html#cb201-17" aria-hidden="true"></a>et<span class="op">$</span><span class="kw">add.dosing</span>(<span class="dv">20</span>, <span class="dt">start.time=</span><span class="dv">0</span>);</span>
+<span id="cb201-18"><a href="examples.html#cb201-18" aria-hidden="true"></a></span>
+<span id="cb201-19"><a href="examples.html#cb201-19" aria-hidden="true"></a>transit &lt;-<span class="st"> </span><span class="kw">rxSolve</span>(mod, et)</span></code></pre></div>
+<pre><code>#&gt; Warning: assumed transit compartment model since &#39;podo&#39; is in the model</code></pre>
+<div class="sourceCode" id="cb203"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb203-1"><a href="examples.html#cb203-1" aria-hidden="true"></a><span class="kw">plot</span>(transit, cen, <span class="dt">ylab=</span><span class="st">&quot;Central Concentration&quot;</span>)</span></code></pre></div>
+<p><img src="RxODE-manual_files/figure-html/unnamed-chunk-131-1.png" width="672" /></p>
+
 </div>
 </div>
             </section>
