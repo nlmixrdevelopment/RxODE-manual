@@ -3,6 +3,10 @@
 This section is for example models to get you started in common
 simulation scenarios.
 
+
+```{r child='RxODE/man-roxygen/rmdhunks/model-types.Rmdh'}
+```
+
 ## Weight based dosing 
 
 ```{r echo=FALSE, results='asis'}
