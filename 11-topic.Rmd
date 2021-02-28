@@ -2,6 +2,23 @@
 
 This covers advanced or miscellaneous topics in `RxODE`
 
+
+## Covariates in RxODE
+
+```{r echo=FALSE, results='asis'}
+cat(gsub("(^|\n) *(#+) +", "\\1##\\2 ",
+         unlist(knitr::knit_child(text = readLines("RxODE/man-roxygen/rmdhunks/covariates.Rmd"),
+                                  envir = environment(), quiet = TRUE))), sep="\n")
+```
+
+## Shiny and RxODE
+
+```{r echo=FALSE, results='asis'}
+cat(gsub("(^|\n) *(#+) +", "\\1##\\2 ",
+         unlist(knitr::knit_child(text = readLines("RxODE/man-roxygen/rmdhunks/shiny.Rmd"),
+                                  envir = environment(), quiet = TRUE))), sep="\n")
+```
+
 ## Using RxODE with a pipeline
 
 ```{r echo=FALSE, results='asis'}

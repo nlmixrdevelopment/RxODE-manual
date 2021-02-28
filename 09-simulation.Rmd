@@ -1,2 +1,19 @@
 # Simulation 
 
+```{r echo=FALSE, results='asis'}
+cat(unlist(knitr::knit_child(text = gsub("^#", "##", readLines("RxODE/man-roxygen/rmdhunks/single-subject.Rmdh")),
+                                  envir = environment(), quiet = TRUE)), sep="\n")
+```
+
+```{r echo=FALSE, results='asis'}
+cat(unlist(knitr::knit_child(text = gsub("^#", "##", readLines("RxODE/man-roxygen/rmdhunks/sim-var.Rmd")),
+                                  envir = environment(), quiet = TRUE)), sep="\n")
+```
+
+
+```{r echo=FALSE, results='asis'}
+cat(unlist(knitr::knit_child(text = gsub("^#", "##",
+                                         gsub("theo_sd", "RxODE/vignettes/theo_sd",
+                                              readLines("RxODE/man-roxygen/rmdhunks/prior-data.Rmd"))),
+                                  envir = environment(), quiet = TRUE)), sep="\n")
+```
